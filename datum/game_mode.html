@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;game_mode - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/game_mode.html#var">Var Details</a> - <a href="datum/game_mode.html#proc">Proc Details</a></header>
+<main>
+<h1>game_mode <aside>/<a href="datum.html">datum</a>/<a href="datum/game_mode.html">game_mode</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/game_mode.html#var/allow_persistence_save">allow_persistence_save</a></th><td>Determines whether rounds with the gamemode will be factored in when it comes to persistency</td></tr>
+            <tr><th><a href="datum/game_mode.html#var/respawn_time">respawn_time</a></th><td>The respawn time for marines</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/game_mode.html#proc/announce_bioscans">announce_bioscans</a></th><td>Annonce to everyone the number of xeno and marines on ship and ground</td></tr>
+            <tr><th><a href="datum/game_mode.html#proc/get_joinable_factions">get_joinable_factions</a></th><td>Return the list of joinable factions, with regards with the current round balance</td></tr>
+            <tr><th><a href="datum/game_mode.html#proc/get_siloless_collapse_countdown">get_siloless_collapse_countdown</a></th><td>starts the timer to end the round when no silo is left</td></tr>
+            <tr><th><a href="datum/game_mode.html#proc/is_faction_balanced">is_faction_balanced</a></th><td>If joining the job.faction will make the game too unbalanced, return FALSE</td></tr>
+            <tr><th><a href="datum/game_mode.html#proc/siloless_hive_collapse">siloless_hive_collapse</a></th><td>handles end of the round when no silo is left</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/allow_persistence_save"><aside class="declaration">var </aside>allow_persistence_save
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 9"/></a></h3>
+        <p>Determines whether rounds with the gamemode will be factored in when it comes to persistency</p><h3 id="var/respawn_time"><aside class="declaration">var </aside>respawn_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 24"/></a></h3>
+        <p>The respawn time for marines</p><h2 id="proc">Proc Details</h2><h3 id="proc/announce_bioscans"><aside class="declaration">proc </aside>announce_bioscans<aside>(show_locations, delta, announce_humans, announce_xenos, send_fax) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L224">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 224"/></a></aside>
+        </h3>
+        <p>Annonce to everyone the number of xeno and marines on ship and ground</p><h3 id="proc/get_joinable_factions"><aside class="declaration">proc </aside>get_joinable_factions<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L673">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 673"/></a></aside>
+        </h3>
+        <p>Return the list of joinable factions, with regards with the current round balance</p><h3 id="proc/get_siloless_collapse_countdown"><aside class="declaration">proc </aside>get_siloless_collapse_countdown<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L332">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 332"/></a></aside>
+        </h3>
+        <p>starts the timer to end the round when no silo is left</p><h3 id="proc/is_faction_balanced"><aside class="declaration">proc </aside>is_faction_balanced<aside>(/<a href="datum.html">datum</a>/<a href="datum/job.html">job</a>/job) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L626">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 626"/></a></aside>
+        </h3>
+        <p>If joining the job.faction will make the game too unbalanced, return FALSE</p><h3 id="proc/siloless_hive_collapse"><aside class="declaration">proc </aside>siloless_hive_collapse<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/gamemodes/game_mode.dm#L328">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;gamemodes&#x2F;game_mode.dm 328"/></a></aside>
+        </h3>
+        <p>handles end of the round when no silo is left</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;atom&#x2F;movable - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="atom/movable.html#var">Var Details</a> - <a href="atom/movable.html#proc">Proc Details</a></header>
+<main>
+<h1>movable <aside>/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/(builtins)#L1">
+        <img src="git.png" width="16" height="16" title="(builtins) 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="atom/movable.html#var/affected_movable_lights">affected_movable_lights</a></th><td>Lazylist to keep track on the sources of illumination.</td></tr>
+            <tr><th><a href="atom/movable.html#var/affecting_dynamic_lumi">affecting_dynamic_lumi</a></th><td>Highest-intensity light affecting us, which determines our visibility.</td></tr>
+            <tr><th><a href="atom/movable.html#var/blocks_emissive">blocks_emissive</a></th><td>Either FALSE, <a href="code/__DEFINES/lighting.html#define/EMISSIVE_BLOCK_GENERIC" title="EMISSIVE_BLOCK_GENERIC">EMISSIVE_BLOCK_GENERIC</a>, or <a href="code/__DEFINES/lighting.html#define/EMISSIVE_BLOCK_UNIQUE" title="EMISSIVE_BLOCK_UNIQUE">EMISSIVE_BLOCK_UNIQUE</a></td></tr>
+            <tr><th><a href="atom/movable.html#var/em_block">em_block</a></th><td>Internal holder for emissive blocker object, do not use directly use blocks_emissive</td></tr>
+            <tr><th><a href="atom/movable.html#var/move_resist">move_resist</a></th><td>How much the atom resists being thrown or moved.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="atom/movable.html#proc/CanPassThrough">CanPassThrough</a></th><td>Returns true or false to allow src to move through the blocker, mover has final say</td></tr>
+            <tr><th><a href="atom/movable.html#proc/_reset_transformation_animation">_reset_transformation_animation</a></th><td>Resets filters and removes transformation animations helper objects from vis contents.</td></tr>
+            <tr><th><a href="atom/movable.html#proc/compose_name_href">compose_name_href</a></th><td>Allows us to wrap the name for specific cases like AI tracking or observer tracking</td></tr>
+            <tr><th><a href="atom/movable.html#proc/face_atom">face_atom</a></th><td>Change the direction of the atom to face the targeted atom</td></tr>
+            <tr><th><a href="atom/movable.html#proc/line_of_sight">line_of_sight</a></th><td>returns FALSE if there isnt line of sight to target within view dist and TRUE if there is</td></tr>
+            <tr><th><a href="atom/movable.html#proc/set_light_range_power_color">set_light_range_power_color</a></th><td>Helper to change several lighting overlay settings.</td></tr>
+            <tr><th><a href="atom/movable.html#proc/stop_throw">stop_throw</a></th><td>Annul all throw var to ensure a clean exit out of throw state</td></tr>
+            <tr><th><a href="atom/movable.html#proc/transformation_animation">transformation_animation</a></th><td>Creates animation that turns current icon into result appearance from top down.</td></tr>
+            <tr><th><a href="atom/movable.html#proc/update_dynamic_luminosity">update_dynamic_luminosity</a></th><td>Keeps track of the sources of dynamic luminosity and updates our visibility with the highest.</td></tr>
+            <tr><th><a href="atom/movable.html#proc/update_emissive_block">update_emissive_block</a></th><td>Updates this movables emissive overlay</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/affected_movable_lights"><aside class="declaration">var </aside>affected_movable_lights
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 52"/></a></h3>
+        <p>Lazylist to keep track on the sources of illumination.</p><h3 id="var/affecting_dynamic_lumi"><aside class="declaration">var </aside>affecting_dynamic_lumi
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 54"/></a></h3>
+        <p>Highest-intensity light affecting us, which determines our visibility.</p><h3 id="var/blocks_emissive"><aside class="declaration">var </aside>blocks_emissive
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 45"/></a></h3>
+        <p>Either FALSE, <a href="code/__DEFINES/lighting.html#define/EMISSIVE_BLOCK_GENERIC" title="EMISSIVE_BLOCK_GENERIC">EMISSIVE_BLOCK_GENERIC</a>, or <a href="code/__DEFINES/lighting.html#define/EMISSIVE_BLOCK_UNIQUE" title="EMISSIVE_BLOCK_UNIQUE">EMISSIVE_BLOCK_UNIQUE</a></p><h3 id="var/em_block"><aside class="declaration">var </aside>em_block
+            <aside>&ndash; /<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/<a href="atom/movable/emissive_blocker.html">emissive_blocker</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 47"/></a></h3>
+        <p>Internal holder for emissive blocker object, do not use directly use blocks_emissive</p><h3 id="var/move_resist"><aside class="declaration">var </aside>move_resist
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 9"/></a></h3>
+        <p>How much the atom resists being thrown or moved.</p><h2 id="proc">Proc Details</h2><h3 id="proc/CanPassThrough"><aside class="declaration">proc </aside>CanPassThrough<aside>(/<a href="atom.html">atom</a>/blocker, /<a href="turf.html">turf</a>/target, blocker_opinion) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L1067">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 1067"/></a></aside>
+        </h3>
+        <p>Returns true or false to allow src to move through the blocker, mover has final say</p><h3 id="proc/_reset_transformation_animation"><aside class="declaration">proc </aside>_reset_transformation_animation<aside>(filter_index) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/icons.dm#L1140">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icons.dm 1140"/></a></aside>
+        </h3>
+        <p>Resets filters and removes transformation animations helper objects from vis contents.</p><h3 id="proc/compose_name_href"><aside class="declaration">proc </aside>compose_name_href<aside>(name) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/say.dm#L88">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;say.dm 88"/></a></aside>
+        </h3>
+        <p>Allows us to wrap the name for specific cases like AI tracking or observer tracking</p>
+<p>Arguments</p>
+<ul>
+<li>name {string} the name of the mob to modify.</li>
+</ul><h3 id="proc/face_atom"><aside class="declaration">proc </aside>face_atom<aside>(/<a href="atom.html">atom</a>/A) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L968">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 968"/></a></aside>
+        </h3>
+        <p>Change the direction of the atom to face the targeted atom</p><h3 id="proc/line_of_sight"><aside class="declaration">proc </aside>line_of_sight<aside>(/<a href="atom.html">atom</a>/target, view_dist) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L1075">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 1075"/></a></aside>
+        </h3>
+        <p>returns FALSE if there isnt line of sight to target within view dist and TRUE if there is</p><h3 id="proc/set_light_range_power_color"><aside class="declaration">proc </aside>set_light_range_power_color<aside>(range, power, color) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/movable_luminosity.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;movable_luminosity.dm 16"/></a></aside>
+        </h3>
+        <p>Helper to change several lighting overlay settings.</p><h3 id="proc/stop_throw"><aside class="declaration">proc </aside>stop_throw<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L590">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 590"/></a></aside>
+        </h3>
+        <p>Annul all throw var to ensure a clean exit out of throw state</p><h3 id="proc/transformation_animation"><aside class="declaration">proc </aside>transformation_animation<aside>(result_appearance, time, transform_overlay, reset_after) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/icons.dm#L1105">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icons.dm 1105"/></a></aside>
+        </h3>
+        <p>Creates animation that turns current icon into result appearance from top down.</p>
+<p>result_appearance - End result appearance/atom/image
+time - Animation duration
+transform_overlay - Appearance/atom/image of effect that moves along the animation - should be horizonatally centered
+reset_after - If FALSE, filters won't be reset and helper vis_objects will not be removed after animation duration expires. Cleanup must be handled by the caller!</p><h3 id="proc/update_dynamic_luminosity"><aside class="declaration">proc </aside>update_dynamic_luminosity<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/movable_luminosity.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;movable_luminosity.dm 2"/></a></aside>
+        </h3>
+        <p>Keeps track of the sources of dynamic luminosity and updates our visibility with the highest.</p><h3 id="proc/update_emissive_block"><aside class="declaration">proc </aside>update_emissive_block<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/atoms_movable.dm#L114">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;atoms_movable.dm 114"/></a></aside>
+        </h3>
+        <p>Updates this movables emissive overlay</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

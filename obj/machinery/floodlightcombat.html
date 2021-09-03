@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;machinery&#x2F;floodlightcombat - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/machinery/floodlightcombat.html#var">Var Details</a> - <a href="obj/machinery/floodlightcombat.html#proc">Proc Details</a></header>
+<main>
+<h1>floodlightcombat <aside>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/floodlightcombat.html">floodlightcombat</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L82">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 82"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#var/brightness">brightness</a></th><td>Determines how much light does the floodlight make , every light tube adds 4 tiles distance.</td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#var/tipped">tipped</a></th><td>Used to show if the object is tipped</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#proc/break_a_light">break_a_light</a></th><td>Loops between the light tubes until it finds a light to break.</td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#proc/calculate_brightness">calculate_brightness</a></th><td>Checks each light if its working and then adds it to the total brightness amount.</td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#proc/flip_back">flip_back</a></th><td>Untip the floodlight</td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#proc/switch_light">switch_light</a></th><td>Used to define which slot is targeted on the sprite and then adjust the overlay.
+Called whenever someone tries to turn the floodlight on/off</td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#proc/tip_over">tip_over</a></th><td>Visually shows that the floodlight has been tipped and breaks all the lights in it.</td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#proc/update_overlays">update_overlays</a></th><td>Updates each light</td></tr>
+            <tr><th><a href="obj/machinery/floodlightcombat.html#proc/wrench_act">wrench_act</a></th><td>Handles the wrench act .</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/brightness"><aside class="declaration">var </aside>brightness
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L96">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 96"/></a></h3>
+        <p>Determines how much light does the floodlight make , every light tube adds 4 tiles distance.</p><h3 id="var/tipped"><aside class="declaration">var </aside>tipped
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L98">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 98"/></a></h3>
+        <p>Used to show if the object is tipped</p><h2 id="proc">Proc Details</h2><h3 id="proc/break_a_light"><aside class="declaration">proc </aside>break_a_light<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L153">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 153"/></a></aside>
+        </h3>
+        <p>Loops between the light tubes until it finds a light to break.</p><h3 id="proc/calculate_brightness"><aside class="declaration">proc </aside>calculate_brightness<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L220">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 220"/></a></aside>
+        </h3>
+        <p>Checks each light if its working and then adds it to the total brightness amount.</p><h3 id="proc/flip_back"><aside class="declaration">proc </aside>flip_back<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L127">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 127"/></a></aside>
+        </h3>
+        <p>Untip the floodlight</p><h3 id="proc/switch_light"><aside class="declaration">proc </aside>switch_light<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L253">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 253"/></a></aside>
+        </h3>
+        <p>Used to define which slot is targeted on the sprite and then adjust the overlay.
+Called whenever someone tries to turn the floodlight on/off</p><h3 id="proc/tip_over"><aside class="declaration">proc </aside>tip_over<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L115">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 115"/></a></aside>
+        </h3>
+        <p>Visually shows that the floodlight has been tipped and breaks all the lights in it.</p><h3 id="proc/update_overlays"><aside class="parent"><a title="/atom" href="atom.html#proc/update_overlays">&uarr;</a></aside>update_overlays<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L227">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 227"/></a></aside>
+        </h3>
+        <p>Updates each light</p><h3 id="proc/wrench_act">wrench_act<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user, /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/I) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/machinery/floodlight.dm#L101">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;machinery&#x2F;floodlight.dm 101"/></a></aside>
+        </h3>
+        <p>Handles the wrench act .</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

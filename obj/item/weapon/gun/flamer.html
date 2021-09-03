@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item&#x2F;weapon&#x2F;gun&#x2F;flamer - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item/weapon/gun/flamer.html#proc">Proc Details</a></header>
+<main>
+<h1>flamer <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/weapon/gun.html">weapon/gun</a>/<a href="obj/item/weapon/gun/flamer.html">flamer</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/projectiles/guns/flamer.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;projectiles&#x2F;guns&#x2F;flamer.dm 5"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item/weapon/gun/flamer.html#proc/attach_fueltank">attach_fueltank</a></th><td>*Attach a back fuel tank to the flamer, wich will use it a standard magazine</td></tr>
+            <tr><th><a href="obj/item/weapon/gun/flamer.html#proc/detach_fueltank">detach_fueltank</a></th><td>*Proced when unlinking the back fuel tank, making the flamer unlit and unable to fire</td></tr>
+            <tr><th><a href="obj/item/weapon/gun/flamer.html#proc/light_pilot">light_pilot</a></th><td>Light the pilot light of a flamer</td></tr></table><h2 id="proc">Proc Details</h2><h3 id="proc/attach_fueltank"><aside class="declaration">proc </aside>attach_fueltank<aside>(/<a href="mob.html">mob</a>/user, /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/ammo_magazine/flamer_tank/backtank/fueltank) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/projectiles/guns/flamer.dm#L194">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;projectiles&#x2F;guns&#x2F;flamer.dm 194"/></a></aside>
+        </h3>
+        <p>*Attach a back fuel tank to the flamer, wich will use it a standard magazine</p>
+<ul>
+<li>mob/user if not null, will play sound and update hud</li>
+<li>obj/item/ammo_magazine/flamer_tank/backtank/fueltank the back tank that is gonna be linked</li>
+</ul><h3 id="proc/detach_fueltank"><aside class="declaration">proc </aside>detach_fueltank<aside>(/<a href="mob.html">mob</a>/user, voluntary) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/projectiles/guns/flamer.dm#L226">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;projectiles&#x2F;guns&#x2F;flamer.dm 226"/></a></aside>
+        </h3>
+        <p>*Proced when unlinking the back fuel tank, making the flamer unlit and unable to fire</p>
+<ul>
+<li>mob/user if not null, will allow to play sound and update icons / hud</li>
+<li>voluntary if TRUE, will span a notice describing the action</li>
+</ul><h3 id="proc/light_pilot"><aside class="declaration">proc </aside>light_pilot<aside>(/<a href="mob.html">mob</a>/user, mustlit) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/projectiles/guns/flamer.dm#L91">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;projectiles&#x2F;guns&#x2F;flamer.dm 91"/></a></aside>
+        </h3>
+        <p>Light the pilot light of a flamer</p>
+<p>mob/user if not null will play a sound and add an overlay
+mustlit boolean, if true the pilot light will be lit</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;ai_behavior - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/ai_behavior.html#var">Var Details</a> - <a href="datum/ai_behavior.html#proc">Proc Details</a></header>
+<main>
+<h1>ai_behavior <aside>/<a href="datum.html">datum</a>/<a href="datum/ai_behavior.html">ai_behavior</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 8"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/anti_stuck_timer">anti_stuck_timer</a></th><td>When this timer is up, we force a change of node to ensure that the ai will never stay stuck trying to go to a specific node</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/atom_to_walk_to">atom_to_walk_to</a></th><td>What atom is the ai moving to</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/base_action">base_action</a></th><td>The standard ation of the AI, aka what it should do at the init or when going back to &quot;normal&quot; behavior</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/current_action">current_action</a></th><td>What the ai is doing right now</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/current_node">current_node</a></th><td>Current node to use for calculating action states: this is the mob's node</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/distance_to_maintain">distance_to_maintain</a></th><td>How far should we stay away from atom_to_walk_to</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/escorted_atom">escorted_atom</a></th><td>What we will escort</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/identifier">identifier</a></th><td>An identifier associated with this behavior, used for accessing specific values of a node's weights</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/mob_parent">mob_parent</a></th><td>Ref to the parent associated with this mind</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/sidestep_prob">sidestep_prob</a></th><td>Prob chance of sidestepping (left or right) when distance maintained with target</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#var/target_distance">target_distance</a></th><td>How far will we look for targets</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/ai_behavior.html#proc/change_action">change_action</a></th><td>Cleanup old state vars, start the movement towards our new target</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#proc/deal_with_obstacle">deal_with_obstacle</a></th><td>Signal handler when the ai is blocked by an obstacle</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#proc/late_initialize">late_initialize</a></th><td>Initiate our base behavior</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#proc/look_for_new_state">look_for_new_state</a></th><td>Check if we need to adopt a new state</td></tr>
+            <tr><th><a href="datum/ai_behavior.html#proc/look_for_next_node">look_for_next_node</a></th><td>Try to find a node to go to. If ignore_current_node is true, we will just find the closest current_node, and not the current_node best adjacent node</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/anti_stuck_timer"><aside class="declaration">var </aside>anti_stuck_timer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 32"/></a></h3>
+        <p>When this timer is up, we force a change of node to ensure that the ai will never stay stuck trying to go to a specific node</p><h3 id="var/atom_to_walk_to"><aside class="declaration">var </aside>atom_to_walk_to
+            <aside>&ndash; /<a href="atom.html">atom</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 10"/></a></h3>
+        <p>What atom is the ai moving to</p><h3 id="var/base_action"><aside class="declaration">var </aside>base_action
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 20"/></a></h3>
+        <p>The standard ation of the AI, aka what it should do at the init or when going back to &quot;normal&quot; behavior</p><h3 id="var/current_action"><aside class="declaration">var </aside>current_action
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 18"/></a></h3>
+        <p>What the ai is doing right now</p><h3 id="var/current_node"><aside class="declaration">var </aside>current_node
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/effect/ai_node.html">effect/ai_node</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 16"/></a></h3>
+        <p>Current node to use for calculating action states: this is the mob's node</p><h3 id="var/distance_to_maintain"><aside class="declaration">var </aside>distance_to_maintain
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 12"/></a></h3>
+        <p>How far should we stay away from atom_to_walk_to</p><h3 id="var/escorted_atom"><aside class="declaration">var </aside>escorted_atom
+            <aside>&ndash; /<a href="atom.html">atom</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 28"/></a></h3>
+        <p>What we will escort</p><h3 id="var/identifier"><aside class="declaration">var </aside>identifier
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 24"/></a></h3>
+        <p>An identifier associated with this behavior, used for accessing specific values of a node's weights</p><h3 id="var/mob_parent"><aside class="declaration">var </aside>mob_parent
+            <aside>&ndash; /<a href="mob.html">mob</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L22">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 22"/></a></h3>
+        <p>Ref to the parent associated with this mind</p><h3 id="var/sidestep_prob"><aside class="declaration">var </aside>sidestep_prob
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 14"/></a></h3>
+        <p>Prob chance of sidestepping (left or right) when distance maintained with target</p><h3 id="var/target_distance"><aside class="declaration">var </aside>target_distance
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 26"/></a></h3>
+        <p>How far will we look for targets</p><h2 id="proc">Proc Details</h2><h3 id="proc/change_action"><aside class="declaration">proc </aside>change_action<aside>(next_action, /<a href="atom.html">atom</a>/next_target) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L71">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 71"/></a></aside>
+        </h3>
+        <p>Cleanup old state vars, start the movement towards our new target</p><h3 id="proc/deal_with_obstacle"><aside class="declaration">proc </aside>deal_with_obstacle<aside>(/<a href="datum.html">datum</a>/source, direction) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L108">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 108"/></a></aside>
+        </h3>
+        <p>Signal handler when the ai is blocked by an obstacle</p><h3 id="proc/late_initialize"><aside class="declaration">proc </aside>late_initialize<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L51">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 51"/></a></aside>
+        </h3>
+        <p>Initiate our base behavior</p><h3 id="proc/look_for_new_state"><aside class="declaration">proc </aside>look_for_new_state<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L117">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 117"/></a></aside>
+        </h3>
+        <p>Check if we need to adopt a new state</p><h3 id="proc/look_for_next_node"><aside class="declaration">proc </aside>look_for_next_node<aside>(ignore_current_node) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/ai/ai_behaviors/ai_behavior.dm#L81">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;ai&#x2F;ai_behaviors&#x2F;ai_behavior.dm 81"/></a></aside>
+        </h3>
+        <p>Try to find a node to go to. If ignore_current_node is true, we will just find the closest current_node, and not the current_node best adjacent node</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

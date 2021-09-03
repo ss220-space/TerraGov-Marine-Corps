@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/living/carbon/human.html#var">Var Details</a> - <a href="mob/living/carbon/human.html#proc">Proc Details</a></header>
+<main>
+<h1>human <aside>/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/human_defines.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defines.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#var/dead_ticks">dead_ticks</a></th><td>How long the human is dead, in life ticks, which is 2 seconds</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#var/last_shock_effect">last_shock_effect</a></th><td>This is the cooldown on suffering additional effects for when shock gets high</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#var/revive_grace_time">revive_grace_time</a></th><td>Amount of deciseconds gained from the braindeath timer, usually by CPR.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/acid_spray_entered">acid_spray_entered</a></th><td>Signal handler to burn and maybe stun the human entering the acid spray</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/do_unique_action">do_unique_action</a></th><td>Try to perform a unique action on the held items</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/get_eye_protection">get_eye_protection</a></th><td>get_eye_protection()
+Returns a number between -1 to 2</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/get_target_lock">get_target_lock</a></th><td>This looks for a an ID on a person and checkes if an access tag from their ID matches the provided access tag. Used with the gun, claymore, sentry and possibly other IFF code.
+Does not actually check for station jobs.</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/get_type_in_slots">get_type_in_slots</a></th><td>Return the first item found in SLOT_ALL of the type searched
+type searched the type you are looking for</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/getarmor_organ">getarmor_organ</a></th><td>This proc returns the armour value for a particular external organ.</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/is_item_in_hands">is_item_in_hands</a></th><td>Return [TRUE]|[FALSE] if item_searched is in the hands of the human
+item_searched the item you want to check</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/is_item_in_slots">is_item_in_slots</a></th><td>Return [TRUE]|[FALSE] if item_searched is equipped or in the hands of the human
+item_searched the item you want to check</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/oncritdrag">oncritdrag</a></th><td>gives humans oxy when dragged by a xeno, called on COMSIG_MOVABLE_PULL_MOVED</td></tr>
+            <tr><th><a href="mob/living/carbon/human.html#proc/receive_order">receive_order</a></th><td>Proc to give a marine an order
+target : what atom to track
+arrow_type : what kind of visual arrow will be spawned on the marine
+verb_name : a word / sentence to describe the order</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/dead_ticks"><aside class="declaration">var </aside>dead_ticks
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/human_defines.dm#L98">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defines.dm 98"/></a></h3>
+        <p>How long the human is dead, in life ticks, which is 2 seconds</p><h3 id="var/last_shock_effect"><aside class="declaration">var </aside>last_shock_effect
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/human_defines.dm#L138">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defines.dm 138"/></a></h3>
+        <p>This is the cooldown on suffering additional effects for when shock gets high</p><h3 id="var/revive_grace_time"><aside class="declaration">var </aside>revive_grace_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/human_defines.dm#L133">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defines.dm 133"/></a></h3>
+        <p>Amount of deciseconds gained from the braindeath timer, usually by CPR.</p><h2 id="proc">Proc Details</h2><h3 id="proc/acid_spray_entered"><aside class="declaration">proc </aside>acid_spray_entered<aside>(/<a href="datum.html">datum</a>/source, /<a href="obj.html">obj</a>/<a href="obj/effect/xenomorph/spray.html">effect/xenomorph/spray</a>/acid_spray, acid_damage, slow_amt) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/effects/aliens.dm#L83">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;effects&#x2F;aliens.dm 83"/></a></aside>
+        </h3>
+        <p>Signal handler to burn and maybe stun the human entering the acid spray</p><h3 id="proc/do_unique_action"><aside class="declaration">proc </aside>do_unique_action<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/mob_helpers.dm#L496">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 496"/></a></aside>
+        </h3>
+        <p>Try to perform a unique action on the held items</p><h3 id="proc/get_eye_protection">get_eye_protection<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/human.dm#L789">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human.dm 789"/></a></aside>
+        </h3>
+        <p>get_eye_protection()
+Returns a number between -1 to 2</p><h3 id="proc/get_target_lock"><aside class="declaration">proc </aside>get_target_lock<aside>(/list/unique_access) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/human_defense.dm#L401">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defense.dm 401"/></a></aside>
+        </h3>
+        <p>This looks for a an ID on a person and checkes if an access tag from their ID matches the provided access tag. Used with the gun, claymore, sentry and possibly other IFF code.
+Does not actually check for station jobs.</p><h3 id="proc/get_type_in_slots"><aside class="declaration">proc </aside>get_type_in_slots<aside>(type_searched) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/inventory.dm#L543">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;inventory.dm 543"/></a></aside>
+        </h3>
+        <p>Return the first item found in SLOT_ALL of the type searched
+type searched the type you are looking for</p><h3 id="proc/getarmor_organ"><aside class="declaration">proc </aside>getarmor_organ<aside>(/<a href="datum.html">datum</a>/<a href="datum/limb.html">limb</a>/affected_limb, type) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/human_defense.dm#L100">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;human_defense.dm 100"/></a></aside>
+        </h3>
+        <p>This proc returns the armour value for a particular external organ.</p><h3 id="proc/is_item_in_hands"><aside class="declaration">proc </aside>is_item_in_hands<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/item_searched) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/inventory.dm#L553">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;inventory.dm 553"/></a></aside>
+        </h3>
+        <p>Return [TRUE]|[FALSE] if item_searched is in the hands of the human
+item_searched the item you want to check</p><h3 id="proc/is_item_in_slots"><aside class="declaration">proc </aside>is_item_in_slots<aside>(item_searched) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/human/inventory.dm#L533">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human&#x2F;inventory.dm 533"/></a></aside>
+        </h3>
+        <p>Return [TRUE]|[FALSE] if item_searched is equipped or in the hands of the human
+item_searched the item you want to check</p><h3 id="proc/oncritdrag"><aside class="declaration">proc </aside>oncritdrag<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/life.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;life.dm 48"/></a></aside>
+        </h3>
+        <p>gives humans oxy when dragged by a xeno, called on COMSIG_MOVABLE_PULL_MOVED</p><h3 id="proc/receive_order"><aside class="declaration">proc </aside>receive_order<aside>(/<a href="atom.html">atom</a>/target, arrow_type, verb_name) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/actions/order_action.dm#L73">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;actions&#x2F;order_action.dm 73"/></a></aside>
+        </h3>
+        <p>Proc to give a marine an order
+target : what atom to track
+arrow_type : what kind of visual arrow will be spawned on the marine
+verb_name : a word / sentence to describe the order</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

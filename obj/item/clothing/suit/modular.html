@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item&#x2F;clothing&#x2F;suit&#x2F;modular - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item/clothing/suit/modular.html#var">Var Details</a></header>
+<main>
+<h1>modular <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/clothing.html">clothing</a>/<a href="obj/item/clothing/suit/modular.html">suit/modular</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 12"/></a></h1>
+
+<p>Modular armor</p>
+<p>Modular armor consists of a a suit and helmet.
+The suit is able to have a storage, module, and 3x armor attachments (chest, arms, and legs)
+Helmets only have a single module slot.</p>
+<p>Suits have a single action, which is to toggle the flashlight.
+Helmets have diffrnet actions based on what module you have installed.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/allowed">allowed</a></th><td>What is allowed to be equipped in suit storage</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/equip_delay">equip_delay</a></th><td>How long it takes to attach or detach to this item</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/installed_modules">installed_modules</a></th><td>What modules are installed</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/installed_storage">installed_storage</a></th><td>What storage is installed</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/light_range">light_range</a></th><td>Misc stats</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/max_modules">max_modules</a></th><td>Installed modules
+How many modules you can have</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/slot_arms">slot_arms</a></th><td>Attachment slots for arm armor</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/slot_chest">slot_chest</a></th><td>Attachment slots for chest armor</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/slot_legs">slot_legs</a></th><td>Attachment slots for leg armor</td></tr>
+            <tr><th><a href="obj/item/clothing/suit/modular.html#var/storage">storage</a></th><td>Holder for the actual storage implementation</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/allowed">allowed
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L24">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 24"/></a></h3>
+        <p>What is allowed to be equipped in suit storage</p><h3 id="var/equip_delay"><aside class="declaration">var </aside>equip_delay
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L63">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 63"/></a></h3>
+        <p>How long it takes to attach or detach to this item</p><h3 id="var/installed_modules"><aside class="declaration">var </aside>installed_modules
+            <aside>&ndash; /list/obj/item/armor_module/attachable</aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 56"/></a></h3>
+        <p>What modules are installed</p><h3 id="var/installed_storage"><aside class="declaration">var </aside>installed_storage
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/armor_module.html">armor_module</a>/<a href="obj/item/armor_module/storage.html">storage</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L58">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 58"/></a></h3>
+        <p>What storage is installed</p><h3 id="var/light_range"><aside class="parent"><a title="/atom" href="atom.html#var/light_range">&uarr;</a></aside>light_range
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L66">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 66"/></a></h3>
+        <p>Misc stats</p><h3 id="var/max_modules"><aside class="declaration">var </aside>max_modules
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 54"/></a></h3>
+        <p>Installed modules
+How many modules you can have</p><h3 id="var/slot_arms"><aside class="declaration">var </aside>slot_arms
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/armor_module.html">armor_module</a>/<a href="obj/item/armor_module/armor.html">armor</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 48"/></a></h3>
+        <p>Attachment slots for arm armor</p><h3 id="var/slot_chest"><aside class="declaration">var </aside>slot_chest
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/armor_module.html">armor_module</a>/<a href="obj/item/armor_module/armor.html">armor</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L46">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 46"/></a></h3>
+        <p>Attachment slots for chest armor</p><h3 id="var/slot_legs"><aside class="declaration">var </aside>slot_legs
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/armor_module.html">armor_module</a>/<a href="obj/item/armor_module/armor.html">armor</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 50"/></a></h3>
+        <p>Attachment slots for leg armor</p><h3 id="var/storage"><aside class="declaration">var </aside>storage
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/storage.html">storage</a>/<a href="obj/item/storage/internal.html">internal</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/modular_armor/modular.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;modular_armor&#x2F;modular.dm 60"/></a></h3>
+        <p>Holder for the actual storage implementation</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;item - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/item.html#var">Var Details</a> - <a href="obj/item.html#proc">Proc Details</a></header>
+<main>
+<h1>item <aside>/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/item.html#var/attack_speed">attack_speed</a></th><td>Byond tick delay between left click attacks</td></tr>
+            <tr><th><a href="obj/item.html#var/attack_speed_alternate">attack_speed_alternate</a></th><td>Byond tick delay between right click alternate attacks</td></tr>
+            <tr><th><a href="obj/item.html#var/blood_sprite_state">blood_sprite_state</a></th><td>The iconstate that the items use for blood on blood.dmi when drawn on the mob.</td></tr>
+            <tr><th><a href="obj/item.html#var/default_worn_icon">default_worn_icon</a></th><td>icon equivalent but for on-mob icon.</td></tr>
+            <tr><th><a href="obj/item.html#var/icon_state_mini">icon_state_mini</a></th><td>The icon state used to represent this image in &quot;icons/obj/items/items_mini.dmi&quot; Used in /obj/item/storage/box/visual to display tiny items in the box</td></tr>
+            <tr><th><a href="obj/item.html#var/item_icons">item_icons</a></th><td></td></tr>
+            <tr><th><a href="obj/item.html#var/item_state_slots">item_state_slots</a></th><td></td></tr>
+            <tr><th><a href="obj/item.html#var/item_state_worn">item_state_worn</a></th><td>tells if the item shall use item_state for non-inhands, needed due to some items using item_state only for inhands and not worn.</td></tr>
+            <tr><th><a href="obj/item.html#var/worn_layer">worn_layer</a></th><td>specific layer for on-mob icon.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/item.html#proc/apply_accessories">apply_accessories</a></th><td>applies any accessory the item may have, called by make_worn_icon().</td></tr>
+            <tr><th><a href="obj/item.html#proc/apply_blood">apply_blood</a></th><td>applies blood on the item, called by make_worn_icon().</td></tr>
+            <tr><th><a href="obj/item.html#proc/apply_custom">apply_custom</a></th><td>applies any custom thing to the sprite, caled by make_worn_icon().</td></tr>
+            <tr><th><a href="obj/item.html#proc/attack_alternate">attack_alternate</a></th><td>attack_alternate</td></tr>
+            <tr><th><a href="obj/item.html#proc/get_worn_icon_file">get_worn_icon_file</a></th><td>gets what icon dmi file shall be used for the on-mob sprite</td></tr>
+            <tr><th><a href="obj/item.html#proc/get_worn_icon_state">get_worn_icon_state</a></th><td>Returns the state that should be used for the on-mob icon</td></tr>
+            <tr><th><a href="obj/item.html#proc/make_worn_icon">make_worn_icon</a></th><td>Generates worn icon for sprites on-mob.</td></tr>
+            <tr><th><a href="obj/item.html#proc/melee_attack_chain_alternate">melee_attack_chain_alternate</a></th><td>RIGHT CLICK CODE FROM HERE</td></tr>
+            <tr><th><a href="obj/item.html#proc/on_enter_storage">on_enter_storage</a></th><td>called when this item is added into a storage item, which is passed on as S. The loc variable is already set to the storage item.</td></tr>
+            <tr><th><a href="obj/item.html#proc/on_exit_storage">on_exit_storage</a></th><td>called when this item is removed from a storage item, which is passed on as S. The loc variable is already set to the new destination before this is called.</td></tr>
+            <tr><th><a href="obj/item.html#proc/on_found">on_found</a></th><td>called when &quot;found&quot; in pockets and storage items. Returns 1 if the search should end.</td></tr>
+            <tr><th><a href="obj/item.html#proc/on_pocket_insertion">on_pocket_insertion</a></th><td>things to do when an item is inserted in the obj's internal pocket</td></tr>
+            <tr><th><a href="obj/item.html#proc/on_pocket_removal">on_pocket_removal</a></th><td>things to do when an item is removed in the obj's internal pocket</td></tr>
+            <tr><th><a href="obj/item.html#proc/onunzoom">onunzoom</a></th><td>called when zoom is deactivated.</td></tr>
+            <tr><th><a href="obj/item.html#proc/onzoom">onzoom</a></th><td>called when zoom is activated.</td></tr>
+            <tr><th><a href="obj/item.html#proc/removed_from_inventory">removed_from_inventory</a></th><td>Called whenever an item is unequipped to a new loc (IE, not when the item ends up in the hands)</td></tr>
+            <tr><th><a href="obj/item.html#proc/toggle_item_bump_attack">toggle_item_bump_attack</a></th><td>Used to enable/disable an item's bump attack. Grouped in a proc to make sure the signal or flags aren't missed</td></tr>
+            <tr><th><a href="obj/item.html#proc/unequipped">unequipped</a></th><td>Called when an item is removed from an equipment slot. The loc should still be in the unequipper.</td></tr>
+            <tr><th><a href="obj/item.html#proc/unique_action">unique_action</a></th><td>Anything unique the item can do, like pumping a shotgun, spin or whatever.</td></tr>
+            <tr><th><a href="obj/item.html#proc/zoom_check_return">zoom_check_return</a></th><td>returns a bitflag when another item tries to zoom same user.</td></tr>
+            <tr><th><a href="obj/item.html#proc/zoom_item_turnoff">zoom_item_turnoff</a></th><td>Wrapper for signal turning scope off.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/attack_speed"><aside class="declaration">var </aside>attack_speed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 23"/></a></h3>
+        <p>Byond tick delay between left click attacks</p><h3 id="var/attack_speed_alternate"><aside class="declaration">var </aside>attack_speed_alternate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 25"/></a></h3>
+        <p>Byond tick delay between right click alternate attacks</p><h3 id="var/blood_sprite_state"><aside class="declaration">var </aside>blood_sprite_state
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 12"/></a></h3>
+        <p>The iconstate that the items use for blood on blood.dmi when drawn on the mob.</p><h3 id="var/default_worn_icon"><aside class="declaration">var </aside>default_worn_icon
+            <aside>&ndash; /icon</aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L91">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 91"/></a></h3>
+        <p>icon equivalent but for on-mob icon.</p><h3 id="var/icon_state_mini"><aside class="declaration">var </aside>icon_state_mini
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 19"/></a></h3>
+        <p>The icon state used to represent this image in &quot;icons/obj/items/items_mini.dmi&quot; Used in /obj/item/storage/box/visual to display tiny items in the box</p><h3 id="var/item_icons"><aside class="declaration">var </aside>item_icons
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L89">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 89"/></a></h3>
+        <blockquote>
+<p>LazyList&lt; Used to specify the icon file to be used when the item is worn in a certain slot. icon_override or sprite_sheets are set they will take precendence over this, assuming they apply to the slot in question.</p>
+</blockquote><h3 id="var/item_state_slots"><aside class="declaration">var </aside>item_state_slots
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L87">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 87"/></a></h3>
+        <blockquote>
+<p>Lazylist&lt; that overrides the default item_state for particular slots.</p>
+</blockquote><h3 id="var/item_state_worn"><aside class="declaration">var </aside>item_state_worn
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L95">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 95"/></a></h3>
+        <p>tells if the item shall use item_state for non-inhands, needed due to some items using item_state only for inhands and not worn.</p><h3 id="var/worn_layer"><aside class="declaration">var </aside>worn_layer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L93">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 93"/></a></h3>
+        <p>specific layer for on-mob icon.</p><h2 id="proc">Proc Details</h2><h3 id="proc/apply_accessories"><aside class="declaration">proc </aside>apply_accessories<aside>(/image/standing) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L1093">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1093"/></a></aside>
+        </h3>
+        <p>applies any accessory the item may have, called by make_worn_icon().</p><h3 id="proc/apply_blood"><aside class="declaration">proc </aside>apply_blood<aside>(/image/standing) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L1089">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1089"/></a></aside>
+        </h3>
+        <p>applies blood on the item, called by make_worn_icon().</p><h3 id="proc/apply_custom"><aside class="declaration">proc </aside>apply_custom<aside>(/image/standing) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L1085">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1085"/></a></aside>
+        </h3>
+        <p>applies any custom thing to the sprite, caled by make_worn_icon().</p><h3 id="proc/attack_alternate"><aside class="declaration">proc </aside>attack_alternate<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/M, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/_onclick/item_attack.dm#L233">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_onclick&#x2F;item_attack.dm 233"/></a></aside>
+        </h3>
+        <p>attack_alternate</p>
+<p>called when the a mob right click attacks on another mob with an item
+Arguments:
+M: the target being attacked
+user: the person clicking</p><h3 id="proc/get_worn_icon_file"><aside class="declaration">proc </aside>get_worn_icon_file<aside>(body_type, slot_name, default_icon, inhands) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L1040">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1040"/></a></aside>
+        </h3>
+        <p>gets what icon dmi file shall be used for the on-mob sprite</p><h3 id="proc/get_worn_icon_state"><aside class="declaration">proc </aside>get_worn_icon_state<aside>(slot_name, inhands) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L1068">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1068"/></a></aside>
+        </h3>
+        <p>Returns the state that should be used for the on-mob icon</p><h3 id="proc/make_worn_icon"><aside class="declaration">proc </aside>make_worn_icon<aside>(body_type, slot_name, inhands, default_icon, default_layer) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L1009">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 1009"/></a></aside>
+        </h3>
+        <p>Generates worn icon for sprites on-mob.</p><h3 id="proc/melee_attack_chain_alternate"><aside class="declaration">proc </aside>melee_attack_chain_alternate<aside>(/<a href="mob.html">mob</a>/user, /<a href="atom.html">atom</a>/target, params) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/_onclick/item_attack.dm#L197">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_onclick&#x2F;item_attack.dm 197"/></a></aside>
+        </h3>
+        <p>RIGHT CLICK CODE FROM HERE</p>
+<p>Most of this is basically whats above for left click but broken down, add more as needed
+A less complex version of melee_attack_chain, called when rightclicking with an item on something
+Arguments:
+user: mob attacking with this item
+target: atom being clicked on
+params: passed down params from Click()</p><h3 id="proc/on_enter_storage"><aside class="declaration">proc </aside>on_enter_storage<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/storage.html">storage</a>/S) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L294">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 294"/></a></aside>
+        </h3>
+        <p>called when this item is added into a storage item, which is passed on as S. The loc variable is already set to the storage item.</p><h3 id="proc/on_exit_storage"><aside class="declaration">proc </aside>on_exit_storage<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/storage.html">storage</a>/S) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L289">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 289"/></a></aside>
+        </h3>
+        <p>called when this item is removed from a storage item, which is passed on as S. The loc variable is already set to the new destination before this is called.</p><h3 id="proc/on_found"><aside class="declaration">proc </aside>on_found<aside>(/<a href="mob.html">mob</a>/finder) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L299">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 299"/></a></aside>
+        </h3>
+        <p>called when &quot;found&quot; in pockets and storage items. Returns 1 if the search should end.</p><h3 id="proc/on_pocket_insertion"><aside class="declaration">proc </aside>on_pocket_insertion<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items/storage/internal.dm#L131">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;storage&#x2F;internal.dm 131"/></a></aside>
+        </h3>
+        <p>things to do when an item is inserted in the obj's internal pocket</p><h3 id="proc/on_pocket_removal"><aside class="declaration">proc </aside>on_pocket_removal<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items/storage/internal.dm#L135">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items&#x2F;storage&#x2F;internal.dm 135"/></a></aside>
+        </h3>
+        <p>things to do when an item is removed in the obj's internal pocket</p><h3 id="proc/onunzoom"><aside class="declaration">proc </aside>onunzoom<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L760">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 760"/></a></aside>
+        </h3>
+        <p>called when zoom is deactivated.</p><h3 id="proc/onzoom"><aside class="declaration">proc </aside>onzoom<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L755">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 755"/></a></aside>
+        </h3>
+        <p>called when zoom is activated.</p><h3 id="proc/removed_from_inventory"><aside class="declaration">proc </aside>removed_from_inventory<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L256">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 256"/></a></aside>
+        </h3>
+        <p>Called whenever an item is unequipped to a new loc (IE, not when the item ends up in the hands)</p><h3 id="proc/toggle_item_bump_attack"><aside class="declaration">proc </aside>toggle_item_bump_attack<aside>(/<a href="mob.html">mob</a>/user, enable_bump_attack) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L367">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 367"/></a></aside>
+        </h3>
+        <p>Used to enable/disable an item's bump attack. Grouped in a proc to make sure the signal or flags aren't missed</p><h3 id="proc/unequipped"><aside class="declaration">proc </aside>unequipped<aside>(/<a href="mob.html">mob</a>/unequipper, slot) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L334">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 334"/></a></aside>
+        </h3>
+        <p>Called when an item is removed from an equipment slot. The loc should still be in the unequipper.</p><h3 id="proc/unique_action"><aside class="declaration">proc </aside>unique_action<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L360">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 360"/></a></aside>
+        </h3>
+        <p>Anything unique the item can do, like pumping a shotgun, spin or whatever.</p><h3 id="proc/zoom_check_return"><aside class="declaration">proc </aside>zoom_check_return<aside>(/<a href="datum.html">datum</a>/source) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L745">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 745"/></a></aside>
+        </h3>
+        <p>returns a bitflag when another item tries to zoom same user.</p><h3 id="proc/zoom_item_turnoff"><aside class="declaration">proc </aside>zoom_item_turnoff<aside>(/<a href="datum.html">datum</a>/source, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/objects/items.dm#L750">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;objects&#x2F;items.dm 750"/></a></aside>
+        </h3>
+        <p>Wrapper for signal turning scope off.</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

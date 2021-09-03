@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__HELPERS&#x2F;unsorted.dm - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__HELPERS/unsorted.html#define">Define Details</a></header>
+<main>
+<h1>code/__HELPERS/unsorted.dm 
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__HELPERS/unsorted.html#define/SIGN">SIGN</a></th><td>Gets the sign of x, returns -1 if negative, 0 if 0, 1 if positive</td></tr>
+        <tr><th>/proc/<a href="global.html#proc/can_see">can_see</a></th>
+                <td>Step-towards method of determining whether one atom can see another. Similar to viewers()</td></tr>
+        <tr><th>/proc/<a href="global.html#proc/dview">dview</a></th>
+                <td>Version of view() which ignores darkness, because BYOND doesn't have it (I actually suggested it but it was tagged redundant, BUT HEARERS IS A T- /rant).</td></tr>
+        <tr><th>/proc/<a href="global.html#proc/getpois">getpois</a></th>
+                <td>Returns a list of all items of interest with their name</td></tr>
+        <tr><th>/proc/<a href="global.html#proc/LeftAndRightOfDir">LeftAndRightOfDir</a></th>
+                <td>Returns the left and right dir of the input dir, used for AI stutter step while attacking</td></tr>
+        <tr><th>/proc/<a href="global.html#proc/get_areas">get_areas</a></th>
+                <td>Takes: Area type as text string or as typepath OR an instance of the area. Returns: A list of all areas of that type in the world.</td></tr>
+        <tr><th>/proc/<a href="global.html#proc/generate_cone">generate_cone</a></th>
+                <td>Generates a cone shape. Any other checks should be handled with the resulting list. Can work with up to 359 degrees
+Variables:
+center - where the cone begins, or center of a circle drawn with this
+max_row_count - how many rows are checked
+starting_row - from how far should the turfs start getting included in the cone
+cone_width - big the angle of the cone is
+cone_direction - at what angle should the cone be made, relative to the game board's orientation
+blocked - whether the cone should take into consideration solid walls</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/SIGN"><aside class="declaration">#define </aside>SIGN
+            <aside>(x)</aside>
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 27"/></a>
+    </h3>
+    <p>Gets the sign of x, returns -1 if negative, 0 if 0, 1 if positive</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

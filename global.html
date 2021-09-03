@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>(global) - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="global.html#var">Var Details</a> - <a href="global.html#proc">Proc Details</a></header>
+<main>
+<h1>(global)
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/(unknown)">
+        <img src="git.png" width="16" height="16" title="(unknown)"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="global.html#var/Failsafe">Failsafe</a></th><td>Failsafe</td></tr>
+            <tr><th><a href="global.html#var/Master">Master</a></th><td>StonedMC</td></tr>
+            <tr><th><a href="global.html#var/SSambience">SSambience</a></th><td>The subsystem used to play ambience to users every now and then, makes them real excited.</td></tr>
+            <tr><th><a href="global.html#var/SSautomatedfire">SSautomatedfire</a></th><td></td></tr>
+            <tr><th><a href="global.html#var/SSloopingsounds">SSloopingsounds</a></th><td></td></tr>
+            <tr><th><a href="global.html#var/SSminimaps">SSminimaps</a></th><td></td></tr>
+            <tr><th><a href="global.html#var/SSrunechat">SSrunechat</a></th><td></td></tr>
+            <tr><th><a href="global.html#var/SStgui">SStgui</a></th><td>tgui subsystem</td></tr>
+            <tr><th><a href="global.html#var/SStimer">SStimer</a></th><td></td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="global.html#proc/Gibberish">Gibberish</a></th><td>Turn text into complete gibberish!</td></tr>
+            <tr><th><a href="global.html#proc/LeftAndRightOfDir">LeftAndRightOfDir</a></th><td>Returns the left and right dir of the input dir, used for AI stutter step while attacking</td></tr>
+            <tr><th><a href="global.html#proc/_addtimer">_addtimer</a></th><td>Create a new timer and insert it in the queue.
+You should not call this directly, and should instead use the addtimer macro, which includes source information.</td></tr>
+            <tr><th><a href="global.html#proc/add_keybinding">add_keybinding</a></th><td>Adds an instanced keybinding to the global tracker</td></tr>
+            <tr><th><a href="global.html#proc/adminscrub">adminscrub</a></th><td>Runs STRIP_HTML_SIMPLE and byond's sanitization proc.</td></tr>
+            <tr><th><a href="global.html#proc/auxtools_expr_stub">auxtools_expr_stub</a></th><td>auxtools expression evaluation</td></tr>
+            <tr><th><a href="global.html#proc/buy_category">buy_category</a></th><td>Return true if you can buy this category, and also change the loadout seller buying bitfield</td></tr>
+            <tr><th><a href="global.html#proc/buy_item_in_vendor">buy_item_in_vendor</a></th><td>Return true if the item was found in a linked vendor and successfully bought</td></tr>
+            <tr><th><a href="global.html#proc/buy_stack">buy_stack</a></th><td>Check if that stack is buyable in a points vendor (currently, only metal, sandbags and plasteel)</td></tr>
+            <tr><th><a href="global.html#proc/can_buy_category">can_buy_category</a></th><td>Will check if the selected category can be bought according to the buying_bitfield</td></tr>
+            <tr><th><a href="global.html#proc/can_see">can_see</a></th><td>Step-towards method of determining whether one atom can see another. Similar to viewers()</td></tr>
+            <tr><th><a href="global.html#proc/can_sell_human_body">can_sell_human_body</a></th><td>Return TRUE if the relation between the two factions are bad enough that a bounty is on the human_to_sell head</td></tr>
+            <tr><th><a href="global.html#proc/cheap_get_humans_near">cheap_get_humans_near</a></th><td>Returns a list of humans via get_dist and same z level method, very cheap compared to range()</td></tr>
+            <tr><th><a href="global.html#proc/cheap_get_xenos_near">cheap_get_xenos_near</a></th><td>Returns a list of xenos via get_dist and same z level method, very cheap compared to range()</td></tr>
+            <tr><th><a href="global.html#proc/create_empty_loadout">create_empty_loadout</a></th><td>Return a new empty loayout</td></tr>
+            <tr><th><a href="global.html#proc/cultslur">cultslur</a></th><td>Makes you talk like you got cult stunned, which is slurring but with some dark messages</td></tr>
+            <tr><th><a href="global.html#proc/deadchat_broadcast">deadchat_broadcast</a></th><td>Displays a message in deadchat, sent by source. Source is not linkified, message is, to avoid stuff like character names to be linkified.
+Automatically gives the class deadsay to the whole message (message + source)</td></tr>
+            <tr><th><a href="global.html#proc/deltimer">deltimer</a></th><td>Delete a timer</td></tr>
+            <tr><th><a href="global.html#proc/dview">dview</a></th><td>Version of view() which ignores darkness, because BYOND doesn't have it (I actually suggested it but it was tagged redundant, BUT HEARERS IS A T- /rant).</td></tr>
+            <tr><th><a href="global.html#proc/emissive_appearance">emissive_appearance</a></th><td>Produces a mutable appearance glued to the <a href="code/__DEFINES/layers.html#define/EMISSIVE_PLANE" title="EMISSIVE_PLANE">EMISSIVE_PLANE</a> dyed to be the <a href="code/__DEFINES/lighting.html#define/EMISSIVE_COLOR" title="EMISSIVE_COLOR">EMISSIVE_COLOR</a>.</td></tr>
+            <tr><th><a href="global.html#proc/extend_line_to_radius">extend_line_to_radius</a></th><td>gets a line from a x and y, to the offset x and y of length radius</td></tr>
+            <tr><th><a href="global.html#proc/generate_asset_name">generate_asset_name</a></th><td>Generate a filename for this asset
+The same asset will always lead to the same asset name
+(Generated names do not include file extention.)</td></tr>
+            <tr><th><a href="global.html#proc/generate_cone">generate_cone</a></th><td>Generates a cone shape. Any other checks should be handled with the resulting list. Can work with up to 359 degrees
+Variables:
+center - where the cone begins, or center of a circle drawn with this
+max_row_count - how many rows are checked
+starting_row - from how far should the turfs start getting included in the cone
+cone_width - big the angle of the cone is
+cone_direction - at what angle should the cone be made, relative to the game board's orientation
+blocked - whether the cone should take into consideration solid walls</td></tr>
+            <tr><th><a href="global.html#proc/get_allowed_instrument_ids">get_allowed_instrument_ids</a></th><td>Get all non admin_only instruments as a list of text ids.</td></tr>
+            <tr><th><a href="global.html#proc/get_areas">get_areas</a></th><td>Takes: Area type as text string or as typepath OR an instance of the area. Returns: A list of all areas of that type in the world.</td></tr>
+            <tr><th><a href="global.html#proc/get_bbox_of_atoms">get_bbox_of_atoms</a></th><td>Get a bounding box of a list of atoms.</td></tr>
+            <tr><th><a href="global.html#proc/get_nearest_target">get_nearest_target</a></th><td>Returns the nearest target that has the right target flag</td></tr>
+            <tr><th><a href="global.html#proc/get_screen_size">get_screen_size</a></th><td>gets the current screen size as defined in config</td></tr>
+            <tr><th><a href="global.html#proc/get_turf_on_clickcatcher">get_turf_on_clickcatcher</a></th><td>Helper proc that processes a clicked target, if the target is not black tiles, it will not change it. If they are it will return the turf of the black tiles. It will return null if the object is a screen object other than black tiles.</td></tr>
+            <tr><th><a href="global.html#proc/get_view_center">get_view_center</a></th><td>Return the center turf of the user's view</td></tr>
+            <tr><th><a href="global.html#proc/get_wound_type">get_wound_type</a></th><td>WOUND DEFINITIONS</td></tr>
+            <tr><th><a href="global.html#proc/getpois">getpois</a></th><td>Returns a list of all items of interest with their name</td></tr>
+            <tr><th><a href="global.html#proc/getviewsize">getviewsize</a></th><td>the 3 directions in the direction on the cone that will be checked
+turfs that are checked whether the cone can continue further from them</td></tr>
+            <tr><th><a href="global.html#proc/give_free_headset">give_free_headset</a></th><td>Will give a headset corresponding to the user job to the user</td></tr>
+            <tr><th><a href="global.html#proc/handle_initial_squad">handle_initial_squad</a></th><td>A generic proc for handling the initial squad role assignment in SSjob</td></tr>
+            <tr><th><a href="global.html#proc/in_view_range">in_view_range</a></th><td>Returns TRUE if the atom is in the user view range.</td></tr>
+            <tr><th><a href="global.html#proc/init_emote_keybinds">init_emote_keybinds</a></th><td>Create a keybind for each datum/emote</td></tr>
+            <tr><th><a href="global.html#proc/init_keybindings">init_keybindings</a></th><td>Creates and sorts all the keybinding datums</td></tr>
+            <tr><th><a href="global.html#proc/is_handful_buyable">is_handful_buyable</a></th><td>Return TRUE if this handful should be buyable, aka if it's corresponding aka box is in a linked vendor</td></tr>
+            <tr><th><a href="global.html#proc/item2representation_type">item2representation_type</a></th><td>Return wich type of item_representation should representate any item_type</td></tr>
+            <tr><th><a href="global.html#proc/jatum_deserialize">jatum_deserialize</a></th><td>Attempt to create a value from a JATUN JSON.</td></tr>
+            <tr><th><a href="global.html#proc/jatum_serialize">jatum_serialize</a></th><td>Attempt to serialize a given value to the JATUM format.</td></tr>
+            <tr><th><a href="global.html#proc/json_deserialize_datum">json_deserialize_datum</a></th><td>Convert a list of json to datum</td></tr>
+            <tr><th><a href="global.html#proc/json_serialize_datum">json_serialize_datum</a></th><td>Convert a datum into a json blob</td></tr>
+            <tr><th><a href="global.html#proc/load_map">load_map</a></th><td>Shortcut function to parse a map and apply it to the world.</td></tr>
+            <tr><th><a href="global.html#proc/load_poll_data">load_poll_data</a></th><td>Loads all current and future server polls and their options to store both as datums.</td></tr>
+            <tr><th><a href="global.html#proc/log_tgui">log_tgui</a></th><td>Appends a tgui-related log entry. All arguments are optional.</td></tr>
+            <tr><th><a href="global.html#proc/make_datum_references_lists">make_datum_references_lists</a></th><td>Initial Building</td></tr>
+            <tr><th><a href="global.html#proc/md5asfile">md5asfile</a></th><td>Save file as an external file then md5 it.
+Used because md5ing files stored in the rsc sometimes gives incorrect md5 results.</td></tr>
+            <tr><th><a href="global.html#proc/md5filepath">md5filepath</a></th><td>Returns the md5 of a file at a given path.</td></tr>
+            <tr><th><a href="global.html#proc/message_to_html">message_to_html</a></th><td>Message-related procs</td></tr>
+            <tr><th><a href="global.html#proc/movespeed_data_null_check">movespeed_data_null_check</a></th><td>Checks if a move speed modifier is valid and not missing any data</td></tr>
+            <tr><th><a href="global.html#proc/playsound">playsound</a></th><td>*Proc used to play a sound.</td></tr>
+            <tr><th><a href="global.html#proc/playsound_z">playsound_z</a></th><td>Play sound for all online mobs on a given Z-level. Good for ambient sounds.</td></tr>
+            <tr><th><a href="global.html#proc/playsound_z_humans">playsound_z_humans</a></th><td>Play a sound for all cliented humans and ghosts by zlevel</td></tr>
+            <tr><th><a href="global.html#proc/playsound_z_xenos">playsound_z_xenos</a></th><td>Play a sound for all cliented xenos and ghosts by hive on a zlevel</td></tr>
+            <tr><th><a href="global.html#proc/pretty_string_from_reagent_list">pretty_string_from_reagent_list</a></th><td>Convert reagent list to a printable string for logging etc</td></tr>
+            <tr><th><a href="global.html#proc/propagate_network">propagate_network</a></th><td>remove the old powernet and replace it with a new one throughout the network.</td></tr>
+            <tr><th><a href="global.html#proc/qdel">qdel</a></th><td>Should be treated as a replacement for the 'del' keyword.</td></tr>
+            <tr><th><a href="global.html#proc/reject_bad_text">reject_bad_text</a></th><td>Returns the text if properly formatted, or null else.</td></tr>
+            <tr><th><a href="global.html#proc/remove_image_from_client">remove_image_from_client</a></th><td>Removes an image from a client's <code>.images</code>. Useful as a callback.</td></tr>
+            <tr><th><a href="global.html#proc/resin_silo_status_output">resin_silo_status_output</a></th><td>Relays health and location data about resin silos belonging to the same hive as the input user</td></tr>
+            <tr><th><a href="global.html#proc/rustg_get_version">rustg_get_version</a></th><td>Gets the version of rust_g</td></tr>
+            <tr><th><a href="global.html#proc/sanitize">sanitize</a></th><td>Runs byond's html encoding sanitization proc, after replacing new-lines and tabs for the # character.</td></tr>
+            <tr><th><a href="global.html#proc/sanitize_is_full_emote_list">sanitize_is_full_emote_list</a></th><td>Sanitize the custom emote list</td></tr>
+            <tr><th><a href="global.html#proc/send2adminchat">send2adminchat</a></th><td>Sends a message to TGS admin chat channels.</td></tr>
+            <tr><th><a href="global.html#proc/send2chat">send2chat</a></th><td>Sends a message to TGS chat channels.</td></tr>
+            <tr><th><a href="global.html#proc/slur">slur</a></th><td>Makes you speak like you're drunk</td></tr>
+            <tr><th><a href="global.html#proc/stars">stars</a></th><td>Convert random parts of a passed in message to stars</td></tr>
+            <tr><th><a href="global.html#proc/strip_html">strip_html</a></th><td>Runs STRIP_HTML_SIMPLE and sanitize.</td></tr>
+            <tr><th><a href="global.html#proc/stutter">stutter</a></th><td>Adds stuttering to the message passed in</td></tr>
+            <tr><th><a href="global.html#proc/tgalert">tgalert</a></th><td><strong>DEPRECATED: USE tgui_alert(...) INSTEAD</strong></td></tr>
+            <tr><th><a href="global.html#proc/tgui_Topic">tgui_Topic</a></th><td>Middleware for /client/Topic.</td></tr>
+            <tr><th><a href="global.html#proc/tgui_alert">tgui_alert</a></th><td>Creates a TGUI alert window and returns the user's response.</td></tr>
+            <tr><th><a href="global.html#proc/tgui_alert_async">tgui_alert_async</a></th><td>Creates an asynchronous TGUI alert window with an associated callback.</td></tr>
+            <tr><th><a href="global.html#proc/tgui_input_list">tgui_input_list</a></th><td>Creates a TGUI input list window and returns the user's response.</td></tr>
+            <tr><th><a href="global.html#proc/tgui_input_list_async">tgui_input_list_async</a></th><td>Creates an asynchronous TGUI input list window with an associated callback.</td></tr>
+            <tr><th><a href="global.html#proc/timeleft">timeleft</a></th><td>Get the remaining deciseconds on a timer</td></tr>
+            <tr><th><a href="global.html#proc/to_chat">to_chat</a></th><td>Sends the message to the recipient (target).</td></tr>
+            <tr><th><a href="global.html#proc/to_chat_immediate">to_chat_immediate</a></th><td>Circumvents the message queue and sends the message
+to the recipient (target) as soon as possible.</td></tr>
+            <tr><th><a href="global.html#proc/turf_block_check">turf_block_check</a></th><td>Return TRUE if we have a block, return FALSE otherwise</td></tr>
+            <tr><th><a href="global.html#proc/url2htmlloader">url2htmlloader</a></th><td>Return html to load a url.
+for use inside of browse() calls to html assets that might be loaded on a cdn.</td></tr>
+            <tr><th><a href="global.html#proc/xeno_message">xeno_message</a></th><td>Send a message to all xenos. Force forces the message whether or not the hivemind is intact. Target is an atom that is pointed out to the hive. Filter list is a list of xenos we don't message.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/Failsafe"><aside class="declaration">var </aside>Failsafe
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/controller/failsafe</aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/failsafe.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;failsafe.dm 7"/></a></h3>
+        <p>Failsafe</p>
+<p>Pretty much pokes the MC to make sure it's still alive.</p><h3 id="var/Master"><aside class="declaration">var </aside>Master
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/master.html">controller/master</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/master.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;master.dm 12"/></a></h3>
+        <p>StonedMC</p>
+<p>Designed to properly split up a given tick among subsystems
+Note: if you read parts of this code and think &quot;why is it doing it that way&quot;
+Odds are, there is a reason</p><h3 id="var/SSambience"><aside class="declaration">var </aside>SSambience
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/ambience.html">ambience</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/ambience.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;ambience.dm 2"/></a></h3>
+        <p>The subsystem used to play ambience to users every now and then, makes them real excited.</p><h3 id="var/SSautomatedfire"><aside class="declaration">var </aside>SSautomatedfire
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/automatedfire.html">automatedfire</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/autofire.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;autofire.dm 18"/></a></h3>
+        <h1 id="autofire-subsystem">Autofire Subsystem</h1>
+<p>Maintains a timer-like system to handle autofiring. Much of this code is modeled
+after or adapted from the runechat subsytem.</p>
+<p>Note that this has the same structure for storing and queueing shooter component as the timer subsystem does
+for handling timers: the bucket_list is a list of autofire component, each of which are the head
+of a linked list. Any given index in bucket_list could be null, representing an empty bucket.</p>
+<p>Doesn't support any event scheduled for more than 100 ticks in the future, as it has no secondary queue by design</p><h3 id="var/SSloopingsounds"><aside class="declaration">var </aside>SSloopingsounds
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/loopingsounds.html">loopingsounds</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/loopingsound.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;loopingsound.dm 11"/></a></h3>
+        <h1 id="looping-sound-subsystem">Looping sound Subsystem</h1>
+<p>Maintains a clientside-timer-like system to handle looping sounds.
+Looping sounds are binary inserted into [looping_sound_queue]
+Which is then checked against REALTIMEOFDAY for when to fire [/datum/looping_sound/proc/sound_loop()]</p><h3 id="var/SSminimaps"><aside class="declaration">var </aside>SSminimaps
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/minimaps.html">minimaps</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/minimaps.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;minimaps.dm 15"/></a></h3>
+        <h1 id="minimaps-subsystem">Minimaps subsystem</h1>
+<p>Handles updating and handling of the by-zlevel minimaps</p>
+<p>Minimaps are a low priority subsystem that fires relatively often
+the Initialize proc for this subsystem draws the maps as one of the last initializing subsystems</p>
+<p>Fire() for this subsystem doens't actually updates anything, and purely just reapplies the overlays that it already tracks
+actual updating of marker locations is handled by <a href="datum/controller/subsystem/minimaps.html#proc/on_move" title="/datum/controller/subsystem/minimaps">/datum/controller/subsystem/minimaps/proc/on_move</a>
+and zlevel changes are handled in <a href="datum/controller/subsystem/minimaps.html#proc/on_z_change" title="/datum/controller/subsystem/minimaps">/datum/controller/subsystem/minimaps/proc/on_z_change</a>
+tracking of the actual atoms you want to be drawn on is done by means of datums holding info pertaining to them with <a href="datum/hud_displays.html" title="/datum/hud_displays">/datum/hud_displays</a>
+There is a byond bug to be aware of when working with minimaps, see <a href="datum/hud_displays.html" title="/datum/hud_displays">/datum/hud_displays</a> and http://www.byond.com/forum/post/2661309</p><h3 id="var/SSrunechat"><aside class="declaration">var </aside>SSrunechat
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/runechat.html">runechat</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/runechat.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;runechat.dm 18"/></a></h3>
+        <h1 id="runechat-subsystem">Runechat Subsystem</h1>
+<p>Maintains a timer-like system to handle destruction of runechat messages. Much of this code is modeled
+after or adapted from the timer subsystem.</p>
+<p>Note that this has the same structure for storing and queueing messages as the timer subsystem does
+for handling timers: the bucket_list is a list of chatmessage datums, each of which are the head
+of a circularly linked list. Any given index in bucket_list could be null, representing an empty bucket.</p><h3 id="var/SStgui"><aside class="declaration">var </aside>SStgui
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/tgui.html">tgui</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/tgui.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;tgui.dm 13"/></a></h3>
+        <p>tgui subsystem</p>
+<p>Contains all tgui state and subsystem code.</p><h3 id="var/SStimer"><aside class="declaration">var </aside>SStimer
+            <aside>&ndash; /static/<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/timer.html">timer</a></aside>
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/timer.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;timer.dm 19"/></a></h3>
+        <h1 id="timer-subsystem">Timer Subsystem</h1>
+<p>Handles creation, callbacks, and destruction of timed events.</p>
+<p>It is important to understand the buckets used in the timer subsystem are just a series of circular doubly-linked
+lists. The object at a given index in bucket_list is a /datum/timedevent, the head of a circular list, which has prev
+and next references for the respective elements in that bucket's circular list.</p><h2 id="proc">Proc Details</h2><h3 id="proc/Gibberish"><aside class="declaration">proc </aside>Gibberish<aside>(text, replace_characters, chance) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/mob_helpers.dm#L259">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 259"/></a></aside>
+        </h3>
+        <p>Turn text into complete gibberish!</p>
+<p>text is the inputted message, replace_characters will cause original letters to be replaced and chance are the odds that a character gets modified.</p><h3 id="proc/LeftAndRightOfDir"><aside class="declaration">proc </aside>LeftAndRightOfDir<aside>(direction, diagonal_check) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm#L1119">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1119"/></a></aside>
+        </h3>
+        <p>Returns the left and right dir of the input dir, used for AI stutter step while attacking</p><h3 id="proc/_addtimer"><aside class="declaration">proc </aside>_addtimer<aside>(/<a href="datum.html">datum</a>/callback/callback, wait, flags, /<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/timer.html">timer</a>/timer_subsystem, file, line) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/timer.dm#L532">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;timer.dm 532"/></a></aside>
+        </h3>
+        <p>Create a new timer and insert it in the queue.
+You should not call this directly, and should instead use the addtimer macro, which includes source information.</p>
+<p>Arguments:</p>
+<ul>
+<li>callback the callback to call on timer finish</li>
+<li>wait deciseconds to run the timer for</li>
+<li>flags flags for this timer, see: code__DEFINES\subsystems.dm</li>
+</ul><h3 id="proc/add_keybinding"><aside class="declaration">proc </aside>add_keybinding<aside>(/<a href="datum.html">datum</a>/keybinding/instance) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/_globalvars/lists/keybinding.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_globalvars&#x2F;lists&#x2F;keybinding.dm 12"/></a></aside>
+        </h3>
+        <p>Adds an instanced keybinding to the global tracker</p><h3 id="proc/adminscrub"><aside class="declaration">proc </aside>adminscrub<aside>(text, limit) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/text.dm#L31">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 31"/></a></aside>
+        </h3>
+        <p>Runs STRIP_HTML_SIMPLE and byond's sanitization proc.</p><h3 id="proc/auxtools_expr_stub"><aside class="declaration">proc </aside>auxtools_expr_stub<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__DEFINES/spaceman_dmm.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;spaceman_dmm.dm 35"/></a></aside>
+        </h3>
+        <p>auxtools expression evaluation</p><h3 id="proc/buy_category"><aside class="declaration">proc </aside>buy_category<aside>(category, /<a href="datum.html">datum</a>/<a href="datum/loadout_seller.html">loadout_seller</a>/seller) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L135">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 135"/></a></aside>
+        </h3>
+        <p>Return true if you can buy this category, and also change the loadout seller buying bitfield</p><h3 id="proc/buy_item_in_vendor"><aside class="declaration">proc </aside>buy_item_in_vendor<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/item_to_buy_type, /<a href="datum.html">datum</a>/<a href="datum/loadout_seller.html">loadout_seller</a>/seller, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 10"/></a></aside>
+        </h3>
+        <p>Return true if the item was found in a linked vendor and successfully bought</p><h3 id="proc/buy_stack"><aside class="declaration">proc </aside>buy_stack<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/stack/stack_to_buy_type, /<a href="datum.html">datum</a>/<a href="datum/loadout_seller.html">loadout_seller</a>/seller, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/user, amount) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L59">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 59"/></a></aside>
+        </h3>
+        <p>Check if that stack is buyable in a points vendor (currently, only metal, sandbags and plasteel)</p><h3 id="proc/can_buy_category"><aside class="declaration">proc </aside>can_buy_category<aside>(category, buying_bitfield) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L128">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 128"/></a></aside>
+        </h3>
+        <p>Will check if the selected category can be bought according to the buying_bitfield</p><h3 id="proc/can_see"><aside class="declaration">proc </aside>can_see<aside>(/<a href="atom.html">atom</a>/source, /<a href="atom.html">atom</a>/target, length) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm#L521">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 521"/></a></aside>
+        </h3>
+        <p>Step-towards method of determining whether one atom can see another. Similar to viewers()</p><h3 id="proc/can_sell_human_body"><aside class="declaration">proc </aside>can_sell_human_body<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/human_to_sell, seller_faction) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/requisitions/supply_export.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;requisitions&#x2F;supply_export.dm 39"/></a></aside>
+        </h3>
+        <p>Return TRUE if the relation between the two factions are bad enough that a bounty is on the human_to_sell head</p><h3 id="proc/cheap_get_humans_near"><aside class="declaration">proc </aside>cheap_get_humans_near<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/source, distance) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/ai.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;ai.dm 5"/></a></aside>
+        </h3>
+        <p>Returns a list of humans via get_dist and same z level method, very cheap compared to range()</p><h3 id="proc/cheap_get_xenos_near"><aside class="declaration">proc </aside>cheap_get_xenos_near<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/source, distance) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/ai.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;ai.dm 14"/></a></aside>
+        </h3>
+        <p>Returns a list of xenos via get_dist and same z level method, very cheap compared to range()</p><h3 id="proc/create_empty_loadout"><aside class="declaration">proc </aside>create_empty_loadout<aside>(name, job) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 2"/></a></aside>
+        </h3>
+        <p>Return a new empty loayout</p><h3 id="proc/cultslur"><aside class="declaration">proc </aside>cultslur<aside>(phrase) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/mob_helpers.dm#L190">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 190"/></a></aside>
+        </h3>
+        <p>Makes you talk like you got cult stunned, which is slurring but with some dark messages</p><h3 id="proc/deadchat_broadcast"><aside class="declaration">proc </aside>deadchat_broadcast<aside>(message, source, /<a href="mob.html">mob</a>/follow_target, /<a href="turf.html">turf</a>/turf_target, speaker_key, message_type) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/mobs.dm#L181">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;mobs.dm 181"/></a></aside>
+        </h3>
+        <p>Displays a message in deadchat, sent by source. Source is not linkified, message is, to avoid stuff like character names to be linkified.
+Automatically gives the class deadsay to the whole message (message + source)</p><h3 id="proc/deltimer"><aside class="declaration">proc </aside>deltimer<aside>(id, /<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/timer.html">timer</a>/timer_subsystem) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/timer.dm#L583">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;timer.dm 583"/></a></aside>
+        </h3>
+        <p>Delete a timer</p>
+<p>Arguments:</p>
+<ul>
+<li>id a timerid or a /datum/timedevent</li>
+</ul><h3 id="proc/dview"><aside class="declaration">proc </aside>dview<aside>(range, center, invis_flags) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm#L976">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 976"/></a></aside>
+        </h3>
+        <p>Version of view() which ignores darkness, because BYOND doesn't have it (I actually suggested it but it was tagged redundant, BUT HEARERS IS A T- /rant).</p><h3 id="proc/emissive_appearance"><aside class="declaration">proc </aside>emissive_appearance<aside>(icon, icon_state, layer, alpha, appearance_flags) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/lighting.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;lighting.dm 2"/></a></aside>
+        </h3>
+        <p>Produces a mutable appearance glued to the <a href="code/__DEFINES/layers.html#define/EMISSIVE_PLANE" title="EMISSIVE_PLANE">EMISSIVE_PLANE</a> dyed to be the <a href="code/__DEFINES/lighting.html#define/EMISSIVE_COLOR" title="EMISSIVE_COLOR">EMISSIVE_COLOR</a>.</p><h3 id="proc/extend_line_to_radius"><aside class="declaration">proc </aside>extend_line_to_radius<aside>(delta_x, delta_y, radius, offset_x, offset_y) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/lighting/lighting_mask/shadow_calculator.dm#L674">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;lighting&#x2F;lighting_mask&#x2F;shadow_calculator.dm 674"/></a></aside>
+        </h3>
+        <p>gets a line from a x and y, to the offset x and y of length radius</p><h3 id="proc/generate_asset_name"><aside class="declaration">proc </aside>generate_asset_name<aside>(file) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/icons.dm#L941">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;icons.dm 941"/></a></aside>
+        </h3>
+        <p>Generate a filename for this asset
+The same asset will always lead to the same asset name
+(Generated names do not include file extention.)</p><h3 id="proc/generate_cone"><aside class="declaration">proc </aside>generate_cone<aside>(/<a href="atom.html">atom</a>/center, max_row_count, starting_row, cone_width, cone_direction, blocked) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm#L1166">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1166"/></a></aside>
+        </h3>
+        <p>Generates a cone shape. Any other checks should be handled with the resulting list. Can work with up to 359 degrees
+Variables:
+center - where the cone begins, or center of a circle drawn with this
+max_row_count - how many rows are checked
+starting_row - from how far should the turfs start getting included in the cone
+cone_width - big the angle of the cone is
+cone_direction - at what angle should the cone be made, relative to the game board's orientation
+blocked - whether the cone should take into consideration solid walls</p><h3 id="proc/get_allowed_instrument_ids"><aside class="declaration">proc </aside>get_allowed_instrument_ids<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/instruments/instrument_data/_instrument_data.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;instruments&#x2F;instrument_data&#x2F;_instrument_data.dm 4"/></a></aside>
+        </h3>
+        <p>Get all non admin_only instruments as a list of text ids.</p><h3 id="proc/get_areas"><aside class="declaration">proc </aside>get_areas<aside>(areatype, subtypes) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm#L1133">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1133"/></a></aside>
+        </h3>
+        <p>Takes: Area type as text string or as typepath OR an instance of the area. Returns: A list of all areas of that type in the world.</p><h3 id="proc/get_bbox_of_atoms"><aside class="declaration">proc </aside>get_bbox_of_atoms<aside>(/list/atoms) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/game.dm#L31">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;game.dm 31"/></a></aside>
+        </h3>
+        <p>Get a bounding box of a list of atoms.</p>
+<p>Arguments:</p>
+<ul>
+<li>atoms - List of atoms. Can accept output of view() and range() procs.</li>
+</ul>
+<p>Returns: list(x1, y1, x2, y2)</p><h3 id="proc/get_nearest_target"><aside class="declaration">proc </aside>get_nearest_target<aside>(/<a href="atom.html">atom</a>/source, distance, target_flags, attacker_faction, attacker_hive) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/ai.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;ai.dm 25"/></a></aside>
+        </h3>
+        <p>Returns the nearest target that has the right target flag</p><h3 id="proc/get_screen_size"><aside class="declaration">proc </aside>get_screen_size<aside>(widescreen) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/view.dm#L147">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;view.dm 147"/></a></aside>
+        </h3>
+        <p>gets the current screen size as defined in config</p><h3 id="proc/get_turf_on_clickcatcher"><aside class="declaration">proc </aside>get_turf_on_clickcatcher<aside>(/<a href="atom.html">atom</a>/target, /<a href="mob.html">mob</a>/user, params) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/projectiles/gun_helpers.dm#L400">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;projectiles&#x2F;gun_helpers.dm 400"/></a></aside>
+        </h3>
+        <p>Helper proc that processes a clicked target, if the target is not black tiles, it will not change it. If they are it will return the turf of the black tiles. It will return null if the object is a screen object other than black tiles.</p><h3 id="proc/get_view_center"><aside class="declaration">proc </aside>get_view_center<aside>(/<a href="mob.html">mob</a>/user) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/view.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;view.dm 21"/></a></aside>
+        </h3>
+        <p>Return the center turf of the user's view</p><h3 id="proc/get_wound_type"><aside class="declaration">proc </aside>get_wound_type<aside>(type, damage) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/organs/wound.dm#L224">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;organs&#x2F;wound.dm 224"/></a></aside>
+        </h3>
+        <p>WOUND DEFINITIONS</p><h3 id="proc/getpois"><aside class="declaration">proc </aside>getpois<aside>(mobs_only, skip_mindless, specify_dead_role) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/unsorted.dm#L1095">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;unsorted.dm 1095"/></a></aside>
+        </h3>
+        <p>Returns a list of all items of interest with their name</p><h3 id="proc/getviewsize"><aside class="declaration">proc </aside>getviewsize<aside>(view) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/view.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;view.dm 1"/></a></aside>
+        </h3>
+        <p>the 3 directions in the direction on the cone that will be checked
+turfs that are checked whether the cone can continue further from them</p><h3 id="proc/give_free_headset"><aside class="declaration">proc </aside>give_free_headset<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/user, faction) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L116">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 116"/></a></aside>
+        </h3>
+        <p>Will give a headset corresponding to the user job to the user</p><h3 id="proc/handle_initial_squad"><aside class="declaration">proc </aside>handle_initial_squad<aside>(/<a href="mob.html">mob</a>/<a href="mob/new_player.html">new_player</a>/player, /<a href="datum.html">datum</a>/<a href="datum/job.html">job</a>/job, latejoin, faction) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/jobs/squads.dm#L384">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;jobs&#x2F;squads.dm 384"/></a></aside>
+        </h3>
+        <p>A generic proc for handling the initial squad role assignment in SSjob</p><h3 id="proc/in_view_range"><aside class="declaration">proc </aside>in_view_range<aside>(/<a href="mob.html">mob</a>/user, /<a href="atom.html">atom</a>/A) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/view.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;view.dm 10"/></a></aside>
+        </h3>
+        <p>Returns TRUE if the atom is in the user view range.</p><h3 id="proc/init_emote_keybinds"><aside class="declaration">proc </aside>init_emote_keybinds<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/_globalvars/lists/keybinding.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_globalvars&#x2F;lists&#x2F;keybinding.dm 28"/></a></aside>
+        </h3>
+        <p>Create a keybind for each datum/emote</p><h3 id="proc/init_keybindings"><aside class="declaration">proc </aside>init_keybindings<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/_globalvars/lists/keybinding.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;_globalvars&#x2F;lists&#x2F;keybinding.dm 2"/></a></aside>
+        </h3>
+        <p>Creates and sorts all the keybinding datums</p><h3 id="proc/is_handful_buyable"><aside class="declaration">proc </aside>is_handful_buyable<aside>(ammo_type) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L105">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 105"/></a></aside>
+        </h3>
+        <p>Return TRUE if this handful should be buyable, aka if it's corresponding aka box is in a linked vendor</p><h3 id="proc/item2representation_type"><aside class="declaration">proc </aside>item2representation_type<aside>(item_type) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/loadout/loadout_helper.dm#L79">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;loadout&#x2F;loadout_helper.dm 79"/></a></aside>
+        </h3>
+        <p>Return wich type of item_representation should representate any item_type</p><h3 id="proc/jatum_deserialize"><aside class="declaration">proc </aside>jatum_deserialize<aside>(json) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/jatum.dm#L144">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;jatum.dm 144"/></a></aside>
+        </h3>
+        <p>Attempt to create a value from a JATUN JSON.</p>
+<ul>
+<li>json - The JSON to deserialize.</li>
+</ul><h3 id="proc/jatum_serialize"><aside class="declaration">proc </aside>jatum_serialize<aside>(value) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/jatum.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;jatum.dm 17"/></a></aside>
+        </h3>
+        <p>Attempt to serialize a given value to the JATUM format.</p>
+<ul>
+<li>value - The var to serialize.</li>
+</ul><h3 id="proc/json_deserialize_datum"><aside class="declaration">proc </aside>json_deserialize_datum<aside>(/list/jsonlist, /list/options, target_type, strict_target_type) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/datum.dm#L206">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datum.dm 206"/></a></aside>
+        </h3>
+        <p>Convert a list of json to datum</p><h3 id="proc/json_serialize_datum"><aside class="declaration">proc </aside>json_serialize_datum<aside>(/<a href="datum.html">datum</a>/D, /list/options) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/datum.dm#L197">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;datum.dm 197"/></a></aside>
+        </h3>
+        <p>Convert a datum into a json blob</p><h3 id="proc/load_map"><aside class="declaration">proc </aside>load_map<aside>(dmm_file, x_offset, y_offset, z_offset, cropMap, measureOnly, no_changeturf, x_lower, x_upper, y_lower, y_upper, placeOnTop) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mapping/reader.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mapping&#x2F;reader.dm 44"/></a></aside>
+        </h3>
+        <p>Shortcut function to parse a map and apply it to the world.</p>
+<ul>
+<li><code>dmm_file</code>: A .dmm file to load (Required).</li>
+<li><code>x_offset</code>, <code>y_offset</code>, <code>z_offset</code>: Positions representign where to load the map (Optional).</li>
+<li><code>cropMap</code>: When true, the map will be cropped to fit the existing world dimensions (Optional).</li>
+<li><code>measureOnly</code>: When true, no changes will be made to the world (Optional).</li>
+<li><code>no_changeturf</code>: When true, <a href="turf.html" title="/turf">turf/AfterChange</a> won't be called on loaded turfs</li>
+<li><code>x_lower</code>, <code>x_upper</code>, <code>y_lower</code>, <code>y_upper</code>: Coordinates (relative to the map) to crop to (Optional).</li>
+<li><code>placeOnTop</code>: Whether to use <a href="turf.html" title="/turf">turf/PlaceOnTop</a> rather than <a href="turf.html" title="/turf">turf/ChangeTurf</a> (Optional).</li>
+</ul><h3 id="proc/load_poll_data"><aside class="declaration">proc </aside>load_poll_data<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/admin/verbs/poll_managment.dm#L696">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;admin&#x2F;verbs&#x2F;poll_managment.dm 696"/></a></aside>
+        </h3>
+        <p>Loads all current and future server polls and their options to store both as datums.</p><h3 id="proc/log_tgui"><aside class="declaration">proc </aside>log_tgui<aside>(user, message, context, /<a href="datum.html">datum</a>/<a href="datum/tgui_window.html">tgui_window</a>/window, /<a href="datum.html">datum</a>/src_object) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/_logging.dm#L213">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;_logging.dm 213"/></a></aside>
+        </h3>
+        <p>Appends a tgui-related log entry. All arguments are optional.</p><h3 id="proc/make_datum_references_lists"><aside class="declaration">proc </aside>make_datum_references_lists<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/global_lists.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;global_lists.dm 17"/></a></aside>
+        </h3>
+        <p>Initial Building</p><h3 id="proc/md5asfile"><aside class="declaration">proc </aside>md5asfile<aside>(file) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/files.dm#L81">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;files.dm 81"/></a></aside>
+        </h3>
+        <p>Save file as an external file then md5 it.
+Used because md5ing files stored in the rsc sometimes gives incorrect md5 results.</p><h3 id="proc/md5filepath"><aside class="declaration">proc </aside>md5filepath<aside>(path) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/files.dm#L76">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;files.dm 76"/></a></aside>
+        </h3>
+        <p>Returns the md5 of a file at a given path.</p><h3 id="proc/message_to_html"><aside class="declaration">proc </aside>message_to_html<aside>(message) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgchat/message.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgchat&#x2F;message.dm 14"/></a></aside>
+        </h3>
+        <p>Message-related procs</p>
+<p>Message format (/list):</p>
+<ul>
+<li>type - Message type, must be one of defines in <code>code/__DEFINES/chat.dm</code></li>
+<li>text - Plain message text</li>
+<li>html - HTML message text</li>
+<li>Optional metadata, can be any key/value pair.</li>
+</ul>
+<p>Copyright (c) 2020 Aleksej Komarov
+SPDX-License-Identifier: MIT</p><h3 id="proc/movespeed_data_null_check"><aside class="declaration">proc </aside>movespeed_data_null_check<aside>(/list/data) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/mob_movespeed.dm#L143">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movespeed.dm 143"/></a></aside>
+        </h3>
+        <p>Checks if a move speed modifier is valid and not missing any data</p><h3 id="proc/playsound"><aside class="declaration">proc </aside>playsound<aside>(/<a href="atom.html">atom</a>/source, soundin, vol, vary, sound_range, falloff, is_global, frequency, channel) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/sound.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;sound.dm 11"/></a></aside>
+        </h3>
+        <p>*Proc used to play a sound.</p>
+<ul>
+<li>Arguments:</li>
+<li>
+<ul>
+<li>source: what played the sound.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>soundin: the .ogg to use.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>vol: the initial volume of the sound, 0 is no sound at all, 75 is loud queen screech.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>vary: to make the frequency var of the sound vary (mostly unused).</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>sound_range: the maximum theoretical range (in tiles) of the sound, by default is equal to the volume.</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>falloff: how the sound's volume decreases with distance, low is fast decrease and high is slow decrease. <br />
+A good representation is: 'byond applies a volume reduction to the sound every X tiles', where X is falloff.</li>
+</ul>
+</li>
+</ul><h3 id="proc/playsound_z"><aside class="declaration">proc </aside>playsound_z<aside>(z, soundin, _volume) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/sound.dm#L146">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;sound.dm 146"/></a></aside>
+        </h3>
+        <p>Play sound for all online mobs on a given Z-level. Good for ambient sounds.</p><h3 id="proc/playsound_z_humans"><aside class="declaration">proc </aside>playsound_z_humans<aside>(z, soundin, _volume) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/sound.dm#L155">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;sound.dm 155"/></a></aside>
+        </h3>
+        <p>Play a sound for all cliented humans and ghosts by zlevel</p><h3 id="proc/playsound_z_xenos"><aside class="declaration">proc </aside>playsound_z_xenos<aside>(z, soundin, _volume, hive_type) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/game/sound.dm#L165">
+        <img src="git.png" width="16" height="16" title="code&#x2F;game&#x2F;sound.dm 165"/></a></aside>
+        </h3>
+        <p>Play a sound for all cliented xenos and ghosts by hive on a zlevel</p><h3 id="proc/pretty_string_from_reagent_list"><aside class="declaration">proc </aside>pretty_string_from_reagent_list<aside>(/list/reagent_list) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/reagents/reagents.dm#L172">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;reagents&#x2F;reagents.dm 172"/></a></aside>
+        </h3>
+        <p>Convert reagent list to a printable string for logging etc</p><h3 id="proc/propagate_network"><aside class="declaration">proc </aside>propagate_network<aside>(/<a href="obj.html">obj</a>/<a href="obj/structure/cable.html">structure/cable</a>/C, /<a href="datum.html">datum</a>/powernet/PN, skip_assigned_powernets) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/power/power.dm#L152">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;power&#x2F;power.dm 152"/></a></aside>
+        </h3>
+        <p>remove the old powernet and replace it with a new one throughout the network.</p><h3 id="proc/qdel"><aside class="declaration">proc </aside>qdel<aside>(/<a href="datum.html">datum</a>/D, force, ...) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/garbage.dm#L314">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;garbage.dm 314"/></a></aside>
+        </h3>
+        <p>Should be treated as a replacement for the 'del' keyword.</p>
+<p>Datums passed to this will be given a chance to clean up references to allow the GC to collect them.</p><h3 id="proc/reject_bad_text"><aside class="declaration">proc </aside>reject_bad_text<aside>(text, max_length, ascii_only) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/text.dm#L45">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 45"/></a></aside>
+        </h3>
+        <p>Returns the text if properly formatted, or null else.</p>
+<p>Things considered improper:</p>
+<ul>
+<li>Larger than max_length.</li>
+<li>Presence of non-ASCII characters if asci_only is set to TRUE.</li>
+<li>Only whitespaces, tabs and/or line breaks in the text.</li>
+<li>Presence of the &lt;, &gt;, \ and / characters.</li>
+<li>Presence of ASCII special control characters (horizontal tab and new line not included).</li>
+</ul><h3 id="proc/remove_image_from_client"><aside class="declaration">proc </aside>remove_image_from_client<aside>(/image/image, /<a href="client.html">client</a>/remove_from) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/game.dm#L121">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;game.dm 121"/></a></aside>
+        </h3>
+        <p>Removes an image from a client's <code>.images</code>. Useful as a callback.</p><h3 id="proc/resin_silo_status_output"><aside class="declaration">proc </aside>resin_silo_status_output<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/xenomorph.html">xenomorph</a>/user, /<a href="datum.html">datum</a>/<a href="datum/hive_status.html">hive_status</a>/hive) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/xenomorph/xenoprocs.dm#L60">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;xenoprocs.dm 60"/></a></aside>
+        </h3>
+        <p>Relays health and location data about resin silos belonging to the same hive as the input user</p><h3 id="proc/rustg_get_version"><aside class="declaration">proc </aside>rustg_get_version<aside>() 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__DEFINES/rust_g.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;rust_g.dm 42"/></a></aside>
+        </h3>
+        <p>Gets the version of rust_g</p><h3 id="proc/sanitize"><aside class="declaration">proc </aside>sanitize<aside>(text) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/text.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 20"/></a></aside>
+        </h3>
+        <p>Runs byond's html encoding sanitization proc, after replacing new-lines and tabs for the # character.</p><h3 id="proc/sanitize_is_full_emote_list"><aside class="declaration">proc </aside>sanitize_is_full_emote_list<aside>(value) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/sanitize_values.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;sanitize_values.dm 29"/></a></aside>
+        </h3>
+        <p>Sanitize the custom emote list</p><h3 id="proc/send2adminchat"><aside class="declaration">proc </aside>send2adminchat<aside>(category, message) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/chat.dm#L69">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;chat.dm 69"/></a></aside>
+        </h3>
+        <p>Sends a message to TGS admin chat channels.</p>
+<p>category - The category of the mssage.
+message - The message to send.</p><h3 id="proc/send2chat"><aside class="declaration">proc </aside>send2chat<aside>(message, channel_tag) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/chat.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;chat.dm 44"/></a></aside>
+        </h3>
+        <p>Sends a message to TGS chat channels.</p>
+<p>message - The message to send.
+channel_tag - Required. If &quot;&quot;, the message with be sent to all connected (Game-type for TGS3) channels. Otherwise, it will be sent to TGS4 channels with that tag (Delimited by ','s).</p><h3 id="proc/slur"><aside class="declaration">proc </aside>slur<aside>(phrase) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/mob_helpers.dm#L154">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 154"/></a></aside>
+        </h3>
+        <p>Makes you speak like you're drunk</p><h3 id="proc/stars"><aside class="declaration">proc </aside>stars<aside>(phrase, probability) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/mob_helpers.dm#L136">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 136"/></a></aside>
+        </h3>
+        <p>Convert random parts of a passed in message to stars</p>
+<ul>
+<li>phrase - the string to convert</li>
+<li>probability - probability any character gets changed</li>
+</ul>
+<p>This proc is dangerously laggy, avoid it or die</p><h3 id="proc/strip_html"><aside class="declaration">proc </aside>strip_html<aside>(text, limit) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/text.dm#L26">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;text.dm 26"/></a></aside>
+        </h3>
+        <p>Runs STRIP_HTML_SIMPLE and sanitize.</p><h3 id="proc/stutter"><aside class="declaration">proc </aside>stutter<aside>(phrase) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/mob_helpers.dm#L233">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;mob_helpers.dm 233"/></a></aside>
+        </h3>
+        <p>Adds stuttering to the message passed in</p><h3 id="proc/tgalert"><aside class="declaration">proc </aside>tgalert<aside>(/<a href="mob.html">mob</a>/User, Message, Title, Button1, Button2, Button3, StealFocus, Timeout) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/datums/browser.dm#L190">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;browser.dm 190"/></a></aside>
+        </h3>
+        <p><strong>DEPRECATED: USE tgui_alert(...) INSTEAD</strong></p>
+<p>Designed as a drop in replacement for alert(); functions the same. (outside of needing User specified)
+Arguments:</p>
+<ul>
+<li>User - The user to show the alert to.</li>
+<li>Message - The textual body of the alert.</li>
+<li>Title - The title of the alert's window.</li>
+<li>Button1 - The first button option.</li>
+<li>Button2 - The second button option.</li>
+<li>Button3 - The third button option.</li>
+<li>StealFocus - Boolean operator controlling if the alert will steal the user's window focus.</li>
+<li>Timeout - The timeout of the window, after which no responses will be valid.</li>
+</ul><h3 id="proc/tgui_Topic"><aside class="declaration">proc </aside>tgui_Topic<aside>(href_list) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgui/external.dm#L172">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;external.dm 172"/></a></aside>
+        </h3>
+        <p>Middleware for /client/Topic.</p>
+<p>return bool If TRUE, prevents propagation of the topic call.</p><h3 id="proc/tgui_alert"><aside class="declaration">proc </aside>tgui_alert<aside>(/<a href="mob.html">mob</a>/user, message, title, /list/buttons, timeout, autofocus) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgui/tgui_alert.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;tgui_alert.dm 13"/></a></aside>
+        </h3>
+        <p>Creates a TGUI alert window and returns the user's response.</p>
+<p>This proc should be used to create alerts that the caller will wait for a response from.
+Arguments:</p>
+<ul>
+<li>user - The user to show the alert to.</li>
+<li>message - The content of the alert, shown in the body of the TGUI window.</li>
+<li>title - The of the alert modal, shown on the top of the TGUI window.</li>
+<li>buttons - The options that can be chosen by the user, each string is assigned a button on the UI.</li>
+<li>timeout - The timeout of the alert, after which the modal will close and qdel itself. Set to zero for no timeout.</li>
+<li>autofocus - The bool that controls if this alert should grab window focus.</li>
+</ul><h3 id="proc/tgui_alert_async"><aside class="declaration">proc </aside>tgui_alert_async<aside>(/<a href="mob.html">mob</a>/user, message, title, /list/buttons, /<a href="datum.html">datum</a>/callback/callback, timeout, autofocus) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgui/tgui_alert.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;tgui_alert.dm 42"/></a></aside>
+        </h3>
+        <p>Creates an asynchronous TGUI alert window with an associated callback.</p>
+<p>This proc should be used to create alerts that invoke a callback with the user's chosen option.
+Arguments:</p>
+<ul>
+<li>user - The user to show the alert to.</li>
+<li>message - The content of the alert, shown in the body of the TGUI window.</li>
+<li>title - The of the alert modal, shown on the top of the TGUI window.</li>
+<li>buttons - The options that can be chosen by the user, each string is assigned a button on the UI.</li>
+<li>callback - The callback to be invoked when a choice is made.</li>
+<li>timeout - The timeout of the alert, after which the modal will close and qdel itself. Set to zero for no timeout.</li>
+<li>autofocus - The bool that controls if this alert should grab window focus.</li>
+</ul><h3 id="proc/tgui_input_list"><aside class="declaration">proc </aside>tgui_input_list<aside>(/<a href="mob.html">mob</a>/user, message, title, /list/buttons, timeout) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgui/tgui_input_list.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;tgui_input_list.dm 12"/></a></aside>
+        </h3>
+        <p>Creates a TGUI input list window and returns the user's response.</p>
+<p>This proc should be used to create alerts that the caller will wait for a response from.
+Arguments:</p>
+<ul>
+<li>user - The user to show the input box to.</li>
+<li>message - The content of the input box, shown in the body of the TGUI window.</li>
+<li>title - The title of the input box, shown on the top of the TGUI window.</li>
+<li>buttons - The options that can be chosen by the user, each string is assigned a button on the UI.</li>
+<li>timeout - The timeout of the input box, after which the input box will close and qdel itself. Set to zero for no timeout.</li>
+</ul><h3 id="proc/tgui_input_list_async"><aside class="declaration">proc </aside>tgui_input_list_async<aside>(/<a href="mob.html">mob</a>/user, message, title, /list/buttons, /<a href="datum.html">datum</a>/callback/callback, timeout) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgui/tgui_input_list.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgui&#x2F;tgui_input_list.dm 42"/></a></aside>
+        </h3>
+        <p>Creates an asynchronous TGUI input list window with an associated callback.</p>
+<p>This proc should be used to create inputs that invoke a callback with the user's chosen option.
+Arguments:</p>
+<ul>
+<li>user - The user to show the input box to.</li>
+<li>message - The content of the input box, shown in the body of the TGUI window.</li>
+<li>title - The title of the input box, shown on the top of the TGUI window.</li>
+<li>buttons - The options that can be chosen by the user, each string is assigned a button on the UI.</li>
+<li>callback - The callback to be invoked when a choice is made.</li>
+<li>timeout - The timeout of the input box, after which the menu will close and qdel itself. Set to zero for no timeout.</li>
+</ul><h3 id="proc/timeleft"><aside class="declaration">proc </aside>timeleft<aside>(id, /<a href="datum.html">datum</a>/<a href="datum/controller/subsystem.html">controller/subsystem</a>/<a href="datum/controller/subsystem/timer.html">timer</a>/timer_subsystem) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/controllers/subsystem/timer.dm#L605">
+        <img src="git.png" width="16" height="16" title="code&#x2F;controllers&#x2F;subsystem&#x2F;timer.dm 605"/></a></aside>
+        </h3>
+        <p>Get the remaining deciseconds on a timer</p>
+<p>Arguments:</p>
+<ul>
+<li>id a timerid or a /datum/timedevent</li>
+</ul><h3 id="proc/to_chat"><aside class="declaration">proc </aside>to_chat<aside>(target, html, type, text, avoid_highlighting, handle_whitespace, trailing_newline, confidential) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgchat/to_chat.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgchat&#x2F;to_chat.dm 56"/></a></aside>
+        </h3>
+        <p>Sends the message to the recipient (target).</p>
+<p>Recommended way to write to_chat calls:</p>
+<pre><code>to_chat(client,
+    type = MESSAGE_TYPE_INFO,
+    html = &quot;You have found &lt;strong&gt;[object]&lt;/strong&gt;&quot;)
+</code></pre><h3 id="proc/to_chat_immediate"><aside class="declaration">proc </aside>to_chat_immediate<aside>(target, html, type, text, avoid_highlighting, handle_whitespace, trailing_newline, confidential) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/tgchat/to_chat.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;tgchat&#x2F;to_chat.dm 10"/></a></aside>
+        </h3>
+        <p>Circumvents the message queue and sends the message
+to the recipient (target) as soon as possible.</p><h3 id="proc/turf_block_check"><aside class="declaration">proc </aside>turf_block_check<aside>(/<a href="atom.html">atom</a>/subject, /<a href="atom.html">atom</a>/target, ignore_can_pass, ignore_density, ignore_closed_turf, ignore_invulnerable, ignore_objects, ignore_mobs, ignore_space) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/xenomorph/castes/wraith/abilities_wraith.dm#L739">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;castes&#x2F;wraith&#x2F;abilities_wraith.dm 739"/></a></aside>
+        </h3>
+        <p>Return TRUE if we have a block, return FALSE otherwise</p><h3 id="proc/url2htmlloader"><aside class="declaration">proc </aside>url2htmlloader<aside>(url) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/__HELPERS/type2type.dm#L381">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__HELPERS&#x2F;type2type.dm 381"/></a></aside>
+        </h3>
+        <p>Return html to load a url.
+for use inside of browse() calls to html assets that might be loaded on a cdn.</p><h3 id="proc/xeno_message"><aside class="declaration">proc </aside>xeno_message<aside>(message, span_class, size, hivenumber, force, /<a href="atom.html">atom</a>/target, sound, apply_preferences, filter_list, arrow_type, arrow_color, report_distance) 
+        
+    
+            <a href="https://github.com/tgstation/TerraGov-Marine-Corps/blob/77014ea7a98eeea703f8a92bcf7c254a47a7f612/code/modules/mob/living/carbon/xenomorph/xenoprocs.dm#L185">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;xenoprocs.dm 185"/></a></aside>
+        </h3>
+        <p>Send a message to all xenos. Force forces the message whether or not the hivemind is intact. Target is an atom that is pointed out to the hive. Filter list is a list of xenos we don't message.</p></main>
+<footer>
+    tgmc.dme
+    <a href="https://github.com/tgstation/TerraGov-Marine-Corps/tree/77014ea7a98eeea703f8a92bcf7c254a47a7f612">77014ea</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>
