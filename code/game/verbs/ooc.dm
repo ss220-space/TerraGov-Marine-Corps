@@ -18,8 +18,8 @@
 
 	if(!msg)
 		return
-	// if(NON_ASCII_CHECK(msg))
-	// 	return
+	if(NON_ASCII_CYRILLIC_CHECK(msg))
+		return
 
 	msg = emoji_parse(msg)
 
@@ -137,8 +137,8 @@
 
 	if(!msg)
 		return
-	// if(NON_ASCII_CHECK(msg))
-	// 	return
+	if(NON_ASCII_CYRILLIC_CHECK(msg))
+		return
 
 	msg = emoji_parse(msg)
 
@@ -231,8 +231,8 @@
 
 	if(!msg)
 		return
-	// if(NON_ASCII_CHECK(msg))
-	// 	return
+	if(NON_ASCII_CYRILLIC_CHECK(msg))
+		return
 
 	msg = emoji_parse(msg)
 
