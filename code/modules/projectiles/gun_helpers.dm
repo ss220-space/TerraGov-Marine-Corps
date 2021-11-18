@@ -324,7 +324,7 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 	if(!length(gun_firemode_list))
 		CRASH("[src] called do_toggle_firemode() with an empty gun_firemode_list")
 
-	if(length(gun_firemode) == 1)
+	if(length_char(gun_firemode) == 1)
 		return
 
 	if(new_firemode)
