@@ -68,7 +68,7 @@
 		if(!new_key)
 			return
 		if(length(new_key) >= 26)
-			new_key = copytext(new_key, 1, 26)
+			new_key = copytext_char(new_key, 1, 26)
 		M.client.holder.fakekey = new_key
 		M.client.create_stealth_key()
 
@@ -321,13 +321,13 @@
 
 	var/files = flist(folder)
 	for(var/next in files)
-		if(copytext(next, -1, 0) == "/")
+		if(copytext_char(next, -1, 0) == "/")
 			to_chat(usr, "Going deeper: [folder][next]")
 			usr.client.holder.recursive_download(folder + next)
 		else
 			log_admin("[key_name(usr)] accessed file: [folder][next].")
 			to_chat(usr, "Downloading: [folder][next]")
-			var/fil = replacetext("[folder][next]", "/", "_")
+			var/fil = replacetext_char("[folder][next]", "/", "_")
 			usr << ftp(file(folder + next), fil)
 
 
@@ -349,7 +349,7 @@
 				continue
 		path += choice
 
-		if(copytext(path, -1, 0) != "/")		//didn't choose a directory, no need to iterate again
+		if(copytext_char(path, -1, 0) != "/")		//didn't choose a directory, no need to iterate again
 			return FALSE
 
 		switch(alert("Is this the folder you want to download?:", "Server Logs", "Yes", "No", "Cancel"))
@@ -388,7 +388,7 @@
 			extensions += "|"
 		extensions += "[i]"
 	var/regex/valid_ext = new("\\.([extensions])$", "i")
-	if(!fexists(path) || !(valid_ext.Find(path)))
+	if(!fexists(path) || !(valid_ext.Find_char(path)))
 		return FALSE
 
 	return path
@@ -1096,7 +1096,7 @@
 	var/datum/admin_help/ticket = C ? C.current_ticket : GLOB.ahelp_tickets.CKey2ActiveTicket(target)
 	var/compliant_msg = trim(lowertext(msg))
 	var/tgs_tagged = "[sender](TGS/External)"
-	var/list/splits = splittext(compliant_msg, " ")
+	var/list/splits = splittext_char(compliant_msg, " ")
 	if(length(splits) && splits[1] == "ticket")
 		if(length(splits) < 2)
 			return IRC_AHELP_USAGE
