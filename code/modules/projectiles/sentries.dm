@@ -187,7 +187,7 @@
 	else
 		rounds_max = gun.current_mag ? gun.current_mag.max_rounds : gun.max_shells
 	. = list(
-		"name" = copytext(name, 2),
+		"name" = copytext_char(name, 2),
 		"rounds_max" = rounds_max,
 		"fire_mode" = gun.gun_firemode,
 		"has_cell" = (gun.sentry_battery ? 1 : 0),
