@@ -4,18 +4,22 @@
 
 #define MODE_R_HAND "right hand"
 #define MODE_KEY_R_HAND "r"
+#define MODE_KEY_R_HAND_RU "к"
 
 #define MODE_L_HAND "left hand"
 #define MODE_KEY_L_HAND "l"
+#define MODE_KEY_L_HAND_RU "д"
 
 #define MODE_INTERCOM "intercom"
 #define MODE_KEY_INTERCOM "i"
+#define MODE_KEY_INTERCOM_RU "ш"
 
 #define MODE_WHISPER "whisper"
 #define MODE_WHISPER_CRIT "whispercrit"
 
 #define MODE_DEPARTMENT "department"
 #define MODE_KEY_DEPARTMENT "h"
+#define MODE_KEY_DEPARTMENT_RU "р"
 #define MODE_TOKEN_DEPARTMENT ":h"
 
 #define MODE_ALIEN "alientalk"
@@ -23,6 +27,7 @@
 
 #define MODE_BINARY "binary"
 #define MODE_KEY_BINARY "n"
+#define MODE_KEY_BINARY_RU "т"
 #define MODE_TOKEN_BINARY ":n"
 
 #define MODE_SING "%"

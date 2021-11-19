@@ -82,8 +82,8 @@
 	else if((length_char(message) > (length_char(key) + 1)) && (key in GLOB.department_radio_prefixes))
 		var/key_symbol = lowertext(message[length_char(key) + 1])
 		if(faction == FACTION_TERRAGOV_REBEL)
-			return GLOB.department_radio_keys_rebel[key_symbol]
-		return GLOB.department_radio_keys[key_symbol]
+			return GLOB.department_radio_keys_rebel[key_symbol] || GLOB.department_radio_keys_rebel_ru[key_symbol]
+		return GLOB.department_radio_keys[key_symbol] || GLOB.department_radio_keys_ru[key_symbol]
 
 
 ///Check if this message is an emote
