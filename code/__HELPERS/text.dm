@@ -396,7 +396,7 @@ GLOBAL_LIST_INIT(en_key_to_ru_key, list(
 	new_key = GLOB.ru_key_to_en_key[new_key]
 	if(!new_key)
 		return _key
-	return uppertext(new_key)
+	return new_key
 
 /proc/sanitize_en_key_to_ru_key(char)
 	var/new_char = GLOB.en_key_to_ru_key[lowertext(char)]

@@ -312,9 +312,8 @@ GLOBAL_LIST_INIT(department_radio_keys_rebel_ru, list(
 
 /mob/living/proc/get_message_language(message)
 	if(length_char(message) >= 2 && message[1] == ",")
-		var/key = message[2]
-		for(var/ld in GLOB.all_languages)
-			var/datum/language/LD = ld
+		var/key = length(message[2]) == 2 ? convert_ru_key_to_en_key(message[2]) : message[2]
+		for(var/datum/language/LD as anything in GLOB.all_languages)
 			if(initial(LD.key) == key)
 				return LD
 	return null
