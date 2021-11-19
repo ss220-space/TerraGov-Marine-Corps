@@ -9,55 +9,46 @@
 #define RADIO_CHANNEL_REQUISITIONS "Requisitions"
 #define RADIO_CHANNEL_REQUISITIONS_REBEL "Requisitions Rebel"
 #define RADIO_KEY_REQUISITIONS "u"
-#define RADIO_KEY_REQUISITIONS_RU "г"
 #define RADIO_TOKEN_REQUISITIONS ":u"
 
 #define RADIO_CHANNEL_ENGINEERING "Engineering"
 #define RADIO_CHANNEL_ENGINEERING_REBEL "Engineering Rebel"
 #define RADIO_KEY_ENGINEERING "e"
-#define RADIO_KEY_ENGINEERING_RU "у"
 #define RADIO_TOKEN_ENGINEERING ":e"
 
 #define RADIO_CHANNEL_MEDICAL "Medical"
 #define RADIO_CHANNEL_MEDICAL_REBEL "Medical Rebel"
 #define RADIO_KEY_MEDICAL "m"
-#define RADIO_KEY_MEDICAL_RU "ь"
 #define RADIO_TOKEN_MEDICAL ":m"
 
 #define RADIO_CHANNEL_COMMAND "Command"
 #define RADIO_CHANNEL_COMMAND_REBEL "Command Rebel"
 #define RADIO_KEY_COMMAND "v"
-#define RADIO_KEY_COMMAND_RU "м"
 #define RADIO_TOKEN_COMMAND ":v"
 
 #define RADIO_CHANNEL_CAS "Fire support"
 #define RADIO_CHANNEL_CAS_REBEL "Fire support Rebel"
 #define RADIO_KEY_CAS "s"
-#define RADIO_KEY_CAS_RU "ы"
 #define RADIO_TOKEN_CAS ":s" //s for support
 
 #define RADIO_CHANNEL_ALPHA "Alpha"
 #define RADIO_CHANNEL_ALPHA_REBEL "Alpha Rebel"
 #define RADIO_KEY_ALPHA "q"
-#define RADIO_KEY_ALPHA_RU "й"
 #define RADIO_TOKEN_ALPHA ":q"
 
 #define RADIO_CHANNEL_BRAVO "Bravo"
 #define RADIO_CHANNEL_BRAVO_REBEL "Bravo Rebel"
 #define RADIO_KEY_BRAVO "b"
-#define RADIO_KEY_BRAVO_RU "и"
 #define RADIO_TOKEN_BRAVO ":b"
 
 #define RADIO_CHANNEL_CHARLIE "Charlie"
 #define RADIO_CHANNEL_CHARLIE_REBEL "Charlie Rebel"
 #define RADIO_KEY_CHARLIE "c"
-#define RADIO_KEY_CHARLIE_RU "с"
 #define RADIO_TOKEN_CHARLIE ":c"
 
 #define RADIO_CHANNEL_DELTA "Delta"
 #define RADIO_CHANNEL_DELTA_REBEL "Delta Rebel"
 #define RADIO_KEY_DELTA "d"
-#define RADIO_KEY_DELTA_RU "в"
 #define RADIO_TOKEN_DELTA ":d"
 
 
