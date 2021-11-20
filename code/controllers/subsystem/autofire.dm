@@ -21,6 +21,11 @@ SUBSYSTEM_DEF(automatedfire)
 	wait = 1
 	priority = FIRE_PRIORITY_AUTOFIRE
 
+	var/debug_enabled = FALSE
+	//Количество вызванных process_shot() внутри сабсистемы
+	var/DEBUG_amount_of_process_shot_calls = 0
+	//Общее количество добавленных в сабсистему компонентов автофаера
+	var/DEBUG_amount_of_autofire_adds = 0
 	/// world.time of the first entry in the bucket list, effectively the 'start time' of the current buckets
 	var/head_offset = 0
 	/// Index of the first non-empty bucket
@@ -65,12 +70,15 @@ SUBSYSTEM_DEF(automatedfire)
 	// Iterate through each bucket starting from the practical offset
 	while (practical_offset <= BUCKET_LEN && head_offset + ((practical_offset - 1) * world.tick_lag) <= world.time)
 		if(!shooter)
-			shooter =  bucket_list[practical_offset]
+			shooter = bucket_list[practical_offset]
 			bucket_list[practical_offset] = null
 
 		while (shooter)
+
 			next_shooter = shooter.next
-			INVOKE_ASYNC(shooter, /datum/component/automatedfire/proc/process_shot)
+			INVOKE_ASYNC(shooter, /datum/component/automatedfire.proc/process_shot)
+			if(debug_enabled)
+				DEBUG_amount_of_process_shot_calls++
 
 			SSautomatedfire.shooter_count--
 			shooter = next_shooter
@@ -116,6 +124,8 @@ SUBSYSTEM_DEF(automatedfire)
 	// Get the bucket head for that bucket, increment the bucket count
 	var/datum/component/automatedfire/bucket_head = bucket_list[bucket_pos]
 	SSautomatedfire.shooter_count++
+	if(SSautomatedfire.debug_enabled)
+		SSautomatedfire.DEBUG_amount_of_autofire_adds++
 
 	// If there is no existing head of this bucket, we can set this shooter to be that head
 	if (!bucket_head)
