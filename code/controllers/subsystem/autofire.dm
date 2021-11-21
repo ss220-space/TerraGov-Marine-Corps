@@ -75,7 +75,7 @@ SUBSYSTEM_DEF(automatedfire)
 		while (shooter)
 
 			next_shooter = shooter.next
-			spawn(-1) shooter.process_shot()
+			INVOKE_ASYNC(shooter, /datum/component/automatedfire/proc/process_shot)
 
 			SSautomatedfire.shooter_count--
 			shooter = next_shooter
@@ -117,6 +117,7 @@ SUBSYSTEM_DEF(automatedfire)
 
 	// Get bucket position and a local reference to the datum var, it's faster to access this way
 	var/bucket_pos = BUCKET_POS(next_fire)
+	next_fire -= world.tick_lag
 
 	// Get the bucket head for that bucket, increment the bucket count
 	var/datum/component/automatedfire/bucket_head = bucket_list[bucket_pos]
