@@ -21,10 +21,6 @@ SUBSYSTEM_DEF(automatedfire)
 	wait = 1
 	priority = FIRE_PRIORITY_AUTOFIRE
 
-	var/debug_enabled = FALSE
-	var/DEBUG_next_fire_bigger_world_time = 0
-	var/DEBUG_not_shooting_return = 0
-	var/DEBUG_no_callback_fire_invoke = 0
 	/// world.time of the first entry in the bucket list, effectively the 'start time' of the current buckets
 	var/head_offset = 0
 	/// Index of the first non-empty bucket

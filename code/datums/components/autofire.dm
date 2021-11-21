@@ -103,17 +103,11 @@
 ///Ask the shooter to fire and schedule the next shot if need
 /datum/component/automatedfire/autofire/process_shot()
 	if(!shooting)
-		if(SSautomatedfire.debug_enabled)
-			SSautomatedfire.DEBUG_not_shooting_return++
 		return
 	if(next_fire > world.time)//This mean duplication somewhere, we abort now
-		if(SSautomatedfire.debug_enabled)
-			SSautomatedfire.DEBUG_next_fire_bigger_world_time++
 		return
 	if(!callback_fire.Invoke())//If the parent has failed to fire, we reset the component
 		hard_reset()
-		if(SSautomatedfire.debug_enabled)
-			SSautomatedfire.DEBUG_no_callback_fire_invoke++
 		return
 	switch(fire_mode)
 		if(GUN_FIREMODE_BURSTFIRE)
