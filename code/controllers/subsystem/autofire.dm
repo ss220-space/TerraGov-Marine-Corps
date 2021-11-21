@@ -76,7 +76,7 @@ SUBSYSTEM_DEF(automatedfire)
 		while (shooter)
 
 			next_shooter = shooter.next
-			INVOKE_ASYNC(shooter, /datum/component/automatedfire.proc/process_shot)
+			spawn(-1) shooter.process_shot()
 			if(debug_enabled)
 				DEBUG_amount_of_process_shot_calls++
 
