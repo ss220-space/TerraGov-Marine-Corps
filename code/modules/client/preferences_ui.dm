@@ -136,6 +136,9 @@
 					)
 
 /datum/preferences/ui_static_data(mob/user)
+	if(!user?.client)
+		return
+
 	. = list()
 	switch(tab_index)
 		if(CHARACTER_CUSTOMIZATION)
@@ -194,7 +197,10 @@
 	. = ..()
 	if(.)
 		return
+
 	var/client/current_client = CLIENT_FROM_VAR(usr)
+	if(!current_client)
+		return
 	var/mob/user = current_client.mob
 
 	switch(action)
