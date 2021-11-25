@@ -1,10 +1,10 @@
 #define UPLOAD_LIMIT 1000000	//Restricts client uploads to the server to 1MB
 #define UPLOAD_LIMIT_ADMIN 10000000	//Restricts admin uploads to the server to 10MB
 
-#define MAX_RECOMMENDED_CLIENT 1570
+#define MAX_RECOMMENDED_CLIENT 1571
 #define MIN_RECOMMENDED_CLIENT 1568
 #define REQUIRED_CLIENT_MAJOR 514
-#define REQUIRED_CLIENT_MINOR 1568
+#define REQUIRED_CLIENT_MINOR 1571
 
 #define LIMITER_SIZE 5
 #define CURRENT_SECOND 1
