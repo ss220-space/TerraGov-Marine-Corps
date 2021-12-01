@@ -46,6 +46,13 @@
 	///the higher the power level the harder it hits
 	var/setting = 1
 
+/obj/item/weapon/powerfist/equipped(mob/user, slot)
+	. = ..()
+	toggle_item_bump_attack(user, TRUE)
+
+/obj/item/weapon/powerfist/dropped(mob/user)
+	. = ..()
+	toggle_item_bump_attack(user, FALSE)
 /obj/item/weapon/powerfist/Destroy()
 	if(cell)
 		QDEL_NULL(cell)
