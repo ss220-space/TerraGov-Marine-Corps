@@ -227,3 +227,5 @@ DEFAULT_VIEW_SQUARE 15x15
 
 ## Uncomment if you think xenos are struggling against marines
 #XENOS_ON_STRIKE
+
+ALLOW_ADMIN_OOCCOLOR
