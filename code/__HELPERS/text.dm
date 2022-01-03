@@ -109,12 +109,12 @@
 			// А .. Я, Ё
 			if(1040 to 1071, 1025)			//Uppercase Cyrillic Letters
 				if(!accept_cyrillic)
-					continue
+					return
 				number_of_alphanumeric++
 				last_char_group = LETTERS_DETECTED
 
-			// a  .. z, а .. я, ё
-			if(97 to 122, 1072 to 1103, 1105)			//Lowercase Letters
+			// a  .. z,
+			if(97 to 122)			//Lowercase Letters
 				if(last_char_group == NO_CHARS_DETECTED || last_char_group == SPACES_DETECTED || last_char_group == SYMBOLS_DETECTED) //start of a word
 					char = uppertext(char)
 				number_of_alphanumeric++
@@ -123,7 +123,7 @@
 			// а .. я, ё
 			if(1072 to 1103, 1105)			//Lowercase Cyrillic Letters
 				if(!accept_cyrillic)
-					continue
+					return
 				if(last_char_group == NO_CHARS_DETECTED || last_char_group == SPACES_DETECTED || last_char_group == SYMBOLS_DETECTED) //start of a word
 					char = uppertext(char)
 				number_of_alphanumeric++
@@ -132,35 +132,35 @@
 			// 0  .. 9
 			if(48 to 57)			//Numbers
 				if(last_char_group == NO_CHARS_DETECTED || !allow_numbers) //suppress at start of string
-					continue
+					return
 				number_of_alphanumeric++
 				last_char_group = NUMBERS_DETECTED
 
 			// '  -  .
 			if(39,45,46)			//Common name punctuation
 				if(last_char_group == NO_CHARS_DETECTED)
-					continue
+					return
 				last_char_group = SYMBOLS_DETECTED
 
 			// ~   |   @  :  #  $  %  &  *  +
 			if(126,124,64,58,35,36,37,38,42,43)			//Other symbols that we'll allow (mainly for AI)
 				if(last_char_group == NO_CHARS_DETECTED || !allow_numbers) //suppress at start of string
-					continue
+					return
 				last_char_group = SYMBOLS_DETECTED
 
 			//Space
 			if(32)
 				if(last_char_group == NO_CHARS_DETECTED || last_char_group == SPACES_DETECTED) //suppress double-spaces and spaces at start of string
-					continue
+					return
 				last_char_group = SPACES_DETECTED
 
 			if(127 to 1024, 1026 to 1039, 1104, 1106 to INFINITY)
 				if(ascii_only)
-					continue
+					return
 				last_char_group = SYMBOLS_DETECTED //for now, we'll treat all non-ascii characters like symbols even though most are letters
 
 			else
-				continue
+				return
 
 		t_out += char
 		charcount++
