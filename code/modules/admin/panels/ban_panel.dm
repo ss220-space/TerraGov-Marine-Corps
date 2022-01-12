@@ -576,7 +576,7 @@
 			else
 				bantype = "JOB_PERMABAN"
 		sql_ban += list(list(
-			"serverip" = world.internet_address + ":" + world.port,
+			"serverip" = "[world.internet_address]:[world.port]",
 			"job" = role,
 			"expiration_time" = duration,
 			"duration" = duration || -1,
