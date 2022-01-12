@@ -91,6 +91,7 @@
 				unbanned_datetime IS NULL AND
 				(expiration_time < bantime OR expiration_time > NOW())
 				AND (NOT :must_apply_to_admins OR bantype in ('ADMIN_PERMABAN', 'ADMIN_TEMPBAN'))
+				AND bantype <> 'APPEARANCE_BAN'
 		"}, values)
 		if(!query_check_ban.warn_execute())
 			qdel(query_check_ban)
@@ -129,6 +130,7 @@
 			AND (ckey = :ckey OR ip = :ip OR computerid = :computerid)
 			AND unbanned_datetime IS NULL
 			AND (expiration_time < bantime OR expiration_time > NOW())
+			AND bantype <> 'APPEARANCE_BAN'
 		ORDER BY bantime DESC
 	"}, list("role" = role, "ckey" = player_ckey, "ip" = player_ip, "computerid" = player_cid))
 	if(!query_check_ban.warn_execute())
@@ -149,7 +151,7 @@
 		if(GLOB.admin_datums[C.ckey] || GLOB.deadmins[C.ckey])
 			is_admin = TRUE
 		var/datum/db_query/query_build_ban_cache = SSdbcore.NewQuery(
-			"SELECT job, bantype FROM [CONFIG_GET(string/utility_database)].[format_table_name("ban")] WHERE ckey = :ckey AND unbanned_datetime IS NULL AND (expiration_time < bantime OR expiration_time > NOW())",
+			"SELECT job, bantype FROM [CONFIG_GET(string/utility_database)].[format_table_name("ban")] WHERE ckey = :ckey AND unbanned_datetime IS NULL AND (expiration_time < bantime OR expiration_time > NOW()) AND bantype <> 'APPEARANCE_BAN'",
 			list("ckey" = C.ckey)
 		)
 		if(!query_build_ban_cache.warn_execute())
@@ -555,7 +557,7 @@
 	)
 	var/sql_ban = list()
 	for(var/role in roles_to_ban)
-		var/bantype = "JO"
+		var/bantype
 		if(role == "Server")
 			role = null
 			if(duration)
@@ -667,6 +669,7 @@
 				(:admin_key IS NULL OR a_ckey = :admin_key) AND
 				(:player_ip IS NULL OR ip = :player_ip) AND
 				(:player_cid IS NULL OR computerid = :player_cid)
+				AND bantype <> 'APPEARANCE_BAN'
 		"}, list(
 			"player_key" = ckey(player_key),
 			"admin_key" = ckey(admin_key),
@@ -723,6 +726,7 @@
 				(:admin_key IS NULL OR a_ckey = :admin_key) AND
 				(:player_ip IS NULL OR ip = :player_ip) AND
 				(:player_cid IS NULL OR computerid = :player_cid)
+				AND bantype <> 'APPEARANCE_BAN'
 			ORDER BY id DESC
 			LIMIT :skip, :take
 		"}, list(
@@ -925,13 +929,13 @@
 		SET
 			expiration_time = IF(:duration IS NULL, NOW() - INTERVAL 1 MINUTE, bantime + INTERVAL :duration [interval]),
 			duration = IF(:duration IS NULL, -1, :duration),
-			bantype = IF(:applies_to_admins=0 AND job not in ('', 'Emote', 'Appearance'), CONCAT('JOB_', :bantype), :bantype),
+			bantype = IF(:applies_to_admins=0 AND bantype in ('PERMABAN', 'TEMPBAN') AND job not in (''), CONCAT('JOB_', :bantype), :bantype),
 			reason = :reason,
 			ckey = :ckey,
 			ip = :ip,
 			computerid = :cid,
 			edits = CONCAT(IFNULL(edits,''), :change_message)
-		WHERE [where]
+		WHERE [where] AND bantype <> 'APPEARANCE_BAN'
 	"}, arguments)
 	if(!query_edit_ban.warn_execute())
 		qdel(query_edit_ban)
@@ -963,7 +967,7 @@
 		to_chat(usr, span_danger("Failed to establish database connection."))
 		return
 	var/datum/db_query/query_get_ban_edits = SSdbcore.NewQuery({"
-		SELECT edits FROM [CONFIG_GET(string/utility_database)].[format_table_name("ban")] WHERE id = :ban_id
+		SELECT edits FROM [CONFIG_GET(string/utility_database)].[format_table_name("ban")] WHERE id = :ban_id AND bantype <> 'APPEARANCE_BAN'
 	"}, list("ban_id" = ban_id))
 	if(!query_get_ban_edits.warn_execute())
 		qdel(query_get_ban_edits)
