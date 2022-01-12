@@ -716,7 +716,7 @@
 					SELECT byond_key
 					FROM [format_table_name("player")]
 					WHERE [format_table_name("player")].ckey = [CONFIG_GET(string/utility_database)].[format_table_name("ban")].unbanned_ckey
-				), unbanned_ckey),
+				), unbanned_ckey)
 			FROM [CONFIG_GET(string/utility_database)].[format_table_name("ban")]
 			WHERE
 				(:player_key IS NULL OR ckey = :player_key) AND
@@ -793,7 +793,7 @@
 			unbanned_datetime = NOW(),
 			unbanned_ckey = :admin_ckey,
 			unbanned_ip = :admin_ip,
-			unbanned_computerid = :admin_cid,
+			unbanned_computerid = :admin_cid
 		WHERE id = :ban_id
 	"}, list("ban_id" = ban_id, "admin_ckey" = usr.client.ckey, "admin_ip" = usr.client.address, "admin_cid" = usr.client.computer_id))
 	if(!query_unban.warn_execute())
