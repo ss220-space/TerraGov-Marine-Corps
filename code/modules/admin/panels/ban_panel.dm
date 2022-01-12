@@ -577,17 +577,17 @@
 				bantype = "JOB_PERMABAN"
 		sql_ban += list(list(
 			"serverip" = "[world.internet_address]:[world.port]",
-			"job" = role,
+			"job" = role || '',
 			"expiration_time" = duration,
 			"duration" = duration || -1,
 			"bantype" = bantype,
 			"reason" = reason,
 			"ckey" = player_ckey || null,
-			"ip" = player_ip || null,
-			"computerid" = player_cid || null,
+			"ip" = player_ip || "",
+			"computerid" = player_cid || "",
 			"a_ckey" = admin_ckey,
-			"a_ip" = admin_ip || null,
-			"a_computerid" = admin_cid,
+			"a_ip" = admin_ip || "",
+			"a_computerid" = admin_cid || "",
 			"who" = who,
 			"adminwho" = adminwho,
 		))
