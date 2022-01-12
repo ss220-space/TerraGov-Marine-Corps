@@ -89,7 +89,7 @@
 				ckey = :player_ckey AND
 				job IN ([sql_roles]) AND
 				unbanned_datetime IS NULL AND
-				(expiration_time < bantime OR expiration_time > NOW())
+				(bantype in ('ADMIN_PERMABAN', 'PERMABAN') OR expiration_time > NOW())
 				AND (NOT :must_apply_to_admins OR bantype in ('ADMIN_PERMABAN', 'ADMIN_TEMPBAN'))
 				AND bantype <> 'APPEARANCE_BAN'
 		"}, values)
@@ -117,7 +117,7 @@
 		SELECT
 			id,
 			bantime,
-			IF(expiration_time < bantime, NULL, expiration_time),
+			IF(bantype in ('ADMIN_PERMABAN', 'PERMABAN'), NULL, expiration_time),
 			NULLIF(duration, -1),
 			bantype,
 			reason,
@@ -129,7 +129,7 @@
 		WHERE [serverban]
 			AND (ckey = :ckey OR ip = :ip OR computerid = :computerid)
 			AND unbanned_datetime IS NULL
-			AND (expiration_time < bantime OR expiration_time > NOW())
+			AND (bantype in ('ADMIN_PERMABAN', 'PERMABAN') OR expiration_time > NOW())
 			AND bantype <> 'APPEARANCE_BAN'
 		ORDER BY bantime DESC
 	"}, list("role" = role, "ckey" = player_ckey, "ip" = player_ip, "computerid" = player_cid))
@@ -151,7 +151,7 @@
 		if(GLOB.admin_datums[C.ckey] || GLOB.deadmins[C.ckey])
 			is_admin = TRUE
 		var/datum/db_query/query_build_ban_cache = SSdbcore.NewQuery(
-			"SELECT job, bantype FROM [CONFIG_GET(string/utility_database)].[format_table_name("ban")] WHERE ckey = :ckey AND unbanned_datetime IS NULL AND (expiration_time < bantime OR expiration_time > NOW()) AND bantype <> 'APPEARANCE_BAN'",
+			"SELECT job, bantype FROM [CONFIG_GET(string/utility_database)].[format_table_name("ban")] WHERE ckey = :ckey AND unbanned_datetime IS NULL AND (bantype in ('ADMIN_PERMABAN', 'PERMABAN') OR expiration_time > NOW()) AND bantype <> 'APPEARANCE_BAN'",
 			list("ckey" = C.ckey)
 		)
 		if(!query_build_ban_cache.warn_execute())
@@ -297,7 +297,7 @@
 					ckey = :player_ckey AND
 					bantype not in ('ADMIN_PERMABAN', 'ADMIN_TEMPBAN', 'APPEARANCE_BAN')
 					AND unbanned_datetime IS NULL
-					AND (expiration_time < bantime OR expiration_time > NOW())
+					AND (bantype in ('ADMIN_PERMABAN', 'PERMABAN') OR expiration_time > NOW())
 			"}, list("player_ckey" = ckey(player_key)))
 			if(!query_get_banned_roles.warn_execute())
 				qdel(query_get_banned_roles)
@@ -517,7 +517,7 @@
 				a_ckey = :admin_ckey AND
 				bantype in ('ADMIN_PERMABAN', 'ADMIN_TEMPBAN') AND
 				unbanned_datetime IS NULL AND
-				(expiration_time < bantime OR expiration_time > NOW())
+				(bantype in ('ADMIN_PERMABAN', 'PERMABAN') OR expiration_time > NOW())
 		"}, list("admin_ckey" = admin_ckey))
 		if(!query_check_adminban_count.warn_execute()) //count distinct bantime to treat rolebans made at the same time as one ban
 			qdel(query_check_adminban_count)
@@ -577,7 +577,7 @@
 				bantype = "JOB_PERMABAN"
 		sql_ban += list(list(
 			"serverip" = "[world.internet_address]:[world.port]",
-			"job" = role || '',
+			"job" = role || "",
 			"expiration_time" = duration,
 			"duration" = duration || -1,
 			"bantype" = bantype,
@@ -696,9 +696,9 @@
 				id,
 				bantime,
 				job,
-				IF(expiration_time < bantime, NULL, expiration_time),
+				IF(bantype in ('ADMIN_PERMABAN', 'PERMABAN'), NULL, expiration_time),
 				NULLIF(duration, -1),
-				IF(expiration_time < NOW(), 1, NULL),
+				IF(bantype in ('ADMIN_PERMABAN', 'PERMABAN'), 1, NULL),
 				bantype,
 				reason,
 				IFNULL((
@@ -863,7 +863,7 @@
 			WHERE a_ckey = :admin_ckey
 				AND bantype in ('ADMIN_PERMABAN', 'ADMIN_TEMPBAN')
 				AND unbanned_datetime IS NULL
-				AND (expiration_time < bantime OR expiration_time > NOW())
+				AND (bantype in ('ADMIN_PERMABAN', 'PERMABAN') OR expiration_time > NOW())
 		"}, list("admin_ckey" = usr.client.ckey))
 		if(!query_check_adminban_count.warn_execute()) //count distinct bantime to treat rolebans made at the same time as one ban
 			qdel(query_check_adminban_count)
