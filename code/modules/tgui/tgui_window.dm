@@ -84,8 +84,8 @@
 		options += "titlebar=1;can_resize=1;"
 	// Generate page html
 	var/html = SStgui.basehtml
-	html = replacetextEx(html, "\[tgui:windowId]", id)
-	html = replacetextEx(html, "\[tgui:strictMode]", strict_mode)
+	html = replacetextEx_char(html, "\[tgui:windowId]", id)
+	html = replacetextEx_char(html, "\[tgui:strictMode]", strict_mode)
 	// Inject assets
 	var/inline_assets_str = ""
 	for(var/datum/asset/asset in assets)
@@ -100,18 +100,18 @@
 		asset.send(client)
 	if(length_char(inline_assets_str))
 		inline_assets_str = "<script>\n" + inline_assets_str + "</script>\n"
-	html = replacetextEx(html, "<!-- tgui:assets -->\n", inline_assets_str)
+	html = replacetextEx_char(html, "<!-- tgui:assets -->\n", inline_assets_str)
 	// Inject inline HTML
 	if (inline_html)
-		html = replacetextEx(html, "<!-- tgui:inline-html -->", isfile(inline_html) ? file2text(inline_html) : inline_html)
+		html = replacetextEx_char(html, "<!-- tgui:inline-html -->", isfile(inline_html) ? file2text(inline_html) : inline_html)
 	// Inject inline JS
 	if (inline_js)
 		inline_js = "<script>\n'use strict';\n[isfile(inline_js) ? file2text(inline_js) : inline_js]\n</script>"
-		html = replacetextEx(html, "<!-- tgui:inline-js -->", inline_js)
+		html = replacetextEx_char(html, "<!-- tgui:inline-js -->", inline_js)
 	// Inject inline CSS
 	if (inline_css)
 		inline_css = "<style>\n[isfile(inline_css) ? file2text(inline_css) : inline_css]\n</style>"
-		html = replacetextEx(html, "<!-- tgui:inline-css -->", inline_css)
+		html = replacetextEx_char(html, "<!-- tgui:inline-css -->", inline_css)
 	// Open the window
 	client << browse(html, "window=[id];[options]")
 	// Detect whether the control is a browser
