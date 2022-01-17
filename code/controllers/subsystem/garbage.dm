@@ -217,7 +217,7 @@ SUBSYSTEM_DEF(garbage)
 					#endif
 					continue
 			if (GC_QUEUE_HARDDELETE)
-				HardDelete(D)
+				HardDelete(D, TRUE)
 				if (MC_TICK_CHECK)
 					return
 				continue
