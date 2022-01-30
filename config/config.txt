@@ -201,3 +201,6 @@ DEFAULT_VIEW_SQUARE 15x15
 #XENOS_ON_STRIKE
 
 AI_ANTI_STUCK_LAG_TIME_DILATION_THRESHOLD 20
+
+## Uncomment to enable the censorship. Words to censor are store in config/censor.txt
+#CENSOR_ENABLED
