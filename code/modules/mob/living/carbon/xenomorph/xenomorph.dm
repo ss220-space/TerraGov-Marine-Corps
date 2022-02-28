@@ -150,7 +150,7 @@
 		if(XENO_UPGRADE_FOUR)
 			return 4
 
-/mob/living/carbon/xenomorph/proc/upgrade_next()
+/mob/living/carbon/xenomorph/proc/upgrade_next(evolution = TRUE)
 	switch(upgrade)
 		if(XENO_UPGRADE_INVALID)
 			return XENO_UPGRADE_INVALID
@@ -161,7 +161,9 @@
 		if(XENO_UPGRADE_TWO)
 			return XENO_UPGRADE_THREE
 		if(XENO_UPGRADE_THREE)
-			return XENO_UPGRADE_FOUR
+			if(evolution)
+				return XENO_UPGRADE_FOUR
+			return XENO_UPGRADE_THREE
 		if(XENO_UPGRADE_FOUR)
 			return XENO_UPGRADE_FOUR
 
