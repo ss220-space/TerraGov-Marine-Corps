@@ -715,11 +715,6 @@
 "eb" = (
 /turf/open/floor/plating,
 /area/barren/cave/lz1)
-"ef" = (
-/turf/open/lavaland/lava/corner{
-	dir = 8
-	},
-/area/bigredv2/outside/c)
 "eg" = (
 /obj/structure/disposalpipe/junction/yjunc{
 	dir = 1
@@ -2506,11 +2501,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/barren/security)
-"oe" = (
-/turf/open/lavaland/lava/lpiece{
-	dir = 4
-	},
-/area/bigredv2/outside/c)
 "og" = (
 /obj/item/shard,
 /turf/open/lavaland/basalt,
@@ -2655,10 +2645,8 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/bigredv2/outside/w)
 "oS" = (
-/turf/open/lavaland/lava/lpiece{
-	dir = 8
-	},
-/area/bigredv2/outside/c)
+/turf,
+/area/space)
 "oT" = (
 /obj/effect/ai_node,
 /obj/structure/closet/walllocker/hydrant/extinguisher{
@@ -2754,10 +2742,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor,
 /area/bigredv2/outside/general_offices)
-"py" = (
-/obj/effect/landmark/weed_node,
-/turf/open/lavaland/basalt,
-/area/barren)
 "pA" = (
 /obj/machinery/landinglight/ds2/delaytwo{
 	dir = 8
@@ -2797,11 +2781,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/freezer,
 /area/barren/medical/chemistry)
-"pJ" = (
-/turf/open/lavaland/lava/side{
-	dir = 1
-	},
-/area/bigredv2/outside/c)
 "pK" = (
 /obj/structure/table,
 /obj/item/trash/tray,
@@ -3523,9 +3502,6 @@
 /obj/structure/sign/poster,
 /turf/closed/wall,
 /area/barren/medical)
-"tN" = (
-/turf/open/lavaland/lava/lpiece,
-/area/bigredv2/outside/c)
 "tR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/freezer,
@@ -4035,11 +4011,6 @@
 /obj/machinery/light,
 /turf/open/floor/tile/dark2,
 /area/barren/engie/engine)
-"wU" = (
-/turf/open/lavaland/lava/side{
-	dir = 8
-	},
-/area/bigredv2/outside/c)
 "wV" = (
 /obj/structure/lattice,
 /turf/open/lavaland/lava,
@@ -4895,11 +4866,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/lavaland/basalt,
 /area/bigredv2/caves/southwest)
-"Ck" = (
-/turf/open/lavaland/lava/corner{
-	dir = 1
-	},
-/area/bigredv2/outside/c)
 "Cl" = (
 /obj/item/organ/xenos/eggsac,
 /turf/open/lavaland/basalt,
@@ -6811,9 +6777,6 @@
 /obj/structure/sink/kitchen,
 /turf/open/floor/prison/kitchen,
 /area/barren/civilian/cook)
-"NH" = (
-/turf/open/lavaland/lava,
-/area/bigredv2/outside/c)
 "NJ" = (
 /obj/structure/cable,
 /turf/open/lavaland/basalt/glowing,
@@ -7158,9 +7121,6 @@
 /obj/structure/cable,
 /obj/structure/closet/walllocker/hydrant/extinguisher,
 /turf/open/lavaland/basalt,
-/area/bigredv2/outside/c)
-"PR" = (
-/turf/open/lavaland/lava/side,
 /area/bigredv2/outside/c)
 "PT" = (
 /turf/open/floor/wood,
@@ -7793,9 +7753,6 @@
 	},
 /turf/open/lavaland/basalt,
 /area/bigredv2/caves/southeast)
-"TT" = (
-/turf/open/lavaland/basalt,
-/area/barren)
 "TV" = (
 /obj/item/tool/pickaxe,
 /obj/effect/decal/cleanable/blood,
@@ -7811,12 +7768,6 @@
 /obj/structure/window/framed/colony,
 /turf/open/floor/plating,
 /area/barren/medical/research)
-"Ua" = (
-/obj/structure/barricade/guardrail,
-/turf/open/lavaland/lava/lpiece{
-	dir = 1
-	},
-/area/bigredv2/outside/c)
 "Ub" = (
 /obj/effect/landmark/start/job/xenomorph,
 /turf/open/lavaland/basalt,
@@ -8413,7 +8364,7 @@
 	name = "sturdy inflatable duck"
 	},
 /turf/open/lavaland/lava,
-/area/bigredv2/outside/c)
+/area/barren)
 "XR" = (
 /obj/structure/table/mainship,
 /obj/machinery/prop/mainship/computer/PC,
@@ -15669,7 +15620,7 @@ aI
 aI
 aI
 aI
-aI
+oS
 aI
 aI
 aI
@@ -19934,7 +19885,7 @@ Kg
 ZN
 AE
 ZW
-xX
+ZN
 ZN
 ZN
 ZN
@@ -28729,10 +28680,10 @@ dK
 dK
 LW
 YZ
-TT
-TT
-py
-TT
+Zg
+Zg
+Zb
+Zg
 Zg
 Zg
 Zg
@@ -30976,8 +30927,8 @@ ZL
 ZK
 ZK
 ZK
-tN
-oe
+Gs
+eu
 ZK
 ZK
 ZK
@@ -31232,10 +31183,10 @@ ZL
 ZL
 ZK
 ZK
-tN
-Ck
-ef
-oe
+Gs
+CS
+Tq
+eu
 ZK
 ZK
 ZK
@@ -31489,10 +31440,10 @@ ZL
 ZL
 ZK
 ZK
-PR
-NH
+Dt
+TO
 XQ
-pJ
+US
 MW
 ZK
 Rq
@@ -31746,10 +31697,10 @@ ZL
 ZL
 ZL
 ZK
-oS
-wU
-wU
-Ua
+QO
+Va
+Va
+cp
 ZK
 ZL
 Rq
@@ -42568,7 +42519,7 @@ ZK
 PQ
 ZL
 Ry
-oS
+QO
 Va
 Va
 Va
