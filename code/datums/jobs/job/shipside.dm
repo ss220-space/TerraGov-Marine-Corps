@@ -106,7 +106,7 @@ Godspeed, captain! And remember, you are not above the law."})
 	total_positions = 1
 
 	exp_requirements = XP_REQ_EXPERT
-	exp_type = EXP_TYPE_OFFICERS
+	exp_type = EXP_TYPE_COMMAND
 
 	skills_type = /datum/skills/fo
 	access = ALL_MARINE_ACCESS
