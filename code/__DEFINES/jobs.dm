@@ -140,6 +140,7 @@ GLOBAL_LIST_INIT(jobs_fallen_all, typecacheof(list(/datum/job/fallen)))
 #define CRYO_DELTA "Delta Squad"
 
 // In minutes
+#define XP_REQ_NOVICE 300
 #define XP_REQ_UNSEASONED 600
 #define XP_REQ_INTERMEDIATE 1500
 #define XP_REQ_EXPERIENCED 6000

@@ -216,7 +216,7 @@ Your squaddies will look to you when it comes to construction in the field of ba
 	comm_title = "Med"
 	total_positions = 16
 
-	exp_requirements = XP_REQ_UNSEASONED
+	exp_requirements = XP_REQ_NOVICE
 	exp_type = EXP_TYPE_MEDICAL
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY, ACCESS_MARINE_CHEMISTRY)
