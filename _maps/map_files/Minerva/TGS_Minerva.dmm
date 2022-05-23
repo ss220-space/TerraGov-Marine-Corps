@@ -5121,7 +5121,7 @@
 "rv" = (
 /obj/effect/ai_node,
 /turf/open/floor/mainship/sterile/purple/side{
-	dir = 4
+	dir = 6
 	},
 /area/mainship/medical/chemistry)
 "rw" = (
@@ -10605,10 +10605,6 @@
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/chemistry)
 "HS" = (
-/obj/machinery/door/airlock/mainship/medical/free_access{
-	dir = 2;
-	name = "Chemistry"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment,
@@ -10829,7 +10825,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/mainship/sterile/purple/corner,
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 1
+	},
 /area/mainship/medical/chemistry)
 "IB" = (
 /turf/open/floor/mainship/mono,
@@ -11444,12 +11442,9 @@
 	},
 /area/mainship/living/commandbunks)
 "Kw" = (
-/obj/machinery/door/airlock/multi_tile/mainship/medidoor/medbay/free_access{
-	dir = 1;
-	name = "Chemistry";
-	req_one_access = list(2,8,40)
+/turf/open/floor/mainship/sterile/purple/corner{
+	dir = 4
 	},
-/turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/chemistry)
 "Kx" = (
 /obj/effect/decal/warning_stripes/thin{
@@ -13174,6 +13169,9 @@
 /obj/effect/ai_node,
 /turf/open/floor/mainship/floor,
 /area/mainship/engineering/engineering_workshop)
+"PK" = (
+/turf/open/floor/mainship/sterile/purple/corner,
+/area/mainship/medical/chemistry)
 "PL" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -22556,7 +22554,7 @@ Gl
 Hd
 HQ
 IA
-Jv
+Jt
 rv
 Jv
 Jv
@@ -22653,8 +22651,8 @@ Fg
 Gm
 kt
 HQ
-HR
-Jt
+PK
+Jv
 Kw
 HQ
 Is
