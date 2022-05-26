@@ -1814,6 +1814,10 @@
 	dir = 8
 	},
 /area/mainship/hallways/hangar)
+"fL" = (
+/obj/machinery/computer/telecomms/monitor/preset,
+/turf/open/floor/mainship/mono,
+/area/mainship/command/telecomms)
 "fM" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -4000,6 +4004,9 @@
 	},
 /turf/open/floor/mainship/floor,
 /area/mainship/living/evacuation)
+"nc" = (
+/turf/open/floor/mainship/sterile/purple/corner,
+/area/mainship/medical/chemistry)
 "nd" = (
 /obj/machinery/vending/medical,
 /turf/open/floor/mainship/mono,
@@ -4291,6 +4298,7 @@
 "ob" = (
 /obj/structure/table/mainship/nometal,
 /obj/effect/spawner/random/plushie/nospawnninety{
+	
 	},
 /turf/open/floor/mainship/floor,
 /area/mainship/hallways/starboard_hallway)
@@ -5129,6 +5137,13 @@
 /obj/machinery/holopad,
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
+"re" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/mainship/medical/chemistry)
 "rg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -5207,12 +5222,6 @@
 	dir = 8
 	},
 /area/mainship/living/cryo_cells)
-"rv" = (
-/obj/effect/ai_node,
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 4
-	},
-/area/mainship/medical/chemistry)
 "rw" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 4
@@ -5467,6 +5476,12 @@
 	dir = 8
 	},
 /area/mainship/squads/general)
+"so" = (
+/obj/effect/ai_node,
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 6
+	},
+/area/mainship/medical/chemistry)
 "sq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -6506,6 +6521,11 @@
 "vw" = (
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/port_hallway)
+"vx" = (
+/turf/open/floor/mainship/sterile/purple/corner{
+	dir = 4
+	},
+/area/mainship/medical/chemistry)
 "vy" = (
 /obj/structure/table,
 /obj/item/trash/cheesie,
@@ -6543,6 +6563,7 @@
 "vE" = (
 /obj/structure/table/woodentable,
 /obj/effect/spawner/random/plushie/nospawnninety{
+	
 	},
 /turf/open/floor/wood,
 /area/mainship/medical/lounge)
@@ -10499,6 +10520,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/command/telecomms)
+"Hg" = (
+/obj/machinery/light/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 1
+	},
+/area/mainship/medical/chemistry)
 "Hh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/item/ammo_casing/bullet{
@@ -10727,17 +10756,6 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/chemistry)
-"HS" = (
-/obj/machinery/door/airlock/mainship/medical/free_access{
-	dir = 2;
-	name = "Chemistry"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "HU" = (
 /obj/machinery/computer/camera_advanced/remote_fob,
 /turf/open/floor/mainship/red{
@@ -10943,12 +10961,6 @@
 /turf/open/floor/mainship/sterile/purple/side{
 	dir = 1
 	},
-/area/mainship/medical/chemistry)
-"IA" = (
-/obj/machinery/light/mainship{
-	dir = 1
-	},
-/turf/open/floor/mainship/sterile/purple/corner,
 /area/mainship/medical/chemistry)
 "IB" = (
 /turf/open/floor/mainship/mono,
@@ -11546,14 +11558,6 @@
 	dir = 9
 	},
 /area/mainship/living/commandbunks)
-"Kw" = (
-/obj/machinery/door/airlock/multi_tile/mainship/medidoor/medbay/free_access{
-	dir = 1;
-	name = "Chemistry";
-	req_one_access = list(2,8,40)
-	},
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "Kx" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 1
@@ -14607,6 +14611,10 @@
 	dir = 1
 	},
 /area/mainship/command/self_destruct)
+"TL" = (
+/obj/machinery/computer/telecomms/server/preset,
+/turf/open/floor/mainship/mono,
+/area/mainship/command/telecomms)
 "TM" = (
 /obj/machinery/camera/autoname/mainship,
 /turf/open/floor/mainship/mono,
@@ -15667,10 +15675,6 @@
 /obj/structure/window/framed/mainship/requisitions,
 /turf/open/floor/mainship/mono,
 /area/mainship/command/telecomms)
-"Xh" = (
-/obj/machinery/computer/telecomms/monitor/preset,
-/turf/open/floor/mainship/mono,
-/area/mainship/command/telecomms)
 "Xi" = (
 /obj/machinery/door_control/mainship/tcomms{
 	pixel_y = 25
@@ -16286,10 +16290,6 @@
 "Zg" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/mainship/tcomms,
-/area/mainship/command/telecomms)
-"Zh" = (
-/obj/machinery/computer/telecomms/server/preset,
-/turf/open/floor/mainship/mono,
 /area/mainship/command/telecomms)
 "Zj" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
@@ -21013,9 +21013,9 @@ hD
 pg
 NC
 Qq
-Xh
+fL
 Yi
-Zh
+TL
 sj
 cr
 Rz
@@ -22565,7 +22565,7 @@ Cc
 Fe
 Gk
 Hc
-HS
+re
 Iz
 Ju
 Ku
@@ -22664,9 +22664,9 @@ Ff
 Gl
 Hd
 HQ
-IA
-Jv
-rv
+Hg
+Jt
+so
 Jv
 Jv
 Mm
@@ -22762,9 +22762,9 @@ Fg
 Gm
 kt
 HQ
-HR
-Jt
-Kw
+nc
+Jv
+vx
 HQ
 Is
 Is
