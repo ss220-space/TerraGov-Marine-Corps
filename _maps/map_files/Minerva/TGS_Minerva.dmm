@@ -691,6 +691,12 @@
 	dir = 9
 	},
 /area/mainship/hallways/hangar)
+"ca" = (
+/obj/effect/ai_node,
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 6
+	},
+/area/mainship/medical/chemistry)
 "cb" = (
 /obj/effect/decal/warning_stripes/thick{
 	dir = 1
@@ -2872,6 +2878,11 @@
 	},
 /turf/closed/wall/mainship,
 /area/mainship/living/evacuation)
+"ji" = (
+/turf/open/floor/mainship/sterile/purple/corner{
+	dir = 4
+	},
+/area/mainship/medical/chemistry)
 "jj" = (
 /turf/open/floor/mainship/silver/corner,
 /area/mainship/hallways/port_hallway)
@@ -4740,6 +4751,14 @@
 /obj/item/clothing/mask/gas,
 /turf/open/floor/mainship/cargo,
 /area/mainship/hallways/hangar)
+"pJ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 1
+	},
+/area/mainship/medical/chemistry)
 "pK" = (
 /obj/structure/cable,
 /obj/effect/ai_node,
@@ -4788,6 +4807,9 @@
 /obj/docking_port/stationary/supply,
 /turf/open/floor/mainship/empty,
 /area/mainship/squads/req)
+"pU" = (
+/turf/open/floor/mainship/sterile/purple/corner,
+/area/mainship/medical/chemistry)
 "pV" = (
 /obj/docking_port/stationary/marine_dropship/crash_target,
 /turf/open/floor/mainship/black{
@@ -5118,12 +5140,6 @@
 	dir = 8
 	},
 /area/mainship/living/cryo_cells)
-"rv" = (
-/obj/effect/ai_node,
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 4
-	},
-/area/mainship/medical/chemistry)
 "rw" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 4
@@ -8976,6 +8992,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/mainship/black,
 /area/mainship/living/briefing)
+"Dm" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/mainship/medical/chemistry)
 "Dn" = (
 /obj/structure/flora/pottedplant/twentyone{
 	icon_state = "plant-09"
@@ -10591,17 +10614,6 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/chemistry)
-"HS" = (
-/obj/machinery/door/airlock/mainship/medical/free_access{
-	dir = 2;
-	name = "Chemistry"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "HU" = (
 /obj/machinery/computer/camera_advanced/remote_fob,
 /turf/open/floor/mainship/red{
@@ -10805,12 +10817,6 @@
 /turf/open/floor/mainship/sterile/purple/side{
 	dir = 1
 	},
-/area/mainship/medical/chemistry)
-"IA" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/mainship/sterile/purple/corner,
 /area/mainship/medical/chemistry)
 "IB" = (
 /turf/open/floor/mainship/mono,
@@ -11424,14 +11430,6 @@
 	dir = 9
 	},
 /area/mainship/living/commandbunks)
-"Kw" = (
-/obj/machinery/door/airlock/multi_tile/mainship/medidoor/medbay/free_access{
-	dir = 1;
-	name = "Chemistry";
-	req_one_access = list(2,8,40)
-	},
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "Kx" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 1
@@ -13769,10 +13767,6 @@
 	dir = 4
 	},
 /area/mainship/command/cic)
-"RF" = (
-/obj/structure/dropship_equipment/flare_launcher,
-/turf/open/floor/mainship/cargo,
-/area/mainship/hallways/hangar)
 "RG" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -14048,6 +14042,10 @@
 	dir = 1
 	},
 /area/mainship/shipboard/weapon_room)
+"SG" = (
+/obj/structure/dropship_equipment/flare_launcher,
+/turf/open/floor/mainship/cargo,
+/area/mainship/hallways/hangar)
 "SH" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -22440,7 +22438,7 @@ Cc
 Fe
 Gk
 Hc
-HS
+Dm
 Iz
 Ju
 Ku
@@ -22539,9 +22537,9 @@ Ff
 Gl
 Hd
 HQ
-IA
-Jv
-rv
+pJ
+Jt
+ca
 Jv
 Jv
 Mm
@@ -22637,9 +22635,9 @@ Fg
 Gm
 kt
 HQ
-HR
-Jt
-Kw
+pU
+Jv
+ji
 HQ
 Is
 Is
@@ -23112,8 +23110,8 @@ MW
 OS
 Ou
 VC
-RF
-RF
+SG
+SG
 VC
 CH
 OS
