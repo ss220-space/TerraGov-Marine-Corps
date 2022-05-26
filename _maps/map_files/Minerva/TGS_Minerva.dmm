@@ -3083,6 +3083,13 @@
 	dir = 8
 	},
 /area/mainship/hallways/starboard_hallway)
+"jN" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/mainship/medical/chemistry)
 "jO" = (
 /turf/open/floor/mainship/terragov/north{
 	dir = 6
@@ -3426,6 +3433,9 @@
 /obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/open/floor/mainship/research,
 /area/mainship/medical/medical_science)
+"le" = (
+/turf/open/floor/mainship/sterile/purple/corner,
+/area/mainship/medical/chemistry)
 "lg" = (
 /obj/machinery/computer/pandemic,
 /turf/open/floor/mainship/research,
@@ -4288,12 +4298,6 @@
 /obj/structure/cable,
 /turf/open/floor/mainship/mono,
 /area/mainship/living/pilotbunks)
-"ob" = (
-/obj/structure/table/mainship/nometal,
-/obj/effect/spawner/random/plushie/nospawnninety{
-	},
-/turf/open/floor/mainship/floor,
-/area/mainship/hallways/starboard_hallway)
 "oc" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
@@ -5207,12 +5211,6 @@
 	dir = 8
 	},
 /area/mainship/living/cryo_cells)
-"rv" = (
-/obj/effect/ai_node,
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 4
-	},
-/area/mainship/medical/chemistry)
 "rw" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 4
@@ -6537,12 +6535,6 @@
 "vD" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4
-	},
-/turf/open/floor/wood,
-/area/mainship/medical/lounge)
-"vE" = (
-/obj/structure/table/woodentable,
-/obj/effect/spawner/random/plushie/nospawnninety{
 	},
 /turf/open/floor/wood,
 /area/mainship/medical/lounge)
@@ -10050,6 +10042,13 @@
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/mainship/living/commandbunks)
+"FR" = (
+/obj/structure/table/mainship/nometal,
+/obj/effect/spawner/random/plushie/nospawnninety{
+	
+	},
+/turf/open/floor/mainship/floor,
+/area/mainship/hallways/starboard_hallway)
 "FS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10727,17 +10726,6 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/chemistry)
-"HS" = (
-/obj/machinery/door/airlock/mainship/medical/free_access{
-	dir = 2;
-	name = "Chemistry"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "HU" = (
 /obj/machinery/computer/camera_advanced/remote_fob,
 /turf/open/floor/mainship/red{
@@ -10943,12 +10931,6 @@
 /turf/open/floor/mainship/sterile/purple/side{
 	dir = 1
 	},
-/area/mainship/medical/chemistry)
-"IA" = (
-/obj/machinery/light/mainship{
-	dir = 1
-	},
-/turf/open/floor/mainship/sterile/purple/corner,
 /area/mainship/medical/chemistry)
 "IB" = (
 /turf/open/floor/mainship/mono,
@@ -11546,14 +11528,6 @@
 	dir = 9
 	},
 /area/mainship/living/commandbunks)
-"Kw" = (
-/obj/machinery/door/airlock/multi_tile/mainship/medidoor/medbay/free_access{
-	dir = 1;
-	name = "Chemistry";
-	req_one_access = list(2,8,40)
-	},
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "Kx" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 1
@@ -13325,6 +13299,13 @@
 /obj/effect/ai_node,
 /turf/open/floor/mainship/floor,
 /area/mainship/engineering/engineering_workshop)
+"PP" = (
+/obj/structure/table/woodentable,
+/obj/effect/spawner/random/plushie/nospawnninety{
+	
+	},
+/turf/open/floor/wood,
+/area/mainship/medical/lounge)
 "PQ" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -13965,6 +13946,11 @@
 	dir = 1
 	},
 /area/mainship/living/evacuation)
+"RP" = (
+/turf/open/floor/mainship/sterile/purple/corner{
+	dir = 4
+	},
+/area/mainship/medical/chemistry)
 "RQ" = (
 /turf/open/floor/plating{
 	dir = 4;
@@ -15080,6 +15066,12 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/command/telecomms)
+"Vf" = (
+/obj/effect/ai_node,
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 6
+	},
+/area/mainship/medical/chemistry)
 "Vg" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 4
@@ -15531,6 +15523,14 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/engineering/engine_core)
+"WJ" = (
+/obj/machinery/light/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 1
+	},
+/area/mainship/medical/chemistry)
 "WK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -21181,7 +21181,7 @@ rO
 kq
 tG
 uT
-vE
+PP
 wv
 xC
 ty
@@ -22565,7 +22565,7 @@ Cc
 Fe
 Gk
 Hc
-HS
+jN
 Iz
 Ju
 Ku
@@ -22664,9 +22664,9 @@ Ff
 Gl
 Hd
 HQ
-IA
-Jv
-rv
+WJ
+Jt
+Vf
 Jv
 Jv
 Mm
@@ -22762,9 +22762,9 @@ Fg
 Gm
 kt
 HQ
-HR
-Jt
-Kw
+le
+Jv
+RP
 HQ
 Is
 Is
@@ -25296,7 +25296,7 @@ vi
 vi
 sP
 vg
-ob
+FR
 yA
 Of
 Eo
