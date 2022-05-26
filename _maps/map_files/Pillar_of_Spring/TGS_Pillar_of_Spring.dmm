@@ -483,7 +483,7 @@
 /obj/machinery/power/apc/mainship,
 /obj/structure/cable,
 /turf/open/floor/mainship/sterile/purple/side{
-	dir = 5
+	dir = 1
 	},
 /area/mainship/medical/chemistry)
 "bD" = (
@@ -573,18 +573,12 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hallways/hangar)
 "bU" = (
-/obj/machinery/door/firedoor/multi_tile{
-	dir = 1
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/multi_tile/mainship/medidoor/medbay/free_access{
-	dir = 1;
-	name = "Chemistry";
-	req_one_access = list(2,8,40)
+/turf/open/floor/mainship/sterile/purple/corner{
+	dir = 8
 	},
-/turf/open/floor/mainship/sterile/side,
 /area/mainship/medical/chemistry)
 "bV" = (
 /obj/machinery/door_control/mainship/ammo{
@@ -1776,9 +1770,7 @@
 /turf/open/floor/mainship/stripesquare,
 /area/mainship/engineering/lower_engineering)
 "fy" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "plant-05"
-	},
+/obj/structure/flora/pottedplant,
 /obj/machinery/vending/nanomed,
 /turf/open/floor/mainship/mono,
 /area/mainship/engineering/engineering_workshop)
@@ -11063,14 +11055,6 @@
 	dir = 1
 	},
 /area/mainship/medical/medical_science)
-"Hd" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 1
-	},
-/area/mainship/medical/medical_science)
 "He" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
@@ -11117,7 +11101,9 @@
 "Hi" = (
 /obj/structure/disposalpipe/segment/corner,
 /obj/effect/ai_node,
-/turf/open/floor/mainship/sterile/dark,
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 10
+	},
 /area/mainship/medical/chemistry)
 "Hj" = (
 /obj/structure/disposalpipe/segment,
@@ -15477,7 +15463,7 @@
 /area/mainship/medical/lower_medical)
 "Td" = (
 /obj/structure/cable,
-/turf/open/floor/mainship/sterile/side{
+/turf/open/floor/mainship/sterile/purple/corner{
 	dir = 1
 	},
 /area/mainship/medical/chemistry)
@@ -15865,7 +15851,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -42444,7 +42429,7 @@ yl
 ZX
 ZX
 gg
-Hd
+Wb
 qs
 ZX
 Rf
