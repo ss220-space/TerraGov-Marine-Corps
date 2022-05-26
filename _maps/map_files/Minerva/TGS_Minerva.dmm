@@ -52,6 +52,14 @@
 /obj/machinery/door/airlock/multi_tile/mainship/generic/noglass,
 /turf/open/floor/mainship/mono,
 /area/mainship/hull/starboard_hull)
+"am" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 1
+	},
+/area/mainship/medical/chemistry)
 "an" = (
 /obj/effect/decal/warning_stripes/thick/corner,
 /obj/item/ammo_casing/bullet{
@@ -691,6 +699,13 @@
 	dir = 9
 	},
 /area/mainship/hallways/hangar)
+"ca" = (
+/obj/item/tool/stamp/internalaffairs{
+	pixel_y = 6
+	},
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "cb" = (
 /obj/effect/decal/warning_stripes/thick{
 	dir = 1
@@ -1386,13 +1401,6 @@
 "er" = (
 /turf/open/floor/wood,
 /area/mainship/command/corporateliaison)
-"es" = (
-/obj/item/tool/stamp/internalaffairs{
-	pixel_y = 6
-	},
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
 "et" = (
 /obj/effect/decal/warning_stripes/box/small{
 	dir = 1
@@ -1407,25 +1415,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
-"ev" = (
-/obj/item/storage/fancy/cigar,
-/obj/structure/disposalpipe/segment,
-/obj/item/tool/pen,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
-"ew" = (
-/obj/item/reagent_containers/food/drinks/bottle/sake{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/food/drinks/dry_ramen,
-/obj/item/radio/intercom/general{
-	dir = 8
-	},
-/obj/structure/table/fancywoodentable,
 /turf/open/floor/wood,
 /area/mainship/command/corporateliaison)
 "ey" = (
@@ -1553,37 +1542,6 @@
 /obj/machinery/autodoc,
 /turf/open/floor/mainship/sterile,
 /area/mainship/medical/lower_medical)
-"eW" = (
-/obj/machinery/computer/skills,
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
-"eX" = (
-/obj/item/paper,
-/obj/item/tool/pen,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
-"eY" = (
-/obj/item/flashlight/lamp,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
-"eZ" = (
-/obj/structure/paper_bin{
-	pixel_x = -4;
-	pixel_y = 5
-	},
-/obj/item/tool/pen,
-/obj/item/clipboard{
-	pixel_x = 5
-	},
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
 "fb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -1694,6 +1652,12 @@
 /obj/item/reagent_containers/glass/fertilizer/ez,
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hull/starboard_hull)
+"ft" = (
+/obj/item/paper,
+/obj/item/tool/pen,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "fu" = (
 /obj/structure/sign/poster,
 /turf/open/floor/plating/plating_catwalk,
@@ -1933,23 +1897,6 @@
 /obj/item/reagent_containers/food/drinks/bottle/sake,
 /obj/item/reagent_containers/food/drinks/bottle/wine,
 /obj/item/reagent_containers/food/drinks/bottle/wine,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
-"gd" = (
-/obj/machinery/microwave{
-	pixel_y = 5
-	},
-/obj/item/storage/box/donkpockets,
-/obj/item/storage/box/donkpockets,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
-"ge" = (
-/obj/item/storage/box/cups{
-	pixel_x = 5;
-	pixel_y = 2
-	},
-/obj/structure/table/fancywoodentable,
 /turf/open/floor/wood,
 /area/mainship/command/corporateliaison)
 "gf" = (
@@ -3133,6 +3080,11 @@
 /obj/docking_port/stationary/marine_dropship/crash_target,
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/living/briefing)
+"jU" = (
+/obj/item/flashlight/lamp,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "jV" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -3291,6 +3243,13 @@
 /obj/structure/supply_drop,
 /turf/open/floor/mainship/mono,
 /area/mainship/squads/req)
+"kF" = (
+/obj/item/storage/fancy/cigar,
+/obj/structure/disposalpipe/segment,
+/obj/item/tool/pen,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "kI" = (
 /turf/open/floor/mainship_hull/dir{
 	dir = 10
@@ -5118,12 +5077,6 @@
 	dir = 8
 	},
 /area/mainship/living/cryo_cells)
-"rv" = (
-/obj/effect/ai_node,
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 4
-	},
-/area/mainship/medical/chemistry)
 "rw" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 4
@@ -8976,6 +8929,14 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/mainship/black,
 /area/mainship/living/briefing)
+"Dm" = (
+/obj/item/storage/box/cups{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "Dn" = (
 /obj/structure/flora/pottedplant/twentyone{
 	icon_state = "plant-09"
@@ -10591,17 +10552,6 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/chemistry)
-"HS" = (
-/obj/machinery/door/airlock/mainship/medical/free_access{
-	dir = 2;
-	name = "Chemistry"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "HU" = (
 /obj/machinery/computer/camera_advanced/remote_fob,
 /turf/open/floor/mainship/red{
@@ -10805,12 +10755,6 @@
 /turf/open/floor/mainship/sterile/purple/side{
 	dir = 1
 	},
-/area/mainship/medical/chemistry)
-"IA" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/mainship/sterile/purple/corner,
 /area/mainship/medical/chemistry)
 "IB" = (
 /turf/open/floor/mainship/mono,
@@ -11424,14 +11368,6 @@
 	dir = 9
 	},
 /area/mainship/living/commandbunks)
-"Kw" = (
-/obj/machinery/door/airlock/multi_tile/mainship/medidoor/medbay/free_access{
-	dir = 1;
-	name = "Chemistry";
-	req_one_access = list(2,8,40)
-	},
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "Kx" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 1
@@ -11605,6 +11541,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hull/starboard_hull)
+"KY" = (
+/obj/machinery/computer/skills,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "KZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -12786,6 +12730,9 @@
 	},
 /turf/open/floor/mainship/floor,
 /area/mainship/engineering/engineering_workshop)
+"OB" = (
+/turf/open/floor/mainship/sterile/purple/corner,
+/area/mainship/medical/chemistry)
 "OC" = (
 /obj/machinery/alarm,
 /turf/open/floor/mainship/floor,
@@ -13154,6 +13101,11 @@
 /obj/effect/ai_node,
 /turf/open/floor/mainship/floor,
 /area/mainship/engineering/engineering_workshop)
+"PK" = (
+/turf/open/floor/mainship/sterile/purple/corner{
+	dir = 4
+	},
+/area/mainship/medical/chemistry)
 "PL" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -14025,6 +13977,15 @@
 "SA" = (
 /turf/closed/wall/mainship,
 /area/mainship/squads/req)
+"SB" = (
+/obj/machinery/microwave{
+	pixel_y = 5
+	},
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "SC" = (
 /obj/structure/prop/mainship/sensor_computer3,
 /turf/open/floor/mainship/mono,
@@ -14493,6 +14454,18 @@
 	dir = 1
 	},
 /area/mainship/command/self_destruct)
+"TL" = (
+/obj/structure/paper_bin{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/tool/pen,
+/obj/item/clipboard{
+	pixel_x = 5
+	},
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "TM" = (
 /obj/machinery/camera/autoname/mainship,
 /turf/open/floor/mainship/mono,
@@ -14629,6 +14602,13 @@
 	},
 /turf/open/floor/plating,
 /area/mainship/powered)
+"Uk" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/mainship/medical/chemistry)
 "Ul" = (
 /obj/structure/cable,
 /turf/open/floor/mainship/mono,
@@ -15795,6 +15775,12 @@
 	},
 /turf/open/floor/mainship/tcomms,
 /area/mainship/command/airoom)
+"XY" = (
+/obj/effect/ai_node,
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 6
+	},
+/area/mainship/medical/chemistry)
 "XZ" = (
 /turf/open/floor/mainship/red/corner{
 	dir = 1
@@ -15898,6 +15884,18 @@
 	dir = 10
 	},
 /area/mainship/command/cic)
+"Yn" = (
+/obj/item/reagent_containers/food/drinks/bottle/sake{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/drinks/dry_ramen,
+/obj/item/radio/intercom/general{
+	dir = 8
+	},
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "Yo" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -20548,7 +20546,7 @@ cT
 bE
 dD
 cv
-eW
+KY
 er
 gc
 bE
@@ -20646,9 +20644,9 @@ cU
 bE
 dF
 eq
-eX
+ft
 fy
-gd
+SB
 gS
 hz
 ir
@@ -20744,9 +20742,9 @@ cY
 bE
 dF
 er
-eY
+jU
 er
-ge
+Dm
 gS
 hz
 ir
@@ -20841,8 +20839,8 @@ cz
 cZ
 bE
 Qy
-es
-eZ
+ca
+TL
 er
 gf
 gS
@@ -21037,7 +21035,7 @@ cB
 db
 bE
 dK
-ev
+kF
 fc
 fA
 gk
@@ -21135,7 +21133,7 @@ bE
 bE
 bE
 dL
-ew
+Yn
 fd
 fF
 gm
@@ -22440,7 +22438,7 @@ Cc
 Fe
 Gk
 Hc
-HS
+Uk
 Iz
 Ju
 Ku
@@ -22539,9 +22537,9 @@ Ff
 Gl
 Hd
 HQ
-IA
-Jv
-rv
+am
+Jt
+XY
 Jv
 Jv
 Mm
@@ -22637,9 +22635,9 @@ Fg
 Gm
 kt
 HQ
-HR
-Jt
-Kw
+OB
+Jv
+PK
 HQ
 Is
 Is
