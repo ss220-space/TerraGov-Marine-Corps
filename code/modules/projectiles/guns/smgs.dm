@@ -377,7 +377,6 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/gyro,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonetknife,
@@ -408,9 +407,9 @@
 	aim_slowdown = 0
 
 	accuracy_mult = 1
-	accuracy_mult_unwielded = 0.85 //moving and akimbo yield lower acc
+	accuracy_mult_unwielded = 0.75 //moving or akimbo yield lower acc
 	scatter = -2
-	scatter_unwielded = 5 // Not exactly small weapon, and recoil blowback is only for vertical recoil
+	scatter_unwielded = 6 // Not exactly small weapon, and recoil blowback is only for vertical recoil
 
 	movement_acc_penalty_mult = 0.1
 	upper_akimbo_accuracy = 5
