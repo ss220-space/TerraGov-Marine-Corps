@@ -1,5 +1,5 @@
 SUBSYSTEM_DEF(ru_items)
-	name = "ru_items"
+	name = "RU_items"
 	flags = SS_NO_FIRE
 	init_order = INIT_ORDER_RU_ITEMS
 	runlevels = RUNLEVEL_INIT
@@ -35,7 +35,11 @@ SUBSYSTEM_DEF(ru_items)
 	name = "\improper Vector storm submachinegun"
 	desc = "The Vector is the TerraGov Marine Corps depelopment to increase assault capability of marines. Lightweight and simple to use. It features delayed blowback system, heavily reducing recoil even with its high ROF. A highly-customizable platform, it is reliable and versatile. Ideal weapon for quick assaults. Uses extended .45 ACP HP magazines"
 	fire_sound = 'sound/weapons/guns/fire/tp23.ogg'
-	icon = 'icons/Marine/gun64.dmi'
+	icon = 'ss220/icons/item/weapons.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'ss220/icons/item/items_lefthand.dmi',
+		slot_r_hand_str = 'ss220/icons/item/items_righthand.dmi',
+		)
 	icon_state = "v45"
 	item_state = "v45"
 	caliber = CALIBER_45ACP //codex
