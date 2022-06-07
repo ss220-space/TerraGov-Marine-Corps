@@ -75,6 +75,7 @@
 #define INIT_ORDER_TIMER 1
 #define INIT_ORDER_DEFAULT 0
 #define INIT_ORDER_AIR -1
+#define INIT_ORDER_RU_ITEMS -3 //before assets because vendor items need to preload
 #define INIT_ORDER_ASSETS -4
 #define INIT_ORDER_SPAWNING_POOL -5
 #define INIT_ORDER_OVERLAY -6
@@ -85,7 +86,6 @@
 #define INIT_ORDER_PATH -50
 #define INIT_ORDER_EXPLOSIONS -69
 #define INIT_ORDER_EXCAVATION -78
-#define INIT_ORDER_RU_WEAPONS -95
 #define INIT_ORDER_CHAT -100 //Should be last to ensure chat remains smooth during init.
 
 // Subsystem fire priority, from lowest to highest priority
