@@ -5,4 +5,9 @@ SUBSYSTEM_DEF(RU_items)
 	runlevels = RUNLEVEL_INIT
 
 
-/datum/controller/subsystem/RU_items/Initialize()
+/obj/machinery/vending/Initialize(mapload, ...)
+	build_ru_items()
+	. = ..()
+
+
+/datum/controller/subsystem/RU_items/proc/build_ru_items()
