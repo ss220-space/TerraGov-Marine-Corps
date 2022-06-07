@@ -22,10 +22,13 @@ SUBSYSTEM_DEF(ru_items)
 
 
 /obj/machinery/vending/proc/build_ru_items()
-	if(istype(src, /obj/machinery/vending/weapon/valhalla))
-		products["Imports"] = SSru_items.items_val+SSru_items.items
-	else if(istype(src, /obj/machinery/vending/weapon))
+	return
+
+/obj/machinery/vending/weapon/build_ru_items()
 		products["Imports"] = SSru_items.items
+
+/obj/machinery/vending/weapon/valhalla/build_ru_items()
+		products["Imports"] = SSru_items.items_val + SSru_items.items
 
 
 //List all custom items here
