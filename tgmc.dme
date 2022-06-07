@@ -251,7 +251,6 @@
 #include "code\controllers\subsystem\persistence.dm"
 #include "code\controllers\subsystem\points.dm"
 #include "code\controllers\subsystem\radio.dm"
-#include "code\controllers\subsystem\RU_items.dm"
 #include "code\controllers\subsystem\runechat.dm"
 #include "code\controllers\subsystem\server_maint.dm"
 #include "code\controllers\subsystem\shuttle.dm"
@@ -1752,6 +1751,7 @@
 #include "interface\menu.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+#include "ss220\code\ru_items.dm"
 #include "ss220\code\necoarc.dm"
 #include "ss220\code\vendorcw.dm"
 // END_INCLUDE

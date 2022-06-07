@@ -1,5 +1,5 @@
-SUBSYSTEM_DEF(RU_items)
-	name = "RU_items"
+SUBSYSTEM_DEF(ru_items)
+	name = "ru_items"
 	flags = SS_NO_FIRE
 	init_order = INIT_ORDER_RU_ITEMS
 	runlevels = RUNLEVEL_INIT
@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(RU_items)
 //Set to False to not compile
 #if TRUE
 
-#include "ss220\code\ru_items_list.dm"
+#include "ru_items_list.dm"
 
 	var/list/items = list(
 		/obj/item/ammo_magazine/smg/vector = -1,
@@ -27,8 +27,8 @@ SUBSYSTEM_DEF(RU_items)
 
 /obj/machinery/vending/proc/build_ru_items()
 	if(istype(src, /obj/machinery/vending/weapon/valhalla))
-		products["Imports"] = SSRU_items.items_val+SSRU_items.items
+		products["Imports"] = SSru_items.items_val+SSru_items.items
 	else if(istype(src, /obj/machinery/vending/weapon))
-		products["Imports"] = SSRU_items.items
+		products["Imports"] = SSru_items.items
 
 #endif
