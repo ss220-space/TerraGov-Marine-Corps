@@ -87,6 +87,17 @@
 	shrapnel_chance = 25
 
 
+/obj/item/ammo_magazine/packet/acp_smg
+	name = "box of .45 ACP HP"
+	desc = "A box containing common .45 ACP hollow-point rounds."
+	icon_state = "box_45acp"
+	default_ammo = /datum/ammo/bullet/smg/acp
+	w_class = WEIGHT_CLASS_SMALL
+	caliber = CALIBER_45ACP
+	current_rounds = 120
+	max_rounds = 120
+
+
 /datum/supply_packs/weapons/vector
 	name = "Vector"
 	contains = list(/obj/item/weapon/gun/smg/vector)
