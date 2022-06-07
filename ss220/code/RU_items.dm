@@ -25,10 +25,10 @@ SUBSYSTEM_DEF(ru_items)
 	return
 
 /obj/machinery/vending/weapon/build_ru_items()
-		products["Imports"] = SSru_items.items
+	products["Imports"] = SSru_items.items
 
 /obj/machinery/vending/weapon/valhalla/build_ru_items()
-		products["Imports"] = SSru_items.items_val + SSru_items.items
+	products["Imports"] = SSru_items.items_val + SSru_items.items
 
 
 //List all custom items here
