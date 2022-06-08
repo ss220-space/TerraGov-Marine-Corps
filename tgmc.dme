@@ -1793,5 +1793,6 @@
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
 #include "ss220\code\necoarc.dm"
+#include "ss220\code\RU_items.dm"
 #include "ss220\code\vendorcw.dm"
 // END_INCLUDE
