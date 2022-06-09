@@ -168,11 +168,27 @@ SUBSYSTEM_DEF(ru_items)
 	cost = 20
 
 
+/obj/item/weapon/twohanded/glaive/harvester/attack_self(mob/user)
+	to_chat(user, span_warning("Check!"))
+	. = ..()
+	if(ismonkey(user)) //TODO MAKE THIS A SPECIES FLAG
+		to_chat(user, span_warning("It's too heavy for you to wield fully!"))
+		return
+
+	if(flags_item & WIELDED)
+		unwield(user)
+	else
+		wield(user)
+
 /obj/item/weapon/twohanded/glaive/harvester/equipped(mob/user, slot)
+	to_chat(user, span_warning("Equipped!"))
+	toggle_item_bump_attack(user, TRUE)
 	. = ..()
 	toggle_item_bump_attack(user, TRUE)
 
 /obj/item/weapon/twohanded/glaive/harvester/wield(mob/user)
+	to_chat(user, span_warning("Wielded!"))
+	toggle_item_bump_attack(user, TRUE)
 	. = ..()
 	toggle_item_bump_attack(user, TRUE)
 
