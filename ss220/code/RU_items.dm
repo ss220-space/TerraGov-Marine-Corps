@@ -170,7 +170,6 @@ SUBSYSTEM_DEF(ru_items)
 
 /obj/item/weapon/twohanded/glaive/harvester/attack_self(mob/user)
 	to_chat(user, span_warning("Check!"))
-	. = ..()
 	if(ismonkey(user))
 		to_chat(user, span_warning("It's too heavy for you to wield fully!"))
 		return
