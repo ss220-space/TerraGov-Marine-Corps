@@ -166,3 +166,16 @@ SUBSYSTEM_DEF(ru_items)
 	name = "VAL-HAL-A"
 	contains = list(/obj/item/weapon/twohanded/glaive/harvester)
 	cost = 20
+
+
+/obj/item/weapon/twohanded/glaive/harvester/equipped(mob/user, slot)
+	. = ..()
+	toggle_item_bump_attack(user, TRUE)
+
+/obj/item/weapon/twohanded/glaive/harvester/wield(mob/user)
+	. = ..()
+	toggle_item_bump_attack(user, TRUE)
+
+/obj/item/weapon/twohanded/glaive/harvester/unwield(mob/user)
+	. = ..()
+	toggle_item_bump_attack(user, FALSE)
