@@ -172,7 +172,6 @@ SUBSYSTEM_DEF(ru_items)
 
 
 
-
 // Stuff which should ideally be in /twohanded code
 ///////////////////////////////////////////////////
 
