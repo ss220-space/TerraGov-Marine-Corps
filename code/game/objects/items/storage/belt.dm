@@ -181,6 +181,7 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/tricordrazine(src)
 	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat(src)
@@ -225,6 +226,7 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/tricordrazine(src)
 	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/storage/pill_bottle/quickclot(src)
 	new /obj/item/storage/pill_bottle/alkysine(src)
 	new /obj/item/storage/pill_bottle/imidazoline(src)
@@ -249,6 +251,7 @@
 		/obj/item/reagent_containers/hypospray/autoinjector/inaprovaline,
 		/obj/item/reagent_containers/hypospray/autoinjector/spaceacillin,
 		/obj/item/reagent_containers/hypospray/autoinjector/hypervene,
+		/obj/item/reagent_containers/hypospray/autoinjector/peridaxon,
 		/obj/item/reagent_containers/hypospray/autoinjector/quickclot,
 	)
 
@@ -270,6 +273,7 @@
 	new /obj/item/reagent_containers/hypospray/autoinjector/inaprovaline(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/spaceacillin(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/hypervene(src)
+	new /obj/item/reagent_containers/hypospray/autoinjector/peridaxon(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/quickclot(src)
 
 /obj/item/storage/belt/combatLifesaver/upp

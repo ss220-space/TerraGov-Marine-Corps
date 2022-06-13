@@ -101,7 +101,7 @@
 
 
 
-	if(staminaloss > -max_stamina)
+	if(staminaloss > -max_stamina_buffer)
 		handle_staminaloss()
 
 	if(IsSleeping())
