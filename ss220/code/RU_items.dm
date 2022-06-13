@@ -154,12 +154,11 @@ SUBSYSTEM_DEF(ru_items)
 	force = 40
 	force_wielded = 95 //Reminder: putting trama inside deals 60% additional damage
 	flags_item = DRAINS_XENO | TWOHANDED
-	attack_speed = 9 //Default is 7, this has slower attack
+	attack_speed = 10 //Default is 7, this has slower attack
 	reach = 2 //like spear
 	slowdown = 0 //Slowdown in back slot
 	var/wielded_slowdown = 0.5 //Slowdown in hands, wielded
 	var/wield_delay = 0.8 SECONDS
-	var/is_wielded = FALSE
 
 /obj/item/weapon/twohanded/glaive/harvester/Initialize()
 	. = ..()
@@ -179,22 +178,19 @@ SUBSYSTEM_DEF(ru_items)
 
 
 /obj/item/weapon/twohanded/glaive/harvester/unwield(mob/user)
-	is_wielded = FALSE
+	toggle_wielded(user, FALSE)
 	user.remove_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN)
 	. = ..()
 
 
 /obj/item/weapon/twohanded/glaive/harvester/wield(mob/user)
-	if (is_wielded)
-		return
-
 	. = ..()
 
 	if(wield_delay > 0 && !do_mob(user, user, wield_delay, BUSY_ICON_HOSTILE, null, PROGRESS_CLOCK, ignore_flags = IGNORE_LOC_CHANGE))
-		if (is_wielded) //Something went wrong. Use flag instead of callback check because it seems it's a fucking temporary solution which is there for 3 years. See gun do_wield
+		if (flags_item & WIELDED) //Something went wrong. Use flag instead of callback check because it seems it's a fucking temporary solution which is there for 3 years. See gun do_wield
 			unwield(user)
 			return
 
 	user.add_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN, TRUE, 0, NONE, TRUE, wielded_slowdown)
-	is_wielded = TRUE
+	toggle_wielded(TRUE)
 	return
