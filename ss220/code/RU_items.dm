@@ -8,7 +8,6 @@ SUBSYSTEM_DEF(ru_items)
 	var/list/items = list(
 		/obj/item/ammo_magazine/smg/vector = -1,
 		/obj/item/ammo_magazine/packet/acp_smg = -1,
-		/obj/item/weapon/twohanded/glaive/harvester = 2,
 	)
 
 	var/list/items_val = list(
@@ -152,11 +151,15 @@ SUBSYSTEM_DEF(ru_items)
 	desc = "TerraGov Marine Corps' cutting-edge 'Harvester' halberd, with experimental plasma regulator. An advanced weapon that combines sheer force with the ability to apply a variety of debilitating effects when loaded with certain reagents, but should be used with both hands. Activate after loading to prime a single use of an effect. It also harvests substances from alien lifeforms it strikes when connected to the Vali system."
 	icon_state = "VAL-HAL-A"
 	item_state = "VAL-HAL-A"
-	force = 50
-	force_wielded = 100 //Reminder: putting trama inside deals 60% additional damage
+	force = 40
+	force_wielded = 95 //Reminder: putting trama inside deals 60% additional damage
 	flags_item = DRAINS_XENO | TWOHANDED
-	attack_speed = 10 //Default is 7, this has slow attack
+	attack_speed = 9 //Default is 7, this has slower attack
 	reach = 2 //like spear
+	slowdown = 0 //Slowdown in back slot
+	var/wielded_slowdown = 0.5 //Slowdown in hands, wielded
+	var/wield_delay = 0.8 SECONDS
+	var/is_wielded = FALSE
 
 /obj/item/weapon/twohanded/glaive/harvester/Initialize()
 	. = ..()
@@ -166,3 +169,33 @@ SUBSYSTEM_DEF(ru_items)
 	name = "VAL-HAL-A"
 	contains = list(/obj/item/weapon/twohanded/glaive/harvester)
 	cost = 20
+
+
+
+
+// Stuff which should ideally be in /twohanded code
+///////////////////////////////////////////////////
+
+#define MOVESPEED_ID_WIELDED_SLOWDOWN "WIELDED_SLOWDOWN"
+
+
+/obj/item/weapon/twohanded/glaive/harvester/unwield(mob/user)
+	is_wielded = FALSE
+	user.remove_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN)
+	. = ..()
+
+
+/obj/item/weapon/twohanded/glaive/harvester/wield(mob/user)
+	if (is_wielded)
+		return
+
+	. = ..()
+
+	if(wield_delay > 0 && !do_mob(user, user, wield_delay, BUSY_ICON_HOSTILE, null, PROGRESS_CLOCK, ignore_flags = IGNORE_LOC_CHANGE))
+		if (is_wielded) //Something went wrong. Use flag instead of callback check because it seems it's a fucking temporary solution which is there for 3 years. See gun do_wield
+			unwield(user)
+			return
+
+	user.add_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN, TRUE, 0, NONE, TRUE, wielded_slowdown)
+	is_wielded = TRUE
+	return
