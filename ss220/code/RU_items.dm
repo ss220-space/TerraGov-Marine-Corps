@@ -176,11 +176,9 @@ SUBSYSTEM_DEF(ru_items)
 
 #define MOVESPEED_ID_WIELDED_SLOWDOWN "WIELDED_SLOWDOWN"
 
-
 /obj/item/weapon/twohanded/glaive/harvester/unwield(mob/user)
-	toggle_wielded(user, FALSE)
-	user.remove_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN)
 	. = ..()
+	user.remove_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN)
 
 
 /obj/item/weapon/twohanded/glaive/harvester/wield(mob/user)
