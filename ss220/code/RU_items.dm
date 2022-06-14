@@ -187,9 +187,10 @@ SUBSYSTEM_DEF(ru_items)
 	if (!(flags_item & WIELDED))
 		return
 
-	if(wield_delay > 0 && !do_mob(user, user, wield_delay, BUSY_ICON_HOSTILE, null, PROGRESS_CLOCK, ignore_flags = IGNORE_LOC_CHANGE))
-		unwield(user)
-		return
+	if(wield_delay > 0)
+		if (!do_mob(user, user, wield_delay, BUSY_ICON_HOSTILE, null, PROGRESS_CLOCK, ignore_flags = IGNORE_LOC_CHANGE))
+			unwield(user)
+			return
 
 	user.add_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN, TRUE, 0, NONE, TRUE, wielded_slowdown)
-	return
+
