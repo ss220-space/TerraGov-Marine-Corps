@@ -52,7 +52,7 @@ export const JobPreferences = (props, context) => {
     'SOM Squad Veteran',
     'SOM Squad Leader',
   ];
-  const flavourJobs = ['Corporate Liaison'];
+  const flavourJobs = ['Corporate Liaison', 'Survivor'];
 
   const JobList = ({ name, jobs }) => (
     <Section title={name}>
