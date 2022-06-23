@@ -7,10 +7,6 @@
 	skills_type = /datum/skills/civilian/survivor
 	faction = FACTION_TERRAGOV
 
-	exp_requirements = XP_REQ_SURVIVOR
-	exp_type = EXP_TYPE_LIVING
-	job_flags = JOB_FLAG_LATEJOINABLE
-
 /datum/job/survivor/after_spawn(mob/living/carbon/C, mob/M, latejoin = FALSE)
 	. = ..()
 
@@ -284,7 +280,21 @@ Good luck, but do not expect to survive."})
 	title = "Survivor"
 	skills_type = /datum/skills/civilian/survivor/master
 	outfit = /datum/outfit/job/survivor/rambo
-	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_NOHEADSET|JOB_FLAG_OVERRIDELATEJOINSPAWN
+	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_NOHEADSET|JOB_FLAG_OVERRIDELATEJOINSPAWN|JOB_FLAG_LATEJOINABLE
+
+	exp_requirements = XP_REQ_SURVIVOR
+	exp_type = EXP_TYPE_LIVING
+
+	html_description = {"
+		<b>Difficulty</b>: Hard<br /><br />
+		<b>You answer to </b> Noone<br /><br />
+		<b>Unlock Requirement</b>: 300h Living<br /><br />
+		<b>Gamemode Availability</b>: Nuclear War, Distress<br /><br /><br />
+		You are one of lucky people to survive the initial xeno infestation. You're one of unlucky people who have not escaped yet. Do not fear, or you will die even faster.
+		<br /><br />
+		<b>Duty</b>: SURVIVE
+	"}
+
 
 /datum/outfit/job/survivor/rambo
 	name = "Survivor"
