@@ -9,6 +9,7 @@
 
 	exp_requirements = XP_REQ_SURVIVOR
 	exp_type = EXP_TYPE_LIVING
+	job_flags = JOB_FLAG_LATEJOINABLE
 
 /datum/job/survivor/after_spawn(mob/living/carbon/C, mob/M, latejoin = FALSE)
 	. = ..()
