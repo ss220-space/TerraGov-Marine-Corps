@@ -2395,7 +2395,7 @@ datum/ammo/bullet/revolver/tp44
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE
 	armor_type = "acid"
 	danger_message = span_danger("A glob of acid lands with a splat and explodes into corrosive bile!")
-	damage = 80
+	damage = 65
 	damage_type = BURN
 	penetration = 25
 	bullet_color = BOILER_LUMINOSITY_AMMO_CORROSIVE_COLOR
