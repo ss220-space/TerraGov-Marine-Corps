@@ -478,7 +478,7 @@
 	var/power
 	switch(current_cycle)
 		if(1 to 15)
-			power = (2.5*effect_str) //While stamina loss is going, stamina regen apparently doesn't happen, so I can keep this smaller.
+			power = (3*effect_str) //While stamina loss is going, stamina regen apparently doesn't happen, so I can keep this smaller.
 			L.reagent_pain_modifier -= PAIN_REDUCTION_LIGHT
 		if(16 to 35)
 			power = (6*effect_str)
