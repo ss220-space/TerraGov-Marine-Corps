@@ -2446,7 +2446,7 @@ datum/ammo/bullet/revolver/tp44
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_LEAVE_TURF
 	danger_message = span_danger("A pressurized glob of acid lands with a concerning hissing sound and explodes into corrosive bile!")
 	max_range = 40
-	damage = 100
+	damage = 90
 	penetration = 50
 	passed_turf_smoke_type = /datum/effect_system/smoke_spread/xeno/acid/light
 	hit_paralyze_time = 1.5 SECONDS
