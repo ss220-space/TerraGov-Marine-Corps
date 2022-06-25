@@ -206,6 +206,16 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 	powerloader = SKILL_POWERLOADER_MASTER
 	police = SKILL_POLICE_FLASH
 
+/datum/skills/civilian/survivor/robust
+	name = "Survivor"
+	firearms = SKILL_FIREARMS_DEFAULT
+	medical = SKILL_MEDICAL_PRACTICED
+	surgery = SKILL_SURGERY_TRAINED
+	engineer = SKILL_ENGINEER_ENGI
+	construction = SKILL_CONSTRUCTION_ADVANCED
+	powerloader = SKILL_POWERLOADER_MASTER
+	police = SKILL_POLICE_FLASH
+
 /datum/skills/civilian/survivor/doctor
 	name = "Survivor Doctor"
 	medical = SKILL_MEDICAL_COMPETENT
