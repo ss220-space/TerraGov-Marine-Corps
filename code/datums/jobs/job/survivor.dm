@@ -278,13 +278,13 @@ Good luck, but do not expect to survive."})
 // Rambo Survivor
 /datum/job/survivor/rambo
 	title = "Survivor"
-	skills_type = /datum/skills/civilian/survivor/robust
+	skills_type = /datum/skills/civilian/survivor/master
 	outfit = /datum/outfit/job/survivor/rambo
 	job_flags = JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_NOHEADSET|JOB_FLAG_OVERRIDELATEJOINSPAWN|JOB_FLAG_LATEJOINABLE
 
 	exp_requirements = XP_REQ_SURVIVOR
 	exp_type = EXP_TYPE_ALL
-	job_points_needed = 6
+	job_points_needed = 5
 	jobworth = list(
 		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
 	)
