@@ -286,7 +286,7 @@ Good luck, but do not expect to survive."})
 	exp_type = EXP_TYPE_ALL
 	job_points_needed = 7
 	jobworth = list(
-		/datum/job/xenomorph = LARVA_POINTS_REGULAR*1.5,
+		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
 	)
 
 	html_description = {"
