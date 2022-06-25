@@ -284,7 +284,7 @@ Good luck, but do not expect to survive."})
 
 	exp_requirements = XP_REQ_SURVIVOR
 	exp_type = EXP_TYPE_ALL
-	job_points_needed = 15
+	job_points_needed = 8
 	jobworth = list(
 		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
 	)
