@@ -168,7 +168,7 @@ SUBSYSTEM_DEF(ru_items)
 /datum/supply_packs/weapons/valihalberd
 	name = "VAL-HAL-A"
 	contains = list(/obj/item/weapon/twohanded/glaive/harvester)
-	cost = 40
+	cost = 50
 
 
 
