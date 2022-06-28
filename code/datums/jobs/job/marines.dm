@@ -256,8 +256,8 @@ Your squaddies will look to you when it comes to construction in the field of ba
 	access = list(ACCESS_MARINE_PREP_REBEL, ACCESS_MARINE_MEDPREP_REBEL, ACCESS_MARINE_MEDBAY_REBEL)
 	minimal_access = list(ACCESS_MARINE_PREP_REBEL, ACCESS_MARINE_MEDPREP_REBEL, ACCESS_MARINE_MEDBAY_REBEL, ACCESS_MARINE_DROPSHIP_REBEL)
 	jobworth = list(
-		/datum/job/terragov/silicon/synthetic/rebel = SYNTH_POINTS_REGULAR,
 		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
+		/datum/job/terragov/silicon/synthetic/rebel = SYNTH_POINTS_REGULAR,
 		/datum/job/terragov/squad/smartgunner/rebel = SMARTIE_POINTS_MEDIUM,
 	)
 
