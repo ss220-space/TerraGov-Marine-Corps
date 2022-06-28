@@ -200,8 +200,8 @@
 /datum/species/human/prefs_name(datum/preferences/prefs)
 	. = ..()
 	if(CONFIG_GET(flag/humans_need_surnames))
-		var/firstspace = findtext(., " ")
-		if(!firstspace || firstspace == length(.))
+		var/firstspace = findtext_char(., " ")
+		if(!firstspace || firstspace == length_char(.))
 			. += " " + pick(SSstrings.get_list_from_file("names/last_name"))
 
 /datum/species/synthetic/prefs_name(datum/preferences/prefs)
@@ -236,13 +236,6 @@
 			H.dropItemToGround(thing)
 	for(var/newtrait in inherent_traits)
 		ADD_TRAIT(H, newtrait, SPECIES_TRAIT)
-	var/datum/reagents/R
-	if(species_flags & NO_CHEM_METABOLIZATION)
-		R = new /datum/reagents(0)
-	else
-		R = new /datum/reagents(1000)
-	H.reagents = R
-	R.my_atom = H
 
 //special things to change after we're no longer that species
 /datum/species/proc/post_species_loss(mob/living/carbon/human/H)

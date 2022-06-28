@@ -153,7 +153,7 @@
 
 		var/datum/job/xenojob = SSjob.GetJobType(/datum/job/xenomorph/queen)
 		if(xenojob.required_playtime_remaining(client))
-			to_chat(src, span_warning("[get_exp_format(xenojob.required_playtime_remaining(client))] as [xenojob.get_exp_req_type()] required to play the queen role."))
+			to_chat(src, span_warning("[get_exp_format(xenojob.required_playtime_remaining(client))] as [xenojob.exp_type] required to play the queen role."))
 			return
 
 		if(hive.living_xeno_queen)
@@ -281,10 +281,14 @@
 		if(new_xeno)
 			qdel(new_xeno)
 		return
-	if(tier != XENO_TIER_ONE || !regression )
-		new_xeno.upgrade_xeno(upgrade, TRUE)
-	if(!regression && upgrade != XENO_UPGRADE_INVALID)
-		new_xeno.upgrade_xeno(new_xeno.upgrade_prev(), TRUE)
+
+	if(regression)
+		if(tier == XENO_TIER_ONE)
+			new_xeno.upgrade_xeno(XENO_UPGRADE_INVALID, TRUE)
+		else
+			new_xeno.upgrade_xeno(upgrade_next(FALSE), TRUE)
+	else if(upgrade != XENO_UPGRADE_INVALID)
+		new_xeno.upgrade_xeno(upgrade_prev(), TRUE)
 
 	SEND_SIGNAL(src, COMSIG_XENOMORPH_EVOLVED, new_xeno)
 

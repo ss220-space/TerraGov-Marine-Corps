@@ -576,8 +576,7 @@ Proc for attack log creation, because really why not
 
 /obj/item/update_filters()
 	. = ..()
-	for(var/X in actions)
-		var/datum/action/A = X
+	for(var/datum/action/A AS in actions)
 		A.update_button_icon()
 
 ///returns a filter in the managed filters list by name
@@ -864,9 +863,9 @@ Proc for attack log creation, because really why not
 	if(!LAZYACCESS(fingerprints, M.key))
 		LAZYSET(fingerprints, M.key, "First: [M.real_name] | [current_time] | [type] [special ? "| [special]" : ""]")
 	else
-		var/laststamppos = findtext(LAZYACCESS(fingerprints, M.key), " Last: ")
+		var/laststamppos = findtext_char(LAZYACCESS(fingerprints, M.key), " Last: ")
 		if(laststamppos)
-			LAZYSET(fingerprints, M.key, copytext(fingerprints[M.key], 1, laststamppos))
+			LAZYSET(fingerprints, M.key, copytext_char(fingerprints[M.key], 1, laststamppos))
 		fingerprints[M.key] += " Last: [M.real_name] | [current_time] | [type] [special ? " | [special]" : ""]"
 
 	return TRUE

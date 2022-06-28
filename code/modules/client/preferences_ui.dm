@@ -114,6 +114,8 @@
 			.["show_typing"] = show_typing
 			.["tooltips"] = tooltips
 			.["widescreenpref"] = widescreenpref
+			.["radialmedicalpref"] = toggles_gameplay & RADIAL_MEDICAL
+			.["radialstackspref"] = toggles_gameplay & RADIAL_STACKS
 			.["scaling_method"] = scaling_method
 			.["pixel_size"] = pixel_size
 			.["parallax"] = parallax
@@ -135,6 +137,9 @@
 					)
 
 /datum/preferences/ui_static_data(mob/user)
+	if(!user?.client)
+		return
+
 	. = list()
 	switch(tab_index)
 		if(CHARACTER_CUSTOMIZATION)
@@ -193,7 +198,10 @@
 	. = ..()
 	if(.)
 		return
+
 	var/client/current_client = CLIENT_FROM_VAR(usr)
+	if(!current_client)
+		return
 	var/mob/user = current_client.mob
 
 	switch(action)
@@ -602,7 +610,7 @@
 			if(!params["key"])
 				return
 			var/mods = params["key_mods"]
-			var/full_key = params["key"]
+			var/full_key = uppertext(convert_ru_key_to_en_key(params["key"]))
 			var/Altmod = ("ALT" in mods) ? "Alt" : ""
 			var/Ctrlmod = ("CONTROL" in mods) ? "Ctrl" : ""
 			var/Shiftmod = ("SHIFT" in mods) ? "Shift" : ""
@@ -638,7 +646,7 @@
 			var/kb_name = params["name"]
 			if(!kb_name)
 				return
-			var/list/part = splittext(kb_name, ":")
+			var/list/part = splittext_char(kb_name, ":")
 			var/id = text2num(part[2])
 			var/datum/custom_emote/emote = custom_emotes[id]
 			var/new_message = params["sentence"]
@@ -651,7 +659,7 @@
 			var/kb_name = params["name"]
 			if(!kb_name)
 				return
-			var/list/part = splittext(kb_name, ":")
+			var/list/part = splittext_char(kb_name, ":")
 			var/id = text2num(part[2])
 			var/datum/custom_emote/emote = custom_emotes[id]
 			emote.spoken_emote = !emote.spoken_emote
@@ -685,6 +693,12 @@
 		if("widescreenpref")
 			widescreenpref = !widescreenpref
 			user.client.view_size.set_default(get_screen_size(widescreenpref))
+
+		if("radialmedicalpref")
+			toggles_gameplay ^= RADIAL_MEDICAL
+
+		if("radialstackspref")
+			toggles_gameplay ^= RADIAL_STACKS
 
 		if("pixel_size")
 			switch(pixel_size)

@@ -58,8 +58,8 @@
 	if(!job) //It might be setup on spawn.
 		setup_job()
 
-	ADD_TRAIT(src, TRAIT_BATONIMMUNE, TRAIT_XENO)
-	ADD_TRAIT(src, TRAIT_FLASHBANGIMMUNE, TRAIT_XENO)
+	ADD_TRAIT(src, TRAIT_BATONIMMUNE, XENO_TRAIT)
+	ADD_TRAIT(src, TRAIT_FLASHBANGIMMUNE, XENO_TRAIT)
 	hive.update_tier_limits()
 	if(CONFIG_GET(flag/xenos_on_strike))
 		replace_by_ai()
@@ -155,7 +155,7 @@
 		if(XENO_UPGRADE_FOUR)
 			return 4
 
-/mob/living/carbon/xenomorph/proc/upgrade_next()
+/mob/living/carbon/xenomorph/proc/upgrade_next(evolution = TRUE)
 	switch(upgrade)
 		if(XENO_UPGRADE_INVALID)
 			return XENO_UPGRADE_INVALID
@@ -166,7 +166,9 @@
 		if(XENO_UPGRADE_TWO)
 			return XENO_UPGRADE_THREE
 		if(XENO_UPGRADE_THREE)
-			return XENO_UPGRADE_FOUR
+			if(evolution)
+				return XENO_UPGRADE_FOUR
+			return XENO_UPGRADE_THREE
 		if(XENO_UPGRADE_FOUR)
 			return XENO_UPGRADE_FOUR
 

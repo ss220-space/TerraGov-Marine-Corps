@@ -213,12 +213,6 @@
 "aaJ" = (
 /turf/closed/wall/mainship/white,
 /area/sulaco/medbay)
-"aaM" = (
-/obj/structure/window/framed/mainship/white,
-/obj/machinery/door/firedoor/mainship,
-/obj/machinery/door/poddoor/shutters/opened/medbay,
-/turf/open/floor/plating/platebotc,
-/area/sulaco/medbay/chemistry)
 "aaN" = (
 /obj/structure/closet/crate/ammo,
 /turf/open/floor/prison,
@@ -234,10 +228,7 @@
 /turf/closed/wall/mainship/white,
 /area/sulaco/medbay/storage)
 "aaR" = (
-/obj/structure/table/mainship,
-/obj/item/storage/belt/combatLifesaver,
-/obj/item/storage/belt/combatLifesaver,
-/obj/item/storage/belt/medical,
+/obj/structure/table/mainship/nometal,
 /obj/machinery/firealarm,
 /turf/open/floor/prison/whitegreen/corner{
 	dir = 4
@@ -1659,17 +1650,6 @@
 	dir = 8
 	},
 /area/sulaco/engineering/atmos)
-"afZ" = (
-/obj/machinery/computer/general_air_control/large_tank_control{
-	input_tag = "waste_in";
-	name = "Waste Tank Control";
-	output_tag = "waste_out";
-	sensors = list("waste_sensor" = "Tank")
-	},
-/turf/open/floor/prison/yellow{
-	dir = 4
-	},
-/area/sulaco/engineering/atmos)
 "agm" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/mainship/maint{
@@ -1770,19 +1750,6 @@
 	},
 /turf/open/floor/prison,
 /area/sulaco/engineering/ce)
-"ahh" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/computer/general_air_control/large_tank_control{
-	name = "Oxygen Supply Console";
-	output_tag = "oxyvent";
-	sensors = list("oxy_sensor" = "Tank")
-	},
-/turf/open/floor/prison/yellow{
-	dir = 1
-	},
-/area/sulaco/engineering/atmos)
 "ahj" = (
 /obj/effect/decal/warning_stripes/thick{
 	dir = 1
@@ -1844,27 +1811,6 @@
 /obj/machinery/pipedispenser,
 /turf/open/floor/prison/yellow/full{
 	dir = 4
-	},
-/area/sulaco/engineering/atmos)
-"aih" = (
-/obj/machinery/computer/general_air_control/large_tank_control{
-	input_tag = "mix_in";
-	name = "Mixed Air Control";
-	output_tag = "mix_out";
-	sensors = list("mix_sensor" = "Tank")
-	},
-/turf/open/floor/prison/yellow{
-	dir = 1
-	},
-/area/sulaco/engineering/atmos)
-"aii" = (
-/obj/machinery/computer/general_air_control/large_tank_control{
-	name = "Nitrogen Control Console";
-	output_tag = "nit_out";
-	sensors = list("nit_sensor" = "Tank")
-	},
-/turf/open/floor/prison/yellow{
-	dir = 1
 	},
 /area/sulaco/engineering/atmos)
 "ain" = (
@@ -4619,15 +4565,6 @@
 /turf/open/floor/prison/darkyellow{
 	dir = 1
 	},
-/area/sulaco/engineering/engine_monitoring)
-"awf" = (
-/obj/machinery/computer/general_air_control/large_tank_control{
-	input_tag = "cooling_in";
-	name = "Core Cooling";
-	output_tag = "cooling_out";
-	sensors = list("core_sensor" = "Tank")
-	},
-/turf/open/floor/prison/darkyellow/corner,
 /area/sulaco/engineering/engine_monitoring)
 "awh" = (
 /obj/structure/table/reinforced,
@@ -10871,6 +10808,18 @@
 "cod" = (
 /turf/open/floor/prison,
 /area/sulaco/bridge/office)
+"cok" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden/layer1{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/yellow/hidden{
+	dir = 4
+	},
+/turf/open/floor/prison/whitegreen/corner{
+	dir = 4
+	},
+/area/sulaco/medbay/chemistry)
 "coO" = (
 /turf/open/floor/prison/whitegreen{
 	dir = 8
@@ -11246,6 +11195,24 @@
 	},
 /turf/open/floor/prison,
 /area/sulaco/bar)
+"cJr" = (
+/obj/structure/table/mainship,
+/obj/item/clothing/glasses/meson,
+/obj/item/paper,
+/obj/item/tool/pen,
+/obj/item/explosive/grenade/chem_grenade/metalfoam,
+/obj/item/explosive/grenade/chem_grenade/metalfoam,
+/obj/item/clothing/head/welding{
+	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye. This one appears reinforced to better protect the cranium. Rumored to have been made to thwart the efforts of sneaky Runers and hunters. A small inscription reads: 'D.C'";
+	flags_armor_features = 16;
+	name = "Modified welding helmet";
+	soft_armor = list("melee"=15,"bullet"=0,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0,"fire"=0,"acid"=0)
+	},
+/obj/item/storage/briefcase/inflatable,
+/turf/open/floor/prison/darkyellow{
+	dir = 1
+	},
+/area/sulaco/engineering/ce)
 "cJZ" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/prison/plate,
@@ -11534,6 +11501,12 @@
 /obj/effect/decal/warning_stripes/thin,
 /turf/open/floor/prison/bright_clean,
 /area/sulaco/hangar/cas)
+"ddQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/dropship_equipment/sentry_holder,
+/obj/effect/decal/warning_stripes,
+/turf/open/floor/prison,
+/area/sulaco/hangar/storage)
 "dez" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/cyan/hidden/layer1{
@@ -11938,12 +11911,6 @@
 /obj/structure/cable,
 /turf/open/floor/prison,
 /area/sulaco/firingrange)
-"dLR" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/prison,
-/area/sulaco/hangar/storage)
 "dLZ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden/layer1,
@@ -11978,6 +11945,21 @@
 /obj/machinery/door/firedoor/mainship,
 /turf/open/floor/plating/platebotc,
 /area/mainship/living/basketball)
+"dNg" = (
+/obj/machinery/computer/general_air_control/large_tank_control{
+	input_tag = "cooling_in";
+	name = "Core Cooling";
+	output_tag = "cooling_out";
+	sensors = list("core_sensor"="Tank")
+	},
+/turf/open/floor/prison/darkyellow/corner,
+/area/sulaco/engineering/engine_monitoring)
+"dNA" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/mainship,
+/obj/structure/flora/pottedplant,
+/turf/open/floor/tile/hydro,
+/area/sulaco/hydro)
 "dOi" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden/layer1,
@@ -12753,6 +12735,16 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/hidden,
 /turf/open/floor/prison,
 /area/sulaco/hangar/storage)
+"eWd" = (
+/obj/machinery/computer/general_air_control/large_tank_control{
+	name = "Nitrogen Control Console";
+	output_tag = "nit_out";
+	sensors = list("nit_sensor"="Tank")
+	},
+/turf/open/floor/prison/yellow{
+	dir = 1
+	},
+/area/sulaco/engineering/atmos)
 "eWf" = (
 /obj/machinery/light{
 	dir = 1
@@ -12925,6 +12917,17 @@
 	},
 /turf/open/floor/prison,
 /area/sulaco/disposal)
+"fnB" = (
+/obj/machinery/computer/general_air_control/large_tank_control{
+	input_tag = "waste_in";
+	name = "Waste Tank Control";
+	output_tag = "waste_out";
+	sensors = list("waste_sensor"="Tank")
+	},
+/turf/open/floor/prison/yellow{
+	dir = 4
+	},
+/area/sulaco/engineering/atmos)
 "foa" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 10
@@ -13238,6 +13241,10 @@
 /obj/item/reagent_containers/food/condiment/peppermill,
 /turf/open/floor/prison/kitchen,
 /area/sulaco/cafeteria)
+"fMn" = (
+/obj/structure/flora/pottedplant,
+/turf/open/floor/prison/bright_clean,
+/area/sulaco/hydro)
 "fMR" = (
 /obj/machinery/landinglight/ds2{
 	dir = 1
@@ -14072,6 +14079,12 @@
 	dir = 1
 	},
 /area/sulaco/medbay)
+"gYn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/dropship_equipment/flare_launcher,
+/obj/effect/decal/warning_stripes,
+/turf/open/floor/prison,
+/area/sulaco/hangar/storage)
 "gYB" = (
 /obj/structure/sink{
 	dir = 4
@@ -14661,6 +14674,11 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating/platebotc,
 /area/sulaco/hangar/cas)
+"hOS" = (
+/obj/structure/dropship_equipment/sentry_holder,
+/obj/effect/decal/warning_stripes,
+/turf/open/floor/prison,
+/area/sulaco/hangar/storage)
 "hPF" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 8
@@ -15778,6 +15796,17 @@
 	dir = 1
 	},
 /area/sulaco/engineering/engine_monitoring)
+"juM" = (
+/obj/machinery/computer/general_air_control/large_tank_control{
+	input_tag = "mix_in";
+	name = "Mixed Air Control";
+	output_tag = "mix_out";
+	sensors = list("mix_sensor"="Tank")
+	},
+/turf/open/floor/prison/yellow{
+	dir = 1
+	},
+/area/sulaco/engineering/atmos)
 "jvc" = (
 /obj/machinery/door/poddoor/shutters/opened/wy{
 	dir = 2
@@ -16619,22 +16648,6 @@
 	},
 /turf/open/floor/prison/plate,
 /area/shuttle/distress/arrive_2)
-"kzw" = (
-/obj/machinery/door/airlock/mainship/generic,
-/obj/machinery/door/poddoor/shutters/opened/medbay,
-/obj/machinery/door/firedoor/mainship,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/cyan/hidden/layer1{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/yellow/hidden{
-	dir = 4
-	},
-/obj/machinery/door/firedoor,
-/turf/open/floor/prison/whitegreen/corner{
-	dir = 4
-	},
-/area/sulaco/medbay/chemistry)
 "kzU" = (
 /obj/machinery/camera/autoname,
 /obj/effect/decal/cleanable/dirt,
@@ -16836,6 +16849,11 @@
 /obj/item/stool,
 /turf/open/floor/prison,
 /area/sulaco/bar)
+"kRM" = (
+/turf/open/floor/prison/whitegreen/corner{
+	dir = 8
+	},
+/area/sulaco/medbay/chemistry)
 "kSg" = (
 /obj/item/radio/intercom/general,
 /turf/open/floor/prison,
@@ -17959,8 +17977,8 @@
 	},
 /area/sulaco/engineering/engine_monitoring)
 "mBB" = (
-/obj/structure/table/mainship,
-/obj/item/storage/pouch/medkit/full,
+/obj/structure/table/mainship/nometal,
+/obj/item/storage/pouch/medkit/firstaid,
 /obj/item/tool/shovel/etool,
 /obj/item/stack/sandbags_empty/half,
 /obj/item/weapon/baton,
@@ -19934,6 +19952,19 @@
 	},
 /turf/open/floor/prison/sterilewhite,
 /area/sulaco/cryosleep)
+"pld" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/computer/general_air_control/large_tank_control{
+	name = "Oxygen Supply Console";
+	output_tag = "oxyvent";
+	sensors = list("oxy_sensor"="Tank")
+	},
+/turf/open/floor/prison/yellow{
+	dir = 1
+	},
+/area/sulaco/engineering/atmos)
 "plf" = (
 /obj/machinery/light,
 /obj/structure/sign/evac,
@@ -20860,6 +20891,14 @@
 /obj/structure/cable,
 /turf/open/floor/mainship/stripesquare,
 /area/sulaco/hangar/droppod)
+"qIb" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/dropship_equipment/flare_launcher,
+/obj/effect/decal/warning_stripes,
+/turf/open/floor/prison,
+/area/sulaco/hangar/storage)
 "qID" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden/layer1,
@@ -22342,8 +22381,6 @@
 /area/sulaco/maintenance/lower_maint2)
 "sBO" = (
 /obj/structure/rack,
-/obj/item/storage/pouch/medical,
-/obj/item/storage/belt/combatLifesaver,
 /obj/item/storage/firstaid/adv,
 /turf/open/floor/prison/red{
 	dir = 10
@@ -23297,24 +23334,6 @@
 	},
 /turf/open/floor/prison/kitchen,
 /area/sulaco/cafeteria)
-"tJx" = (
-/obj/structure/table/mainship,
-/obj/item/clothing/glasses/meson,
-/obj/item/paper,
-/obj/item/tool/pen,
-/obj/item/explosive/grenade/chem_grenade/metalfoam,
-/obj/item/explosive/grenade/chem_grenade/metalfoam,
-/obj/item/clothing/head/welding{
-	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye. This one appears reinforced to better protect the cranium. Rumored to have been made to thwart the efforts of sneaky Runers and hunters. A small inscription reads: 'D.C'";
-	flags_armor_features = 16;
-	name = "Modified welding helmet";
-	soft_armor = list("melee" = 15, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	},
-/obj/item/storage/briefcase/inflatable,
-/turf/open/floor/prison/darkyellow{
-	dir = 1
-	},
-/area/sulaco/engineering/ce)
 "tJY" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
@@ -23779,7 +23798,7 @@
 /turf/open/floor/prison/sterilewhite,
 /area/sulaco/cafeteria/kitchen)
 "uux" = (
-/obj/machinery/vending/marine_medic,
+/obj/machinery/vending/medical,
 /turf/open/floor/prison,
 /area/sulaco/marine)
 "uuN" = (
@@ -25077,12 +25096,6 @@
 /obj/effect/landmark/start/job/ai,
 /turf/open/floor/mainship/tcomms,
 /area/sulaco/command/ai)
-"wnS" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "plant-05"
-	},
-/turf/open/floor/prison/bright_clean,
-/area/sulaco/hydro)
 "woe" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden/layer1,
@@ -25962,10 +25975,6 @@
 	dir = 8
 	},
 /area/sulaco/engineering/atmos)
-"xCr" = (
-/obj/structure/dropship_equipment/sentry_holder,
-/turf/open/floor/prison,
-/area/sulaco/hangar/storage)
 "xCs" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
@@ -26081,14 +26090,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/sulaco/hallway/lower_main_hall)
-"xMz" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/mainship,
-/obj/structure/flora/pottedplant{
-	icon_state = "plant-05"
-	},
-/turf/open/floor/tile/hydro,
-/area/sulaco/hydro)
 "xMC" = (
 /obj/structure/window/framed/mainship/gray/toughened,
 /obj/machinery/door/poddoor/opened{
@@ -26295,11 +26296,6 @@
 	dir = 8
 	},
 /area/mainship/living/basketball)
-"yfI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/dropship_equipment/sentry_holder,
-/turf/open/floor/prison,
-/area/sulaco/hangar/storage)
 "yfM" = (
 /obj/structure/table/mainship,
 /obj/item/storage/box/nt_mre,
@@ -47256,7 +47252,7 @@ aKb
 iRd
 bjj
 aNy
-wnS
+fMn
 eGS
 uuN
 cSn
@@ -47503,7 +47499,7 @@ wYX
 dty
 mAk
 aLf
-xMz
+dNA
 wVR
 rxh
 evY
@@ -53155,9 +53151,9 @@ aWx
 gjE
 aWx
 aan
-aaM
 aaX
-kzw
+kRM
+cok
 aan
 aan
 aaJ
@@ -66253,7 +66249,7 @@ aPF
 aPF
 ykt
 yle
-xCr
+hOS
 pWS
 aLt
 pWS
@@ -66510,7 +66506,7 @@ aPF
 aPF
 ykt
 yle
-yfI
+ddQ
 pWS
 aUL
 pWS
@@ -66767,8 +66763,8 @@ bFa
 bFa
 kOr
 kOr
-jYO
-dLR
+gYn
+qIb
 aUL
 tpA
 tld
@@ -71531,7 +71527,7 @@ aYZ
 aYZ
 adn
 aeJ
-tJx
+cJr
 igr
 aeh
 aic
@@ -72574,7 +72570,7 @@ byO
 fak
 juI
 xeh
-awf
+dNg
 mBj
 uYq
 avR
@@ -72817,7 +72813,7 @@ pEc
 aeq
 aeq
 aeq
-aih
+juM
 rzq
 als
 cCN
@@ -73588,7 +73584,7 @@ pEc
 aeq
 aeq
 aeq
-aii
+eWd
 rzq
 bmI
 fys
@@ -74359,7 +74355,7 @@ pEc
 pEc
 aeq
 aeq
-ahh
+pld
 rzq
 rzq
 rzq
@@ -75129,7 +75125,7 @@ mDu
 mDu
 dzy
 afj
-afZ
+fnB
 ahy
 roQ
 ajv
