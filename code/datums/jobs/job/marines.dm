@@ -133,9 +133,9 @@ What you lack alone, you gain standing shoulder to shoulder with the men and wom
 	outfit = /datum/outfit/job/marine/engineer
 	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD|JOB_FLAG_CAN_SEE_ORDERS
 	jobworth = list(
-		/datum/job/xenomorph = LARVA_POINTS_REGULAR, 
-		/datum/job/terragov/squad/smartgunner = SMARTIE_POINTS_MEDIUM, 
-		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR, 
+		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
+		/datum/job/terragov/squad/smartgunner = SMARTIE_POINTS_MEDIUM,
+		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR,
 		/datum/job/terragov/command/mech_pilot = MECH_POINTS_REGULAR,
 	)
 	html_description = {"
@@ -156,9 +156,9 @@ What you lack alone, you gain standing shoulder to shoulder with the men and wom
 	access = list(ACCESS_MARINE_PREP_REBEL, ACCESS_MARINE_ENGPREP_REBEL, ACCESS_CIVILIAN_ENGINEERING, ACCESS_MARINE_REMOTEBUILD_REBEL, ACCESS_MARINE_ENGINEERING_REBEL)
 	minimal_access = list(ACCESS_MARINE_PREP_REBEL, ACCESS_MARINE_ENGPREP_REBEL, ACCESS_CIVILIAN_ENGINEERING, ACCESS_MARINE_DROPSHIP_REBEL, ACCESS_MARINE_REMOTEBUILD_REBEL, ACCESS_MARINE_ENGINEERING_REBEL)
 	jobworth = list(
-		/datum/job/xenomorph = LARVA_POINTS_REGULAR, 
+		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
 		/datum/job/terragov/squad/smartgunner/rebel = SMARTIE_POINTS_MEDIUM,
-		/datum/job/terragov/silicon/synthetic/rebel = SYNTH_POINTS_REGULAR
+		/datum/job/terragov/silicon/synthetic/rebel = SYNTH_POINTS_REGULAR,
 	)
 
 /datum/job/terragov/squad/engineer/radio_help_message(mob/M)
@@ -236,10 +236,10 @@ Your squaddies will look to you when it comes to construction in the field of ba
 	outfit = /datum/outfit/job/marine/corpsman
 	job_flags = JOB_FLAG_LATEJOINABLE|JOB_FLAG_ROUNDSTARTJOINABLE|JOB_FLAG_ALLOWS_PREFS_GEAR|JOB_FLAG_PROVIDES_BANK_ACCOUNT|JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD|JOB_FLAG_CAN_SEE_ORDERS
 	jobworth = list(
-		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR, 
-		/datum/job/terragov/command/mech_pilot = MECH_POINTS_REGULAR, 
-		/datum/job/xenomorph = LARVA_POINTS_REGULAR, 
-		/datum/job/terragov/squad/smartgunner = SMARTIE_POINTS_MEDIUM
+		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR,
+		/datum/job/terragov/command/mech_pilot = MECH_POINTS_REGULAR,
+		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
+		/datum/job/terragov/squad/smartgunner = SMARTIE_POINTS_MEDIUM,
 	)
 	html_description = {"
 		<b>Difficulty</b>: Hard<br /><br />
@@ -259,9 +259,9 @@ Your squaddies will look to you when it comes to construction in the field of ba
 	access = list(ACCESS_MARINE_PREP_REBEL, ACCESS_MARINE_MEDPREP_REBEL, ACCESS_MARINE_MEDBAY_REBEL)
 	minimal_access = list(ACCESS_MARINE_PREP_REBEL, ACCESS_MARINE_MEDPREP_REBEL, ACCESS_MARINE_MEDBAY_REBEL, ACCESS_MARINE_DROPSHIP_REBEL)
 	jobworth = list(
-		/datum/job/terragov/silicon/synthetic/rebel = SYNTH_POINTS_REGULAR, 
-		/datum/job/xenomorph = LARVA_POINTS_REGULAR, 
-		/datum/job/terragov/squad/smartgunner/rebel = SMARTIE_POINTS_MEDIUM
+		/datum/job/terragov/silicon/synthetic/rebel = SYNTH_POINTS_REGULAR,
+		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
+		/datum/job/terragov/squad/smartgunner/rebel = SMARTIE_POINTS_MEDIUM,
 	)
 
 /datum/job/terragov/squad/corpsman/radio_help_message(mob/M)
@@ -596,9 +596,10 @@ You are also in charge of communicating with command and letting them know about
 	total_positions = 0
 	job_flags = JOB_FLAG_ADDTOMANIFEST|JOB_FLAG_PROVIDES_SQUAD_HUD|JOB_FLAG_CAN_SEE_ORDERS
 	jobworth = list(
-		/datum/job/xenomorph = LARVA_POINTS_REGULAR, 
-		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR, 
+		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
+		/datum/job/terragov/silicon/synthetic = SYNTH_POINTS_REGULAR,
 		/datum/job/terragov/command/mech_pilot = MECH_POINTS_REGULAR,
+		/datum/job/survivor/rambo = SURVIVOR_POINTS_REGULAR,
 	)
 	minimap_icon = "private"
 
@@ -608,7 +609,7 @@ You are also in charge of communicating with command and letting them know about
 	access = list(ACCESS_MARINE_PREP_REBEL)
 	minimal_access = list(ACCESS_MARINE_PREP_REBEL, ACCESS_MARINE_DROPSHIP_REBEL)
 	jobworth = list(
-		/datum/job/xenomorph = LARVA_POINTS_REGULAR, 
+		/datum/job/xenomorph = LARVA_POINTS_REGULAR,
 		/datum/job/terragov/silicon/synthetic/rebel = SYNTH_POINTS_REGULAR,
 	)
 
