@@ -200,29 +200,86 @@ SUBSYSTEM_DEF(ru_items)
 ///////////////////////// Robotic armor ///////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-/obj/item/clothing/head/helmet/marine/robot/acid
-	name = "\improper Exidobate upper armor plating"
-	desc = "Heavy armor plating designed for self mounting on the upper half of TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
-	soft_armor = list("melee" = 50, "bullet" = 60, "laser" = 65, "energy" = 65, "bomb" = 50, "bio" = 65, "rad" = 50, "fire" = 40, "acid" = 75)
-
+/obj/item/clothing/head/helmet/marine/robot/advanced
 	flags_item_map_variant = 0
 	icon = 'ss220/icons/item/Roboarmor.dmi'
-	icon_state = "robo_helm_acid"
-	item_state = "robo_helm_acid"
 	item_icons = list(
 		slot_head_str = 'ss220/icons/item/Roboarmor.dmi',
 	)
 
-/obj/item/clothing/suit/storage/marine/robot/acid
+/obj/item/clothing/suit/storage/marine/robot/advanced
+	flags_item_map_variant = 0
+	icon = 'ss220/icons/item/Roboarmor.dmi'
+	item_icons = list(
+		slot_wear_suit_str = 'ss220/icons/item/Roboarmor.dmi',
+	)
+
+/obj/item/clothing/head/helmet/marine/robot/advanced/acid
+	name = "\improper Exidobate upper armor plating"
+	desc = "Heavy armor plating designed for self mounting on the upper half of TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 50, "bullet" = 60, "laser" = 65, "energy" = 65, "bomb" = 50, "bio" = 65, "rad" = 50, "fire" = 40, "acid" = 75)
+
+	icon_state = "robo_helm_acid"
+	item_state = "robo_helm_acid"
+
+/obj/item/clothing/suit/storage/marine/robot/advanced/acid
 	name = "\improper Exidobate armor plating"
 	desc = "Heavy armor plating designed for self mounting on TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
 	soft_armor = list("melee" = 50, "bullet" = 70, "laser" = 80, "energy" = 80, "bomb" = 50, "bio" = 80, "rad" = 50, "fire" = 60, "acid" = 75)
 	slowdown = 0.7
 
-	flags_item_map_variant = 0
-	icon = 'ss220/icons/item/Roboarmor.dmi'
 	icon_state = "robo_armor_acid"
 	item_state = "robo_armor_acid"
-	item_icons = list(
-		slot_wear_suit_str = 'ss220/icons/item/Roboarmor.dmi',
-	)
+
+/obj/item/clothing/head/helmet/marine/robot/advanced/physical
+	name = "\improper Name upper armor plating"
+	desc = "Heavy armor plating designed for self mounting on the upper half of TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 75, "bullet" = 80, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 20, "acid" = 50)
+
+	icon_state = "robo_helm_physical"
+	item_state = "robo_helm_physical"
+
+/obj/item/clothing/suit/storage/marine/robot/advanced/physical
+	name = "\improper Name armor plating"
+	desc = "Heavy armor plating designed for self mounting on TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 75, "bullet" = 85, "laser" = 70, "energy" = 70, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 60)
+	slowdown = 0.7
+
+	icon_state = "robo_armor_physical"
+	item_state = "robo_armor_physical"
+
+/obj/item/clothing/head/helmet/marine/robot/advanced/bomb
+	name = "\improper Name upper armor plating"
+	desc = "Heavy armor plating designed for self mounting on the upper half of TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 50, "bomb" = 90, "bio" = 50, "rad" = 50, "fire" = 20, "acid" = 50)
+
+	icon_state = "robo_helm_bomb"
+	item_state = "robo_helm_bomb"
+
+/obj/item/clothing/suit/storage/marine/robot/advanced/bomb
+	name = "\improper Name armor plating"
+	desc = "Heavy armor plating designed for self mounting on TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 60, "bullet" = 70, "laser" = 70, "energy" = 70, "bomb" = 90, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 60)
+	slowdown = 0.7
+
+	icon_state = "robo_armor_bomb"
+	item_state = "robo_armor_bomb"
+
+/obj/item/clothing/head/helmet/marine/robot/advanced/fire
+	name = "\improper Name upper armor plating"
+	desc = "Heavy armor plating designed for self mounting on the upper half of TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 50, "bullet" = 50, "laser" = 80, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 100, "acid" = 50)
+	hard_armor = list("fire" = 200)
+
+	icon_state = "robo_helm_fire"
+	item_state = "robo_helm_fire"
+
+/obj/item/clothing/suit/storage/marine/robot/advanced/fire
+	name = "\improper Name armor plating"
+	desc = "Heavy armor plating designed for self mounting on TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 50, "bullet" = 60, "laser" = 80, "energy" = 70, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 100, "acid" = 60)
+	hard_armor = list("fire" = 200)
+	slowdown = 0.5
+
+	icon_state = "robo_armor_fire"
+	item_state = "robo_armor_fire"
