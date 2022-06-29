@@ -195,3 +195,34 @@ SUBSYSTEM_DEF(ru_items)
 
 	user.add_movespeed_modifier(MOVESPEED_ID_WIELDED_SLOWDOWN, TRUE, 0, NONE, TRUE, wielded_slowdown)
 
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////// Robotic armor ///////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+/obj/item/clothing/head/helmet/marine/robot/acid
+	name = "\improper Exidobate upper armor plating"
+	desc = "Heavy armor plating designed for self mounting on the upper half of TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 50, "bullet" = 60, "laser" = 65, "energy" = 65, "bomb" = 50, "bio" = 65, "rad" = 50, "fire" = 40, "acid" = 75)
+
+	flags_item_map_variant = 0
+	icon = 'ss220/icons/item/Roboarmor.dmi'
+	icon_state = "robo_armor_acid"
+	item_state = "robo_armor_acid"
+	item_icons = list(
+		slot_head_str = icon,
+	)
+
+/obj/item/clothing/suit/storage/marine/robot/acid
+	name = "\improper Exidobate armor plating"
+	desc = "Heavy armor plating designed for self mounting on TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
+	soft_armor = list("melee" = 50, "bullet" = 70, "laser" = 70, "energy" = 55, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 60)
+	slowdown = 0.7
+
+	flags_item_map_variant = 0
+	icon = 'ss220/icons/item/Roboarmor.dmi'
+	icon_state = "robo_armor_acid"
+	item_state = "robo_armor_acid"
+	item_icons = list(
+		slot_wear_suit_str = icon,
+	)
