@@ -207,16 +207,16 @@ SUBSYSTEM_DEF(ru_items)
 
 	flags_item_map_variant = 0
 	icon = 'ss220/icons/item/Roboarmor.dmi'
-	icon_state = "robo_armor_acid"
-	item_state = "robo_armor_acid"
+	icon_state = "robo_helm_acid"
+	item_state = "robo_helm_acid"
 	item_icons = list(
-		slot_head_str = icon,
+		slot_head_str = 'ss220/icons/item/Roboarmor.dmi',
 	)
 
 /obj/item/clothing/suit/storage/marine/robot/acid
 	name = "\improper Exidobate armor plating"
 	desc = "Heavy armor plating designed for self mounting on TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside."
-	soft_armor = list("melee" = 50, "bullet" = 70, "laser" = 70, "energy" = 55, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 60)
+	soft_armor = list("melee" = 50, "bullet" = 70, "laser" = 80, "energy" = 80, "bomb" = 50, "bio" = 80, "rad" = 50, "fire" = 60, "acid" = 75)
 	slowdown = 0.7
 
 	flags_item_map_variant = 0
@@ -224,5 +224,5 @@ SUBSYSTEM_DEF(ru_items)
 	icon_state = "robo_armor_acid"
 	item_state = "robo_armor_acid"
 	item_icons = list(
-		slot_wear_suit_str = icon,
+		slot_wear_suit_str = 'ss220/icons/item/Roboarmor.dmi',
 	)
