@@ -1649,14 +1649,6 @@
 "agJ" = (
 /turf/closed/wall/prison,
 /area/prison/research/secret/containment)
-"agK" = (
-/obj/structure/bed,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/effect/spawner/random/plushie,
-/turf/open/floor/prison,
-/area/prison/research/secret/containment)
 "agL" = (
 /turf/open/floor/prison,
 /area/prison/research/secret/containment)
@@ -36515,17 +36507,6 @@
 	dir = 1
 	},
 /area/prison/cellblock/protective)
-"ckF" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/structure/closet/walllocker/emerglocker/full,
-/obj/item/weapon/gun/sentry/big_sentry/premade,
-/turf/open/floor/prison/blackfloor,
-/area/prison/pirate)
 "ckG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/layer1{
 	on = 1
@@ -37589,10 +37570,6 @@
 	},
 /turf/open/floor/plating,
 /area/prison/pirate)
-"cnH" = (
-/obj/item/weapon/gun/sentry/big_sentry/premade,
-/turf/open/floor/plating,
-/area/prison/pirate)
 "cnI" = (
 /obj/structure/table/reinforced/flipped{
 	dir = 1
@@ -37997,10 +37974,6 @@
 /obj/structure/table/reinforced/flipped{
 	dir = 1
 	},
-/turf/open/floor/plating/platebot,
-/area/prison/pirate)
-"cpb" = (
-/obj/item/weapon/gun/sentry/big_sentry/premade,
 /turf/open/floor/plating/platebot,
 /area/prison/pirate)
 "cpc" = (
@@ -43524,6 +43497,16 @@
 /obj/effect/landmark/lv624/fog_blocker/xeno_spawn,
 /turf/closed/wall/prison,
 /area/prison/cellblock/mediumsec/east)
+"jSY" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/closet/walllocker/emerglocker/full,
+/turf/open/floor/prison/blackfloor,
+/area/prison/pirate)
 "jWH" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -46485,6 +46468,14 @@
 	dir = 8
 	},
 /area/prison/hangar/main)
+"rXV" = (
+/obj/structure/bed,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/spawner/random/plushie,
+/turf/open/floor/prison,
+/area/prison/research/secret/containment)
 "rYj" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/ai_node,
@@ -47220,11 +47211,6 @@
 	},
 /turf/open/floor/prison/plate,
 /area/prison/cellblock/maxsec/north)
-"tVE" = (
-/obj/structure/table/reinforced,
-/obj/effect/spawner/random/plushie,
-/turf/open/floor/wood,
-/area/prison/parole/protective_custody)
 "tWb" = (
 /obj/effect/landmark/xeno_resin_door,
 /turf/open/floor/plating,
@@ -48636,6 +48622,11 @@
 /obj/effect/landmark/excavation_site_spawner,
 /turf/open/ground/grass,
 /area/prison/residential/north)
+"xVc" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/plushie,
+/turf/open/floor/wood,
+/area/prison/parole/protective_custody)
 "xWh" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -71340,7 +71331,7 @@ lZe
 lZe
 lED
 lED
-cnH
+lZe
 lED
 lED
 lZe
@@ -72113,7 +72104,7 @@ lED
 lED
 hKD
 lED
-cpb
+lED
 lZe
 cqC
 cro
@@ -72896,7 +72887,7 @@ crU
 cuD
 cvt
 cio
-ckF
+jSY
 cwt
 cio
 xsd
@@ -85863,7 +85854,7 @@ owV
 aha
 pWy
 agt
-agK
+rXV
 agX
 ahj
 ahy
@@ -95495,7 +95486,7 @@ chH
 ciU
 cjL
 cjL
-tVE
+xVc
 clr
 cjL
 ciU
