@@ -2233,19 +2233,6 @@
 	dir = 8
 	},
 /area/whiskey_outpost)
-"kB" = (
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/storage/belt/lifesaver/full,
-/obj/structure/table/mainship,
-/obj/item/armor_module/storage/uniform/white_vest,
-/obj/item/clothing/suit/surgical,
-/turf/open/floor/mainship/sterile,
-/area/whiskey_outpost)
 "kC" = (
 /obj/machinery/light{
 	dir = 8
@@ -7660,17 +7647,6 @@
 /obj/structure/cable,
 /turf/open/floor,
 /area/whiskey_outpost)
-"Sj" = (
-/obj/item/clothing/suit/surgical,
-/obj/structure/table/mainship,
-/obj/effect/spawner/random/pillbottle{
-	pixel_x = -2
-	},
-/obj/item/armor_module/storage/uniform/white_vest,
-/turf/open/floor/mainship/sterile/corner{
-	dir = 4
-	},
-/area/whiskey_outpost)
 "Sk" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/open/ground/grass/beach,
@@ -7740,6 +7716,17 @@
 /obj/vehicle/unmanned/heavy,
 /obj/item/uav_turret/heavy,
 /turf/open/floor/prison/marked,
+/area/whiskey_outpost)
+"SN" = (
+/obj/item/clothing/suit/surgical,
+/obj/structure/table/mainship,
+/obj/effect/spawner/random/pillbottle{
+	pixel_x = -2
+	},
+/obj/item/armor_module/storage/uniform/white_vest,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 4
+	},
 /area/whiskey_outpost)
 "SR" = (
 /turf/open/ground/coast{
@@ -8510,6 +8497,19 @@
 "Zj" = (
 /turf/open/ground/grass,
 /area/whiskey_outpost/outside/west)
+"Zl" = (
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/storage/belt/lifesaver/full,
+/obj/structure/table/mainship,
+/obj/item/armor_module/storage/uniform/white_vest,
+/obj/item/clothing/suit/surgical,
+/turf/open/floor/mainship/sterile,
+/area/whiskey_outpost)
 "Zq" = (
 /obj/structure/table/mainship,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey{
@@ -16601,7 +16601,7 @@ ac
 fL
 bn
 iw
-Sj
+SN
 Yi
 jQ
 yj
@@ -18111,7 +18111,7 @@ Dl
 cM
 hk
 ac
-kB
+Zl
 kW
 lA
 mB
