@@ -1199,6 +1199,17 @@
 	},
 /turf/open/ground/grass,
 /area/whiskey_outpost/outside/north)
+"fD" = (
+/obj/item/clothing/suit/surgical,
+/obj/structure/table/mainship,
+/obj/effect/spawner/random/pillbottle{
+	pixel_x = -2
+	},
+/obj/item/armor_module/storage/uniform/white_vest,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 4
+	},
+/area/whiskey_outpost)
 "fE" = (
 /obj/item/storage/box/minisentry,
 /obj/item/storage/box/minisentry,
@@ -2106,6 +2117,19 @@
 /obj/machinery/sleeper,
 /turf/open/floor/mainship/sterile,
 /area/whiskey_outpost)
+"jU" = (
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/storage/belt/lifesaver/full,
+/obj/structure/table/mainship,
+/obj/item/armor_module/storage/uniform/white_vest,
+/obj/item/clothing/suit/surgical,
+/turf/open/floor/mainship/sterile,
+/area/whiskey_outpost)
 "jW" = (
 /obj/machinery/sleep_console,
 /obj/machinery/light{
@@ -2232,19 +2256,6 @@
 /turf/open/floor/plating/warning{
 	dir = 8
 	},
-/area/whiskey_outpost)
-"kB" = (
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/storage/belt/lifesaver/full,
-/obj/structure/table/mainship,
-/obj/item/armor_module/storage/uniform/white_vest/surgery,
-/obj/item/clothing/suit/surgical,
-/turf/open/floor/mainship/sterile,
 /area/whiskey_outpost)
 "kC" = (
 /obj/machinery/light{
@@ -3186,12 +3197,6 @@
 	name = "\improper Recreation Area"
 	},
 /turf/open/floor/mainship,
-/area/whiskey_outpost)
-"pb" = (
-/obj/machinery/unboxer{
-	anchored = 1
-	},
-/turf/open/floor/prison,
 /area/whiskey_outpost)
 "pc" = (
 /obj/structure/platform{
@@ -7660,17 +7665,6 @@
 /obj/structure/cable,
 /turf/open/floor,
 /area/whiskey_outpost)
-"Sj" = (
-/obj/item/clothing/suit/surgical,
-/obj/structure/table/mainship,
-/obj/effect/spawner/random/pillbottle{
-	pixel_x = -2
-	},
-/obj/item/armor_module/storage/uniform/white_vest/surgery,
-/turf/open/floor/mainship/sterile/corner{
-	dir = 4
-	},
-/area/whiskey_outpost)
 "Sk" = (
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/open/ground/grass/beach,
@@ -8338,6 +8332,12 @@
 /obj/machinery/floodlight/outpost,
 /turf/open/ground/jungle,
 /area/whiskey_outpost/outside/west)
+"XE" = (
+/obj/machinery/unboxer{
+	anchored = 1
+	},
+/turf/open/floor/prison,
+/area/whiskey_outpost)
 "XF" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/open/floor/plating/ground/dirt,
@@ -14404,7 +14404,7 @@ rp
 dq
 cF
 pD
-pb
+XE
 eR
 nl
 gl
@@ -16601,7 +16601,7 @@ ac
 fL
 bn
 iw
-Sj
+fD
 Yi
 jQ
 yj
@@ -18111,7 +18111,7 @@ Dl
 cM
 hk
 ac
-kB
+jU
 kW
 lA
 mB
