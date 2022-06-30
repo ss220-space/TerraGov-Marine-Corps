@@ -14136,12 +14136,6 @@
 /obj/structure/showcase,
 /turf/open/floor/wood,
 /area/prison/hallway/staff)
-"aRz" = (
-/obj/structure/showcase/coinpress{
-	desc = "A stand with a plastic display of some kind of weird machine.";
-	},
-/turf/open/floor/wood,
-/area/prison/hallway/staff)
 "aRA" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -36438,17 +36432,6 @@
 	dir = 1
 	},
 /area/prison/cellblock/protective)
-"ckF" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/structure/closet/walllocker/emerglocker/full,
-/obj/item/weapon/gun/sentry/big_sentry/premade,
-/turf/open/floor/prison/blackfloor,
-/area/prison/pirate)
 "ckG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/layer1{
 	on = 1
@@ -37519,10 +37502,6 @@
 	},
 /turf/open/floor/plating,
 /area/prison/pirate)
-"cnH" = (
-/obj/item/weapon/gun/sentry/big_sentry/premade,
-/turf/open/floor/plating,
-/area/prison/pirate)
 "cnI" = (
 /obj/structure/table/reinforced/flipped{
 	dir = 1
@@ -37926,10 +37905,6 @@
 /obj/structure/table/reinforced/flipped{
 	dir = 1
 	},
-/turf/open/floor/plating/platebot,
-/area/prison/pirate)
-"cpb" = (
-/obj/item/weapon/gun/sentry/big_sentry/premade,
 /turf/open/floor/plating/platebot,
 /area/prison/pirate)
 "cpc" = (
@@ -41486,6 +41461,15 @@
 /obj/effect/ai_node,
 /turf/open/floor/prison,
 /area/prison/research/secret/dissection)
+"epc" = (
+/obj/effect/attach_point/weapon/dropship1{
+	dir = 8;
+	
+	},
+/turf/open/floor/plating/icefloor/warnplate{
+	dir = 8
+	},
+/area/prison/hangar/civilian)
 "epq" = (
 /obj/machinery/light{
 	dir = 1
@@ -41677,6 +41661,16 @@
 /obj/effect/landmark/xeno_resin_door,
 /turf/open/floor/plating,
 /area/prison/maintenance/residential/access/south)
+"ePx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/structure/closet/walllocker/emerglocker/full,
+/turf/open/floor/prison/blackfloor,
+/area/prison/pirate)
 "eQi" = (
 /turf/open/floor/plating/icefloor/warnplate{
 	dir = 10
@@ -42391,14 +42385,6 @@
 	},
 /turf/open/floor/prison,
 /area/prison/hangar/main)
-"gSs" = (
-/obj/effect/attach_point/weapon/dropship1{
-	dir = 8;
-	},
-/turf/open/floor/plating/icefloor/warnplate{
-	dir = 8
-	},
-/area/prison/hangar/civilian)
 "gTf" = (
 /obj/effect/landmark/excavation_site_spawner,
 /obj/effect/ai_node,
@@ -44719,6 +44705,13 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plating,
 /area/prison/research/secret/biolab)
+"nxy" = (
+/obj/structure/showcase/coinpress{
+	desc = "A stand with a plastic display of some kind of weird machine.";
+	
+	},
+/turf/open/floor/wood,
+/area/prison/hallway/staff)
 "nzo" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -45111,6 +45104,15 @@
 	},
 /turf/open/floor/plating,
 /area/prison/hangar/civilian)
+"otV" = (
+/obj/effect/attach_point/weapon/dropship1{
+	dir = 8;
+	
+	},
+/turf/open/floor/plating/icefloor/warnplate{
+	dir = 8
+	},
+/area/prison/hangar/main)
 "oug" = (
 /obj/machinery/miner/damaged,
 /turf/open/floor/prison/red{
@@ -48429,14 +48431,6 @@
 /obj/effect/ai_node,
 /turf/open/floor/prison/bright_clean,
 /area/prison/hallway/central)
-"xgV" = (
-/obj/effect/attach_point/weapon/dropship1{
-	dir = 8;
-	},
-/turf/open/floor/plating/icefloor/warnplate{
-	dir = 8
-	},
-/area/prison/hangar/main)
 "xhO" = (
 /obj/structure/window/framed/prison/reinforced,
 /turf/open/floor/plating,
@@ -50753,7 +50747,7 @@ bcJ
 bcJ
 bcJ
 bcJ
-gSs
+epc
 bcJ
 bcJ
 szH
@@ -71366,7 +71360,7 @@ lZe
 lZe
 lED
 lED
-cnH
+lZe
 lED
 lED
 lZe
@@ -72139,7 +72133,7 @@ lED
 lED
 hKD
 lED
-cpb
+lED
 lZe
 cqC
 cro
@@ -72922,7 +72916,7 @@ crU
 cuD
 cvt
 cio
-ckF
+ePx
 cwt
 cio
 xsd
@@ -102650,7 +102644,7 @@ aHh
 aKg
 rUP
 aQk
-aRz
+nxy
 aSz
 aTJ
 aVk
@@ -108577,7 +108571,7 @@ uHL
 uHL
 uHL
 uHL
-xgV
+otV
 uHL
 uHL
 ndS
