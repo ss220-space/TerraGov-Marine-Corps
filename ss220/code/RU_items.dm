@@ -293,27 +293,17 @@ SUBSYSTEM_DEF(ru_items)
 	icon_state = "robo_armor_fire"
 	item_state = "robo_armor_fire"
 
-
-/datum/supply_packs/armor/robot/advanced/fire
-	name = "Heavy Riot Armor Set"
+/datum/supply_packs/armor/robot/advanced/acid
+	name = "Exidobate acid protection armor set"
 	contains = list(
-		/obj/item/clothing/head/helmet/marine/robot/advanced/fire,
-		/obj/item/clothing/suit/storage/marine/robot/advanced/fire,
+		/obj/item/clothing/head/helmet/marine/robot/advanced/acid,
+		/obj/item/clothing/suit/storage/marine/robot/advanced/acid,
 	)
 	cost = 60
 	available_against_xeno_only = TRUE
 
-/datum/supply_packs/armor/robot/advanced/bomb
-	name = "Heavy Riot Armor Set"
-	contains = list(
-		/obj/item/clothing/head/helmet/marine/robot/advanced/bomb,
-		/obj/item/clothing/suit/storage/marine/robot/advanced/bomb,
-	)
-	cost = 60
-	available_against_xeno_only = TRUE
-
-	/datum/supply_packs/armor/robot/advanced/physical
-	name = "Heavy Riot Armor Set"
+/datum/supply_packs/armor/robot/advanced/physical
+	name = "Cingulata physical protection armor set"
 	contains = list(
 		/obj/item/clothing/head/helmet/marine/robot/advanced/physical,
 		/obj/item/clothing/suit/storage/marine/robot/advanced/physical,
@@ -321,11 +311,20 @@ SUBSYSTEM_DEF(ru_items)
 	cost = 60
 	available_against_xeno_only = TRUE
 
-	/datum/supply_packs/armor/robot/advanced/acid
-	name = "Heavy Riot Armor Set"
+/datum/supply_packs/armor/robot/advanced/bomb
+	name = "Tardigrada bomb protection armor set"
 	contains = list(
-		/obj/item/clothing/head/helmet/marine/robot/advanced/acid,
-		/obj/item/clothing/suit/storage/marine/robot/advanced/acid,
+		/obj/item/clothing/head/helmet/marine/robot/advanced/bomb,
+		/obj/item/clothing/suit/storage/marine/robot/advanced/bomb,
+	)
+	cost = 60
+	available_against_xeno_only = TRUE
+
+/datum/supply_packs/armor/robot/advanced/fire
+	name = "Urodela fire protection armor set"
+	contains = list(
+		/obj/item/clothing/head/helmet/marine/robot/advanced/fire,
+		/obj/item/clothing/suit/storage/marine/robot/advanced/fire,
 	)
 	cost = 60
 	available_against_xeno_only = TRUE
