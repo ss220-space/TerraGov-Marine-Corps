@@ -166,6 +166,11 @@ SUBSYSTEM_DEF(ru_items)
 	icon = 'ss220/icons/item/VAL-HAL-A.dmi'
 	icon_state = "VAL-HAL-A"
 	item_state = "VAL-HAL-A"
+	item_icons = list(
+		slot_back_str = 'ss220/icons/mob/VAL-HAL-A _back.dmi',
+		slot_s_store_str = 'ss220/icons/mob/VAL-HAL-A_suit.dmi',
+		slot_l_hand_str = 'ss220/icons/mob/VAL-HAL-A_left.dmi',
+		slot_r_hand_str = 'ss220/icons/mob/VAL-HAL-A_right.dmi',)
 	force = 40
 	force_wielded = 95 //Reminder: putting trama inside deals 60% additional damage
 	flags_item = DRAINS_XENO | TWOHANDED
