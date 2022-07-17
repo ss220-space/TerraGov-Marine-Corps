@@ -51,7 +51,12 @@ SUBSYSTEM_DEF(ru_items)
 	name = "\improper Vector storm submachinegun"
 	desc = "The Vector is the TerraGov Marine Corps depelopment to increase assault capability of marines. Lightweight and simple to use. It features delayed blowback system, heavily reducing recoil even with its high ROF. A highly-customizable platform, it is reliable and versatile. Ideal weapon for quick assaults. Uses extended .45 ACP HP magazines"
 	fire_sound = 'sound/weapons/guns/fire/tp23.ogg'
-	icon = 'icons/Marine/gun64.dmi'
+	icon = 'ss220/icons/item/vector.dmi'
+	item_icons = list(
+		slot_back_str = 'ss220/icons/mob/vector_back.dmi',
+		slot_s_store_str = 'ss220/icons/mob/vector_suit_slot.dmi',
+		slot_l_hand_str = 'ss220/icons/mob/vector_items_lefthand_1.dmi',
+		slot_r_hand_str = 'ss220/icons/mob/vector_items_righthand_1.dmi',)
 	icon_state = "v45"
 	item_state = "v45"
 	caliber = CALIBER_45ACP //codex
@@ -136,6 +141,7 @@ SUBSYSTEM_DEF(ru_items)
 /obj/item/ammo_magazine/packet/acp_smg
 	name = "box of .45 ACP HP"
 	desc = "A box containing common .45 ACP hollow-point rounds."
+	icon = 'ss220/icons/item/vector_ammo.dmi'
 	icon_state = "box_45acp"
 	default_ammo = /datum/ammo/bullet/smg/acp
 	w_class = WEIGHT_CLASS_SMALL
@@ -157,6 +163,7 @@ SUBSYSTEM_DEF(ru_items)
 /obj/item/weapon/twohanded/glaive/harvester
 	name = "\improper VAL-HAL-A halberd harvester"
 	desc = "TerraGov Marine Corps' cutting-edge 'Harvester' halberd, with experimental plasma regulator. An advanced weapon that combines sheer force with the ability to apply a variety of debilitating effects when loaded with certain reagents, but should be used with both hands. Activate after loading to prime a single use of an effect. It also harvests substances from alien lifeforms it strikes when connected to the Vali system."
+	icon = 'ss220/icons/item/VAL-HAL-A.dmi'
 	icon_state = "VAL-HAL-A"
 	item_state = "VAL-HAL-A"
 	force = 40
