@@ -376,4 +376,4 @@ SUBSYSTEM_DEF(ru_items)
 	name = "\improper Tetralyne bottle"
 	desc = "A small bottle. Contains tetralyne - used as a potent treatment against physical injuries."
 	icon_state = "bottle16"
-	list_reagents = list(/datum/reagent/medicine/tetralyne = 30)
+	list_reagents = list(/datum/reagent/medicine/tetralyne = 60)
