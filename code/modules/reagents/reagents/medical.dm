@@ -1347,3 +1347,24 @@
 		if (21 to INFINITY)
 			L.jitter(5)
 	return ..()
+
+/datum/reagent/medicine/tetralyne
+	name = "Teralyne"
+	description = "Teralyne is a concentrated form of Tricordrazine and can be used to treat extensive blunt or burn trauma."
+	color = "#00a063"
+	overdose_threshold = REAGENTS_OVERDOSE*0.5
+	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL*0.5
+	scannable = TRUE
+
+/datum/reagent/medicine/tetralyne/on_mob_life(mob/living/L, metabolism)
+	L.heal_limb_damage(1.2*effect_str, 1.2*effect_str)
+	return ..()
+
+
+/datum/reagent/medicine/tetralyne/overdose_process(mob/living/L, metabolism)
+	L.reagents.add_reagent(/datum/reagent/toxin, 2)
+	L.adjustToxLoss(3*effect_str)
+
+/datum/reagent/medicine/tetralyne/overdose_crit_process(mob/living/L, metabolism)
+	L.apply_damages(2*effect_str, 2*effect_str, 2*effect_str, 2*effect_str, effect_str)
+	L.adjustStaminaLoss(5*effect_str)
