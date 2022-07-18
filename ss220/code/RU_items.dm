@@ -328,3 +328,52 @@ SUBSYSTEM_DEF(ru_items)
 	)
 	cost = 60
 	available_against_xeno_only = TRUE
+
+///////////////////////////////////////////////////////////////////////
+////////////////////////// Tetralyne //////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+/datum/reagent/medicine/tetralyne
+	name = "Tetralyne"
+	description = "Tetralyne is a concentrated form of Tricordrazine and can be used to treat extensive blunt or burn trauma."
+	color = "#00a063"
+	overdose_threshold = REAGENTS_OVERDOSE*0.5
+	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL*0.5
+	scannable = TRUE
+
+/datum/reagent/medicine/tetralyne/on_mob_life(mob/living/L, metabolism)
+	L.heal_limb_damage(1.2*effect_str, 1.2*effect_str)
+	return ..()
+
+
+/datum/reagent/medicine/tetralyne/overdose_process(mob/living/L, metabolism)
+	L.reagents.add_reagent(/datum/reagent/toxin, 2)
+	L.adjustToxLoss(3*effect_str)
+
+/datum/reagent/medicine/tetralyne/overdose_crit_process(mob/living/L, metabolism)
+	L.apply_damages(2*effect_str, 2*effect_str, 2*effect_str, 2*effect_str, effect_str)
+	L.adjustStaminaLoss(5*effect_str)
+
+/datum/chemical_reaction/tetralyne
+	name = "Tetralyne"
+	results = list(/datum/reagent/medicine/tetralyne = 1)
+	required_reagents = list(/datum/reagent/medicine/meralyne = 1, /datum/reagent/medicine/dermaline = 1)
+
+/obj/item/reagent_containers/pill/tricordrazine
+	pill_desc = "A tetralyne pill. Broad spectrum medication that quickly heals all damage types."
+	list_reagents = list(/datum/reagent/medicine/tetralyne = 7.5)
+	pill_id = 9
+
+/obj/item/storage/pill_bottle/tetralyne
+	name = "tetralyne pill bottle"
+	desc = "Contains pills that quickly heal brute and burn."
+	icon_state = "pill_canistercomplete"
+	pill_type_to_fill = /obj/item/reagent_containers/pill/tetralyne
+	greyscale_config = /datum/greyscale_config/pillbottleround
+	greyscale_colors = "#00a063#ffffff"
+
+/obj/item/reagent_containers/glass/bottle/tetralyne
+	name = "\improper Tetralyne bottle"
+	desc = "A small bottle. Contains tetralyne - used as a potent treatment against physical injuries."
+	icon_state = "bottle16"
+	list_reagents = list(/datum/reagent/medicine/tetralyne = 30)
