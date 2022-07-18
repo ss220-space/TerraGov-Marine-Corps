@@ -1349,8 +1349,8 @@
 	return ..()
 
 /datum/reagent/medicine/tetralyne
-	name = "Teralyne"
-	description = "Teralyne is a concentrated form of Tricordrazine and can be used to treat extensive blunt or burn trauma."
+	name = "Tetralyne"
+	description = "Tetralyne is a concentrated form of Tricordrazine and can be used to treat extensive blunt or burn trauma."
 	color = "#00a063"
 	overdose_threshold = REAGENTS_OVERDOSE*0.5
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL*0.5
