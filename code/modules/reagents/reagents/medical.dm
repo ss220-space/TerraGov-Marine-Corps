@@ -62,7 +62,7 @@
 	scannable = TRUE
 	custom_metabolism = REAGENTS_METABOLISM * 0.5
 	purge_list = list(/datum/reagent/toxin, /datum/reagent/zombium)
-	purge_rate = 5
+	purge_rate = 3
 	overdose_threshold = REAGENTS_OVERDOSE
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL
 
