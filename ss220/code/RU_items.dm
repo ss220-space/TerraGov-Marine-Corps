@@ -357,7 +357,7 @@ SUBSYSTEM_DEF(ru_items)
 /datum/chemical_reaction/tetralyne
 	name = "Tetralyne"
 	results = list(/datum/reagent/medicine/tetralyne = 1)
-	required_reagents = list(/datum/reagent/medicine/meralyne = 1, /datum/reagent/medicine/dermaline = 1)
+	required_reagents = list(/datum/reagent/medicine/meralyne = 1, /datum/reagent/medicine/dermaline = 1, /datum/reagent/medicine/tricordrazine = 1)
 
 /obj/item/reagent_containers/pill/tricordrazine
 	pill_desc = "A tetralyne pill. Broad spectrum medication that quickly heals all damage types."
