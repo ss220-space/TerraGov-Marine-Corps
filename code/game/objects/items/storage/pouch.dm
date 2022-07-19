@@ -346,7 +346,7 @@
 	new /obj/item/reagent_containers/hypospray/advanced/meraderm(src)
 
 /obj/item/storage/pouch/medical_injectors
-	name = " injector pouch"
+	name = "injector pouch"
 	desc = "A specialized medical pouch that can only hold auto-injectors."
 	icon_state = "firstaid_injector"
 	storage_slots = 10
@@ -361,7 +361,7 @@
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/combat (src)
-	new /obj/item/reagent_containers/hypospray/autoinjector/dylovene
+	new /obj/item/reagent_containers/hypospray/autoinjector/dylovene (src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/inaprovaline(src)
 	new /obj/item/reagent_containers/hypospray/autoinjector/russian_red (src)
 
