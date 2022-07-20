@@ -158,13 +158,15 @@ SUBSYSTEM_DEF(ru_items)
 
 /obj/item/weapon/gun/revolver/standard_revolver/coltrifle
 	name = "\improper M1855 Revolving Rifle"
-	desc = "A hybrid of a revolver and a rifle was designed and manufactured a long time ago. Still used by some antique lovers."
+	desc = "A hybrid of a revolver and a rifle was designed and manufactured a long time ago by Crowford Armory Union. Still used by some antique lovers."
 	icon = 'icons/marine/gun64.dmi'
 	icon_state = "coltrifle"
 	item_state = "coltrifle"
 	fire_animation = "coltrifle_fire"
+	gun_skill_category = GUN_SKILL_RIFLES
+	flags_equip_slot = ITEM_SLOT_BACK
 	damage_mult = 1.1
-	force = 30
+	force = 20
 
 	scatter = 0.5
 	scatter_unwielded = 5
