@@ -8,6 +8,8 @@ SUBSYSTEM_DEF(ru_items)
 	var/list/items = list(
 		/obj/item/ammo_magazine/smg/vector = -1,
 		/obj/item/ammo_magazine/packet/acp_smg = -1,
+		/obj/item/weapon/gun/revolver/standard_revolver/coltrifle = -1,
+		/obj/item/ammo_magazine/revolver/standard_revolver = -1,
 	)
 
 	var/list/items_val = list(
@@ -15,6 +17,7 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/ammo_magazine/smg/vector = -1,
 		/obj/item/ammo_magazine/packet/acp_smg = -1,
 		/obj/item/weapon/twohanded/glaive/harvester = -1,
+		/obj/item/weapon/gun/revolver/standard_revolver/coltrifle = -1,
 		/obj/item/clothing/head/helmet/marine/robot/advanced/acid = -1,
 		/obj/item/clothing/suit/storage/marine/robot/advanced/acid = -1,
 		/obj/item/clothing/head/helmet/marine/robot/advanced/physical = -1,
@@ -149,6 +152,36 @@ SUBSYSTEM_DEF(ru_items)
 	contains = list(/obj/item/weapon/gun/smg/vector)
 	cost = 20
 
+///////////////////////////////////////////////////////////////////////
+//////// Сoltrifle, based on Colt Model 1855 Revolving Rifle. /////////
+///////////////////////////////////////////////////////////////////////
+
+/obj/item/weapon/gun/revolver/standard_revolver/coltrifle
+	name = "\improper M1855 Revolving Rifle"
+	desc = "A hybrid of a revolver and a rifle was designed and manufactured a long time ago. Still used by some antique lovers."
+	icon = 'icons/marine/gun64.dmi'
+	icon_state = "coltrifle"
+	item_state = "coltrifle"
+	fire_animation = "coltrifle_fire"
+	damage_mult = 1.1
+	force = 30
+
+	scatter = 0.5
+	scatter_unwielded = 5
+
+	upper_akimbo_accuracy = 6
+	lower_akimbo_accuracy = 3
+	akimbo_additional_delay = 1
+
+	recoil = 0
+	recoil_unwielded = 0.5
+
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/extended_barrel,
+	)
+	attachable_offset = list("muzzle_x" = 50, "muzzle_y" = 21,"rail_x" = 24, "rail_y" = 22)
 
 ///////////////////////////////////////////////////////////////////////
 ////////////////// VAL-HAL-A, the Vali Halberd ////////////////////////
