@@ -9,7 +9,6 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/ammo_magazine/smg/vector = -1,
 		/obj/item/ammo_magazine/packet/acp_smg = -1,
 		/obj/item/weapon/gun/revolver/standard_revolver/coltrifle = -1,
-		/obj/item/ammo_magazine/revolver/standard_revolver = -1,
 	)
 
 	var/list/items_val = list(
@@ -165,10 +164,11 @@ SUBSYSTEM_DEF(ru_items)
 	fire_animation = "coltrifle_fire"
 	gun_skill_category = GUN_SKILL_RIFLES
 	flags_equip_slot = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_BULKY
 	damage_mult = 1.1
 	force = 20
 
-	scatter = 0.5
+	scatter = 0
 	scatter_unwielded = 5
 
 	upper_akimbo_accuracy = 6
@@ -176,7 +176,7 @@ SUBSYSTEM_DEF(ru_items)
 	akimbo_additional_delay = 1
 
 	recoil = 0
-	recoil_unwielded = 0.5
+	recoil_unwielded = 0
 
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness,
