@@ -171,6 +171,7 @@ SUBSYSTEM_DEF(ru_items)
 	scatter = 0
 	scatter_unwielded = 5
 
+	fire_delay = 0.2 SECONDS
 	upper_akimbo_accuracy = 6
 	lower_akimbo_accuracy = 3
 	akimbo_additional_delay = 1
