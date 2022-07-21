@@ -56,7 +56,7 @@ SUBSYSTEM_DEF(ru_items)
 	item_state = "T25"
 	caliber = CALIBER_10x26_CASELESS //codex
 	max_shells = 80 //codex
-	force = 35
+	force = 20
 	aim_slowdown = 0.5
 	wield_delay = 0.9 SECONDS
 	fire_sound = "gun_smartgun"
