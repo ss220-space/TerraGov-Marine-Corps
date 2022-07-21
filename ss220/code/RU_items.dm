@@ -57,7 +57,7 @@ SUBSYSTEM_DEF(ru_items)
 	caliber = CALIBER_10x26_CASELESS //codex
 	max_shells = 80 //codex
 	force = 35
-	aim_slowdown = 0.7
+	aim_slowdown = 0.5
 	wield_delay = 0.9 SECONDS
 	fire_sound = "gun_smartgun"
 	dry_fire_sound = 'sound/weapons/guns/fire/m41a_empty.ogg'
@@ -80,11 +80,7 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonetknife,
 		/obj/item/attachable/compensator,
-		/obj/item/attachable/scope,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/marine,
 		/obj/item/weapon/gun/pistol/plasma_pistol,
-		/obj/item/weapon/gun/shotgun/combat/masterkey,
 		/obj/item/weapon/gun/flamer/mini_flamer,
 		/obj/item/attachable/motiondetector,
 	)
