@@ -78,6 +78,8 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonetknife,
 	)
 	attachable_offset = list("muzzle_x" = 50, "muzzle_y" = 21,"rail_x" = 24, "rail_y" = 22)
 
