@@ -52,7 +52,7 @@ SUBSYSTEM_DEF(ru_items)
 
 /obj/item/weapon/gun/revolver/standard_revolver/coltrifle
 	name = "\improper M1855 Revolving Rifle"
-	desc = "A hybrid of a revolver and a rifle was designed and manufactured a long time ago by Crowford Armory Union. Still used by some antique lovers."
+	desc = "A revolver and carbine hybrid, designed and manufactured a long time ago by Crowford Armory Union. Popular back then, but completely obsolete today. Still used by some antiquity lovers."
 	icon = 'icons/marine/gun64.dmi'
 	icon_state = "coltrifle"
 	item_state = "coltrifle"
