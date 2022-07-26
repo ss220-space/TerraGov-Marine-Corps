@@ -660,11 +660,11 @@ It is a modified Beretta 93R, and can fire three round burst or single fire. Whe
 		/obj/item/attachable/lace,
 	)
 
-	flags_gun_features = GUN_AMMO_COUNTER|GUN_WIELDED_FIRING_ONLY|GUN_IFF
+	flags_gun_features = GUN_AMMO_COUNTER|GUN_IFF
 	gun_skill_category = GUN_SKILL_SMARTGUN
 	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC)
 
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 13, "rail_y" = 23, "under_x" = 19, "under_y" = 13, "stock_x" = 21, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 46, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 23, "under_x" = 25, "under_y" = 13, "stock_x" = 21, "stock_y" = 17)
 
 	aim_slowdown = 0.2
 	wield_delay = 0.4 SECONDS
@@ -675,4 +675,4 @@ It is a modified Beretta 93R, and can fire three round burst or single fire. Whe
 	scatter_unwielded = 5
 	recoil = -2
 	recoil_unwielded = -2
-	akimbo_additional_delay = 1
+	akimbo_additional_delay = 0.8
