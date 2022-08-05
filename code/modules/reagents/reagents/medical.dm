@@ -93,14 +93,6 @@
 		L.Unconscious(30 SECONDS)
 	L.apply_damage(3*effect_str, CLONE)
 
-/obj/item/reagent_containers/hypospray/autoinjector/rye //made for debugging
-	name = "rye autoinjector"
-	icon_state = "autoinjector-6"
-	amount_per_transfer_from_this = 3
-	volume = 100
-
-	list_reagents = list(/datum/reagent/medicine/ryetalyn = 100)
-
 /datum/reagent/medicine/paracetamol
 	name = "Paracetamol"
 	description = "Most probably know this as Tylenol, but this chemical is a mild, simple painkiller, good for enduring heavy labor."
