@@ -60,7 +60,8 @@ SUBSYSTEM_DEF(ru_items)
 	gun_skill_category = GUN_SKILL_RIFLES
 	flags_equip_slot = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
-	damage_mult = 1.1
+	damage_mult = 1.25
+	damage_falloff_mult = 0 //1 falloff per tile by default, now 0
 	force = 20
 
 	scatter = 0
