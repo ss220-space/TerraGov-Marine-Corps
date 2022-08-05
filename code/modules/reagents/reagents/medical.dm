@@ -543,11 +543,15 @@
 	scannable = TRUE
 
 /datum/reagent/medicine/hyronalin/on_mob_life(mob/living/L)
-	L.adjustToxLoss(-2*effect_str)
-	if(L.toxloss > 40)
+	L.adjustToxLoss(-effect_str)
+	if(L.toxloss > 20)
 		L.adjustToxLoss(-effect_str)
+	if(L.toxloss > 50)
+		L.adjustToxLoss(-effect_str)
+		L.adjustStaminaLoss(2*effect_str)
 	if(L.toxloss > 80)
 		L.adjustToxLoss(-effect_str)
+		L.adjustStaminaLoss(3*effect_str)
 	return ..()
 
 /datum/reagent/medicine/hyronalin/overdose_process(mob/living/L, metabolism)
