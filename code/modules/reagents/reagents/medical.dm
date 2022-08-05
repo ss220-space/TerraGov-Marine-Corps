@@ -563,6 +563,8 @@
 
 /datum/reagent/medicine/arithrazine/on_mob_life(mob/living/L)
 	L.adjustToxLoss(-0.5*effect_str)
+	if(prob(50))
+		L.take_limb_damage(effect_str*rand(1, 5), 0)
 	return ..()
 
 /datum/reagent/medicine/arithrazine/overdose_process(mob/living/L, metabolism)
