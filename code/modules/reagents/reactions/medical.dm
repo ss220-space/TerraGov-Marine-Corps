@@ -115,8 +115,8 @@
 
 /datum/chemical_reaction/synaptizine
 	name = "Synaptizine"
-	results = list(/datum/reagent/medicine/synaptizine = 2)
-	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/lithium = 1, /datum/reagent/water = 1, /datum/reagent/medicine/lemoline = 1)
+	results = list(/datum/reagent/medicine/synaptizine = 3)
+	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/lithium = 1, /datum/reagent/water = 1)
 
 /datum/chemical_reaction/leporazine
 	name = "Leporazine"
