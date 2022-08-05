@@ -557,8 +557,6 @@ datum/ammo/bullet/revolver/tp44
 	sundering = 3
 
 
-<<<<<<< HEAD
-=======
 /datum/ammo/bullet/smg/incendiary
 	name = "incendiary submachinegun bullet"
 	hud_state = "smg_fire"
@@ -567,7 +565,6 @@ datum/ammo/bullet/revolver/tp44
 	penetration = 0
 
 
->>>>>>> master220
 /*
 //================================================
 					Rifle Ammo

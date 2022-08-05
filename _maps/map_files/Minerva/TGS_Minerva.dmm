@@ -1546,8 +1546,6 @@
 /obj/machinery/autodoc,
 /turf/open/floor/mainship/sterile,
 /area/mainship/medical/lower_medical)
-<<<<<<< HEAD
-=======
 "eW" = (
 /obj/machinery/computer/skills,
 /obj/machinery/light/mainship{
@@ -1583,7 +1581,6 @@
 /obj/effect/soundplayer,
 /turf/closed/wall/mainship,
 /area/mainship/living/evacuation)
->>>>>>> master220
 "fb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -22549,11 +22546,7 @@ Cc
 Fe
 Gk
 Hc
-<<<<<<< HEAD
-Uk
-=======
 MG
->>>>>>> master220
 Iz
 Ju
 Ku
@@ -22652,15 +22645,9 @@ Ff
 Gl
 Hd
 HQ
-<<<<<<< HEAD
-am
-Jt
-XY
-=======
 mq
 Jt
 lf
->>>>>>> master220
 Jv
 Jv
 Mm
@@ -22756,15 +22743,9 @@ Fg
 Gm
 kt
 HQ
-<<<<<<< HEAD
-OB
-Jv
-PK
-=======
 vI
 Jv
 xj
->>>>>>> master220
 HQ
 Is
 Is

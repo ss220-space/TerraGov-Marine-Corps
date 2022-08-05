@@ -102,11 +102,7 @@ SUBSYSTEM_DEF(job)
 	if(job.required_playtime_remaining(player.client))
 		JobDebug("AR player does not have enough job exp, Player: [player], Job:[job.title]")
 		return FALSE
-<<<<<<< HEAD
-	if(ismarinejob(job))
-=======
 	if(ismarinejob(job) || issommarinejob(job))
->>>>>>> master220
 		if(!handle_initial_squad(player, job, latejoin, job.faction))
 			JobDebug("Failed to assign marine role to a squad. Player: [player.key] Job: [job.title]")
 			return FALSE

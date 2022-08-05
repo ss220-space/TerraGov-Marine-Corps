@@ -4899,23 +4899,9 @@
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/aft_hallway)
 "oD" = (
-<<<<<<< HEAD
-/obj/effect/decal/warning_stripes/thin{
-	dir = 9
-	},
-/obj/effect/decal/warning_stripes/thin{
-	dir = 10
-	},
-/obj/effect/decal/warning_stripes/thin{
-	dir = 6
-	},
-/turf/open/floor/mainship/mono,
-/area/mainship/shipboard/weapon_room)
-=======
 /obj/effect/soundplayer,
 /turf/closed/wall/mainship,
 /area/mainship/engineering/ce_room)
->>>>>>> master220
 "oE" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/mainship{
@@ -6322,8 +6308,6 @@
 /obj/machinery/vending/medical,
 /turf/open/floor/mainship/floor,
 /area/mainship/squads/general)
-<<<<<<< HEAD
-=======
 "ti" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -6336,7 +6320,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/mainship/mono,
 /area/mainship/shipboard/weapon_room)
->>>>>>> master220
 "tj" = (
 /obj/structure/cable,
 /turf/closed/wall/mainship,
@@ -10252,8 +10235,6 @@
 /obj/machinery/light/mainship,
 /turf/open/floor/mainship/mono,
 /area/mainship/living/commandbunks)
-<<<<<<< HEAD
-=======
 "Ez" = (
 /obj/machinery/light/mainship{
 	dir = 8
@@ -10265,7 +10246,6 @@
 	dir = 10
 	},
 /area/mainship/living/numbertwobunks)
->>>>>>> master220
 "EA" = (
 /obj/machinery/light/mainship{
 	dir = 4
@@ -10295,8 +10275,6 @@
 	},
 /turf/open/floor/wood,
 /area/mainship/living/numbertwobunks)
-<<<<<<< HEAD
-=======
 "EF" = (
 /obj/machinery/light/mainship,
 /obj/machinery/door_control/old/ai{
@@ -10306,7 +10284,6 @@
 /obj/structure/table/fancywoodentable,
 /turf/open/floor/wood,
 /area/mainship/command/corporateliaison)
->>>>>>> master220
 "EG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -11761,15 +11738,12 @@
 /obj/effect/ai_node,
 /turf/open/floor/wood,
 /area/mainship/living/commandbunks)
-<<<<<<< HEAD
-=======
 "IF" = (
 /obj/machinery/light/mainship,
 /obj/machinery/computer/marine_card,
 /obj/structure/table/fancywoodentable,
 /turf/open/floor/wood,
 /area/mainship/living/numbertwobunks)
->>>>>>> master220
 "IG" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -14715,14 +14689,8 @@
 /turf/open/floor/mainship/mono,
 /area/mainship/engineering/engine_core)
 "Qy" = (
-<<<<<<< HEAD
-/obj/machinery/power/apc/mainship,
-/obj/structure/cable,
-/turf/open/floor/mainship/sterile/purple/side{
-=======
 /obj/structure/cable,
 /turf/open/floor/mainship/sterile/purple/corner{
->>>>>>> master220
 	dir = 1
 	},
 /area/mainship/medical/chemistry)
@@ -41778,11 +41746,7 @@ TV
 ZX
 ZX
 ZX
-<<<<<<< HEAD
-vi
-=======
 rh
->>>>>>> master220
 ZX
 Vq
 vZ
@@ -44126,15 +44090,9 @@ EB
 rP
 sa
 sw
-<<<<<<< HEAD
-Va
-Ho
-Ox
-=======
 Go
 tg
 jw
->>>>>>> master220
 JZ
 rG
 sI
@@ -46164,13 +46122,8 @@ mx
 SJ
 SJ
 SJ
-<<<<<<< HEAD
-YR
-qc
-=======
 Qy
 yZ
->>>>>>> master220
 Sq
 YT
 YT
@@ -46426,13 +46379,8 @@ iC
 SR
 lP
 UV
-<<<<<<< HEAD
-Qy
-KL
-=======
 Wt
 gj
->>>>>>> master220
 ef
 lF
 Zq
@@ -49818,11 +49766,7 @@ OK
 xb
 XC
 OK
-<<<<<<< HEAD
-GO
-=======
 VV
->>>>>>> master220
 zs
 yx
 zo

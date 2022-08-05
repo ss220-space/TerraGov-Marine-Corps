@@ -36483,19 +36483,6 @@
 	dir = 1
 	},
 /area/prison/cellblock/protective)
-<<<<<<< HEAD
-"ckF" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/structure/closet/walllocker/emerglocker/full,
-/turf/open/floor/prison/blackfloor,
-/area/prison/pirate)
-=======
->>>>>>> master220
 "ckG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/layer1{
 	on = 1

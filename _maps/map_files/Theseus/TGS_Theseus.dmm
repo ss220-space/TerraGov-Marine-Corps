@@ -5316,8 +5316,6 @@
 /obj/structure/dropprop,
 /turf/open/floor/mainship/cargo,
 /area/mainship/hallways/hangar/droppod)
-<<<<<<< HEAD
-=======
 "byW" = (
 /obj/machinery/chem_master,
 /obj/machinery/light/mainship,
@@ -5326,7 +5324,6 @@
 	dir = 8
 	},
 /area/mainship/medical/chemistry)
->>>>>>> master220
 "byX" = (
 /obj/machinery/vending/medical/shipside,
 /turf/open/floor/mainship/sterile/side,

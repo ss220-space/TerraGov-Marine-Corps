@@ -1993,20 +1993,6 @@
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/mainship/sterile/side,
 /area/whiskey_outpost)
-<<<<<<< HEAD
-"iV" = (
-/obj/item/clothing/suit/surgical,
-/obj/structure/table/mainship,
-/obj/effect/spawner/random/pillbottle{
-	pixel_x = -2
-	},
-/obj/item/armor_module/storage/uniform/white_vest,
-/turf/open/floor/mainship/sterile/corner{
-	dir = 4
-	},
-/area/whiskey_outpost)
-=======
->>>>>>> master220
 "iW" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/mainship/sterile/dark,
@@ -2399,22 +2385,6 @@
 	dir = 8
 	},
 /area/whiskey_outpost)
-<<<<<<< HEAD
-"kB" = (
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/storage/belt/lifesaver/full,
-/obj/item/storage/belt/lifesaver/full,
-/obj/structure/table/mainship,
-/obj/item/armor_module/storage/uniform/white_vest,
-/obj/item/clothing/suit/surgical,
-/turf/open/floor/mainship/sterile,
-/area/whiskey_outpost)
-=======
->>>>>>> master220
 "kC" = (
 /obj/machinery/light{
 	dir = 8
