@@ -89,6 +89,8 @@
 		var/key_symbol = length(message[2]) > 1 ? convert_ru_key_to_en_key(message[2]) : message[2]
 		if(faction == FACTION_TERRAGOV_REBEL)
 			return GLOB.department_radio_keys_rebel[key_symbol]
+		if(faction == FACTION_SOM)
+			return GLOB.department_radio_keys_som[key_symbol]
 		return GLOB.department_radio_keys[key_symbol]
 
 

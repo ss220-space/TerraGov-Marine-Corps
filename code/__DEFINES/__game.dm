@@ -18,10 +18,16 @@
 #define MAP_THESEUS "Theseus"
 #define MAP_TALOS "Talos"
 #define MAP_MINERVA "Minerva"
+<<<<<<< HEAD
 #define MAP_TWIN_PILLARS "Twin Pillars"
 #define MAP_TWIN_PILLARS "Twin Pillars SS220 edition"
 
 
+=======
+// #define MAP_TWIN_PILLARS "Twin Pillars"
+#define MAP_TWIN_PILLARS "Twin Pillars SS220 edition"
+#define MAP_COMBAT_PATROL_BASE "Combat Patrol Base"
+>>>>>>> master220
 
 #define SEE_INVISIBLE_MINIMUM 5
 

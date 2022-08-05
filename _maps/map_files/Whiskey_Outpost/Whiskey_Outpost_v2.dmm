@@ -1993,6 +1993,7 @@
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/mainship/sterile/side,
 /area/whiskey_outpost)
+<<<<<<< HEAD
 "iV" = (
 /obj/item/clothing/suit/surgical,
 /obj/structure/table/mainship,
@@ -2004,6 +2005,8 @@
 	dir = 4
 	},
 /area/whiskey_outpost)
+=======
+>>>>>>> master220
 "iW" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/mainship/sterile/dark,
@@ -2396,6 +2399,7 @@
 	dir = 8
 	},
 /area/whiskey_outpost)
+<<<<<<< HEAD
 "kB" = (
 /obj/item/storage/belt/lifesaver/full,
 /obj/item/clothing/glasses/hud/health,
@@ -2409,6 +2413,8 @@
 /obj/item/clothing/suit/surgical,
 /turf/open/floor/mainship/sterile,
 /area/whiskey_outpost)
+=======
+>>>>>>> master220
 "kC" = (
 /obj/machinery/light{
 	dir = 8
@@ -2881,6 +2887,14 @@
 	dir = 4
 	},
 /area/whiskey_outpost/outside/west)
+"ne" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/mainship/emerald{
+	dir = 8
+	},
+/area/whiskey_outpost)
 "nh" = (
 /obj/item/storage/box/sentry,
 /turf/open/floor/plating/ground/dirt,
@@ -4718,15 +4732,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/asteroidfloor,
 /area/whiskey_outpost/outside/west)
-"wc" = (
-/obj/machinery/vending/shared_vending/marine_engi,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/open/floor/mainship/red{
-	dir = 8
-	},
-/area/whiskey_outpost)
 "we" = (
 /obj/machinery/door/airlock/mainship/medical/or/or2{
 	dir = 1
@@ -5326,6 +5331,14 @@
 	dir = 4
 	},
 /area/whiskey_outpost)
+"AD" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/mainship/red{
+	dir = 8
+	},
+/area/whiskey_outpost)
 "AE" = (
 /obj/structure/cargo_container{
 	dir = 8
@@ -5350,6 +5363,17 @@
 	},
 /turf/open/floor/tile/damaged/five,
 /area/whiskey_outpost/outside/south)
+"AN" = (
+/obj/item/clothing/suit/surgical,
+/obj/structure/table/mainship,
+/obj/effect/spawner/random/pillbottle{
+	pixel_x = -2
+	},
+/obj/item/armor_module/storage/uniform/white_vest,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 4
+	},
+/area/whiskey_outpost)
 "AQ" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -6159,6 +6183,19 @@
 	dir = 4
 	},
 /area/whiskey_outpost/outside/east)
+"GO" = (
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/storage/belt/lifesaver/full,
+/obj/item/storage/belt/lifesaver/full,
+/obj/structure/table/mainship,
+/obj/item/armor_module/storage/uniform/white_vest,
+/obj/item/clothing/suit/surgical,
+/turf/open/floor/mainship/sterile,
+/area/whiskey_outpost)
 "GR" = (
 /obj/structure/platform_decoration,
 /obj/structure/barricade/sandbags{
@@ -6597,15 +6634,6 @@
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/whiskey_outpost/outside/west)
-"Kw" = (
-/obj/machinery/vending/shared_vending/marine_engi,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/open/floor/mainship/emerald{
-	dir = 8
-	},
-/area/whiskey_outpost)
 "Kx" = (
 /turf/open/floor/plating/ground/dirtgrassborder/corner2{
 	dir = 1
@@ -16603,7 +16631,7 @@ ac
 fL
 gw
 iw
-iV
+AN
 Yi
 jQ
 yj
@@ -18113,7 +18141,7 @@ Dl
 bd
 hk
 ac
-kB
+GO
 kW
 lA
 mB
@@ -18925,7 +18953,7 @@ kz
 ac
 bK
 cv
-wc
+AD
 dz
 eE
 fy
@@ -18938,7 +18966,7 @@ ij
 ac
 lf
 zg
-Kw
+ne
 nt
 nO
 nV

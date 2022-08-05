@@ -42,3 +42,10 @@ endmap
 map twin_pillars_ss220_edition
 	voteweight 0
 endmap
+<<<<<<< HEAD
+=======
+
+map combat_patrol_base
+	voteweight 0
+endmap
+>>>>>>> master220
