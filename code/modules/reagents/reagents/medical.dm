@@ -556,14 +556,13 @@
 	name = "Arithrazine"
 	description = "Arithrazine is a dangerous medicine capable of healing toxin damage, but with severe side effects of chemical burns and internal hematomas."
 	color = "#C8A5DC" // rgb: 200, 165, 220
-	custom_metabolism = REAGENTS_METABOLISM * 5
+	custom_metabolism = REAGENTS_METABOLISM * 2.5
 	overdose_threshold = REAGENTS_OVERDOSE/2
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL/2
 	scannable = TRUE
 
 /datum/reagent/medicine/arithrazine/on_mob_life(mob/living/L)
-	L.adjustToxLoss(-effect_str)
-	L.take_limb_damage(2*effect_str, 2*effect_str)
+	L.adjustToxLoss(-0.5*effect_str)
 	return ..()
 
 /datum/reagent/medicine/arithrazine/overdose_process(mob/living/L, metabolism)
