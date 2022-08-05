@@ -148,6 +148,11 @@
 	list_reagents = list(/datum/reagent/medicine/dermaline = 7.5)
 	pill_id = 5
 
+/obj/item/reagent_containers/pill/tetralyne
+	pill_desc = "A tetralyne pill. Heals burn and brute damage at a high rate."
+	list_reagents = list(/datum/reagent/medicine/tetralyne = 7.5)
+	pill_id = 5
+
 /obj/item/reagent_containers/pill/paracetamol
 	pill_desc = "A paracetamol pill. Painkiller for the ages."
 	list_reagents = list(/datum/reagent/medicine/paracetamol = 15)

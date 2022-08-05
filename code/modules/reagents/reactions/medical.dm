@@ -222,3 +222,8 @@
 	name = "Stimulum"
 	results = list(/datum/reagent/medicine/research/stimulon = 1)
 	required_reagents = list(/datum/reagent/medicine/synaptizine = 10, /datum/reagent/medicine/arithrazine = 20, /datum/reagent/consumable/nutriment = 20, /datum/reagent/medicine/lemoline = 20)
+
+/datum/chemical_reaction/tetralyne
+	name = "Tetralyne"
+	results = list(/datum/reagent/medicine/tetralyne = 1)
+	required_reagents = list(/datum/reagent/medicine/meralyne = 1, /datum/reagent/medicine/dermaline = 1, /datum/reagent/medicine/tricordrazine = 1)

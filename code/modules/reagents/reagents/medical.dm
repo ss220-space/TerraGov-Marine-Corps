@@ -60,17 +60,30 @@
 	reagent_state = SOLID
 	color = "#C8A5DC" // rgb: 200, 165, 220
 	scannable = TRUE
-	custom_metabolism = REAGENTS_METABOLISM * 0.5
+	custom_metabolism = 0 //doesn't metab
 	purge_list = list(/datum/reagent/toxin, /datum/reagent/zombium)
-	purge_rate = 3
+	purge_rate = 0
 	overdose_threshold = REAGENTS_OVERDOSE
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL
 
 /datum/reagent/medicine/ryetalyn/on_mob_life(mob/living/L, metabolism)
+	. = ..()
+	if(!.)
+		return FALSE
+
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
 		C.disabilities = 0
-	return ..()
+
+	for(var/datum/reagent/current_reagent AS in holder.reagent_list) //Cycle through all chems in body
+		for(var/datum/reagent/purged AS in purge_list)
+			if(istype(current_reagent, purged))
+				var/purge_volume = min(5, holder.get_reagent_amount(current_reagent.type))
+				purge_volume = max(purge_volume, 1)
+				holder.remove_reagent(current_reagent.type,purge_volume) //Purge current chem
+				holder.remove_reagent(src.type, 0.1*purge_volume)
+
+	return TRUE
 
 /datum/reagent/medicine/ryetalyn/overdose_process(mob/living/L, metabolism)
 	L.apply_damage(effect_str, TOX)
@@ -79,6 +92,14 @@
 	if(prob(15))
 		L.Unconscious(30 SECONDS)
 	L.apply_damage(3*effect_str, CLONE)
+
+/obj/item/reagent_containers/hypospray/autoinjector/rye //made for debugging
+	name = "rye autoinjector"
+	icon_state = "autoinjector-6"
+	amount_per_transfer_from_this = 3
+	volume = 100
+
+	list_reagents = list(/datum/reagent/medicine/ryetalyn = 100)
 
 /datum/reagent/medicine/paracetamol
 	name = "Paracetamol"
@@ -1345,3 +1366,24 @@
 		if (21 to INFINITY)
 			L.jitter(5)
 	return ..()
+
+/datum/reagent/medicine/tetralyne
+	name = "Tetralyne"
+	description = "Tetralyne is a concentrated form of Tricordrazine and can be used to treat extensive blunt or burn trauma."
+	color = "#00a063"
+	overdose_threshold = REAGENTS_OVERDOSE*0.5
+	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL*0.5
+	scannable = TRUE
+
+/datum/reagent/medicine/tetralyne/on_mob_life(mob/living/L, metabolism)
+	L.heal_limb_damage(1.2*effect_str, 1.2*effect_str)
+	return ..()
+
+
+/datum/reagent/medicine/tetralyne/overdose_process(mob/living/L, metabolism)
+	L.reagents.add_reagent(/datum/reagent/toxin, 2)
+	L.adjustToxLoss(3*effect_str)
+
+/datum/reagent/medicine/tetralyne/overdose_crit_process(mob/living/L, metabolism)
+	L.apply_damages(2*effect_str, 2*effect_str, 2*effect_str, 2*effect_str, effect_str)
+	L.adjustStaminaLoss(5*effect_str)

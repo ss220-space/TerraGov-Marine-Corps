@@ -332,6 +332,13 @@
 	greyscale_config = /datum/greyscale_config/pillbottleround
 	greyscale_colors = "#ffef00#FFFFFF"
 
+/obj/item/storage/pill_bottle/tetralyne
+	name = "tetralyne pill bottle"
+	desc = "Contains pills that rapidly heal trauma and burns."
+	pill_type_to_fill = /obj/item/reagent_containers/pill/tetralyne
+	greyscale_config = /datum/greyscale_config/pillbottleround
+	greyscale_colors = "#D3FF8F#FFFFFF"
+
 /obj/item/storage/pill_bottle/dylovene
 	name = "dylovene pill bottle"
 	desc = "Contains pills that heal toxic damage and purge toxins and neurotoxins of all kinds."
