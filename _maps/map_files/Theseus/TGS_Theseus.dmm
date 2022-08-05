@@ -4330,6 +4330,12 @@
 "boQ" = (
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/surgery_hallway)
+"boR" = (
+/obj/machinery/bodyscanner,
+/turf/open/floor/mainship/sterile/corner{
+	dir = 1
+	},
+/area/mainship/medical/lower_medical)
 "boT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/layer1{
 	dir = 4;
@@ -6075,15 +6081,6 @@
 	dir = 8
 	},
 /area/mainship/medical/medical_science)
-"bHs" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/machinery/disposal,
-/turf/open/floor/mainship/sterile/side{
-	dir = 1
-	},
-/area/mainship/medical/chemistry)
 "bHv" = (
 /obj/docking_port/stationary/marine_dropship/crash_target,
 /turf/open/floor/mainship/floor,
@@ -7982,6 +7979,12 @@
 "caM" = (
 /turf/closed/wall/mainship,
 /area/mainship/shipboard/port_point_defense)
+"caS" = (
+/obj/structure/paper_bin,
+/obj/item/tool/pen/blue,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "caY" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -9470,6 +9473,11 @@
 	},
 /turf/open/floor/mainship/floor,
 /area/mainship/squads/alpha)
+"dUJ" = (
+/obj/structure/table/mainship/nometal,
+/obj/item/tool/hand_labeler,
+/turf/open/floor/mainship/sterile/side,
+/area/mainship/medical/chemistry)
 "dVK" = (
 /obj/structure/table/mainship/nometal,
 /obj/item/storage/box/MRE,
@@ -9685,6 +9693,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mainship/mono,
 /area/mainship/living/numbertwobunks)
+"etd" = (
+/obj/item/storage/fancy/cigarettes/dromedaryco,
+/obj/item/ashtray/bronze,
+/obj/item/tool/lighter/zippo,
+/obj/machinery/door_control/mainship/corporate,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/wood,
+/area/mainship/command/corporateliaison)
 "etF" = (
 /obj/structure/window/framed/mainship,
 /obj/machinery/door/poddoor/shutters/mainship/corporate{
@@ -9711,14 +9727,6 @@
 /obj/item/clothing/mask/breath/medical,
 /turf/open/floor/mainship/sterile/dark,
 /area/mainship/medical/operating_room_three)
-"ewJ" = (
-/obj/structure/table/mainship/nometal,
-/obj/item/tool/hand_labeler,
-/obj/machinery/camera/autoname/mainship{
-	dir = 1
-	},
-/turf/open/floor/mainship/sterile/side,
-/area/mainship/medical/chemistry)
 "ext" = (
 /obj/machinery/status_display{
 	pixel_y = 30
@@ -11177,6 +11185,15 @@
 	dir = 8
 	},
 /area/mainship/squads/req)
+"hiF" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window{
+	dir = 8
+	},
+/obj/machinery/door/window/secure,
+/obj/machinery/door/firedoor/mainship,
+/turf/open/floor/mainship/sterile,
+/area/mainship/medical/lower_medical)
 "hjo" = (
 /obj/machinery/marine_selector/clothes/synth,
 /turf/open/floor/mainship/mono,
@@ -12310,6 +12327,12 @@
 	},
 /turf/open/floor/plating,
 /area/mainship/command/bridge)
+"jkH" = (
+/obj/item/camera_film,
+/obj/item/camera,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/mainship/mono,
+/area/mainship/command/corporateliaison)
 "jkR" = (
 /obj/item/clothing/head/helmet/marine/heavy,
 /turf/open/floor/mainship/mono,
@@ -12982,14 +13005,6 @@
 /obj/effect/ai_node,
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
-"kEC" = (
-/obj/item/storage/fancy/cigarettes/dromedaryco,
-/obj/item/ashtray/bronze,
-/obj/item/tool/lighter/zippo,
-/obj/machinery/door_control/mainship/corporate,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
 "kEX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
@@ -13760,6 +13775,11 @@
 	},
 /turf/open/floor/mainship/floor,
 /area/mainship/living/basketball)
+"lIZ" = (
+/obj/machinery/computer/skills,
+/obj/structure/table/fancywoodentable,
+/turf/open/floor/mainship/mono,
+/area/mainship/command/corporateliaison)
 "lLS" = (
 /obj/structure/bed/chair/nometal{
 	dir = 1
@@ -13959,6 +13979,16 @@
 	dir = 1
 	},
 /area/mainship/hallways/aft_hallway)
+"lZN" = (
+/obj/machinery/door/airlock/multi_tile/mainship/research{
+	dir = 2;
+	name = "Research Chemical Lab"
+	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/side,
+/area/mainship/medical/medical_science)
 "may" = (
 /obj/machinery/vending/uniform_supply,
 /turf/open/floor/mainship/green{
@@ -14485,6 +14515,13 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/shipboard/brig)
+"mUE" = (
+/obj/structure/table/mainship/nometal,
+/obj/machinery/recharger,
+/turf/open/floor/mainship/sterile/side{
+	dir = 4
+	},
+/area/mainship/medical/lower_medical)
 "mVi" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -14684,12 +14721,6 @@
 	dir = 1
 	},
 /area/mainship/command/bridge)
-"nph" = (
-/obj/item/camera_film,
-/obj/item/camera,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/mainship/mono,
-/area/mainship/command/corporateliaison)
 "npx" = (
 /obj/machinery/light/mainship{
 	dir = 4
@@ -14759,11 +14790,6 @@
 	dir = 1
 	},
 /area/mainship/hallways/bow_hallway)
-"nus" = (
-/obj/machinery/computer/skills,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/mainship/mono,
-/area/mainship/command/corporateliaison)
 "nuO" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -15484,9 +15510,6 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/squads/delta)
-"oJg" = (
-/turf/open/floor/mainship/sterile/side,
-/area/mainship/medical/medical_science)
 "oJq" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/mainship/tcomms,
@@ -17540,6 +17563,13 @@
 /obj/structure/window/framed/mainship,
 /turf/open/floor/plating,
 /area/mainship/squads/delta)
+"spn" = (
+/obj/structure/window/framed/mainship/white,
+/obj/machinery/door/firedoor/mainship,
+/obj/machinery/smartfridge/chemistry,
+/obj/machinery/door/firedoor/mainship,
+/turf/open/floor/mainship/sterile,
+/area/mainship/medical/lower_medical)
 "spV" = (
 /obj/effect/decal/warning_stripes/nscenter,
 /obj/effect/decal/warning_stripes/thin{
@@ -18096,13 +18126,6 @@
 /obj/structure/cable,
 /turf/open/floor/mainship/mono,
 /area/mainship/engineering/lower_engineering)
-"tvj" = (
-/obj/machinery/chem_master,
-/obj/item/reagent_containers/glass/beaker/bluespace,
-/turf/open/floor/mainship/sterile/corner{
-	dir = 8
-	},
-/area/mainship/medical/chemistry)
 "tvp" = (
 /obj/structure/disposalpipe/segment/corner{
 	dir = 4
@@ -18169,12 +18192,6 @@
 	dir = 1
 	},
 /area/mainship/squads/delta)
-"tCx" = (
-/obj/structure/paper_bin,
-/obj/item/tool/pen/blue,
-/obj/structure/table/fancywoodentable,
-/turf/open/floor/wood,
-/area/mainship/command/corporateliaison)
 "tDu" = (
 /obj/item/flashlight/lamp,
 /obj/structure/table/mainship/nometal,
@@ -18275,9 +18292,6 @@
 /obj/item/book/manual/atmospipes,
 /turf/open/floor/mainship/mono,
 /area/mainship/engineering/lower_engine_monitoring)
-"tJB" = (
-/turf/open/floor/mainship/sterile,
-/area/mainship/medical/chemistry)
 "tKz" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -18952,16 +18966,6 @@
 "uYp" = (
 /turf/closed/wall/mainship,
 /area/mainship/command/bridge)
-"uYG" = (
-/obj/structure/table/mainship/nometal,
-/obj/machinery/recharger,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/mainship/sterile/side{
-	dir = 4
-	},
-/area/mainship/medical/lower_medical)
 "uYY" = (
 /obj/machinery/camera/autoname/mainship{
 	dir = 4
@@ -19498,15 +19502,6 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/mainship/orange,
 /area/mainship/hallways/repair_bay)
-"vYG" = (
-/obj/machinery/bodyscanner,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/mainship/sterile/corner{
-	dir = 1
-	},
-/area/mainship/medical/lower_medical)
 "wav" = (
 /obj/effect/decal/warning_stripes/thin{
 	dir = 1
@@ -20624,6 +20619,16 @@
 /obj/machinery/door/window/secure/bridge,
 /turf/open/floor/mainship/ai,
 /area/mainship/living/numbertwobunks)
+"ycL" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal,
+/obj/machinery/camera/autoname/mainship,
+/turf/open/floor/mainship/sterile/side{
+	dir = 1
+	},
+/area/mainship/medical/chemistry)
 "yea" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/junction{
@@ -39719,9 +39724,9 @@ gBg
 eDN
 uVm
 ahA
-nus
-tCx
-kEC
+lIZ
+caS
+etd
 cFr
 fbp
 toW
@@ -39976,7 +39981,7 @@ szI
 tBz
 bgx
 ahA
-nph
+jkH
 rSg
 toW
 pqz
@@ -52033,7 +52038,7 @@ biu
 bjV
 biu
 nSl
-vYG
+boR
 bKG
 lMe
 gUL
@@ -52807,10 +52812,10 @@ wyX
 bJG
 yea
 ost
+nCT
 bxw
 bxw
-bxw
-uYG
+mUE
 bDq
 ann
 bDq
@@ -53065,9 +53070,9 @@ bAv
 xCa
 sBz
 nSl
-buq
-tJB
-buq
+spn
+hiF
+xLb
 nSl
 nSl
 xLb
@@ -53324,7 +53329,7 @@ hSb
 nSl
 bvU
 bxM
-tvj
+byW
 blP
 bBK
 bDr
@@ -53836,9 +53841,9 @@ boX
 jfz
 mTG
 nSl
-bHs
+ycL
 bKL
-ewJ
+dUJ
 ngS
 bvl
 iCy
@@ -54607,9 +54612,9 @@ tjn
 xCa
 bKC
 nSl
-blP
-blP
-blP
+buq
+buq
+buq
 blP
 kLG
 buD
@@ -57957,10 +57962,10 @@ awF
 sZv
 aAj
 alz
-alz
+aEX
 nZA
-oJg
-alz
+lZN
+aEX
 alz
 ruj
 bQv
