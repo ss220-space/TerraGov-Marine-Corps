@@ -10,8 +10,8 @@
 
 /datum/chemical_reaction/sdtoxin
 	name = "Toxin"
-	results = list(/datum/reagent/toxin/sdtoxin = 2)
-	required_reagents = list(/datum/reagent/medicine/synaptizine = 1, /datum/reagent/medicine/dylovene = 1)
+	results = list(/datum/reagent/toxin/mindbreaker = 2)
+	required_reagents = list(/datum/reagent/medicine/synaptizine = 0.5, /datum/reagent/medicine/dylovene = 0.5)
 
 /datum/chemical_reaction/sleeptoxin
 	name = "Soporific"
