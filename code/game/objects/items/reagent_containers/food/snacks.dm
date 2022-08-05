@@ -287,7 +287,7 @@
 	icon_state = "aesirsalad"
 	trash = /obj/item/trash/snack_bowl
 	filling_color = "#468C00"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/drink/doctor_delight = 8, /datum/reagent/medicine/tricordrazine = 8)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/drink/hippies_delight = 8, /datum/reagent/medicine/tricordrazine = 8)
 	bitesize = 3
 	tastes = list("leaves" = 1)
 
@@ -1048,7 +1048,7 @@
 	icon_state = "syndi_cakes"
 	desc = "An extremely moist snack cake that tastes just as good after being nuked."
 	filling_color = "#FF5D05"
-	list_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/drink/doctor_delight = 5)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/drink/hippies_delight = 5)
 	trash = /obj/item/trash/syndi_cakes
 	bitesize = 3
 	tastes = list("sweetness" = 3, "cake" = 1)
