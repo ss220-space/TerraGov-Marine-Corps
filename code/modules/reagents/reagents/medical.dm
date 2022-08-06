@@ -428,6 +428,8 @@
 	purge_rate = 5
 
 /datum/reagent/medicine/synaptizine/on_mob_add(mob/living/L, metabolism)
+	L.reagents.add_reagent(/datum/reagent/toxin, 5)
+	L.adjustToxLoss(10*effect_str)
 	if(TIMER_COOLDOWN_CHECK(L, name))
 		return
 	L.adjustStaminaLoss(-30*effect_str)
@@ -437,11 +439,14 @@
 	L.reagent_shock_modifier += PAIN_REDUCTION_MEDIUM
 	L.adjustDrowsyness(-5)
 	L.AdjustUnconscious(-20)
-	L.AdjustStun(-20)
 	L.AdjustParalyzed(-20)
+	L.AdjustStun(-20)
 	L.hallucination = max(0, L.hallucination - 10)
 	L.adjustToxLoss(effect_str)
-	L.reagents.add_reagent(/datum/reagent/toxin, 2)
+
+	if(TIMER_COOLDOWN_CHECK(L, name))
+		return ..()
+
 
 	switch(current_cycle)
 		if(1 to 10)
@@ -460,7 +465,7 @@
 
 /datum/reagent/medicine/synaptizine/on_mob_delete(mob/living/L, metabolism)
 	to_chat(L, span_userdanger("The room spins as you start to come down off your stimulants!"))
-	TIMER_COOLDOWN_START(L, name, 60 SECONDS)
+	TIMER_COOLDOWN_START(L, name, 600 SECONDS)
 
 /datum/reagent/medicine/neuraline //injected by neurostimulator implant and medic-only injector
 	name = "Neuraline"
