@@ -429,7 +429,7 @@
 
 /datum/reagent/medicine/synaptizine/on_mob_add(mob/living/L, metabolism)
 	L.reagents.add_reagent(/datum/reagent/toxin, 5)
-	L.adjustToxLoss(20*effect_str)
+	L.adjustToxLoss(25*effect_str)
 	if(TIMER_COOLDOWN_CHECK(L, name))
 		return
 	L.adjustStaminaLoss(-30*effect_str)
@@ -446,7 +446,6 @@
 
 	if(TIMER_COOLDOWN_CHECK(L, name))
 		return ..()
-
 
 	switch(current_cycle)
 		if(1 to 10)
