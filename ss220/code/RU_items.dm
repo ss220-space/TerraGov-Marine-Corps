@@ -60,12 +60,14 @@ SUBSYSTEM_DEF(ru_items)
 	gun_skill_category = GUN_SKILL_RIFLES
 	flags_equip_slot = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
-	damage_mult = 1.25
-	damage_falloff_mult = 0 //1 falloff per tile by default, now 0
 	force = 20
 
 	scatter = 0
+	recoil = 5
 	scatter_unwielded = 5
+	recoil_unwielded = 12
+	recoil_backtime_multiplier = 0.5
+	recoil_deviation = 35
 
 	fire_delay = 0.2 SECONDS
 	upper_akimbo_accuracy = 6
@@ -83,6 +85,38 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/attachable/bayonetknife,
 	)
 	attachable_offset = list("muzzle_x" = 50, "muzzle_y" = 21,"rail_x" = 24, "rail_y" = 22)
+
+
+
+/obj/item/ammo_magazine/revolver/rifle
+	name = "\improper M1855 speed loader (.44LS)"
+	desc = "A speed loader for the M1855, with special design to make it possible to speedload a rifle. Longer version of .44 Magnum, with uranium-neodimium core."
+	default_ammo = /datum/ammo/bullet/revolver/rifle
+	caliber = CALIBER_44LS
+	max_rounds = 8
+	icon_state = "44LS"
+
+/obj/item/ammo_magazine/packet/long_special
+	name = "box of .44 Long Special"
+	desc = "A box containing 40 rounds of .44 Long Special."
+	icon_state = "44LSbox"
+	default_ammo = /datum/ammo/bullet/revolver/rifle
+	caliber = CALIBER_44LS
+	current_rounds = 40
+	max_rounds = 40
+
+/datum/ammo/bullet/revolver/rifle
+	name = ".44 Long Special bullet"
+	hud_state = "revolver_impact"
+	handful_amount = 8
+	damage = 50
+	penetration = 30
+	sundering = 3
+	damage_falloff = 0
+	shell_speed = 3.5
+
+/datum/ammo/bullet/revolver/highimpact/on_hit_mob(mob/M,obj/projectile/P)
+	staggerstun(M, P, knockback = 2, shake = 1)
 
 ///////////////////////////////////////////////////////////////////////
 ////////////////////////  T25, old version .///////////////////////////
