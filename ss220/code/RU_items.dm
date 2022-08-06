@@ -79,6 +79,7 @@ SUBSYSTEM_DEF(ru_items)
 	recoil_deviation = 360 //real party
 
 	fire_delay = 0.25 SECONDS
+	aim_fire_delay = 0.25 SECONDS
 	upper_akimbo_accuracy = 6
 	lower_akimbo_accuracy = 3
 	akimbo_additional_delay = 1
