@@ -140,7 +140,7 @@
 	name = "Mindbreaker Toxin"
 	description = "A powerful hallucinogen, it can cause fatal effects in users."
 	color = "#B31008" // rgb: 139, 166, 233
-	toxpwr = 0.2
+	toxpwr = 0.4
 	overdose_threshold = REAGENTS_OVERDOSE
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL
 	taste_description = "sourness"
