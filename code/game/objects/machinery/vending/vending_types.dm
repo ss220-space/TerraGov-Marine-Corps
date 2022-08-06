@@ -244,6 +244,7 @@
 			/obj/item/reagent_containers/glass/bottle/adminordrazine = -1,
 			/obj/item/reagent_containers/glass/bottle/lemoline = -1,
 			/obj/item/reagent_containers/glass/bottle/nanoblood = -1,
+			/obj/item/reagent_containers/glass/bottle/doctor_delight = -1,
 		),
 		"Pill Bottle" = list(
 			/obj/item/storage/pill_bottle/bicaridine = -1,
