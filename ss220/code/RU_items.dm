@@ -83,6 +83,7 @@ SUBSYSTEM_DEF(ru_items)
 	upper_akimbo_accuracy = 6
 	lower_akimbo_accuracy = 3
 	akimbo_additional_delay = 1
+	aim_slowdown = 0.3
 
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness,
