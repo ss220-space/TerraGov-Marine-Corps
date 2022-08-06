@@ -428,7 +428,7 @@
 	purge_rate = 5
 
 /datum/reagent/medicine/synaptizine/on_mob_add(mob/living/L, metabolism)
-	L.reagents.add_reagent(/datum/reagent/toxin, 5)
+	L.reagents.add_reagent(/datum/reagent/toxin/mindbreaker, 5)
 	L.adjustToxLoss(10*effect_str)
 	if(TIMER_COOLDOWN_CHECK(L, name))
 		return
