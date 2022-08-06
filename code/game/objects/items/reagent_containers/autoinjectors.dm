@@ -197,12 +197,12 @@
 	name = "synaptizine autoinjector"
 	desc = "An auto-injector freshly loaded with a safe-to-use synaptizine mix."
 	icon_state = "Devilpower"
-	amount_per_transfer_from_this = 5
-	volume = 15
+	amount_per_transfer_from_this = 8
+	volume = 16
 	list_reagents = list(
-		/datum/reagent/medicine/synaptizine = 5,
-		/datum/reagent/medicine/hyronalin = 5,
-		/datum/reagent/medicine/ryetalyn = 5,
+		/datum/reagent/medicine/synaptizine = 4,
+		/datum/reagent/medicine/hyronalin = 4,
+		/datum/reagent/medicine/ryetalyn = 8,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/neuraline
@@ -287,23 +287,24 @@
 
 	list_reagents = list(/datum/reagent/toxin/pain = 100)
 
-/obj/item/reagent_containers/hypospray/autoinjector/toxin_purge
-	name = "toxin cleanup autoinjector"
-	desc = "An auto-injector loaded with toxin-purging chemicals."
+/obj/item/reagent_containers/hypospray/autoinjector/ryetalin
+	name = "ryetalin autoinjector"
+	desc = "An auto-injector loaded with ryetalin, active element which doesn't metabolize normally, but violently purges toxins when they appear in blood."
 	icon_state = "Toxic"
-	amount_per_transfer_from_this = 5
-	volume = 15
+	amount_per_transfer_from_this = 2
+	volume = 6
 	list_reagents = list(
-		/datum/reagent/medicine/ryetalyn = 5,
-		/datum/reagent/medicine/dylovene = 10,
+		/datum/reagent/medicine/ryetalyn = 6,
 	)
 
-/obj/item/reagent_containers/hypospray/autoinjector/toxin_purge/advanced
+/obj/item/reagent_containers/hypospray/autoinjector/ryetalin/advanced
 	name = "advanced toxin cleanup autoinjector"
-	volume = 30
+	desc = "An auto-injector loaded with ryetalin and dylovene, to quickly get rid of toxic chemicals in patient's blood."
+	amount_per_transfer_from_this = 5
+	volume = 20
 	list_reagents = list(
 		/datum/reagent/medicine/ryetalyn = 10,
-		/datum/reagent/medicine/dylovene = 20,
+		/datum/reagent/medicine/dylovene = 10,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/toxin_heal
