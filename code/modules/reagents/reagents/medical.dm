@@ -429,7 +429,7 @@
 
 /datum/reagent/medicine/synaptizine/on_mob_add(mob/living/L, metabolism)
 	L.reagents.add_reagent(/datum/reagent/toxin, 5)
-	L.adjustToxLoss(25*effect_str)
+	L.adjustToxLoss(10*effect_str)
 	if(TIMER_COOLDOWN_CHECK(L, name))
 		return
 	L.adjustStaminaLoss(-30*effect_str)
@@ -464,8 +464,7 @@
 
 /datum/reagent/medicine/synaptizine/on_mob_delete(mob/living/L, metabolism)
 	to_chat(L, span_userdanger("The room spins as you start to come down off your stimulants!"))
-	L.adjustToxLoss(-10*effect_str)
-	TIMER_COOLDOWN_START(L, name, 600 SECONDS)
+	TIMER_COOLDOWN_START(L, name, 480 SECONDS)
 
 /datum/reagent/medicine/neuraline //injected by neurostimulator implant and medic-only injector
 	name = "Neuraline"
