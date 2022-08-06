@@ -9,6 +9,8 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/ammo_magazine/smg/vector = -1,
 		/obj/item/ammo_magazine/packet/acp_smg = -1,
 		/obj/item/weapon/gun/revolver/standard_revolver/coltrifle = -1,
+		/obj/item/ammo_magazine/revolver/rifle = -1,
+		/obj/item/ammo_magazine/packet/long_special = -1,
 	)
 
 	var/list/items_val = list(
@@ -17,6 +19,8 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/ammo_magazine/packet/acp_smg = -1,
 		/obj/item/weapon/twohanded/glaive/harvester = -1,
 		/obj/item/weapon/gun/revolver/standard_revolver/coltrifle = -1,
+		/obj/item/ammo_magazine/revolver/rifle = -1,
+		/obj/item/ammo_magazine/packet/long_special = -1,
 		/obj/item/clothing/head/helmet/marine/robot/advanced/acid = -1,
 		/obj/item/clothing/suit/storage/marine/robot/advanced/acid = -1,
 		/obj/item/clothing/head/helmet/marine/robot/advanced/physical = -1,
@@ -60,6 +64,9 @@ SUBSYSTEM_DEF(ru_items)
 	gun_skill_category = GUN_SKILL_RIFLES
 	flags_equip_slot = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
+	caliber = CALIBER_44LS
+	default_ammo_type = /obj/item/ammo_magazine/revolver/rifle
+	allowed_ammo_types = list(/obj/item/ammo_magazine/revolver/rifle)
 	force = 20
 
 	scatter = 0
@@ -74,9 +81,6 @@ SUBSYSTEM_DEF(ru_items)
 	lower_akimbo_accuracy = 3
 	akimbo_additional_delay = 1
 
-	recoil = 0
-	recoil_unwielded = 0
-
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/reddot,
@@ -85,8 +89,6 @@ SUBSYSTEM_DEF(ru_items)
 		/obj/item/attachable/bayonetknife,
 	)
 	attachable_offset = list("muzzle_x" = 50, "muzzle_y" = 21,"rail_x" = 24, "rail_y" = 22)
-
-
 
 /obj/item/ammo_magazine/revolver/rifle
 	name = "\improper M1855 speed loader (.44LS)"
