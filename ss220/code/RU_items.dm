@@ -113,7 +113,7 @@ SUBSYSTEM_DEF(ru_items)
 	name = ".44 Long Special bullet"
 	hud_state = "revolver_impact"
 	handful_amount = 8
-	damage = 50
+	damage = 60
 	penetration = 30
 	sundering = 3
 	damage_falloff = 0
