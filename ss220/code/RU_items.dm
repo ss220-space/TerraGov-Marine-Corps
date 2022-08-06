@@ -72,9 +72,9 @@ SUBSYSTEM_DEF(ru_items)
 	force = 20
 
 	scatter = 3
-	recoil = 4
+	recoil = 3
 	scatter_unwielded = 10
-	recoil_unwielded = 7
+	recoil_unwielded = 6
 	recoil_backtime_multiplier = 2
 	recoil_deviation = 360 //real party
 
