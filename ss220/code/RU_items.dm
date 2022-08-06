@@ -71,10 +71,10 @@ SUBSYSTEM_DEF(ru_items)
 	allowed_ammo_types = list(/obj/item/ammo_magazine/revolver/rifle)
 	force = 20
 
-	scatter = 2
+	scatter = 3
 	recoil = 4
-	scatter_unwielded = 8
-	recoil_unwielded = 8
+	scatter_unwielded = 10
+	recoil_unwielded = 7
 	recoil_backtime_multiplier = 2
 	recoil_deviation = 360 //real party
 
