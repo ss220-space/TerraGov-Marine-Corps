@@ -57,9 +57,10 @@
 	icon_state = "Lilac"
 	amount_per_transfer_from_this = 15
 	list_reagents = list(
-		/datum/reagent/medicine/meralyne = 10,
-		/datum/reagent/medicine/dermaline = 10,
-		/datum/reagent/medicine/oxycodone = 10,
+		/datum/reagent/medicine/meralyne = 8,
+		/datum/reagent/medicine/dermaline = 8,
+		/datum/reagent/medicine/tetralyne = 8,
+		/datum/reagent/medicine/oxycodone = 6,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/quickclot

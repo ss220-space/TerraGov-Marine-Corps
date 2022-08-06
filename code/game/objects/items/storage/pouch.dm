@@ -465,7 +465,7 @@
 /obj/item/storage/pouch/medical_injectors/medic
 	name = "medical injector pouch"
 	desc = "A specialized injector pouch with advanced medicine."
-	storage_slots = 12
+	storage_slots = 10
 
 /obj/item/storage/pouch/medical_injectors/medic/Initialize() //corpsman autoinjector pouch gets upgraded, but more general chems.
 	. = ..()
