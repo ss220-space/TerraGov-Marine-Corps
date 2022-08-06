@@ -61,22 +61,24 @@ SUBSYSTEM_DEF(ru_items)
 	icon_state = "coltrifle"
 	item_state = "coltrifle"
 	fire_animation = "coltrifle_fire"
+	fire_sound = 'sound/weapons/guns/fire/mateba.ogg'
 	gun_skill_category = GUN_SKILL_RIFLES
 	flags_equip_slot = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	caliber = CALIBER_44LS
+	max_chamber_items = 8
 	default_ammo_type = /obj/item/ammo_magazine/revolver/rifle
 	allowed_ammo_types = list(/obj/item/ammo_magazine/revolver/rifle)
 	force = 20
 
-	scatter = 0
-	recoil = 5
-	scatter_unwielded = 5
-	recoil_unwielded = 12
-	recoil_backtime_multiplier = 0.5
-	recoil_deviation = 35
+	scatter = 2
+	recoil = 4
+	scatter_unwielded = 8
+	recoil_unwielded = 8
+	recoil_backtime_multiplier = 2
+	recoil_deviation = 360 //real party
 
-	fire_delay = 0.2 SECONDS
+	fire_delay = 0.25 SECONDS
 	upper_akimbo_accuracy = 6
 	lower_akimbo_accuracy = 3
 	akimbo_additional_delay = 1
