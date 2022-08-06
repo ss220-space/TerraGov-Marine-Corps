@@ -185,7 +185,7 @@
 /obj/item/reagent_containers/glass/bottle/tricordrazine
 	name = "\improper Tricordrazine bottle"
 	desc = "A small bottle. Contains tricordrazine - used as a generic treatment for injuries."
-	icon_state = "bottle4"
+	icon_state = "bottle-5"
 	list_reagents = list(/datum/reagent/medicine/tricordrazine = 60)
 
 /obj/item/reagent_containers/glass/bottle/meralyne
@@ -217,6 +217,12 @@
 	desc = "A small bottle. Contains one and a half doses of polyhexanide, a sterilizer for internal surgical use."
 	icon_state = "bottle2"
 	list_reagents = list(/datum/reagent/medicine/polyhexanide = 30)
+
+/obj/item/reagent_containers/glass/bottle/medicalnanites
+	name = "\improper Nanomachines bottle"
+	desc = "A small bottle. Contains nanomachines modified for medical use, A potent new method of healing that that reproduces using a subject's blood and has a brief but potentially dangerous activation period!"
+	icon_state = "bottle7"
+	list_reagents = list(/datum/reagent/medicine/research/medicalnanites = 5)
 
 /obj/item/reagent_containers/glass/bottle/lemoline
 	name = "\improper Lemoline bottle"

@@ -86,7 +86,7 @@ Status: [status ? status : "Unknown"] | Damage: [health ? health : "None"]
 			thing_to_check = C.related_accounts_cid
 		else
 			thing_to_check = C.related_accounts_ip
-		thing_to_check = splittext(thing_to_check, ", ")
+		thing_to_check = splittext_char(thing_to_check, ", ")
 
 
 		var/list/dat = list("Related accounts by [uppertext(href_list["showrelatedacc"])]:")
@@ -827,7 +827,7 @@ Status: [status ? status : "Unknown"] | Damage: [health ? health : "None"]
 		if(!F)
 			return
 
-		var/dat = "<html><head><title>Fax Message: [F.title]</title></head>"
+		var/dat = "<html><meta charset='UTF-8'><head><title>Fax Message: [F.title]</title></head>"
 		dat += "<body>[F.message]</body></html>"
 
 		usr << browse(dat, "window=fax")
@@ -939,7 +939,7 @@ Status: [status ? status : "Unknown"] | Damage: [health ? health : "None"]
 				else
 					message_body = sanitize(message_body)
 
-				message_body = replacetext(message_body, "\n", "<br />") // Lets just always do this one
+				message_body = replacetext_char(message_body, "\n", "<br />") // Lets just always do this one
 				fax_message = generate_templated_fax(dep, subject, addressed_to, message_body, sent_by, department)
 				if(!fax_message)
 					return
@@ -1131,7 +1131,7 @@ Status: [status ? status : "Unknown"] | Damage: [health ? health : "None"]
 			to_chat(usr, span_warning("Select fewer object types, (max 5)."))
 			return
 
-		var/list/offset = splittext(href_list["offset"],",")
+		var/list/offset = splittext_char(href_list["offset"],",")
 		var/number = clamp(text2num(href_list["object_count"]), 1, 100)
 		var/X = length(offset) > 0 ? text2num(offset[1]) : 0
 		var/Y = length(offset) > 1 ? text2num(offset[2]) : 0
@@ -2036,7 +2036,7 @@ Status: [status ? status : "Unknown"] | Damage: [health ? health : "None"]
 				var/datum/job/J = SSjob.GetJob(change)
 				previous = H.job?.title
 				var/squad_to_insert_into
-				if(ismarinejob(J))
+				if(ismarinejob(J) || issommarinejob(J))
 					if(H.assigned_squad)
 						squad_to_insert_into = H.assigned_squad
 					else
@@ -2106,7 +2106,7 @@ Status: [status ? status : "Unknown"] | Damage: [health ? health : "None"]
 				change = input("Choose the marine's new squad.", "Change Squad") as null|anything in SSjob.squads
 				if(!change || !istype(H))
 					return
-				if(!ismarinejob(H.job))
+				if(!ismarinejob(H.job) && !issommarinejob(H.job))
 					to_chat(usr, span_warning("Only marine jobs may be part of squads."))
 					return
 				H.change_squad(change)

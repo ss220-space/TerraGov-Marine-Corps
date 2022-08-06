@@ -85,15 +85,17 @@
 		return MODE_SING
 	else if(key == ";")
 		return MODE_HEADSET
-	else if((length(message) > (length(key) + 1)) && (key in GLOB.department_radio_prefixes))
-		var/key_symbol = lowertext(message[length(key) + 1])
+	else if((length_char(message) > (length_char(key) + 1)) && (key in GLOB.department_radio_prefixes))
+		var/key_symbol = length(message[2]) > 1 ? convert_ru_key_to_en_key(message[2]) : message[2]
 		if(faction == FACTION_TERRAGOV_REBEL)
 			return GLOB.department_radio_keys_rebel[key_symbol]
+		if(faction == FACTION_SOM)
+			return GLOB.department_radio_keys_som[key_symbol]
 		return GLOB.department_radio_keys[key_symbol]
 
 
 ///Check if this message is an emote
 /mob/proc/check_emote(message)
 	if(message[1] == "*")
-		emote(copytext(message, length(message[1]) + 1), intentional = TRUE)
+		emote(copytext_char(message, length_char(message[1]) + 1), intentional = TRUE)
 		return TRUE

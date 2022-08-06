@@ -32,6 +32,17 @@ endmap
 map minerva
 endmap
 
+map talos
+endmap
+
 map twin_pillars
+	voteweight 0
+endmap
+
+map twin_pillars_ss220_edition
+	voteweight 0
+endmap
+
+map combat_patrol_base
 	voteweight 0
 endmap

@@ -12,6 +12,8 @@
 #define MARINE_CAN_BUY_MASK (1 << 11)
 #define MARINE_CAN_BUY_ESSENTIALS (1 << 12)
 
+#define MARINE_CAN_BUY_LOADOUT  (1 << 14)
+
 #define MARINE_CAN_BUY_WEBBING (1 << 15)
 #define MARINE_CAN_BUY_MODULE (1 << 16)
 #define MARINE_CAN_BUY_ARMORMOD (1 << 17)
@@ -40,7 +42,7 @@
 #define CAT_ENGSUP "ENGINEERING SUPPLIES"
 #define CAT_LEDSUP "LEADER SUPPLIES"
 #define CAT_SGSUP "SMARTGUNNER SUPPLIES"
-
+#define CAT_LOAD "LOADOUT"
 
 GLOBAL_LIST_INIT(marine_selector_cats, list(
 		CAT_MOD = list(MARINE_CAN_BUY_MODULE),
@@ -59,6 +61,7 @@ GLOBAL_LIST_INIT(marine_selector_cats, list(
 		CAT_MAS = list(MARINE_CAN_BUY_MASK),
 		CAT_ESS = list(MARINE_CAN_BUY_ESSENTIALS),
 		CAT_INJ = null,
+		CAT_LOAD = list(MARINE_CAN_BUY_LOADOUT),
 		CAT_MEDSUP = null,
 		CAT_MEDINJ = null,
 		CAT_ENGSUP = null,
@@ -187,11 +190,14 @@ GLOBAL_LIST_INIT(leader_gear_listed_products, list(
 //A way to give them everything at once that still works with loadouts would be nice, but barring that make sure that your point calculation is set up so they don't get more than what they're supposed to
 GLOBAL_LIST_INIT(smartgunner_gear_listed_products, list(
 	/obj/item/clothing/glasses/night/m56_goggles = list(CAT_ESS, "KLTD Smart Goggles", 0, "white"),
-	/obj/item/weapon/gun/rifle/standard_smartmachinegun = list(CAT_SGSUP, "SG-29 Smartmachinegun", 29, "orange"), //If a smartgunner buys a SG-29, then they will have 16 points to purchase 4 SG-29 drums
-	/obj/item/ammo_magazine/standard_smartmachinegun = list(CAT_SGSUP, "SG-29 Ammo Drum", 4, "black"),
-	/obj/item/weapon/gun/minigun/smart_minigun = list(CAT_SGSUP, "SG-85 Handheld Gatling Gun", 27, "orange"), //If a smartgunner buys a SG-85, then they should be able to buy only 1 powerpack and 2 ammo bins
-	/obj/item/ammo_magazine/minigun_powerpack/smartgun =  list(CAT_SGSUP, "SG-85 Powerpack", 10, "black"),
-	/obj/item/ammo_magazine/packet/smart_minigun = list(CAT_SGSUP, "SG-85 Ammo Bin", 4, "black"),
+	/obj/item/weapon/gun/rifle/standard_smartmachinegun = list(CAT_LEDSUP, "SG-29 Smartmachinegun", 29, "orange"), //If a smartgunner buys a SG-29, then they will have 16 points to purchase 4 SG-29 drums
+	/obj/item/ammo_magazine/standard_smartmachinegun = list(CAT_LEDSUP, "SG-29 Ammo Drum", 4, "black"),
+	/obj/item/weapon/gun/minigun/smart_minigun = list(CAT_LEDSUP, "SG-85 Handheld Gatling Gun", 27, "orange"), //If a smartgunner buys a SG-85, then they should be able to buy only 1 powerpack and 2 ammo bins
+	/obj/item/ammo_magazine/minigun_powerpack/smartgun =  list(CAT_LEDSUP, "SG-85 Powerpack", 10, "black"),
+	/obj/item/ammo_magazine/packet/smart_minigun = list(CAT_LEDSUP, "SG-85 Ammo Bin", 4, "black"),
+	/obj/item/weapon/gun/rifle/T25 = list(CAT_LEDSUP, "T-25 Smartrifle", 26, "orange"), //If smartganner buys a t25 , then they will have 2 mag and 3 ammo box
+	/obj/item/ammo_magazine/rifle/T25 =  list(CAT_LEDSUP, "T-25 Smartrifle magazine", 2, "black"),
+	/obj/item/ammo_magazine/packet/T25_rifle = list(CAT_LEDSUP, "T-25 Smartrifle ammo box", 5, "black"),
 	////////////////////////////////////// INJECTORS /////////////////////////////////////////////
 	/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = list(CAT_INJ, "Advanced combat", 4, "orange"),
 	/obj/item/reagent_containers/hypospray/autoinjector/combat = list(CAT_INJ, "Combat", 1, "orange"),
@@ -440,7 +446,7 @@ GLOBAL_LIST_INIT(medic_clothes_listed_products, list(
 		/obj/item/armor_module/storage/uniform/white_vest = list(CAT_WEB, "Corpsman white vest", 0, "black"),
 		/obj/item/armor_module/storage/uniform/webbing = list(CAT_WEB, "Tactical webbing", 0, "black"),
 		/obj/item/armor_module/storage/uniform/holster = list(CAT_WEB, "Shoulder handgun holster", 0, "black"),
-		/obj/item/storage/belt/lifesaver = list(CAT_BEL, "Lifesaver belt", 0, "orange"),
+		/obj/item/storage/belt/lifesaver/full = list(CAT_BEL, "Lifesaver belt", 0, "orange"),
 		/obj/item/storage/belt/rig/medical = list(CAT_BEL, "Rig belt", 0, "black"),
 		/obj/item/storage/belt/hypospraybelt = list(CAT_BEL, "Hypospray belt", 0, "black"),
 		/obj/item/armor_module/module/welding = list(CAT_HEL, "Jaeger welding module", 0, "orange"),
@@ -660,7 +666,7 @@ GLOBAL_LIST_INIT(synthetic_clothes_listed_products, list(
 		/obj/item/clothing/gloves/latex = list(CAT_GLO, "Latex gloves", 0, "black"),
 		/obj/item/clothing/gloves/marine/officer = list(CAT_GLO, "Officer gloves", 0, "black"),
 		/obj/item/clothing/gloves/white = list(CAT_GLO, "White gloves", 0, "black"),
-		/obj/item/storage/belt/lifesaver = list(CAT_BEL, "Lifesaver belt", 0, "orange"),
+		/obj/item/storage/belt/lifesaver/full = list(CAT_BEL, "Lifesaver belt", 0, "orange"),
 		/obj/item/storage/belt/rig/medical = list(CAT_BEL, "Rig belt", 0, "black"),
 		/obj/item/storage/belt/hypospraybelt = list(CAT_BEL, "Hypospray belt", 0, "black"),
 		/obj/item/storage/belt/sparepouch = list(CAT_BEL, "G8 general utility pouch", 0, "black"),

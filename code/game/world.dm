@@ -87,7 +87,7 @@ GLOBAL_VAR(restart_counter)
 		if(GLOB.round_id)
 			GLOB.log_directory += "[GLOB.round_id]"
 		else
-			var/timestamp = replacetext(time_stamp(), ":", ".")
+			var/timestamp = replacetext_char(time_stamp(), ":", ".")
 			GLOB.log_directory += "[timestamp]"
 	else
 		GLOB.log_directory = "data/logs/[override_dir]"
@@ -148,7 +148,7 @@ GLOBAL_VAR(restart_counter)
 		return
 
 	var/list/filtering_whitelist = CONFIG_GET(keyed_list/topic_filtering_whitelist)
-	var/host = splittext(addr, ":")
+	var/host = splittext_char(addr, ":")
 	if(!filtering_whitelist[host[1]]) // We only ever check the host, not the port (if provided)
 		if(length(T) >= MAX_TOPIC_LEN)
 			log_admin_private("[addr] banned from topic calls for a round for too long status message")
@@ -305,14 +305,15 @@ GLOBAL_VAR(restart_counter)
 	Round time: 0:0					|	Round time: 4:54
 	*/
 	var/discord_url = CONFIG_GET(string/discordurl)
-	var/webmap_host = CONFIG_GET(string/webmap_host)
+	// var/webmap_host = CONFIG_GET(string/webmap_host)
 	var/shipname = length(SSmapping?.configs) && SSmapping.configs[SHIP_MAP] ? SSmapping.configs[SHIP_MAP].map_name : "Lost in space..."
 	var/map_name = length(SSmapping.configs) && SSmapping.configs[GROUND_MAP] ? SSmapping.configs[GROUND_MAP].map_name : "Loading..."
-	var/ground_map_file = length(SSmapping.configs) && SSmapping.configs[GROUND_MAP] ? SSmapping.configs[GROUND_MAP].map_file : ""
+	// var/ground_map_file = length(SSmapping.configs) && SSmapping.configs[GROUND_MAP] ? SSmapping.configs[GROUND_MAP].map_file : ""
 
 	var/new_status = ""
-	new_status += "<b><a href='[discord_url ? discord_url : "#"]'>[server_name] &#8212; [shipname]</a></b>"
-	new_status += "<br>Map: <a href='[webmap_host][ground_map_file]'><b>[map_name]</a></b>"
+	new_status += "<b><a href='[discord_url ? discord_url : "#"]'>[server_name]</a></b>"
+	new_status += "<br>Map: <b>[map_name]</b>"
+	new_status += "<br>Ship: <b>[shipname]</b>"
 	new_status += "<br>Mode: <b>[SSticker.mode ? SSticker.mode.name : "Lobby"]</b>"
 	new_status += "<br>Round time: <b>[gameTimestamp("hh:mm")]</b>"
 
@@ -334,15 +335,6 @@ GLOBAL_VAR(restart_counter)
 		hub_password = "kMZy3U5jJHSiBQjr"
 	else
 		hub_password = "SORRYNOPASSWORD"
-
-/world/proc/change_fps(new_value = 20)
-	if(new_value <= 0)
-		CRASH("change_fps() called with [new_value] new_value.")
-	if(fps == new_value)
-		return //No change required.
-
-	fps = new_value
-	on_tickrate_change()
 
 
 /world/proc/change_tick_lag(new_value = 0.5)

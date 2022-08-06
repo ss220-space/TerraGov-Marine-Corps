@@ -511,7 +511,6 @@ WEAPONS
 	contains = list(/obj/item/ammo_magazine/pistol/standard_pistol/smart_pistol)
 	cost = 1
 
-
 /*******************************************************************************
 EXPLOSIVES
 *******************************************************************************/
@@ -1608,6 +1607,11 @@ FACTORY
 	name = "Nanotrasen \"Eat healthy!\" margerita pizza kit refill"
 	contains = list(/obj/item/factory_refill/pizza_refill)
 	cost = 29 //allows a one point profit if all pizzas are processed and sold back to ASRS
+
+/datum/supply_packs/factory/smartgunner_rifle_box_refill
+	name = "Smart rifle bullet bin parts refill"
+	contains = list(/obj/item/factory_refill/smartgunner_rifle_box_refill)
+	cost = 25
 
 /datum/supply_packs/factory/smartgun_minigun_box_refill
 	name = "Smart minigun bullet bin parts refill"

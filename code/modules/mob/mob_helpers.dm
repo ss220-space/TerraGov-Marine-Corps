@@ -137,11 +137,11 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
 	if(probability <= 0)
 		return phrase
 	phrase = html_decode(phrase)
-	var/leng = length(phrase)
+	var/leng = length_char(phrase)
 	. = ""
 	var/char = ""
-	for(var/i = 1, i <= leng, i += length(char))
-		char = phrase[i]
+	for(var/i = 1, i <= leng, i += length_char(char))
+		char = copytext_char(phrase, i, i+1)
 		if(char == " " || !prob(probability))
 			. += char
 		else
@@ -153,12 +153,12 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
  */
 /proc/slur(phrase)
 	phrase = html_decode(phrase)
-	var/leng = length(phrase)
+	var/leng = length_char(phrase)
 	. = ""
 	var/newletter = ""
 	var/rawchar = ""
-	for(var/i = 1, i <= leng, i += length(rawchar))
-		rawchar = newletter = phrase[i]
+	for(var/i = 1, i <= leng, i += length_char(rawchar))
+		rawchar = newletter = copytext_char(phrase, i, i+1)
 		if(rand(1, 3) == 3)
 			var/lowerletter = lowertext(newletter)
 			if(lowerletter == "o")
@@ -171,11 +171,23 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
 				newletter = "oo"
 			else if(lowerletter == "c")
 				newletter = "k"
+			else if(lowerletter == "о")
+				newletter = "у"
+			else if(lowerletter == "с")
+				newletter = "ч"
+			else if(lowerletter == "а")
+				newletter = "ах"
+			else if(lowerletter == "ц")
+				newletter = "к"
+			else if(lowerletter == "э")
+				newletter = "о"
+			else if(lowerletter == "г")
+				newletter = "х"
 		if(prob(5))
 			if(newletter == " ")
-				newletter = "...huuuhhh..."
+				newletter = "...ээээээм..."
 			else if(newletter == ".")
-				newletter = " *BURP*."
+				newletter = " *ОТРЫЖКА*."
 		if(prob(15))
 			newletter += pick(list("'", "[newletter]", "[newletter][newletter]"))
 		. += "[newletter]"
@@ -184,12 +196,12 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
 /// Makes you talk like you got cult stunned, which is slurring but with some dark messages
 /proc/cultslur(phrase) // Inflicted on victims of a stun talisman
 	phrase = html_decode(phrase)
-	var/leng = length(phrase)
+	var/leng = length_char(phrase)
 	. = ""
 	var/newletter = ""
 	var/rawchar = ""
-	for(var/i = 1, i <= leng, i += length(rawchar))
-		rawchar = newletter = phrase[i]
+	for(var/i = 1, i <= leng, i += length_char(rawchar))
+		rawchar = newletter = copytext_char(phrase, i, i+1)
 		if(rand(1, 2) == 2)
 			var/lowerletter = lowertext(newletter)
 			if(lowerletter == "o")
@@ -204,11 +216,25 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
 				newletter = " NAR "
 			else if(lowerletter == "s")
 				newletter = " SIE "
+			else if(lowerletter == "о")
+				newletter = "у"
+			else if(lowerletter == "т")
+				newletter = "ч"
+			else if(lowerletter == "а")
+				newletter = "ах"
+			else if(lowerletter == "у")
+				newletter = "уу"
+			else if(lowerletter == "ц")
+				newletter = " НАР "
+			else if(lowerletter == "с")
+				newletter = " СИ "
 		if(rand(1, 4) == 4)
 			if(newletter == " ")
 				newletter = " no hope... "
 			else if(newletter == "H")
 				newletter = " IT COMES... "
+			else if(newletter == "Х")
+				newletter = " ИДЁТ... "
 
 		if(prob(33))
 			switch(rand(1, 5))
@@ -228,13 +254,13 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
 ///Adds stuttering to the message passed in
 /proc/stutter(phrase)
 	phrase = html_decode(phrase)
-	var/leng = length(phrase)
+	var/leng = length_char(phrase)
 	. = ""
 	var/newletter = ""
 	var/rawchar
-	for(var/i = 1, i <= leng, i += length(rawchar))
-		rawchar = newletter = phrase[i]
-		if(prob(80) && !(lowertext(newletter) in list("a", "e", "i", "o", "u", " ")))
+	for(var/i = 1, i <= leng, i += length_char(rawchar))
+		rawchar = newletter = copytext_char(phrase, i, i+1)
+		if(prob(80) && !(lowertext(newletter) in list("a", "e", "i", "o", "u", " ", "а", "у", "о", "и", "э", "ы", "я", "Ю", "е", "ё")))
 			if(prob(10))
 				newletter = "[newletter]-[newletter]-[newletter]-[newletter]"
 			else if(prob(20))
@@ -257,9 +283,9 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
 	. = ""
 	var/rawchar = ""
 	var/letter = ""
-	var/lentext = length(text)
-	for(var/i = 1, i <= lentext, i += length(rawchar))
-		rawchar = letter = text[i]
+	var/lentext = length_char(text)
+	for(var/i = 1, i <= lentext, i += length_char(rawchar))
+		rawchar = letter = copytext_char(text, i, i+1)
 		if(prob(chance))
 			if(replace_characters)
 				letter = ""

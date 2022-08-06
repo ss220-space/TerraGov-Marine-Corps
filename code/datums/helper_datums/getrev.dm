@@ -1,7 +1,7 @@
 /datum/getrev
 	var/commit  // git rev-parse HEAD
 	var/date
-	var/originmastercommit  // git rev-parse origin/master
+	var/originmastercommit  // git rev-parse origin/master220
 	var/list/testmerge = list()
 
 /datum/getrev/New()
@@ -14,7 +14,7 @@
 		commit = rustg_git_revparse("HEAD")
 		if(commit)
 			date = rustg_git_commit_date(commit)
-		originmastercommit = rustg_git_revparse("origin/master")
+		originmastercommit = rustg_git_revparse("origin/master220")
 
 	// goes to DD log and config_error.txt
 	log_world(get_log_message())
@@ -23,7 +23,7 @@
 	var/list/msg = list()
 	msg += "Running /tg/ revision: [date]"
 	if(originmastercommit)
-		msg += "origin/master: [originmastercommit]"
+		msg += "origin/master220: [originmastercommit]"
 
 	for(var/line in testmerge)
 		var/datum/tgs_revision_information/test_merge/tm = line
@@ -45,7 +45,7 @@
 		var/datum/tgs_revision_information/test_merge/tm = line
 		var/cm = tm.head_commit
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
-		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.holder))
+		if(details && findtext_char(details, "\[s\]") && (!usr || !usr.client.holder))
 			continue
 		. += "<a href=\"[CONFIG_GET(string/githuburl)]/pull/[tm.number]\">#[tm.number][details]</a><br>"
 

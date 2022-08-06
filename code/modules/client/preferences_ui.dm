@@ -90,6 +90,7 @@
 		if(JOB_PREFERENCES)
 			.["job_preferences"] = job_preferences
 			.["preferred_squad"] = preferred_squad
+			.["preferred_squad_som"] = preferred_squad_som
 			.["alternate_option"] = alternate_option
 			.["special_occupation"] = be_special
 		if(GAME_SETTINGS)
@@ -137,6 +138,9 @@
 					)
 
 /datum/preferences/ui_static_data(mob/user)
+	if(!user?.client)
+		return
+
 	. = list()
 	switch(tab_index)
 		if(CHARACTER_CUSTOMIZATION)
@@ -161,6 +165,7 @@
 				)
 		if(JOB_PREFERENCES)
 			.["squads"] = SELECTABLE_SQUADS
+			.["squads_som"] = SELECTABLE_SQUADS_SOM
 			.["jobs"] = list()
 			for(var/datum/job/job AS in SSjob.joinable_occupations)
 				var/rank = job.title
@@ -195,7 +200,10 @@
 	. = ..()
 	if(.)
 		return
+
 	var/client/current_client = CLIENT_FROM_VAR(usr)
+	if(!current_client)
+		return
 	var/mob/user = current_client.mob
 
 	switch(action)
@@ -311,6 +319,7 @@
 		if("jobreset")
 			job_preferences = list()
 			preferred_squad = "None"
+			preferred_squad_som = "None"
 			alternate_option = 2 // return to lobby
 
 		if("underwear")
@@ -479,6 +488,12 @@
 				return
 			preferred_squad = new_squad
 
+		if("squad_som")
+			var/new_squad_som = params["newValue"]
+			if(!(new_squad_som in SELECTABLE_SQUADS_SOM))
+				return
+			preferred_squad_som = new_squad_som
+
 		if("med_record")
 			var/new_record = trim(html_encode(params["medicalDesc"]), MAX_MESSAGE_LEN)
 			if(!new_record)
@@ -604,7 +619,7 @@
 			if(!params["key"])
 				return
 			var/mods = params["key_mods"]
-			var/full_key = params["key"]
+			var/full_key = uppertext(convert_ru_key_to_en_key(params["key"]))
 			var/Altmod = ("ALT" in mods) ? "Alt" : ""
 			var/Ctrlmod = ("CONTROL" in mods) ? "Ctrl" : ""
 			var/Shiftmod = ("SHIFT" in mods) ? "Shift" : ""
@@ -640,7 +655,7 @@
 			var/kb_name = params["name"]
 			if(!kb_name)
 				return
-			var/list/part = splittext(kb_name, ":")
+			var/list/part = splittext_char(kb_name, ":")
 			var/id = text2num(part[2])
 			var/datum/custom_emote/emote = custom_emotes[id]
 			var/new_message = params["sentence"]
@@ -653,7 +668,7 @@
 			var/kb_name = params["name"]
 			if(!kb_name)
 				return
-			var/list/part = splittext(kb_name, ":")
+			var/list/part = splittext_char(kb_name, ":")
 			var/id = text2num(part[2])
 			var/datum/custom_emote/emote = custom_emotes[id]
 			emote.spoken_emote = !emote.spoken_emote

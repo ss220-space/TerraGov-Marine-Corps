@@ -17,6 +17,8 @@
 	var/list/votable_modes
 	var/list/mode_names
 
+	var/list/words_to_filter = list()
+
 	var/motd
 	var/policy
 
@@ -53,6 +55,7 @@
 	LoadMOTD()
 	LoadPolicy()
 	LoadChatFilter()
+	LoadCensor()
 
 	if(Master)
 		Master.OnConfigLoad()
@@ -128,15 +131,15 @@
 
 		var/lockthis = firstchar == "@"
 		if(lockthis)
-			L = copytext(L, length(firstchar) + 1)
+			L = copytext_char(L, length_char(firstchar) + 1)
 
-		var/pos = findtext(L, " ")
+		var/pos = findtext_char(L, " ")
 		var/entry = null
 		var/value = null
 
 		if(pos)
-			entry = lowertext(copytext(L, 1, pos))
-			value = copytext(L, pos + length(L[pos]))
+			entry = lowertext(copytext_char(L, 1, pos))
+			value = copytext_char(L, pos + length_char(L[pos]))
 		else
 			entry = lowertext(L)
 
@@ -254,16 +257,16 @@
 		t = trim(t)
 		if(length(t) == 0)
 			continue
-		else if(copytext(t, 1, 2) == "#")
+		else if(copytext_char(t, 1, 2) == "#")
 			continue
 
-		var/pos = findtext(t, " ")
+		var/pos = findtext_char(t, " ")
 		var/command = null
 		var/data = null
 
 		if(pos)
-			command = lowertext(copytext(t, 1, pos))
-			data = copytext(t, pos + 1)
+			command = lowertext(copytext_char(t, 1, pos))
+			data = copytext_char(t, pos + 1)
 		else
 			command = lowertext(t)
 
@@ -347,16 +350,16 @@ Example config:
 		t = trim(t)
 		if(length(t) == 0)
 			continue
-		else if(copytext(t, 1, 2) == "#")
+		else if(copytext_char(t, 1, 2) == "#")
 			continue
 
-		var/pos = findtext(t, " ")
+		var/pos = findtext_char(t, " ")
 		var/command = null
 		var/data = null
 
 		if(pos)
-			command = lowertext(copytext(t, 1, pos))
-			data = copytext(t, pos + 1)
+			command = lowertext(copytext_char(t, 1, pos))
+			data = copytext_char(t, pos + 1)
 		else
 			command = lowertext(t)
 
@@ -412,11 +415,39 @@ Example config:
 	for(var/line in file2list("[directory]/in_character_filter.txt"))
 		if(!line)
 			continue
-		if(findtextEx(line,"#",1,2))
+		if(findtextEx_char(line,"#",1,2))
 			continue
 		in_character_filter += REGEX_QUOTE(line)
 
 	ic_filter_regex = in_character_filter.len ? regex("\\b([jointext(in_character_filter, "|")])\\b", "i") : null
+
+/datum/controller/configuration/proc/LoadCensor()
+	if(!fexists("[directory]/censor.txt"))
+		return
+
+	log_config("Loading config file censor.txt...")
+
+	for(var/line in file2list("[directory]/censor.txt"))
+		if(!line)
+			continue
+		if(findtextEx_char(line,"#",1,2))
+			continue
+
+		var/pos = findtext_char(line, " ")
+		var/key = null
+		var/value = null
+
+		if(!pos)
+			continue
+
+		key = copytext_char(line, 1, pos)
+		value = copytext_char(line, pos + 1)
+
+		if(!key || !value)
+			continue
+
+		words_to_filter[key] = value
+
 
 
 //Message admins when you can.
