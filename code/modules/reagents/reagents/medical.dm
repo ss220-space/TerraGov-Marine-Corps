@@ -444,9 +444,6 @@
 	L.hallucination = max(0, L.hallucination - 10)
 	L.adjustToxLoss(effect_str)
 
-	if(TIMER_COOLDOWN_CHECK(L, name))
-		return ..()
-
 	switch(current_cycle)
 		if(1 to 10)
 			L.adjustStaminaLoss(-7.5*effect_str)
@@ -464,7 +461,7 @@
 
 /datum/reagent/medicine/synaptizine/on_mob_delete(mob/living/L, metabolism)
 	to_chat(L, span_userdanger("The room spins as you start to come down off your stimulants!"))
-	TIMER_COOLDOWN_START(L, name, 480 SECONDS)
+	TIMER_COOLDOWN_START(L, name, 60 SECONDS)
 
 /datum/reagent/medicine/neuraline //injected by neurostimulator implant and medic-only injector
 	name = "Neuraline"
