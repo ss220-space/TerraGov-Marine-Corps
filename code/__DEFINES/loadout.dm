@@ -75,7 +75,6 @@ GLOBAL_LIST_INIT(marine_selector_cats, list(
 
 GLOBAL_LIST_INIT(marine_gear_listed_products, list(
 		////////////////// INJECTORS ////////////////////
-		/obj/item/reagent_containers/hypospray/autoinjector/combat = list(CAT_INJ, "Combat", 1, "orange"),
 		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = list(CAT_INJ, "Advanced combat", 4, "orange"),
 		/obj/item/reagent_containers/hypospray/autoinjector/ryetalin = list(CAT_INJ, "Toxin purge", 3, "orange"),
 		/obj/item/reagent_containers/hypospray/autoinjector/hyronalin = list(CAT_INJ, "Toxin heal", 2, "black"),

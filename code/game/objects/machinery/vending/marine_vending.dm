@@ -971,6 +971,7 @@
 			/obj/item/storage/pill_bottle/packet/dylovene = -1,
 		),
 		"Auto Injector" = list(
+			/obj/item/reagent_containers/hypospray/autoinjector/combat = -1,
 			/obj/item/reagent_containers/hypospray/autoinjector/bicaridine = -1,
 			/obj/item/reagent_containers/hypospray/autoinjector/kelotane = -1,
 			/obj/item/reagent_containers/hypospray/autoinjector/tramadol = -1,
