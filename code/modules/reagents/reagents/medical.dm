@@ -424,8 +424,6 @@
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL/5
 	scannable = TRUE
 	custom_metabolism = REAGENTS_METABOLISM * 0.5
-	purge_list = list(/datum/reagent/toxin/mindbreaker)
-	purge_rate = 5
 
 /datum/reagent/medicine/synaptizine/on_mob_add(mob/living/L, metabolism)
 	L.reagents.add_reagent(/datum/reagent/toxin/mindbreaker, 5)
