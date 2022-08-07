@@ -38,7 +38,7 @@
 /datum/chemical_reaction/ryetalyn
 	name = "Ryetalyn"
 	results = list(/datum/reagent/medicine/ryetalyn = 4)
-	required_reagents = list(/datum/reagent/medicine/hyronalin = 3, /datum/reagent/medicine/lemoline = 1)
+	required_reagents = list(/datum/reagent/medicine/hyronalin = 4, /datum/reagent/sodium = 1, /datum/reagent/medicine/lemoline = 1)
 
 /datum/chemical_reaction/cryoxadone
 	name = "Cryoxadone"
@@ -127,7 +127,7 @@
 /datum/chemical_reaction/hyronalin
 	name = "Hyronalin"
 	results = list(/datum/reagent/medicine/hyronalin = 3)
-	required_reagents = list(/datum/reagent/radium = 1, /datum/reagent/medicine/dylovene = 1, /datum/reagent/medicine/lemoline = 1)
+	required_reagents = list(/datum/reagent/radium = 1, /datum/reagent/medicine/dylovene = 1, /datum/reagent/medicine/arithrazine = 1, /datum/reagent/medicine/lemoline = 1)
 
 /datum/chemical_reaction/arithrazine
 	name = "Arithrazine"
