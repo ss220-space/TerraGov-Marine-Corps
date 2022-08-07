@@ -433,7 +433,13 @@
 	icon_state = "firstaid_injector"
 	storage_slots = 10
 	max_storage_space = 14
-	can_hold = list(/obj/item/reagent_containers/hypospray/autoinjector)
+	can_hold = list(
+		/obj/item/reagent_containers/hypospray/autoinjector,
+		/obj/item/healthanalyzer,
+	)
+	bypass_w_limit = (
+		/obj/item/healthanalyzer,
+	)
 
 /obj/item/storage/pouch/medical_injectors/firstaid
 	desc = "Standard marine first-aid injector pouch. Specialized to store only auto-injectors."
