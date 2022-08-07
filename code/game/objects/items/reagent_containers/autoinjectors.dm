@@ -59,7 +59,7 @@
 	list_reagents = list(
 		/datum/reagent/medicine/meralyne = 8,
 		/datum/reagent/medicine/dermaline = 8,
-		///datum/reagent/medicine/tetralyne = 8,
+		/datum/reagent/medicine/tricordrazine = 8,
 		/datum/reagent/medicine/oxycodone = 6,
 	)
 
