@@ -126,7 +126,7 @@
 
 /datum/chemical_reaction/hyronalin
 	name = "Hyronalin"
-	results = list(/datum/reagent/medicine/hyronalin = 3)
+	results = list(/datum/reagent/medicine/hyronalin = 4)
 	required_reagents = list(/datum/reagent/radium = 1, /datum/reagent/medicine/dylovene = 1, /datum/reagent/medicine/arithrazine = 1, /datum/reagent/medicine/lemoline = 1)
 
 /datum/chemical_reaction/arithrazine
