@@ -291,10 +291,10 @@
 	name = "ryetalin autoinjector"
 	desc = "An auto-injector loaded with ryetalin, active element which doesn't metabolize normally, but violently purges toxins when they appear in blood."
 	icon_state = "Toxic"
-	amount_per_transfer_from_this = 2
-	volume = 6
+	amount_per_transfer_from_this = 5
+	volume = 5
 	list_reagents = list(
-		/datum/reagent/medicine/ryetalyn = 6,
+		/datum/reagent/medicine/ryetalyn = 5,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/ryetalin/advanced
@@ -307,18 +307,17 @@
 		/datum/reagent/medicine/dylovene = 10,
 	)
 
-/obj/item/reagent_containers/hypospray/autoinjector/toxin_heal
-	name = "toxin heal autoinjector"
-	desc = "An auto-injector loaded with chemicals to heal effects of toxin poisoning."
+/obj/item/reagent_containers/hypospray/autoinjector/hyronalin
+	name = "hyronalin autoinjector"
+	desc = "An auto-injector loaded with hyronalin to heal effects of toxin poisoning without side effects."
 	icon_state = "autoinjector-1"
-	amount_per_transfer_from_this = 5
-	volume = 15
+	amount_per_transfer_from_this = 2
+	volume = 6
 	list_reagents = list(
-		/datum/reagent/medicine/hyronalin = 5,
-		/datum/reagent/medicine/dylovene = 10,
+		/datum/reagent/medicine/hyronalin = 6,
 	)
 
-/obj/item/reagent_containers/hypospray/autoinjector/toxin_heal/advanced
+/obj/item/reagent_containers/hypospray/autoinjector/hyronalin/advanced
 	name = "advanced toxin heal autoinjector"
 	volume = 30
 	list_reagents = list(
@@ -332,10 +331,11 @@
 	icon_state = "autoinjector-9"
 	amount_per_transfer_from_this = 30
 	list_reagents = list(
-		/datum/reagent/medicine/inaprovaline = 19, //little over 15 to be able to stand up from crit
+		/datum/reagent/medicine/inaprovaline = 15,
 		/datum/reagent/medicine/russian_red = 10,
-		/datum/reagent/medicine/synaptizine = 0.5, //float is ok I guess, unga can change inject amt on injectors anyway to get different doses
+		/datum/reagent/medicine/synaptizine = 1,
 		/datum/reagent/medicine/ryetalyn = 0.5,
+		/datum/reagent/medicine/hyronalin = 1.5,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/emergency/advanced
@@ -410,12 +410,12 @@
 
 /obj/item/reagent_containers/hypospray/autoinjector/stimulant
 	name = "stimulant autoinjector"
-	desc = "An auto-injector loaded with single dose of stimulant to boost combat performance."
+	desc = "An auto-injector loaded with single dose of synaptizine and chemicals to remove most side effects."
 	icon_state = "Devilpower"
-	amount_per_transfer_from_this = 6
-	volume = 6
+	amount_per_transfer_from_this = 5
+	volume = 5
 	list_reagents = list(
 		/datum/reagent/medicine/synaptizine = 2,
-		/datum/reagent/medicine/ryetalyn = 2,
-		/datum/reagent/medicine/hyronalin = 2,
+		/datum/reagent/medicine/hyronalin = 2.5,
+		/datum/reagent/medicine/ryetalyn = 0.5,
 	)
