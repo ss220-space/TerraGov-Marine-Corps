@@ -198,11 +198,11 @@
 	desc = "An auto-injector freshly loaded with a safe-to-use synaptizine mix."
 	icon_state = "Devilpower"
 	amount_per_transfer_from_this = 5
-	volume = 10
+	volume = 30
 	list_reagents = list(
-		/datum/reagent/medicine/synaptizine = 4,
-		/datum/reagent/medicine/hyronalin = 4,
-		/datum/reagent/medicine/ryetalyn = 2,
+		/datum/reagent/medicine/synaptizine = 6,
+		/datum/reagent/medicine/hyronalin = 9,
+		/datum/reagent/medicine/ryetalyn = 15,
 	)
 
 /obj/item/reagent_containers/hypospray/autoinjector/neuraline
