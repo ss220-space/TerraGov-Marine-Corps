@@ -1380,6 +1380,7 @@
 
 /datum/reagent/medicine/tetralyne/on_mob_life(mob/living/L, metabolism)
 	L.heal_limb_damage(1.2*effect_str, 1.2*effect_str)
+	L.adjustToxLoss(-0.6*effect_str)
 	return ..()
 
 
