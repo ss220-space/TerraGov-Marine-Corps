@@ -415,6 +415,3 @@
 /obj/item/clothing/head/squadhb/d
 	name = "\improper Delta squad headband"
 	icon_state = "dsquadhb"
-	soft_armor = list("melee" = 5, "bullet" = -5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	var/DELTA_BOOST = 1
-	slowdown = 0
