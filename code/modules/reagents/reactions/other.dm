@@ -10,8 +10,8 @@
 
 /datum/chemical_reaction/sdtoxin
 	name = "Toxin"
-	results = list(/datum/reagent/toxin/sdtoxin = 2)
-	required_reagents = list(/datum/reagent/medicine/synaptizine = 1, /datum/reagent/medicine/dylovene = 1)
+	results = list(/datum/reagent/toxin/mindbreaker = 2)
+	required_reagents = list(/datum/reagent/medicine/synaptizine = 0.5, /datum/reagent/medicine/dylovene = 0.5)
 
 /datum/chemical_reaction/sleeptoxin
 	name = "Soporific"
@@ -271,7 +271,7 @@
 
 /datum/chemical_reaction/plasmalosssmoke
 	name = "Tanglefoot smoke"
-	required_reagents = list(/datum/reagent/toxin/sleeptoxin = 2, /datum/reagent/medicine/synaptizine = 1, /datum/reagent/sulfur = 1)
+	required_reagents = list(/datum/reagent/toxin/sleeptoxin = 2, /datum/reagent/potassium = 1, /datum/reagent/sulfur = 1)
 
 /datum/chemical_reaction/plasmalosssmoke/on_reaction(datum/reagents/holder, created_volume)
 	var/smoke_radius = round(sqrt(created_volume), 1)

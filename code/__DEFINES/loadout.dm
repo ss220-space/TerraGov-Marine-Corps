@@ -130,6 +130,7 @@ GLOBAL_LIST_INIT(medic_gear_listed_products, list(
 		/obj/effect/essentials_set/medic = list(CAT_ESS, "Essential Medic Set", 0, "white"),
 		/obj/item/storage/pill_bottle/meralyne = list(CAT_MEDSUP, "Meralyne pills", 16, "orange"),
 		/obj/item/storage/pill_bottle/dermaline = list(CAT_MEDSUP, "Dermaline pills", 16, "orange"),
+<<<<<<< HEAD
 		/obj/item/storage/pill_bottle/paracetamol = list(CAT_MEDSUP, "Paracetamol pills", 8, "black"),
 		/obj/item/storage/syringe_case/meralyne = list(CAT_MEDSUP, "syringe Case (120u Meralyne)", 16, "black"),
 		/obj/item/reagent_containers/hypospray/advanced/meralyne = list(CAT_MEDSUP, "hypospray (60u Meralyne)", 8, "black"), //half the units of the mera case half the price
@@ -151,6 +152,27 @@ GLOBAL_LIST_INIT(medic_gear_listed_products, list(
 		/obj/item/reagent_containers/hypospray/autoinjector/emergency/advanced = list(CAT_MEDINJ, "Emergency", 6, "orange"),
 		/obj/item/reagent_containers/hypospray/autoinjector/nanoblood = list(CAT_MEDINJ, "Nanoblood", 6, "orange"),
 		/obj/item/reagent_containers/hypospray/autoinjector/somolent = list(CAT_MEDINJ, "Somolent", 6, "black"),
+		/obj/item/storage/pill_bottle/tetralyne = list(CAT_MEDSUP, "Tetralyne pills", 32, "orange"),
+		/obj/item/storage/pill_bottle/paracetamol = list(CAT_MEDSUP, "Paracetamol pills", 8, "orange"),
+		/obj/item/storage/syringe_case/meralyne = list(CAT_MEDSUP, "syringe Case (120u Meralyne)", 16, "orange"),
+		/obj/item/reagent_containers/hypospray/advanced/meralyne = list(CAT_MEDSUP, "hypospray (60u Meralyne)", 8, "orange"), //half the units of the mera case half the price
+		/obj/item/storage/syringe_case/dermaline = list(CAT_MEDSUP, "syringe Case (120u Dermaline)", 16, "orange"),
+		/obj/item/reagent_containers/hypospray/advanced/dermaline = list(CAT_MEDSUP, "hypospray (60u dermaline)", 8, "orange"), //half the units of the derm case half the price
+		/obj/item/storage/syringe_case/meraderm = list(CAT_MEDSUP, "syringe Case (120u Meraderm)", 16, "orange"),
+		/obj/item/reagent_containers/glass/bottle/tetralyne = list(CAT_MEDSUP, "Bottle (60u Tetralyne)", 16, "orange"),
+		/obj/item/reagent_containers/hypospray/advanced/meraderm = list(CAT_MEDSUP, "hypospray (60u Meraderm)", 8, "orange"), //half the units of the meraderm case half the price
+		/obj/item/storage/syringe_case/nanoblood = list(CAT_MEDSUP, "syringe Case (120u Nanoblood)", 5, "black"),
+		/obj/item/reagent_containers/hypospray/advanced/nanoblood = list(CAT_MEDSUP, "hypospray (60u Nanoblood)", 3, "black"), //bit more than half of the nanoblood case
+		/obj/item/storage/syringe_case/tricordrazine = list(CAT_MEDSUP, "syringe Case (120u Tricordrazine)", 5, "black"),
+		/obj/item/reagent_containers/hypospray/advanced/tricordrazine = list(CAT_MEDSUP, "hypospray (60u Tricordrazine)", 3, "black"),
+		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced = list(CAT_MEDSUP, "Injector (Advanced)", 5, "black"),
+		/obj/item/reagent_containers/hypospray/autoinjector/quickclotplus = list(CAT_MEDSUP, "Injector (QuickclotPlus)", 1, "orange"),
+		/obj/item/reagent_containers/hypospray/autoinjector/peridaxon_plus = list(CAT_MEDSUP, "Injector (Peridaxon Plus)", 1, "orange"),
+		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine = list(CAT_MEDSUP, "Injector (Synaptizine)", 4, "orange"),
+		/obj/item/reagent_containers/hypospray/autoinjector/neuraline = list(CAT_MEDSUP, "Injector (Neuraline)", 14, "orange"),
+		/obj/item/reagent_containers/hypospray/advanced = list(CAT_MEDSUP, "Advanced hypospray", 2, "black"),
+		/obj/item/reagent_containers/hypospray/advanced/big = list(CAT_MEDSUP, "Big hypospray", 10, "black"),
+		/obj/item/clothing/glasses/hud/health = list(CAT_MEDSUP, "Medical HUD glasses", 2, "black"),
 	))
 
 GLOBAL_LIST_INIT(leader_gear_listed_products, list(
