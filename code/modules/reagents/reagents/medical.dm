@@ -78,11 +78,11 @@
 	for(var/datum/reagent/current_reagent AS in holder.reagent_list) //Cycle through all chems in body
 		for(var/datum/reagent/purged AS in purge_list)
 			if(istype(current_reagent, purged))
-				var/purge_volume = min(5, holder.get_reagent_amount(current_reagent.type), holder.get_reagent_amount(type)*10) //at most 5
+				var/purge_volume = min(5, holder.get_reagent_amount(current_reagent.type), holder.get_reagent_amount(type)*2) //at most 5
 				purge_volume = max(purge_volume, 1) //at least 1
 				purge_volume = round(purge_volume, 1)
 				holder.remove_reagent(current_reagent.type, purge_volume) //Purge current chem
-				holder.remove_reagent(type, 0.1*purge_volume) //at cost of 0.1 rye per u purged
+				holder.remove_reagent(type, 0.5*purge_volume) //at cost of 0.5 rye per u purged
 
 	return TRUE
 
