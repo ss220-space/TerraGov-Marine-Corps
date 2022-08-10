@@ -411,9 +411,6 @@
 /obj/item/clothing/head/squadhb/c
 	name = "\improper Charlie squad headband"
 	icon_state = "csquadhb"
-	soft_armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = -5)
-	var/CHARLIE_BOOST = 1
-	slowdown = 0
 
 /obj/item/clothing/head/squadhb/d
 	name = "\improper Delta squad headband"
