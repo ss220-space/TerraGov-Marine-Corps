@@ -140,7 +140,7 @@
 	name = "Mindbreaker Toxin"
 	description = "A powerful hallucinogen, it can cause fatal effects in users."
 	color = "#B31008" // rgb: 139, 166, 233
-	toxpwr = 0
+	toxpwr = 0.4
 	overdose_threshold = REAGENTS_OVERDOSE
 	overdose_crit_threshold = REAGENTS_OVERDOSE_CRITICAL
 	taste_description = "sourness"
@@ -470,8 +470,6 @@
 	custom_metabolism = REAGENTS_METABOLISM * 3
 	overdose_threshold = 10000 //Overdosing for neuro is what happens when you run out of stamina to avoid its oxy and toxin damage
 	scannable = TRUE
-	purge_list = list(/datum/reagent/medicine/bicaridine, /datum/reagent/medicine/kelotane, /datum/reagent/medicine/tramadol, /datum/reagent/medicine/tricordrazine)
-	purge_rate = 1
 	toxpwr = 0
 
 /datum/reagent/toxin/xeno_neurotoxin/on_mob_life(mob/living/L, metabolism)
