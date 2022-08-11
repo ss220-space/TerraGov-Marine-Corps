@@ -14,7 +14,7 @@
 	///Flags to indicate whether this atom can bypass certain things, or if certain things can bypass this atom
 	var/flags_pass = NONE
 
-	var/resistance_flags = PROJECTILE_IMMUNE
+	var/resistance_flags = NONE | PROJECTILE_IMMUNE
 
 	var/germ_level = GERM_LEVEL_AMBIENT // The higher the germ level, the more germ on the atom.
 
