@@ -2878,11 +2878,10 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	armor_type = "bio"
 	accuracy_var_high = 10
 	max_range = 30
-	damage = 150
+	damage = 50
 	damage_type = STAMINA
-	penetration = 25
 	damage_falloff = 0
-
+	penetration = 40
 	bullet_color = BOILER_LUMINOSITY_AMMO_NEUROTOXIN_COLOR
 	reagent_transfer_amount = 30
 	///On a direct hit, how long is the target paralyzed?
@@ -2890,7 +2889,7 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	///On a direct hit, how much do the victim's eyes get blurred?
 	var/hit_eye_blur = 11
 	///On a direct hit, how much drowsyness gets added to the target?
-	var/hit_drowsyness = 8
+	var/hit_drowsyness = 12
 	///Does the gas spread have a fixed range? -1 for no, 0+ for a fixed range. This prevents scaling from caste age.
 	var/fixed_spread_range = -1
 	///Which type is the smoke we leave on passed tiles, provided the projectile has AMMO_LEAVE_TURF enabled?
@@ -2994,9 +2993,9 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE
 	armor_type = "acid"
 	danger_message = span_danger("A glob of acid lands with a splat and explodes into corrosive bile!")
-	damage = 65
+	damage = 50
 	damage_type = BURN
-	penetration = 25
+	penetration = 40
 	bullet_color = BOILER_LUMINOSITY_AMMO_CORROSIVE_COLOR
 	hit_paralyze_time = 1 SECONDS
 	hit_eye_blur = 1
@@ -3025,13 +3024,13 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_LEAVE_TURF
 	danger_message = span_danger("A pressurized glob of acid lands with a nasty splat and explodes into noxious fumes!")
 	max_range = 40
-	damage = 150
-	penetration = 50
-	reagent_transfer_amount = 65
+	damage = 75
+	penetration = 60
+	reagent_transfer_amount = 55
 	passed_turf_smoke_type = /datum/effect_system/smoke_spread/xeno/neuro/light
 	hit_paralyze_time = 2 SECONDS
 	hit_eye_blur = 16
-	hit_drowsyness = 12
+	hit_drowsyness = 18
 	fixed_spread_range = 2
 	accuracy = 100
 	accurate_range = 30
@@ -3045,8 +3044,8 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_LEAVE_TURF
 	danger_message = span_danger("A pressurized glob of acid lands with a concerning hissing sound and explodes into corrosive bile!")
 	max_range = 40
-	damage = 90
-	penetration = 50
+	damage = 75
+	penetration = 60
 	passed_turf_smoke_type = /datum/effect_system/smoke_spread/xeno/acid/light
 	hit_paralyze_time = 1.5 SECONDS
 	hit_eye_blur = 4
