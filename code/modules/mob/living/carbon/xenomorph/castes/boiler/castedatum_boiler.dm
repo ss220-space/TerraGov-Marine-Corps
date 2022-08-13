@@ -46,7 +46,7 @@
 	minimap_icon = "boiler"
 
 	// *** Boiler Abilities *** //
-	max_ammo = 3
+	max_ammo = 4
 	bomb_strength = 1 //Multiplier to the effectiveness of the boiler glob.
 	bomb_delay = 32 SECONDS
 	ammo_multiplier = 1.5 SECONDS
@@ -104,7 +104,7 @@
 	acid_spray_structure_damage = 53
 
 	// *** Boiler Abilities *** //
-	max_ammo = 4
+	max_ammo = 5
 	bomb_strength = 1.1
 
 	bomb_delay = 32 SECONDS
@@ -140,7 +140,7 @@
 	acid_spray_structure_damage = 61
 
 	// *** Boiler Abilities *** //
-	max_ammo = 5
+	max_ammo = 6
 	bomb_strength = 1.2
 
 	bomb_delay = 32 SECONDS
@@ -177,7 +177,7 @@
 	acid_spray_structure_damage = 69
 
 	// *** Boiler Abilities *** //
-	max_ammo = 6
+	max_ammo = 7
 	bomb_strength = 1.3
 
 	bomb_delay = 27 SECONDS
@@ -212,7 +212,7 @@
 	acid_spray_structure_damage = 69
 
 	// *** Boiler Abilities *** //
-	max_ammo = 6
+	max_ammo = 7
 	bomb_strength = 1.3
 
 	bomb_delay = 27 SECONDS
