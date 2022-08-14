@@ -1,10 +1,10 @@
 #define HAL_LINES_FILE "hallucinations.json"
 
 GLOBAL_LIST_INIT(hallucination_list, list(
-	/datum/hallucination/sounds = 70,
-	/datum/hallucination/chat = 10,
+	/datum/hallucination/sounds = 72,
+	/datum/hallucination/chat = 15,
 	/datum/hallucination/battle = 10,
-	/datum/hallucination/xeno_attack_vent_runner = 8,
+	/datum/hallucination/xeno_attack_vent_runner = 1,
 	/datum/hallucination/death = 1,
 	/datum/hallucination/queen_screech = 1,
 ))
@@ -401,7 +401,8 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	set waitfor = FALSE
 	..()
 	target.set_screwyhud(SCREWYHUD_DEAD)
-	target.Sleeping(30 SECONDS)
+	var/delay_time = rand(5 SECONDS, 10 SECONDS)
+	target.Sleeping(15 SECONDS)
 	if(prob(50))
 		var/mob/fakemob
 		var/list/dead_people = list()
@@ -412,9 +413,9 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		else
 			fakemob = target //ever been so lonely you had to haunt yourself?
 		if(fakemob)
-			sleep(rand(20, 50))
+			sleep(delay_time)
 			to_chat(target, span_deadsay("<b>DEAD: [fakemob.name]</b> says, \"[pick("rip","why did i just drop dead?","hey [target.real_name]","git gud","you too?","did we get the [pick("nuke", "blue disk", "red disk", "green disk", "yellow disk")]?","i[prob(50)?" fucking":""] hate [pick("runners", "queens", "shrikes", "xenos", "this", "myself", "admins", "you")]")]\""))
-	sleep(rand(7 SECONDS, 9 SECONDS))
+	sleep(15 SECONDS - delay_time)
 	target.set_screwyhud(SCREWYHUD_NONE)
 	target.SetSleeping(0)
 	qdel(src)
