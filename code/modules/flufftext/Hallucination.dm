@@ -275,7 +275,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	var/turf/source = random_far_turf()
 	var/possible_sound_list = list()
 	if(!sound_type)
-		sound_type = pick("airlock pry", "hugged", "glass step", "grill hit", "weed placed", "gunshots", "b18", "queen message", "queen died", "larba", "moth", "xeno talk", "xeno roar", "xeno hiss", "xeno help", "gasp", "pain")
+		sound_type = pick("airlock pry", "hugged", "glass step", "grill hit", "weed placed", "gunshots", "b18", "queen message", "queen died", "larba", "moth", "xeno talk", "xeno roar", "xeno hiss", "xeno help", "gasp", "pain", "random ambient", "clown", "OB", "ERT", "shutters", "powerloss", "revive")
 	//Strange audio
 	switch(sound_type)
 		if("airlock pry")
@@ -295,7 +295,9 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			sleep(1 SECONDS)
 			target.playsound_local(source, get_sfx("[pick("male", "female")]_hugged"), 35, TRUE)
 		if("weed placed")
+		for(var/i in 1 to rand(3, 5))
 			target.playsound_local(source, get_sfx("alien_resin_build"), 35, TRUE)
+			sleep(rand(0.5 SECONDS, 1.3 SECONDS))
 		if("gunshots")
 			target.playsound_local(source, get_sfx("alien_resin_build"), 35, TRUE)
 			for(var/i in 1 to rand(5, 10))
@@ -347,6 +349,32 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 				"male_pain",
 			)
 			target.playsound_local(source, get_sfx(pick(possible_sound_list)), 35, TRUE)
+		if("random ambient")
+			possible_sound_list = list(
+				"shatter",
+				"sparks",
+				"rustle",
+			)
+			target.playsound_local(source, get_sfx(pick(possible_sound_list)), 35, TRUE)
+		if("clown")
+			possible_sound_list = list(
+				"female_scream",
+				"male_scream",
+			)
+			for(var/i in 1 to rand(3, 8))
+				target.playsound_local(source, get_sfx("clownstep"), 35, TRUE)
+				sleep(1 SECONDS)
+			target.playsound_local(source, get_sfx(pick(possible_sound_list)), 35, TRUE)
+		if("OB")
+			target.playsound_local(source, get_sfx("OB"), 35, TRUE)
+		if("ERT")
+			target.playsound_local(source, get_sfx("morse"), 35, TRUE)
+		if("shutters")
+			target.playsound_local(source, get_sfx("shutters"), 35, TRUE)
+		if("powerloss")
+			target.playsound_local(source, get_sfx("powerloss"), 35, TRUE)
+		if("revive")
+			target.playsound_local(source, get_sfx("revive"), 35, TRUE)
 	qdel(src)
 
 
