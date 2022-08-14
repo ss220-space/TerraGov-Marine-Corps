@@ -1,11 +1,12 @@
 #define HAL_LINES_FILE "hallucinations.json"
 
 GLOBAL_LIST_INIT(hallucination_list, list(
-	/datum/hallucination/sounds = 49,
-	/datum/hallucination/chat = 20,
-	/datum/hallucination/battle = 20,
+	/datum/hallucination/sounds = 58,
+	/datum/hallucination/chat = 10,
+	/datum/hallucination/battle = 10,
 	/datum/hallucination/xeno_attack = 10,
 	/datum/hallucination/death = 1,
+	/datum/hallucination/queen_screech = 1,
 ))
 
 
@@ -295,9 +296,9 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			sleep(1 SECONDS)
 			target.playsound_local(source, get_sfx("[pick("male", "female")]_hugged"), 35, TRUE)
 		if("weed placed")
-		for(var/i in 1 to rand(3, 5))
-			target.playsound_local(source, get_sfx("alien_resin_build"), 35, TRUE)
-			sleep(rand(0.5 SECONDS, 1.3 SECONDS))
+			for(var/i in 1 to rand(3, 5))
+				target.playsound_local(source, get_sfx("alien_resin_build"), 35, TRUE)
+				sleep(rand(0.5 SECONDS, 1.3 SECONDS))
 		if("gunshots")
 			target.playsound_local(source, get_sfx("alien_resin_build"), 35, TRUE)
 			for(var/i in 1 to rand(5, 10))
@@ -377,6 +378,20 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			target.playsound_local(source, get_sfx("revive"), 35, TRUE)
 		if("nade")
 			target.playsound_local(source, get_sfx("nade_prime"), 35, TRUE)
+	qdel(src)
+
+
+/datum/hallucination/queen_screech
+
+/datum/hallucination/queen_screech/New(mob/living/carbon/C, forced = TRUE)
+	set waitfor = FALSE
+	..()
+
+	playsound(C.loc, 'sound/voice/alien_queen_screech.ogg', 75, 0)
+	to_chat(src, span_danger("An ear-splitting guttural roar tears through your mind and makes your world convulse!"))
+	C.Stun(1 SECONDS)
+	C.Paralyze(1 SECONDS)
+
 	qdel(src)
 
 
