@@ -21,8 +21,8 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	var/halpick = pickweight(GLOB.hallucination_list)
 	new halpick(src, FALSE)
 
-	var/min_wait_time = max(10 SECONDS - (hallucination/10) SECONDS, 0)
-	var/max_wait_time = max(30 SECONDS - (hallucination/5) SECONDS, 10 SECONDS)
+	var/min_wait_time = max(10 SECONDS - (hallucination/10) SECONDS, 5 SECONDS)
+	var/max_wait_time = max(30 SECONDS - (hallucination/5) SECONDS, 15 SECONDS)
 	next_hallucination = world.time + rand(min_wait_time, max_wait_time)
 
 /mob/living/carbon/proc/set_screwyhud(hud_type)
@@ -273,8 +273,9 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	set waitfor = FALSE
 	..()
 	var/turf/source = random_far_turf()
+	var/possible_sound_list = list()
 	if(!sound_type)
-		sound_type = pick("airlock pry", "hugged", "glass step", "grill hit", "weed placed", "gunshots")
+		sound_type = pick("airlock pry", "hugged", "glass step", "grill hit", "weed placed", "gunshots", "fake queen message", "larba", "random_roar", "random_hiss")
 	//Strange audio
 	switch(sound_type)
 		if("airlock pry")
@@ -300,8 +301,26 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			for(var/i in 1 to rand(5, 10))
 				target.playsound_local(source, get_sfx("ballistic_hit"), 35, TRUE)
 				sleep(rand(CLICK_CD_RANGE, CLICK_CD_RANGE + 6))
-
+		if("fake queen message")
+			possible_sound_list = list(
+				'sound/voice/alien_distantroar_3.ogg',
+				'sound/voice/alien_queen_command.ogg',
+				'sound/voice/alien_queen_command2.ogg',
+				'sound/voice/alien_queen_command3.ogg',
+			)
+			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+		if("larba")
+			possible_sound_list = list(
+				'sound/voice/alien_roar_larva1.ogg',
+				'sound/voice/alien_roar_larva2.ogg',
+				'sound/voice/alien_roar_larva3.ogg',
+				'sound/voice/alien_roar_larva4.ogg',
+				'sound/voice/alien_chestburst.ogg',
+				'sound/voice/alien_chestburst2.ogg',
+			)
+			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
 	qdel(src)
+
 
 /datum/hallucination/death
 
