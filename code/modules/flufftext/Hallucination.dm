@@ -310,142 +310,43 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			sleep(rand(10 SECONDS, 25 SECONDS))
 			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
 		if("queen message")
-			possible_sound_list = list(
-				'sound/voice/alien_distantroar_3.ogg',
-				'sound/voice/alien_queen_command.ogg',
-				'sound/voice/alien_queen_command2.ogg',
-				'sound/voice/alien_queen_command3.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx("queen_distant"), 35, TRUE)
 		if("queen died")
-			possible_sound_list = list(
-				'sound/voice/alien_queen_died.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, 'sound/voice/alien_queen_died.ogg', 35, TRUE)
 		if("larba")
-			possible_sound_list = list(
-				'sound/voice/alien_roar_larva1.ogg',
-				'sound/voice/alien_roar_larva2.ogg',
-				'sound/voice/alien_roar_larva3.ogg',
-				'sound/voice/alien_roar_larva4.ogg',
-				'sound/voice/alien_chestburst.ogg',
-				'sound/voice/alien_chestburst2.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx("alien_roar_larva"), 35, TRUE)
 		if("moth")
-			possible_sound_list = list(
-				'sound/voice/moth_scream.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, 'sound/voice/moth_scream.ogg',, 35, TRUE)
 		if("xeno talk")
-			possible_sound_list = list(
-				'sound/voice/alien_talk.ogg',
-				'sound/voice/alien_talk2.ogg',
-				'sound/voice/alien_talk3.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx("alien_talk"), 35, TRUE)
 		if("xeno roar")
-			possible_sound_list = list(
-				'sound/voice/alien_roar1.ogg',
-				'sound/voice/alien_roar2.ogg',
-				'sound/voice/alien_roar3.ogg',
-				'sound/voice/alien_roar4.ogg',
-				'sound/voice/alien_roar5.ogg',
-				'sound/voice/alien_roar6.ogg',
-				'sound/voice/alien_roar7.ogg',
-				'sound/voice/alien_roar8.ogg',
-				'sound/voice/alien_roar9.ogg',
-				'sound/voice/alien_roar10.ogg',
-				'sound/voice/alien_roar11.ogg',
-				'sound/voice/alien_roar12.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx("alien_roar"), 35, TRUE)
 		if("xeno hiss")
-			possible_sound_list = list(
-				'sound/voice/hiss1.ogg',
-				'sound/voice/hiss2.ogg',
-				'sound/voice/hiss3.ogg',
-				'sound/voice/hiss4.ogg',
-				'sound/voice/hiss5.ogg',
-				'sound/voice/alien_hiss1.ogg',
-				'sound/voice/alien_hiss2.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx("alien_hiss_expanded"), 35, TRUE)
 		if("xeno help")
 			possible_sound_list = list(
-				'sound/voice/alien_help1.ogg',
-				'sound/voice/alien_help2.ogg',
-				'sound/voice/alien_death.ogg',
-				'sound/voice/alien_death2.ogg',
+				"alien_help",
+				"alien_death",
 			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx(pick(possible_sound_list)), 35, TRUE)
 		if("xeno spit")
-			possible_sound_list = list(
-				'sound/voice/alien_spitacid.ogg',
-				'sound/voice/alien_spitacid2.ogg',
-			)
 			for(var/i in 1 to rand(3, 6))
-				target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+				target.playsound_local(source, get_sfx("alien_spit"), 35, TRUE)
 				sleep(rand(0.8 SECONDS, 1.2 SECONDS,))
 		if("gasp")
 			possible_sound_list = list(
-				'sound/voice/human_female_gasp1.ogg',
-				'sound/voice/human_female_gasp2.ogg',
-				'sound/voice/human_male_gasp1.ogg',
-				'sound/voice/human_male_gasp2.ogg',
-				'sound/voice/human_male_gasp3.ogg',
+				"female_gasp",
+				"male_gasp",
 			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx(pick(possible_sound_list)), 35, TRUE)
 		if("pain")
 			possible_sound_list = list(
-				'sound/voice/human_female_pain_1.ogg',
-				'sound/voice/human_female_pain_2.ogg',
-				'sound/voice/human_female_pain_3.ogg',
-				'sound/voice/human_female_scream_1.ogg',
-				'sound/voice/human_female_scream_2.ogg',
-				'sound/voice/human_female_scream_3.ogg',
-				'sound/voice/human_female_scream_4.ogg',
-				'sound/voice/human_female_scream_5.ogg',
-				'sound/voice/human_male_pain_1.ogg',
-				'sound/voice/human_male_pain_2.ogg',
-				'sound/voice/human_male_pain_3.ogg',
-				'sound/voice/human_male_pain_4.ogg',
-				'sound/voice/human_male_pain_5.ogg',
-				'sound/voice/human_male_pain_6.ogg',
-				'sound/voice/human_male_pain_7.ogg',
-				'sound/voice/human_male_pain_8.ogg',
-				'sound/voice/human_male_scream_1.ogg',
-				'sound/voice/human_male_scream_2.ogg',
-				'sound/voice/human_male_scream_3.ogg',
-				'sound/voice/human_male_scream_4.ogg',
-				'sound/voice/human_male_scream_5.ogg',
-				'sound/voice/human_male_scream_6.ogg',
+				"female_scream",
+				"female_pain",
+				"male_scream",
+				"male_pain",
 			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
-		if("xeno help")
-			possible_sound_list = list(
-				'sound/voice/alien_help1.ogg',
-				'sound/voice/alien_help2.ogg',
-				'sound/voice/alien_death.ogg',
-				'sound/voice/alien_death2.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
-		if("xeno help")
-			possible_sound_list = list(
-				'sound/voice/alien_help1.ogg',
-				'sound/voice/alien_help2.ogg',
-				'sound/voice/alien_death.ogg',
-				'sound/voice/alien_death2.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
-		if("xeno help")
-			possible_sound_list = list(
-				'sound/voice/alien_help1.ogg',
-				'sound/voice/alien_help2.ogg',
-				'sound/voice/alien_death.ogg',
-				'sound/voice/alien_death2.ogg',
-			)
-			target.playsound_local(source, pick(possible_sound_list), 35, TRUE)
+			target.playsound_local(source, get_sfx(pick(possible_sound_list)), 35, TRUE)
 	qdel(src)
 
 
