@@ -1,10 +1,10 @@
 #define HAL_LINES_FILE "hallucinations.json"
 
 GLOBAL_LIST_INIT(hallucination_list, list(
-	/datum/hallucination/sounds = 100,
-	/datum/hallucination/chat = 50,
+	/datum/hallucination/sounds = 40,
+	/datum/hallucination/chat = 30,
 	/datum/hallucination/battle = 20,
-	/datum/hallucination/xeno_attack = 8,
+	/datum/hallucination/xeno_attack = 10,
 ))
 
 
@@ -20,7 +20,9 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	var/halpick = pickweight(GLOB.hallucination_list)
 	new halpick(src, FALSE)
 
-	next_hallucination = world.time + rand(10 SECONDS, 60 SECONDS)
+	var/min_wait_time = max(10 SECONDS - (hallucination/10) SECONDS, 0)
+	var/max_wait_time = max(30 SECONDS - (hallucination/5) SECONDS, 10 SECONDS)
+	next_hallucination = world.time + rand(min_wait_time, max_wait_time)
 
 /mob/living/carbon/proc/set_screwyhud(hud_type)
 	hal_screwyhud = hud_type
