@@ -388,4 +388,27 @@
 		slot_r_hand_str = 'icons/mob/items_righthand_1.dmi',)
 	icon = 'icons/obj/clothing/cm_hats.dmi'
 	icon_state = "straw_hat"
-	soft_armor = list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 15, BIO = 10, FIRE = 20, ACID = 20)
+	soft_armor = list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 15, BIO = 10, "rad" = 0, FIRE = 20, ACID = 20)
+
+/obj/item/clothing/head/squadhb
+	name = "\improper Alpha squad headband"
+	desc = "Headband made from ultra-thin special cloth. Cloth thickness provides more than just a stylish fluttering of headband. You can tie around headband onto a helmet. This squad version of a headband has secret unique features created by the cloth coloring component. "
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
+	icon_state = "asquadhb"
+	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, "rad" = 0, FIRE = 0, ACID = 0)
+	slowdown = -0.1
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/clothing/head/squadhb/b
+	name = "\improper Bravo squad headband"
+	icon_state = "bsquadhb"
+
+/obj/item/clothing/head/squadhb/c
+	name = "\improper Charlie squad headband"
+	icon_state = "csquadhb"
+
+/obj/item/clothing/head/squadhb/d
+	name = "\improper Delta squad headband"
+	icon_state = "dsquadhb"
