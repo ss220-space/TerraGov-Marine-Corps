@@ -34,12 +34,6 @@
 	start_acid_spray_cone(target, X.xeno_caste.acid_spray_range)
 	add_cooldown()
 
-/datum/action/xeno_action/activable/spray_acid/cone/proc/reset_speed()
-	var/mob/living/carbon/xenomorph/spraying_xeno = owner
-	if(QDELETED(spraying_xeno))
-		return
-	spraying_xeno.remove_movespeed_modifier(type)
-
 /datum/action/xeno_action/activable/spray_acid/ai_should_start_consider()
 	return TRUE
 
