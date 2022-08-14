@@ -418,3 +418,59 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	target.set_screwyhud(SCREWYHUD_NONE)
 	target.SetSleeping(0)
 	qdel(src)
+
+
+/mob/hallucination
+	density = FALSE
+	status_flags = GODMODE
+	layer = BELOW_MOB_LAYER
+	var/mob/living/carbon/xenomorph/base_mob
+	/// Timer to remove the hit effect
+	var/timer_effect
+
+/mob/hallucination/Initialize(mapload, atom/target, life_time)
+	. = ..()
+	var/possible_mobs = list(
+		/mob/living/carbon/xenomorph/runner,
+		/mob/living/carbon/xenomorph/drone,
+		/mob/living/carbon/xenomorph/defender,
+		/mob/living/carbon/xenomorph/warrior,
+		/mob/living/carbon/xenomorph/wraith,
+	)
+
+	base_mob = pick(possible_mobs)
+	//base_mob = new base_mob.type
+	appearance = base_mob.appearance
+	desc = base_mob.desc
+	name = base_mob.name
+	add_movespeed_modifier(MOVESPEED_ID_XENO_CASTE_SPEED, TRUE, 0, NONE, TRUE, base_mob.xeno_caste.speed)
+	AddComponent(/datum/component/ai_controller, /datum/ai_behavior/xeno/illusion, target)
+	QDEL_IN(src, life_time)
+
+/// Remove the filter effect added when it was hit
+/mob/hallucination/proc/remove_hit_filter()
+	remove_filter("illusion_hit")
+
+/mob/hallucination/projectile_hit()
+	remove_filter("illusion_hit")
+	deltimer(timer_effect)
+	add_filter("illusion_hit", 2, ripple_filter(10, 5))
+	timer_effect = addtimer(CALLBACK(src, .proc/remove_hit_filter), 0.5 SECONDS)
+	return FALSE
+
+/datum/ai_behavior/xeno/hallucination
+	target_distance = 3 //We attack only nearby
+	base_action = ESCORTING_ATOM
+	is_offered_on_creation = FALSE
+
+/datum/ai_behavior/xeno/hallucination/attack_target(datum/soure, atom/attacked)
+	if(!attacked)
+		attacked = atom_to_walk_to
+
+	var/mob/hallucination/hallucination_mob = mob_parent
+	hallucination_mob.changeNext_move(hallucination_mob.base_mob.xeno_caste.attack_delay)
+	if(ismob(attacked))
+		hallucination_mob.do_attack_animation(attacked, ATTACK_EFFECT_REDSLASH)
+		playsound(hallucination_mob.loc, "alien_claw_flesh", 25, 1)
+		return
+	hallucination_mob.do_attack_animation(attacked, ATTACK_EFFECT_CLAW)
