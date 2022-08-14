@@ -1,10 +1,10 @@
 #define HAL_LINES_FILE "hallucinations.json"
 
 GLOBAL_LIST_INIT(hallucination_list, list(
-	/datum/hallucination/sounds = 58,
+	/datum/hallucination/sounds = 70,
 	/datum/hallucination/chat = 10,
 	/datum/hallucination/battle = 10,
-	/datum/hallucination/xeno_attack = 10,
+	/datum/hallucination/xeno_attack_vent_runner = 8,
 	/datum/hallucination/death = 1,
 	/datum/hallucination/queen_screech = 1,
 ))
@@ -135,27 +135,27 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	active = FALSE
 	return ..()
 
-/obj/effect/hallucination/simple/xeno
+/obj/effect/hallucination/simple/xeno_vent
 	name = "Mature Runner"
 	desc = "A small red alien that looks like it could run fairly quickly..."
 	icon = 'icons/Xeno/2x2_Xenos.dmi'
 	icon_state = "Runner Walking"
 
-/obj/effect/hallucination/simple/xeno/Initialize(mapload, mob/living/carbon/T)
+/obj/effect/hallucination/simple/xeno_vent/Initialize(mapload, mob/living/carbon/T)
 	. = ..()
 	name = "Mature Runner ([rand(100, 999)])"
 
-/obj/effect/hallucination/simple/xeno/throw_impact(atom/hit_atom, speed)
+/obj/effect/hallucination/simple/xeno_vent/throw_impact(atom/hit_atom, speed)
 	if(hit_atom == target && target.stat != DEAD)
 		target.Paralyze(3 SECONDS, TRUE, TRUE)
 		target.visible_message(span_danger("[target] flails around wildly."),span_xenowarning("\The [src] pounces at [target]!"))
 
-/datum/hallucination/xeno_attack
+/datum/hallucination/xeno_attack_vent_runner
 	//Xeno crawls from nearby vent,jumps at you, and goes back in
 	var/obj/machinery/atmospherics/components/unary/vent_pump/pump = null
-	var/obj/effect/hallucination/simple/xeno/xeno = null
+	var/obj/effect/hallucination/simple/xeno_vent/xeno = null
 
-/datum/hallucination/xeno_attack/New(mob/living/carbon/C, forced = TRUE)
+/datum/hallucination/xeno_attack_vent_runner/New(mob/living/carbon/C, forced = TRUE)
 	set waitfor = FALSE
 	..()
 	for(var/obj/machinery/atmospherics/components/unary/vent_pump/U in orange(3, target))
@@ -418,59 +418,3 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	target.set_screwyhud(SCREWYHUD_NONE)
 	target.SetSleeping(0)
 	qdel(src)
-
-
-/mob/hallucination
-	density = FALSE
-	status_flags = GODMODE
-	layer = BELOW_MOB_LAYER
-	var/mob/living/carbon/xenomorph/base_mob
-	/// Timer to remove the hit effect
-	var/timer_effect
-
-/mob/hallucination/Initialize(mapload, atom/target, life_time)
-	. = ..()
-	var/possible_mobs = list(
-		/mob/living/carbon/xenomorph/runner,
-		/mob/living/carbon/xenomorph/drone,
-		/mob/living/carbon/xenomorph/defender,
-		/mob/living/carbon/xenomorph/warrior,
-		/mob/living/carbon/xenomorph/wraith,
-	)
-
-	base_mob = pick(possible_mobs)
-	//base_mob = new base_mob.type
-	appearance = base_mob.appearance
-	desc = base_mob.desc
-	name = base_mob.name
-	add_movespeed_modifier(MOVESPEED_ID_XENO_CASTE_SPEED, TRUE, 0, NONE, TRUE, base_mob.xeno_caste.speed)
-	AddComponent(/datum/component/ai_controller, /datum/ai_behavior/xeno/illusion, target)
-	QDEL_IN(src, life_time)
-
-/// Remove the filter effect added when it was hit
-/mob/hallucination/proc/remove_hit_filter()
-	remove_filter("illusion_hit")
-
-/mob/hallucination/projectile_hit()
-	remove_filter("illusion_hit")
-	deltimer(timer_effect)
-	add_filter("illusion_hit", 2, ripple_filter(10, 5))
-	timer_effect = addtimer(CALLBACK(src, .proc/remove_hit_filter), 0.5 SECONDS)
-	return FALSE
-
-/datum/ai_behavior/xeno/hallucination
-	target_distance = 3 //We attack only nearby
-	base_action = ESCORTING_ATOM
-	is_offered_on_creation = FALSE
-
-/datum/ai_behavior/xeno/hallucination/attack_target(datum/soure, atom/attacked)
-	if(!attacked)
-		attacked = atom_to_walk_to
-
-	var/mob/hallucination/hallucination_mob = mob_parent
-	hallucination_mob.changeNext_move(hallucination_mob.base_mob.xeno_caste.attack_delay)
-	if(ismob(attacked))
-		hallucination_mob.do_attack_animation(attacked, ATTACK_EFFECT_REDSLASH)
-		playsound(hallucination_mob.loc, "alien_claw_flesh", 25, 1)
-		return
-	hallucination_mob.do_attack_animation(attacked, ATTACK_EFFECT_CLAW)
