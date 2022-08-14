@@ -229,6 +229,10 @@
 		/obj/item/clothing/glasses/meson/enggoggles = "enggoggles",
 		/obj/item/clothing/glasses/meson/enggoggles/prescription = "enggoggles",
 		/obj/item/clothing/head/hairflower = "flower_pin",
+		/obj/item/clothing/head/squadhb,
+		/obj/item/clothing/head/squadhb/b,
+		/obj/item/clothing/head/squadhb/c,
+		/obj/item/clothing/head/squadhb/d,
 	)
 
 /obj/item/storage/internal/marinehelmet
