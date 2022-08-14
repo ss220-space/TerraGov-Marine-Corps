@@ -2245,7 +2245,7 @@ datum/ammo/bullet/revolver/tp44
 	var/added_spit_delay = 0 //used to make cooldown of the different spits vary.
 	var/spit_cost = 5
 	armor_type = "bio"
-	shell_speed = 1
+	shell_speed = 1.2
 	accuracy = 40
 	accurate_range = 15
 	max_range = 15
@@ -2271,14 +2271,13 @@ datum/ammo/bullet/revolver/tp44
 	spit_cost = 55
 	added_spit_delay = 0
 	damage_type = STAMINA
-	accurate_range = 5
 	max_range = 10
 	accuracy_var_low = 3
 	accuracy_var_high = 3
 	damage = 40
 	stagger_stacks = 1.1
 	slowdown_stacks = 1.5
-	smoke_strength = 0.5
+	smoke_strength = 1
 	smoke_range = 0
 	reagent_transfer_amount = 4
 
@@ -2343,15 +2342,12 @@ datum/ammo/bullet/revolver/tp44
 	smoke_system = null
 
 /datum/ammo/xeno/toxin/upgrade1
-	smoke_strength = 0.6
 	reagent_transfer_amount = 5
 
 /datum/ammo/xeno/toxin/upgrade2
-	smoke_strength = 0.7
 	reagent_transfer_amount = 6
 
 /datum/ammo/xeno/toxin/upgrade3
-	smoke_strength = 0.75
 	reagent_transfer_amount = 6.5
 
 
@@ -2447,10 +2443,10 @@ datum/ammo/bullet/revolver/tp44
 	damage_type = BURN
 	added_spit_delay = 5
 	spit_cost = 50
-	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE
+	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE|AMMO_SKIPS_ALIENS
 	armor_type = "acid"
 	damage = 18
-	max_range = 8
+	max_range = 9
 	bullet_color = COLOR_PALE_GREEN_GRAY
 	///Duration of the acid puddles
 	var/puddle_duration = 1 SECONDS //Lasts 1-3 seconds
