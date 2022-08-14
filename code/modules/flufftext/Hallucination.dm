@@ -1,10 +1,11 @@
 #define HAL_LINES_FILE "hallucinations.json"
 
 GLOBAL_LIST_INIT(hallucination_list, list(
-	/datum/hallucination/sounds = 40,
-	/datum/hallucination/chat = 30,
+	/datum/hallucination/sounds = 49,
+	/datum/hallucination/chat = 20,
 	/datum/hallucination/battle = 20,
 	/datum/hallucination/xeno_attack = 10,
+	/datum/hallucination/death = 1,
 ))
 
 
