@@ -224,6 +224,8 @@ A good representation is: 'byond applies a volume reduction to the sound every X
 			S = pick('sound/weapons/guns/fire/autorifle-1.ogg','sound/weapons/guns/fire/autorifle-2.ogg','sound/weapons/guns/fire/autorifle-3.ogg')
 		if("gun_pulse")
 			S = pick('sound/weapons/guns/fire/m41a_1.ogg','sound/weapons/guns/fire/m41a_2.ogg','sound/weapons/guns/fire/m41a_3.ogg','sound/weapons/guns/fire/m41a_4.ogg','sound/weapons/guns/fire/m41a_5.ogg','sound/weapons/guns/fire/m41a_6.ogg')
+		if("nade_prime")
+			S = pick('sound/weapons/armbomb.ogg')
 
 		// Xeno
 		if("acid_hit")

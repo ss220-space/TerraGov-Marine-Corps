@@ -275,7 +275,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	var/turf/source = random_far_turf()
 	var/possible_sound_list = list()
 	if(!sound_type)
-		sound_type = pick("airlock pry", "hugged", "glass step", "grill hit", "weed placed", "gunshots", "b18", "queen message", "queen died", "larba", "moth", "xeno talk", "xeno roar", "xeno hiss", "xeno help", "gasp", "pain", "random ambient", "clown", "OB", "ERT", "shutters", "powerloss", "revive")
+		sound_type = pick("airlock pry", "hugged", "glass step", "grill hit", "weed placed", "gunshots", "b18", "queen message", "queen died", "larba", "moth", "xeno talk", "xeno roar", "xeno hiss", "xeno help", "gasp", "pain", "random ambient", "clown", "OB", "ERT", "shutters", "powerloss", "revive", "nade")
 	//Strange audio
 	switch(sound_type)
 		if("airlock pry")
@@ -375,6 +375,8 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			target.playsound_local(source, get_sfx("powerloss"), 35, TRUE)
 		if("revive")
 			target.playsound_local(source, get_sfx("revive"), 35, TRUE)
+		if("nade")
+			target.playsound_local(source, get_sfx("nade_prime"), 35, TRUE)
 	qdel(src)
 
 
