@@ -479,7 +479,6 @@
 	L.reagent_pain_modifier -= PAIN_REDUCTION_LIGHT
 	L.adjustStaminaLoss(2)
 	L.stuttering = max(L.stuttering, 1)
-	L.adjustToxLoss(0.5)
 	return ..()
 
 /datum/reagent/toxin/xeno_neurotoxin/overdose_process(mob/living/L, metabolism)
