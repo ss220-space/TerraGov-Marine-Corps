@@ -471,7 +471,7 @@
 	overdose_threshold = 20
 	overdose_crit_threshold = 40
 	scannable = TRUE
-	toxpwr = 0
+	toxpwr = 1
 	purge_list = list(/datum/reagent/medicine/bicaridine, /datum/reagent/medicine/kelotane, /datum/reagent/medicine/tramadol, /datum/reagent/medicine/tricordrazine)
 	purge_rate = 1
 
