@@ -74,7 +74,7 @@
 		counter += 10
 
 	if(affected_mob.reagents.get_reagent_amount(/datum/reagent/medicine/larvaway))
-		counter -= 4
+		counter -= 3
 
 	if(affected_mob.reagents.get_reagent_amount(/datum/reagent/medicine/spaceacillin))
 		counter -= 2
