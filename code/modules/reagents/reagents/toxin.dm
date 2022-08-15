@@ -496,7 +496,7 @@
 		L.adjust_blurriness(1.3)
 	if(L.getToxLoss() < 150)
 		L.adjustToxLoss(3)
-	L.adjustStaminaLoss(2)
+	L.adjustStaminaLoss(4)
 
 /datum/reagent/toxin/xeno_hemodile //Slows its victim. The slow becomes twice as strong with each other xeno toxin in the victim's system.
 	name = "Hemodile"
