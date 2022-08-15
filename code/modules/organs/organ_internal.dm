@@ -275,7 +275,7 @@
 		to_chat(owner, span_warning("All the different drugs in you are starting to make you feel off..."))
 		overdosed = TRUE
 
-	owner.hallucination += 3 + (owner.reagents.total_volume-max_reagents)/15
+	owner.hallucination += 2 + (owner.reagents.total_volume-max_reagents)/15
 	if(prob((owner.reagents.total_volume-max_reagents) * (organ_status + 1) * 0.66))
 		owner.Confused(2 SECONDS * (organ_status + 1))
 

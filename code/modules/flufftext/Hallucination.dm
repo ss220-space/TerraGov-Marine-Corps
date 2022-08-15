@@ -22,8 +22,8 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	var/halpick = pickweight(GLOB.hallucination_list)
 	new halpick(src, FALSE)
 
-	var/min_wait_time = max(10 SECONDS - (hallucination/10) SECONDS, 5 SECONDS)
-	var/max_wait_time = max(30 SECONDS - (hallucination/5) SECONDS, 15 SECONDS)
+	var/min_wait_time = max(12 SECONDS - (hallucination/10) SECONDS, 6 SECONDS)
+	var/max_wait_time = max(36 SECONDS - (hallucination/5) SECONDS, 18 SECONDS)
 	next_hallucination = world.time + rand(min_wait_time, max_wait_time)
 
 /mob/living/carbon/proc/set_screwyhud(hud_type)
