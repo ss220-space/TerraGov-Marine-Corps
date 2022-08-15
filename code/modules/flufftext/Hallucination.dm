@@ -401,7 +401,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	set waitfor = FALSE
 	..()
 	target.set_screwyhud(SCREWYHUD_DEAD)
-	var/delay_time = rand(5 SECONDS, 10 SECONDS)
+	var/delay_time = rand(5 SECONDS, 7 SECONDS)
 	target.Sleeping(15 SECONDS)
 	if(prob(50))
 		var/mob/fakemob
