@@ -487,7 +487,7 @@
 	L.adjust_drugginess(1.1)
 	if(L.getToxLoss() < 150)
 		L.adjustToxLoss(1.5)
-	L.adjustStaminaLoss(1)
+	L.adjustStaminaLoss(2)
 
 /datum/reagent/toxin/xeno_neurotoxin/overdose_crit_process(mob/living/L, metabolism)
 	L.reagent_pain_modifier -= PAIN_REDUCTION_VERY_HEAVY
