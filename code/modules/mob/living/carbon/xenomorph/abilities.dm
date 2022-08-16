@@ -335,9 +335,9 @@
 		if(/obj/structure/mineral_door/resin)
 			plasma_cost = initial(plasma_cost) * 3
 		if(/obj/effect/alien/resin/resin_growth)
-			plasma_cost = initial(plasma_cost) / 2 // 25
-		if(/obj/effect/alien/resin/resin_growth/door) 
-			plasma_cost = initial(plasma_cost) / 2 // 25
+			plasma_cost = initial(plasma_cost) / 4 // 25
+		if(/obj/effect/alien/resin/resin_growth/door)
+			plasma_cost = initial(plasma_cost) / 4 // 25
 
 	if(new_resin)
 		add_cooldown(SSmonitor.gamestate == SHUTTERS_CLOSED ? get_cooldown()/2 : get_cooldown())
