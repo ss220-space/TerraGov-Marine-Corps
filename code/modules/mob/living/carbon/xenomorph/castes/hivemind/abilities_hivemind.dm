@@ -9,7 +9,7 @@
 
 /datum/action/xeno_action/activable/secrete_resin/ranged/slow
 	base_wait = 1 SECONDS
-	max_range = 4
+	max_range = 5
 	buildable_structures = list(
 		/turf/closed/wall/resin/regenerating,
 		/obj/effect/alien/resin/sticky,
