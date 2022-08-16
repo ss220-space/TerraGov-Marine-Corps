@@ -79,7 +79,7 @@
 	return TRUE
 
 
-/obj/effect/alien/resin/resingrowth
+/obj/effect/alien/resin/resin_growth
 	name = GROWTH_WALL
 	desc = "Some sort of resin growth. Looks incredibly fragile"
 	icon_state = "growth_wall"
@@ -91,7 +91,7 @@
 	var/growth_time = 300 SECONDS
 	var/structure = "wall"
 
-/obj/effect/alien/resin/resingrowth/Initialize()
+/obj/effect/alien/resin/resin_growth/Initialize()
 	. = ..()
 	addtimer(CALLBACK(src, .proc/on_growth), growth_time)
 	var/static/list/connections = list(
@@ -99,14 +99,14 @@
 	)
 	AddElement(/datum/element/connect_loc, connections)
 
-/obj/effect/alien/resin/resingrowth/proc/trample_plant(datum/source, atom/movable/O, oldloc, oldlocs)
+/obj/effect/alien/resin/resin_growth/proc/trample_plant(datum/source, atom/movable/O, oldloc, oldlocs)
 	SIGNAL_HANDLER
 	if(!ismob(O) || isxeno(O))
 		return
 	playsound(src, "alien_resin_break", 25)
 	deconstruct(TRUE)
 
-/obj/effect/alien/resin/resingrowth/proc/on_growth()
+/obj/effect/alien/resin/resin_growth/proc/on_growth()
 	playsound(src, "alien_resin_build", 25)
 	var/turf/T = get_turf(src)
 	switch(structure)
@@ -116,7 +116,7 @@
 			new /obj/structure/mineral_door/resin(T)
 	deconstruct(TRUE)
 
-/obj/effect/alien/resin/resingrowth/door
+/obj/effect/alien/resin/resin_growth/door
 	name = GROWTH_DOOR
 	structure = "door"
 	icon_state = "growth_door"
