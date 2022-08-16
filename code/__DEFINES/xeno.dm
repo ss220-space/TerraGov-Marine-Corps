@@ -28,6 +28,8 @@
 #define RESIN_WALL "resin wall"
 #define STICKY_RESIN "sticky resin"
 #define RESIN_DOOR "resin door"
+#define GROWTH_WALL "growth wall"
+#define GROWTH_DOOR "growth door"
 
 //Xeno reagents defines
 #define DEFILER_NEUROTOXIN "Neurotoxin"
@@ -109,7 +111,11 @@ GLOBAL_LIST_INIT(resin_images_list, list(
 		STICKY_RESIN = image('icons/mob/actions.dmi', icon_state = STICKY_RESIN),
 		RESIN_DOOR = image('icons/mob/actions.dmi', icon_state = RESIN_DOOR)
 		))
-
+//List of resin growth images
+GLOBAL_LIST_INIT(growth_images_list, list(
+		GROWTH_WALL = image('icons/mob/actions.dmi', icon_state = GROWTH_WALL),
+		GROWTH_DOOR = image('icons/mob/actions.dmi', icon_state = GROWTH_DOOR)
+		))
 //xeno upgrade flags
 ///Message the hive when we buy this upgrade
 #define UPGRADE_FLAG_MESSAGE_HIVE (1<<0)
