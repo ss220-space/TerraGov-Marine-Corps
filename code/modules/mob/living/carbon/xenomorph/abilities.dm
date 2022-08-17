@@ -192,7 +192,9 @@
 	if(X.selected_ability != src)
 		return ..()
 	. = ..()
-	var/resin_choice = show_radial_menu(owner, owner, GLOB.resin_images_list, radius = 35)
+	var/list/available = GLOB.resin_images_list
+	available.len = buildable_structures.len
+	var/resin_choice = show_radial_menu(owner, owner, available, radius = 35)
 	if(!resin_choice)
 		return
 	var/i = GLOB.resin_images_list.Find(resin_choice)
