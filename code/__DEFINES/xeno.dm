@@ -109,9 +109,7 @@ GLOBAL_LIST_INIT(plant_images_list, list(
 GLOBAL_LIST_INIT(resin_images_list, list(
 		RESIN_WALL = image('icons/mob/actions.dmi', icon_state = RESIN_WALL),
 		STICKY_RESIN = image('icons/mob/actions.dmi', icon_state = STICKY_RESIN),
-		RESIN_DOOR = image('icons/mob/actions.dmi', icon_state = RESIN_DOOR),
-		GROWTH_WALL = image('icons/mob/actions.dmi', icon_state = GROWTH_WALL),
-		GROWTH_DOOR = image('icons/mob/actions.dmi', icon_state = GROWTH_DOOR),
+		RESIN_DOOR = image('icons/mob/actions.dmi', icon_state = RESIN_DOOR)
 		))
 
 //xeno upgrade flags
