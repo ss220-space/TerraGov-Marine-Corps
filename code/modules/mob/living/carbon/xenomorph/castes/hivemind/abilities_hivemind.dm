@@ -9,7 +9,7 @@
 
 /datum/action/xeno_action/activable/secrete_resin/ranged/slow
 	base_wait = 1 SECONDS
-	max_range = 5
+	max_range = 4
 	buildable_structures = list(
 		/turf/closed/wall/resin/regenerating,
 		/obj/effect/alien/resin/sticky,
@@ -22,19 +22,6 @@
 	if (owner.status_flags & INCORPOREAL)
 		return FALSE
 	return ..()
-
-/datum/action/xeno_action/activable/secrete_resin/ranged/slow/action_activate()
-	var/mob/living/carbon/xenomorph/X = owner
-	if(X.selected_ability != src)
-		return ..()
-	var/i = buildable_structures.Find(X.selected_resin)
-	if(length(buildable_structures) == i)
-		X.selected_resin = buildable_structures[1]
-	else
-		X.selected_resin = buildable_structures[i+1]
-	var/atom/A = X.selected_resin
-	X.balloon_alert(X, initial(A.name))
-	update_button_icon()
 
 /datum/action/xeno_action/change_form
 	name = "Change form"
