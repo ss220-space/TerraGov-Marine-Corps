@@ -72,13 +72,12 @@
 /obj/machinery/marine_selector/ui_static_data(mob/user)
 	. = list()
 	.["displayed_records"] = list()
+
 	for(var/c in categories)
 		.["displayed_records"][c] = list()
 
 	.["vendor_name"] = name
 	.["show_points"] = use_points
-	var/obj/item/card/id/ID = user.get_idcard()
-	.["total_marine_points"] = ID ? initial(ID.marine_points) : 0
 
 
 	for(var/i in listed_products)
@@ -94,17 +93,29 @@
 	. = list()
 
 	var/obj/item/card/id/I = user.get_idcard()
-	.["current_m_points"] = I?.marine_points || 0
 	var/buy_flags = I?.marine_buy_flags || NONE
-
+	var/obj/item/card/id/dogtag/full/ptscheck = new /obj/item/card/id/dogtag/full
 
 	.["cats"] = list()
 	for(var/i in GLOB.marine_selector_cats)
-		.["cats"][i] = list("remaining" = 0, "total" = 0)
+		.["cats"][i] = list(
+			"remaining" = 0,
+			"total" = 0,
+			"remaining_points" = 0,
+			"total_points" = 0,
+			"choice" = "choice",
+			)
 		for(var/flag in GLOB.marine_selector_cats[i])
 			.["cats"][i]["total"]++
 			if(buy_flags & flag)
 				.["cats"][i]["remaining"]++
+
+	for(var/nm in I?.marine_points)
+		.["cats"][nm] = list(
+			"remaining_points" = I?.marine_points[nm],
+			"total_points" = ptscheck?.marine_points[nm],
+			"choice" = "points",
+			)
 
 /obj/machinery/marine_selector/ui_act(action, list/params)
 	. = ..()
@@ -122,6 +133,7 @@
 			var/obj/item/card/id/I = usr.get_idcard()
 
 			var/list/L = listed_products[idx]
+			var/item_category = L[1]
 			var/cost = L[3]
 
 			if(SSticker.mode?.flags_round_type & MODE_HUMAN_ONLY && is_type_in_typecache(idx, GLOB.hvh_restricted_items_list))
@@ -130,7 +142,7 @@
 					flick(icon_deny, src)
 				return
 
-			if(use_points && I.marine_points < cost)
+			if(use_points && I.marine_points[item_category] < cost)
 				to_chat(usr, span_warning("Not enough points."))
 				if(icon_deny)
 					flick(icon_deny, src)
@@ -185,7 +197,7 @@
 						new /obj/item/hud_tablet(loc, vendor_role, H.assigned_squad)
 
 			if(use_points)
-				I.marine_points -= cost
+				I.marine_points[item_category] -= cost
 			. = TRUE
 
 	updateUsrDialog()
@@ -195,6 +207,7 @@
 	desc = "An automated closet hooked up to a colossal storage unit of standard-issue uniform and armor."
 	icon_state = "marineuniform"
 	vendor_role = /datum/job/terragov/squad/standard
+	use_points = TRUE
 	categories = list(
 		CAT_STD = list(MARINE_CAN_BUY_UNIFORM),
 		CAT_GLA = list(MARINE_CAN_BUY_GLASSES),
@@ -207,11 +220,12 @@
 		CAT_MOD = list(MARINE_CAN_BUY_MODULE),
 		CAT_ARMMOD = list(MARINE_CAN_BUY_ARMORMOD),
 		CAT_MAS = list(MARINE_CAN_BUY_MASK),
+		CAT_INJ = null
 	)
 
 /obj/machinery/marine_selector/clothes/Initialize()
 	. = ..()
-	listed_products = GLOB.marine_clothes_listed_products
+	listed_products = GLOB.marine_clothes_listed_products + GLOB.marine_gear_listed_products
 
 /obj/machinery/marine_selector/clothes/loyalist
 	faction = FACTION_TERRAGOV
@@ -936,6 +950,10 @@
 #undef MARINE_CAN_BUY_ESSENTIALS
 
 #undef MARINE_CAN_BUY_ALL
-#undef MARINE_TOTAL_BUY_POINTS
+#undef DEFAULT_TOTAL_BUY_POINTS
+#undef DEFAULT_INJECTOR_TOTAL_BUY_POINTS
+#undef MEDIC_TOTAL_BUY_POINTS
+#undef MEDIC_INJECTOR_TOTAL_BUY_POINTS
+#undef ENGINEER_TOTAL_BUY_POINTS
 #undef SQUAD_LOCK
 #undef JOB_LOCK

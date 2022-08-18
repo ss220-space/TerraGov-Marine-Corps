@@ -206,6 +206,12 @@
 	icon_state = "bottle19"
 	list_reagents = list(/datum/reagent/medicine/dermaline = 30, /datum/reagent/medicine/meralyne = 30)
 
+/obj/item/reagent_containers/glass/bottle/tetralyne
+	name = "\improper Tetralyne bottle"
+	desc = "A small bottle. Contains tetralyne - used as a potent treatment against physical injuries."
+	icon_state = "bottle16"
+	list_reagents = list(/datum/reagent/medicine/tetralyne = 60,)
+
 /obj/item/reagent_containers/glass/bottle/nanoblood
 	name = "\improper Nanoblood bottle"
 	desc = "A small bottle. Contains nanoblood - used as a treatment for large amounts of blood loss."
