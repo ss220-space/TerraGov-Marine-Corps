@@ -309,7 +309,7 @@
 	icon_state = "autoinjector-6"
 	amount_per_transfer_from_this = 1
 	volume = 1
-	list_reagents = list(/datum/reagent/medicine/research/medicalnanites = 1)
+	list_reagents = list(/datum/reagent/medicine/research/medicalnanites_seed = 1)
 
 /obj/item/reagent_containers/hypospray/autoinjector/pain //made for debugging
 	name = "liquid pain autoinjector"
