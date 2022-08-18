@@ -473,29 +473,6 @@
 	toxpwr = 0
 
 /datum/reagent/toxin/xeno_neurotoxin/on_mob_life(mob/living/L, metabolism)
-	var/power
-	switch(current_cycle)
-		if(1 to 20)
-			power = (2*effect_str) //While stamina loss is going, stamina regen apparently doesn't happen, so I can keep this smaller.
-			L.reagent_pain_modifier -= PAIN_REDUCTION_LIGHT
-		if(21 to 45)
-			power = (6*effect_str)
-			L.reagent_pain_modifier -= PAIN_REDUCTION_HEAVY
-			L.jitter(4) //Shows that things are bad
-		if(46 to INFINITY)
-			power = (15*effect_str)
-			L.reagent_pain_modifier -= PAIN_REDUCTION_VERY_HEAVY
-			L.jitter(8) //Shows that things are *really* bad
-
-	//Apply stamina damage, then apply any 'excess' stamina damage beyond our maximum as tox and oxy damage
-	var/stamina_loss_limit = L.maxHealth * 2
-	L.adjustStaminaLoss(min(power, max(0, stamina_loss_limit - L.staminaloss))) //If we're under our stamina_loss limit, apply the difference between our limit and current stamina damage or power, whichever's less
-
-	var/stamina_excess_damage = (L.staminaloss + power) - stamina_loss_limit
-	if(stamina_excess_damage > 0) //If we exceed maxHealth * 2 stamina damage, apply any excess as toxloss and oxyloss
-		L.adjustToxLoss(stamina_excess_damage * 0.5)
-		L.adjustOxyLoss(stamina_excess_damage * 0.5)
-		L.Losebreath(2) //So the oxy loss actually means something.
 
 	L.stuttering = max(L.stuttering, 1)
 

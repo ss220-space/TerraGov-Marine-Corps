@@ -2364,6 +2364,7 @@ datum/ammo/bullet/revolver/tp44
 /datum/ammo/xeno/toxin/heavy/upgrade3
 	reagent_transfer_amount = 21
 
+
 /datum/ammo/xeno/sticky
 	name = "sticky resin spit"
 	icon_state = "sticky"
