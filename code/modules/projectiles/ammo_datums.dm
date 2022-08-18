@@ -2359,7 +2359,6 @@ datum/ammo/bullet/revolver/tp44
 	spit_cost = 400
 	damage = 40
 	smoke_strength = 0.9
-<<<<<<< HEAD
 	reagent_transfer_amount = 18
 	smoke_range = 1
 
@@ -2374,7 +2373,6 @@ datum/ammo/bullet/revolver/tp44
 /datum/ammo/xeno/toxin/heavy/upgrade3
 	smoke_strength = 1
 	reagent_transfer_amount = 21
-=======
 	reagent_transfer_amount = 8.5
 
 /datum/ammo/xeno/toxin/heavy/upgrade1
@@ -2388,7 +2386,6 @@ datum/ammo/bullet/revolver/tp44
 /datum/ammo/xeno/toxin/heavy/upgrade3
 	smoke_strength = 1
 	reagent_transfer_amount = 10
->>>>>>> 952688b564 (smoke revert)
 
 
 /datum/ammo/xeno/sticky
