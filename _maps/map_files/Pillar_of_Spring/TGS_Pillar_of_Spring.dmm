@@ -2073,13 +2073,6 @@
 	dir = 1
 	},
 /area/mainship/living/numbertwobunks)
-"gj" = (
-/obj/structure/disposalpipe/segment/corner,
-/obj/effect/ai_node,
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 10
-	},
-/area/mainship/medical/chemistry)
 "gk" = (
 /turf/open/floor/mainship_hull/dir{
 	dir = 10
@@ -5768,18 +5761,6 @@
 "rg" = (
 /turf/open/floor/mainship/stripesquare,
 /area/mainship/hallways/starboard_hallway)
-"rh" = (
-/obj/machinery/door/airlock/mainship/research/pen,
-/obj/machinery/door/firedoor/mainship,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/medical_science)
 "ri" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -8456,14 +8437,6 @@
 	dir = 1
 	},
 /area/mainship/hallways/hangar)
-"yZ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/mainship/sterile/purple/corner{
-	dir = 8
-	},
-/area/mainship/medical/chemistry)
 "za" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -16646,11 +16619,6 @@
 /obj/effect/ai_node,
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hull/lower_hull)
-"VV" = (
-/obj/structure/flora/pottedplant,
-/obj/machinery/vending/nanomed,
-/turf/open/floor/mainship/mono,
-/area/mainship/engineering/engineering_workshop)
 "VW" = (
 /obj/machinery/power/apc/mainship,
 /obj/structure/cable,
@@ -48778,7 +48746,7 @@ Yv
 UA
 NO
 qG
-Ry
+pq
 uT
 jy
 Uu

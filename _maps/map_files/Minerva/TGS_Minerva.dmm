@@ -3401,12 +3401,6 @@
 /obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/open/floor/mainship/research,
 /area/mainship/medical/medical_science)
-"lf" = (
-/obj/effect/ai_node,
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 6
-	},
-/area/mainship/medical/chemistry)
 "lg" = (
 /obj/machinery/computer/pandemic,
 /turf/open/floor/mainship/research,
@@ -3766,14 +3760,6 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
-"mq" = (
-/obj/machinery/light/mainship{
-	dir = 1
-	},
-/turf/open/floor/mainship/sterile/purple/side{
-	dir = 1
-	},
-/area/mainship/medical/chemistry)
 "ms" = (
 /obj/machinery/computer/camera_advanced/overwatch/bravo{
 	name = "Delta Overwatch Console"
@@ -5761,12 +5747,6 @@
 	},
 /turf/open/floor/mainship/cargo,
 /area/mainship/hallways/port_hallway)
-"tv" = (
-/obj/machinery/alarm,
-/turf/open/floor/mainship/orange{
-	dir = 5
-	},
-/area/mainship/living/briefing)
 "tw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6519,9 +6499,6 @@
 	dir = 8
 	},
 /area/mainship/medical/lounge)
-"vI" = (
-/turf/open/floor/mainship/sterile/purple/corner,
-/area/mainship/medical/chemistry)
 "vJ" = (
 /turf/open/floor/mainship/sterile/side{
 	dir = 8
@@ -7001,11 +6978,6 @@
 /obj/machinery/door/airlock/multi_tile/mainship/generic/noglass,
 /turf/open/floor/mainship/mono,
 /area/mainship/living/evacuation)
-"xj" = (
-/turf/open/floor/mainship/sterile/purple/corner{
-	dir = 4
-	},
-/area/mainship/medical/chemistry)
 "xk" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical,
@@ -8378,6 +8350,12 @@
 /obj/item/storage/firstaid/adv,
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/squads/req)
+"Bd" = (
+/obj/machinery/alarm,
+/turf/open/floor/mainship/orange{
+	dir = 5
+	},
+/area/mainship/living/briefing)
 "Be" = (
 /obj/machinery/light/mainship{
 	dir = 4
@@ -12216,13 +12194,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hallways/starboard_hallway)
-"MG" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable,
-/turf/open/floor/mainship/sterile/dark,
-/area/mainship/medical/chemistry)
 "MH" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -25063,7 +25034,7 @@ Ot
 BG
 NB
 Cg
-tv
+Bd
 jK
 Hi
 ZN
