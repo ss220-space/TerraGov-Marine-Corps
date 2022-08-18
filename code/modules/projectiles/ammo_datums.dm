@@ -2273,9 +2273,9 @@ datum/ammo/bullet/revolver/tp44
 	damage = 40
 	stagger_stacks = 1.1
 	slowdown_stacks = 1.5
-	smoke_strength = 0.5
+	smoke_strength = 1
 	smoke_range = 0
-	reagent_transfer_amount = 4
+	reagent_transfer_amount = 5
 
 ///Set up the list of reagents the spit transfers upon impact
 /datum/ammo/xeno/toxin/proc/set_reagents()
@@ -2338,16 +2338,13 @@ datum/ammo/bullet/revolver/tp44
 	smoke_system = null
 
 /datum/ammo/xeno/toxin/upgrade1
-	smoke_strength = 0.6
-	reagent_transfer_amount = 5
-
-/datum/ammo/xeno/toxin/upgrade2
-	smoke_strength = 0.7
 	reagent_transfer_amount = 6
 
+/datum/ammo/xeno/toxin/upgrade2
+	reagent_transfer_amount = 7
+
 /datum/ammo/xeno/toxin/upgrade3
-	smoke_strength = 0.75
-	reagent_transfer_amount = 6.5
+	reagent_transfer_amount = 8
 
 
 /datum/ammo/xeno/toxin/heavy //Praetorian
@@ -2355,19 +2352,15 @@ datum/ammo/bullet/revolver/tp44
 	added_spit_delay = 0
 	spit_cost = 100
 	damage = 40
-	smoke_strength = 0.9
 	reagent_transfer_amount = 8.5
 
 /datum/ammo/xeno/toxin/heavy/upgrade1
-	smoke_strength = 0.9
 	reagent_transfer_amount = 9
 
 /datum/ammo/xeno/toxin/heavy/upgrade2
-	smoke_strength = 0.95
 	reagent_transfer_amount = 9.5
 
 /datum/ammo/xeno/toxin/heavy/upgrade3
-	smoke_strength = 1
 	reagent_transfer_amount = 10
 
 
