@@ -1261,7 +1261,7 @@
 	name = "Medical nanites seedling"
 	description = "These are a batch of construction nanites altered for in-vivo replication. They can heal wounds using the iron present in the bloodstream, but need to adapt to subject's protein structure before giving positive effects. Medical care is recommended during injection."
 	color = "#19C832"
-	custom_metabolism = 990
+	custom_metabolism = 999
 	scannable = FALSE
 	taste_description = "metal, followed by mild burning"
 
