@@ -2270,7 +2270,6 @@ datum/ammo/bullet/revolver/tp44
 	spit_cost = 55
 	added_spit_delay = 0
 	damage_type = STAMINA
-	accurate_range = 5
 	max_range = 10
 	accuracy_var_low = 3
 	accuracy_var_high = 3
@@ -2463,7 +2462,7 @@ datum/ammo/bullet/revolver/tp44
 	spit_cost = 50
 	armor_type = "acid"
 	damage = 18
-	max_range = 8
+	max_range = 9
 	bullet_color = COLOR_PALE_GREEN_GRAY
 	///Duration of the acid puddles
 	var/puddle_duration = 1 SECONDS //Lasts 1-3 seconds
