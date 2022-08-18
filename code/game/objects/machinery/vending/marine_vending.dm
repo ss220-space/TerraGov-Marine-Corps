@@ -978,6 +978,7 @@
 			/obj/item/reagent_containers/hypospray/autoinjector/dylovene = -1,
 			/obj/item/reagent_containers/hypospray/autoinjector/combat = -1,
 			/obj/item/reagent_containers/hypospray/autoinjector/inaprovaline = -1,
+			/obj/item/reagent_containers/hypospray/autoinjector/spaceacillin = 20,
 			/obj/item/reagent_containers/hypospray/autoinjector/oxycodone = 30,
 			/obj/item/reagent_containers/hypospray/autoinjector/hypervene = 20,
 			/obj/item/reagent_containers/hypospray/autoinjector/alkysine = 20,
@@ -1247,6 +1248,10 @@
 			/obj/item/storage/pouch/document = -1,
 		),
 		"Headwear" = list(
+			/obj/item/clothing/head/squadhb/ = -1,
+			/obj/item/clothing/head/squadhb/b = -1,
+			/obj/item/clothing/head/squadhb/c = -1,
+			/obj/item/clothing/head/squadhb/d = -1,
 			/obj/item/clothing/head/slouch = -1,
 			/obj/item/clothing/head/headband/red = -1,
 			/obj/item/clothing/head/headband/rambo = -1,
