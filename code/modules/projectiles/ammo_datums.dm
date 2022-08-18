@@ -2352,17 +2352,17 @@ datum/ammo/bullet/revolver/tp44
 	added_spit_delay = 0
 	spit_cost = 400
 	damage = 40
-	reagent_transfer_amount = 8.5
+	reagent_transfer_amount = 18
+	smoke_range = 1
 
 /datum/ammo/xeno/toxin/heavy/upgrade1
-	reagent_transfer_amount = 9
+	reagent_transfer_amount = 19
 
 /datum/ammo/xeno/toxin/heavy/upgrade2
-	reagent_transfer_amount = 9.5
+	reagent_transfer_amount = 20
 
 /datum/ammo/xeno/toxin/heavy/upgrade3
-	smoke_strength = 0.9
-	reagent_transfer_amount = 18
+	reagent_transfer_amount = 21
 
 /datum/ammo/xeno/sticky
 	name = "sticky resin spit"
