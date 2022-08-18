@@ -2009,7 +2009,7 @@ datum/ammo/bullet/revolver/tp44
 	accuracy_var_low = 3
 	accuracy_var_high = 3
 	damage = 40
-	stagger_stacks = 1.6
+	stagger_stacks = 1.1
 	slowdown_stacks = 1.5
 	smoke_strength = 0.5
 	smoke_range = 0
