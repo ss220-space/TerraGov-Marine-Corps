@@ -323,30 +323,6 @@
 	},
 /turf/open/floor/mainship/tcomms,
 /area/mainship/command/telecomms)
-"aZ" = (
-/obj/machinery/door/poddoor/mainship/ammo{
-	dir = 2;
-	name = "\improper Heavy Ordinance Storage"
-	},
-/turf/open/floor/mainship/mono,
-/area/mainship/hallways/hangar)
-"ba" = (
-/obj/machinery/door/poddoor/mainship/ammo{
-	dir = 2;
-	name = "\improper Heavy Ordinance Storage"
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/mainship/hallways/hangar)
-"bb" = (
-/obj/machinery/door/poddoor/mainship/ammo{
-	dir = 2;
-	name = "\improper Heavy Ordinance Storage"
-	},
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/plating/plating_catwalk,
-/area/mainship/hallways/hangar)
 "bc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
@@ -1124,6 +1100,14 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/layer1,
 /turf/open/floor/mainship/mono,
 /area/mainship/hallways/hangar)
+"dy" = (
+/obj/machinery/light/mainship{
+	dir = 1
+	},
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 1
+	},
+/area/mainship/medical/chemistry)
 "dz" = (
 /obj/machinery/light/mainship{
 	dir = 4
@@ -1379,6 +1363,11 @@
 /obj/structure/janitorialcart,
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hull/port_hull)
+"eo" = (
+/turf/open/floor/mainship/sterile/purple/corner{
+	dir = 4
+	},
+/area/mainship/medical/chemistry)
 "ep" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/plating_catwalk,
@@ -2259,6 +2248,12 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/squads/req)
+"ha" = (
+/obj/effect/ai_node,
+/turf/open/floor/mainship/sterile/purple/side{
+	dir = 6
+	},
+/area/mainship/medical/chemistry)
 "hc" = (
 /obj/structure/table/mainship/nometal,
 /obj/machinery/cell_charger,
@@ -4924,6 +4919,14 @@
 	},
 /turf/open/floor/mainship_hull,
 /area/space)
+"qr" = (
+/obj/machinery/door/poddoor/mainship/ammo{
+	dir = 2;
+	id = "ammo1";
+	name = "\improper Heavy Ordinance Storage"
+	},
+/turf/open/floor/mainship/mono,
+/area/mainship/hallways/hangar)
 "qu" = (
 /obj/machinery/door/poddoor/railing{
 	dir = 2;
@@ -7977,6 +7980,9 @@
 /obj/structure/cable,
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/living/grunt_rnr)
+"Ad" = (
+/turf/open/floor/mainship/sterile/purple/corner,
+/area/mainship/medical/chemistry)
 "Ae" = (
 /obj/machinery/marine_selector/clothes,
 /obj/structure/window/reinforced{
@@ -8493,6 +8499,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/mainship/hallways/hangar)
+"Bx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable,
+/turf/open/floor/mainship/sterile/dark,
+/area/mainship/medical/chemistry)
 "By" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/decal/cleanable/blood/oil,
@@ -11025,6 +11038,14 @@
 /obj/item/tool/lighter/zippo,
 /turf/open/floor/carpet,
 /area/mainship/living/bridgebunks)
+"Jf" = (
+/obj/machinery/door/poddoor/mainship/ammo{
+	dir = 2;
+	id = "ammo1";
+	name = "\improper Heavy Ordinance Storage"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/mainship/hallways/hangar)
 "Ji" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 8
@@ -15460,6 +15481,17 @@
 	},
 /turf/open/floor/mainship/mono,
 /area/mainship/engineering/engine_core)
+"WJ" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/door/poddoor/mainship/ammo{
+	dir = 2;
+	id = "ammo1";
+	name = "\improper Heavy Ordinance Storage"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/mainship/hallways/hangar)
 "WK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -21664,7 +21696,7 @@ az
 dP
 cW
 aW
-aZ
+qr
 VC
 VC
 VC
@@ -21762,7 +21794,7 @@ dV
 dV
 dx
 aA
-aZ
+qr
 VC
 VC
 VC
@@ -21860,7 +21892,7 @@ mR
 aj
 eC
 aW
-ba
+Jf
 NA
 NA
 NA
@@ -21958,7 +21990,7 @@ mR
 aj
 eC
 aC
-bb
+WJ
 bw
 bw
 bw
@@ -22056,7 +22088,7 @@ dP
 dP
 dT
 aD
-aZ
+qr
 VC
 VC
 VC
@@ -22154,7 +22186,7 @@ dV
 dV
 VC
 aW
-aZ
+qr
 VC
 VC
 VC
@@ -22486,7 +22518,7 @@ Cc
 Fe
 Gk
 Hc
-MG
+Bx
 Iz
 Ju
 Ku
@@ -22585,9 +22617,9 @@ Ff
 Gl
 Hd
 HQ
-mq
+dy
 Jt
-lf
+ha
 Jv
 Jv
 Mm
@@ -22683,9 +22715,9 @@ Fg
 Gm
 kt
 HQ
-vI
+Ad
 Jv
-xj
+eo
 HQ
 Is
 Is

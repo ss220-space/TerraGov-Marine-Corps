@@ -1,0 +1,179 @@
+2022-08-01:
+  BraveMole:
+  - bugfix: Fix plural gender not able to chose gear
+  Lumipharon:
+  - balance: Slightly reduced the accuracy of volkite projectiles, and decreased the
+      damage of deflagration
+  - balance: Volkite weapons have higher damage falloff
+  - balance: Reduced the accurate range of the VX-33 Caliver and VX-42 Culverin
+  - balance: Reduced the magazine capacity of the VX-33 Caliver
+  - bugfix: gamemode votes should now work as expected in all cases.
+  novaepee:
+  - qol: Keybind for Move, Focus, Hold, Send, and Rally Order
+2022-08-03:
+  Autisem:
+  - balance: Dead marines will not cap the xeno pop for crash
+  - balance: Xeno larva check will proc every 1 minut instead of 2 minuts for crash
+2022-08-04:
+  Lauwma:
+  - rscadd: Adds back good old smoke grenades
+  Lumipharon:
+  - balance: Combat Patrol - bioscan occurs every 3 minutes instead of 5
+  - balance: Combat Patrol - max team player ratio changed to 1.1 from 1.2
+  - bugfix: fixes a projectile bug for a future version of byond
+  Vondiech:
+  - code_imp: turned long chain of else-if's in /mob/dead/observer/Topic(href, href_list)
+      into a switch
+  novaepee:
+  - rscadd: Give attack, defend, and retreat order to FC, SL, and aSL (also CO, SO,
+      CSE, RO, and CMO)
+  - balance: better coordination with marines, hopefully
+2022-08-05:
+  BraveMole:
+  - bugfix: Fix inconsistent hugger activation on hit
+  - bugfix: Fix direction on pipe changing when tadpole is landing
+  - bugfix: Taking over synths gives them the wrong random name race format
+  - qol: Drop pod ejects marine if the marine dies
+  - qol: Add auto climbing
+  - balance: Prevent placing silo and other blessing's building near fob, outside
+      of weeds, etc.
+  - bugfix: Fix burst breaking gun in high lag situation
+  - bugfix: Fix spawned shotgun not able to shoot
+  - bugfix: Prevent corpse lunging
+  - bugfix: Fix wraith unable to time shift self again after entering and existing
+      crit whilst under the effect of time shift
+  - bugfix: Fix being able to vent out in dense object
+  - bugfix: Fix alamo being stuck shipside if you touched the console too late
+  - bugfix: Fix motion detector shutting down impromptly
+  - bugfix: Fix stagger not being applied with deployed gun
+  - bugfix: Set Xeno buffs admin verb is now in percentage
+  - bugfix: Fix disguised hunter still having wound overlay
+  - bugfix: Fix ai controlling doors groundside
+  - bugfix: Fix synth's getting human limbs after aheal
+  - bugfix: Cannot deploy via alt click menu
+  - bugfix: Fix fob drone placing cade diagonally
+  - bugfix: Fix corpse spawner being counted in statistic
+  - code_imp: Minor performance increase in projectile code
+  - bugfix: Prevent from spamming launch in tadpole
+  QualityVan:
+  - refactor: Anything can emit auras. both buff orders and pheromones use the same
+      system, although in slightly different ways.
+  - rscadd: Humans using overwatch computers can transmit buff orders through them.
+  XElectricX:
+  - bugfix: Large object transparency no longer makes all tiles a multitile object
+      occupies the only thing clickable.
+  goose4429:
+  - code_imp: Refactored vendor code for loadouts
+  - code_imp: Vendors now support several point categories
+2022-08-06:
+  tyeagg:
+  - rscadd: rappel rope when entering map
+  - qol: screen alert for respawn waves and objective
+  - balance: respawn timer for patrol to 5 minutes
+  - soundadd: rappel and tadpole hover sound
+  - imageadd: rappel and patrol point
+2022-08-07:
+  BraveMole:
+  - bugfix: Fix climbing
+  Kuro020:
+  - bugfix: fixed the lever action mob sprite
+  QualityVan:
+  - bugfix: Eggs work a little more the way they ought. Flaming them won't make the
+      hugger hatch, for instance.
+2022-08-08:
+  BraveMole:
+  - bugfix: Fix bonus projectile not having IFF
+  - bugfix: Fix sadar turret not shooting
+  - code_imp: Attachment icon no longer update every icon change
+  - bugfix: Fix being able to shoot in a tarp
+  - rscadd: Add overlay short description on hypospray and pill bottles
+  - bugfix: Fix tadpole able to crush shutters
+2022-08-09:
+  Araulius:
+  - balance: Increased the amount of lemoline per crate from 10u to 30u
+  - balance: increased cost of lemoline crate from 5 points to 8 points
+  Lumipharon:
+  - rscadd: Added some HvH specific end of round stats for Combat Patrol, projectiles
+      are counted instead of just bullets
+  - code_imp: tidied up end of round stats
+  Moraetea:
+  - balance: Increasing sunder recovery during Gorger drain ability
+2022-08-10:
+  RikuTheKiller:
+  - rscdel: removed useless vali messages
+  - rscdel: removed redundant check for volume amount
+  - spellcheck: changed the exact wording on some of the vali balloon messages
+  Xsdew:
+  - imageadd: 'Re sprites for the following: AR-18, AR-12, SMG-90, P-14, SH-35, MG-42.'
+  - imagedel: Unused sprites of those weapons were removed.
+  - code_imp: added code to allow for the new sprites to be used, with the MG-42 getting
+      the first big mob icon sprite.
+  mc-oofert:
+  - bugfix: You can no longer get out of the condor while it is flying so you dont
+      kill yourself
+  tyeagg:
+  - bugfix: wave respawns not working
+2022-08-11:
+  Losenis:
+  - rscadd: Synths can now have hair.
+  Lumipharon:
+  - bugfix: fixed ghost projectiles
+  iLikeMemes:
+  - qol: Corrected researcher's lemoline bottle description.
+2022-08-12:
+  BraveMole:
+  - bugfix: Controlling a remote vehicle as an ai remove static
+  - bugfix: You can hear again through a remote controlled vehicle
+  - qol: Remote controlled vehicle can move diagonally
+  - qol: You can open cades with droids with control click
+  - bugfix: Fix wrong flag on shouldermount, causing gun to cycle too much
+  - bugfix: Prevent shoulder-mount duel weapon firing
+  QualityVan:
+  - code_imp: Cleanup from aura refactor
+  RikuTheKiller:
+  - rscadd: new keybind for toggling self-harm, defaults to on
+2022-08-13:
+  BraveMole:
+  - rscadd: Set default client fps to 60
+  Xsdew:
+  - imageadd: Further refinements to the AR12, AR18, SMG90, and SH35 sprites.
+2022-08-14:
+  BraveMole:
+  - bugfix: Fix xeno fire overlay not changing dir when the xeno is turning
+  - bugfix: Fix medscanner being counted as surgery tool
+2022-08-15:
+  Lumipharon:
+  - bugfix: Fix some Combat Patrol end of round stats
+2022-08-16:
+  Lumipharon:
+  - rscadd: 'Combat Patrol: Added laser rifle and AR-55 loadouts to TGMC SL''s'
+  - rscadd: 'Combat Patrol: Added SMG-90, laser carbine and AR-21 loadouts to TGMC
+      medics'
+  - rscadd: 'Combat Patrol: Added AR-21 loadout to TGMC marines'
+  - balance: 'Combat Patrol: Removed the two AP mags from the V-21 scout loadout,
+      removed quantity limit on SG-85 loadout, added more C4 to TGMC demo engi loadout'
+  - bugfix: 'Combat Patrol: Added missing ammo for SH-15 medic loadout'
+2022-08-17:
+  QualityVan:
+  - bugfix: Dead xenos stop emitting pheromones
+  Targeting Computer 9.6:
+  - bugfix: fixed some missing or misplaced cameras, firelocks, lights, apcs, holopads
+      and wires on POS.
+  breadhunt:
+  - bugfix: Attaching stuff like signalers, voice sensors and the like to wires will
+      now actually pulse them instead of runtiming
+  - balance: Possible engi heaven
+2022-08-18:
+  Lumipharon:
+  - bugfix: fixed SOM shoes sometimes going invisible
+  - balance: Added some more attachments to the V-31 and V-51
+  - imageadd: added some alt sprites for certain attachments on SOM weapons
+  XElectricX:
+  - balance: Motorbikes no longer act as barriers and can be shot over.
+  - bugfix: Hitting riders on motorbikes is now consistent.
+  breadhunt:
+  - bugfix: Detpacks now work when a signaler is in your hand again, instead of only
+      working on the floor
+  - bugfix: Overwatch markers now work again
+  lbnesquik:
+  - rscadd: Added one CAS radio key to the tactical binoculars crate.

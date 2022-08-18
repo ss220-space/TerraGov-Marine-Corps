@@ -8,6 +8,7 @@ GLOBAL_LIST_INIT(quick_loadouts, init_quick_loadouts())
 		/datum/outfit/quick/tgmc/marine/standard_assaultrifle,
 		/datum/outfit/quick/tgmc/marine/combat_rifle,
 		/datum/outfit/quick/tgmc/marine/standard_laserrifle,
+		/datum/outfit/quick/tgmc/marine/standard_skirmishrifle,
 		/datum/outfit/quick/tgmc/marine/auto_shotgun,
 		/datum/outfit/quick/tgmc/marine/standard_machinegunner,
 		/datum/outfit/quick/tgmc/marine/medium_machinegunner,
@@ -19,14 +20,19 @@ GLOBAL_LIST_INIT(quick_loadouts, init_quick_loadouts())
 		/datum/outfit/quick/tgmc/engineer/sentry,
 		/datum/outfit/quick/tgmc/engineer/demolition,
 		/datum/outfit/quick/tgmc/corpsman/standard_medic,
+		/datum/outfit/quick/tgmc/corpsman/standard_smg,
+		/datum/outfit/quick/tgmc/corpsman/standard_skirmishrifle,
 		/datum/outfit/quick/tgmc/corpsman/auto_shotgun,
 		/datum/outfit/quick/tgmc/corpsman/laser_medic,
+		/datum/outfit/quick/tgmc/corpsman/laser_carbine,
 		/datum/outfit/quick/tgmc/smartgunner/standard_sg,
 		/datum/outfit/quick/tgmc/smartgunner/minigun_sg,
 		/datum/outfit/quick/tgmc/leader/standard_assaultrifle,
 		/datum/outfit/quick/tgmc/leader/standard_carbine,
 		/datum/outfit/quick/tgmc/leader/combat_rifle,
 		/datum/outfit/quick/tgmc/leader/auto_shotgun,
+		/datum/outfit/quick/tgmc/leader/standard_laserrifle,
+		/datum/outfit/quick/tgmc/leader/oicw,
 		/datum/outfit/quick/som/marine/standard_assaultrifle,
 		/datum/outfit/quick/som/marine/scout,
 		/datum/outfit/quick/som/marine/shotgunner,
@@ -153,8 +159,8 @@ GLOBAL_LIST_INIT(quick_loadouts, init_quick_loadouts())
 			if(selected_loadout.jobtype != user_id.rank)
 				to_chat(usr, span_warning("You are not in the right job for this loadout!"))
 				return
-			if(user_id.marine_buy_flags & MARINE_CAN_BUY_LOADOUT)
-				user_id.marine_buy_flags &= ~MARINE_CAN_BUY_LOADOUT
+			if(user_id.can_buy_loadout)
+				user_id.can_buy_loadout = FALSE
 				selected_loadout.quantity --
 				selected_loadout.equip(ui.user) //actually equips the loadout
 			else

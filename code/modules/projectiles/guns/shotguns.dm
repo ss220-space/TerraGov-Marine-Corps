@@ -459,8 +459,9 @@
 /obj/item/weapon/gun/shotgun/pump/lever
 	name = "lever action rifle"
 	desc = "A .44 magnum lever action rifle with side loading port. It has a low fire rate, but it packs quite a punch in hunting."
+	icon = 'icons/obj/items/gun.dmi'
 	icon_state = "mares_leg"
-	item_state = "mbx900"
+	item_state = "mares_leg"
 	fire_sound = 'sound/weapons/guns/fire/leveraction.ogg'//I like how this one sounds.
 	dry_fire_sound = 'sound/weapons/guns/fire/sniper_empty.ogg'
 	reload_sound = 'sound/weapons/guns/interact/mosin_reload.ogg'
@@ -586,6 +587,7 @@
 /obj/item/weapon/gun/shotgun/pump/t35
 	name = "\improper SH-35 pump shotgun"
 	desc = "The Terran Armories SH-35 is the shotgun used by the TerraGov Marine Corps. It's used as a close quarters tool when someone wants something more suited for close range than most people, or as an odd sidearm on your back for emergencies. Uses 12 gauge shells.\n<b>Requires a pump, which is the Unique Action key.</b>"
+	icon = 'icons/Marine/gun64.dmi'
 	flags_equip_slot = ITEM_SLOT_BACK
 	icon_state = "t35"
 	item_state = "t35"
@@ -611,7 +613,7 @@
 		/obj/item/attachable/shoulder_mount,
 	)
 
-	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 18,"rail_x" = 10, "rail_y" = 20, "under_x" = 21, "under_y" = 12, "stock_x" = 20, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 20, "under_x" = 23, "under_y" = 8, "stock_x" = 7, "stock_y" = 12)
 
 	flags_item_map_variant = NONE
 
@@ -692,11 +694,13 @@
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonetknife,
+		/obj/item/attachable/compensator,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/motiondetector,
+		/obj/item/attachable/reddot,
 	)
-	attachable_offset = list("muzzle_x" = 45, "muzzle_y" = 19,"rail_x" = 26, "rail_y" = 22, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 45, "muzzle_y" = 18,"rail_x" = 26, "rail_y" = 22, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16)
 
 	fire_delay = 1.8 SECONDS
 	accuracy_mult = 1.15

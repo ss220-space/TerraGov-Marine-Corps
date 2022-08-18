@@ -1,6 +1,6 @@
 #define DEBUG_STAGGER_SLOWDOWN 0
 
-GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/facehugger, /obj/effect/alien/egg, /obj/structure/mineral_door, /obj/effect/alien/resin, /obj/structure/bed/nest))) //For sticky/acid spit
+GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/facehugger, /obj/alien/egg, /obj/structure/mineral_door, /obj/alien/resin, /obj/structure/bed/nest))) //For sticky/acid spit
 
 /datum/ammo
 	var/name 		= "generic bullet"
@@ -229,13 +229,17 @@ GLOBAL_LIST_INIT(no_sticky_resin, typecacheof(list(/obj/item/clothing/mask/faceh
 			new_proj.generate_bullet(src)
 		new_proj.accuracy = round(new_proj.accuracy * main_proj.accuracy/initial(main_proj.accuracy)) //if the gun changes the accuracy of the main projectile, it also affects the bonus ones.
 
+		if(isgun(source))
+			var/obj/item/weapon/gun/gun = source
+			gun.apply_gun_modifiers(new_proj, target, shooter)
+
 		//Scatter here is how many degrees extra stuff deviate from the main projectile, first two the same amount, one to each side, and from then on the extra pellets keep widening the arc.
 		var/new_angle = angle + (main_proj.ammo.bonus_projectiles_scatter * ((i % 2) ? (-(i + 1) * 0.5) : (i * 0.5)))
 		if(new_angle < 0)
 			new_angle += 360
 		else if(new_angle > 360)
 			new_angle -= 360
-		new_proj.fire_at(shooter.Adjacent(target) ? target : null, main_proj.loc, source, range, speed, new_angle, TRUE) //Angle-based fire. No target.
+		new_proj.fire_at(shooter.Adjacent(target) ? target : null, main_proj.firer, source, range, speed, new_angle, TRUE) //Angle-based fire. No target.
 
 /// A variant of Fire_bonus_projectiles without fixed scatter and no link between gun and bonus_projectile accuracy
 /datum/ammo/proc/fire_directionalburst(obj/projectile/main_proj, atom/shooter, atom/source, range, speed, angle, target)
@@ -2191,11 +2195,12 @@ datum/ammo/bullet/revolver/tp44
 	shell_speed = 4
 	accuracy_var_low = 5
 	accuracy_var_high = 5
+	accuracy = 5
 	point_blank_range = 2
 	damage = 20
 	penetration = 10
 	sundering = 2
-	fire_burst_damage = 20
+	fire_burst_damage = 15
 
 	//inherited, could use some changes
 	ping = "ping_s"
@@ -2208,17 +2213,17 @@ datum/ammo/bullet/revolver/tp44
 
 /datum/ammo/energy/volkite/medium
 	max_range = 25
-	accurate_range = 15
+	accurate_range = 12
 	damage = 30
 	accuracy_var_low = 3
 	accuracy_var_high = 3
-	fire_burst_damage = 25
+	fire_burst_damage = 20
 
 /datum/ammo/energy/volkite/heavy
 	max_range = 35
-	accurate_range = 18
+	accurate_range = 12
 	damage = 25
-	fire_burst_damage = 25
+	fire_burst_damage = 20
 
 /datum/ammo/energy/volkite/light
 	max_range = 25
@@ -2352,17 +2357,20 @@ datum/ammo/bullet/revolver/tp44
 	added_spit_delay = 0
 	spit_cost = 400
 	damage = 40
-	reagent_transfer_amount = 18
-	smoke_range = 1
+	smoke_strength = 0.9
+	reagent_transfer_amount = 8.5
 
 /datum/ammo/xeno/toxin/heavy/upgrade1
-	reagent_transfer_amount = 19
+	smoke_strength = 0.9
+	reagent_transfer_amount = 9
 
 /datum/ammo/xeno/toxin/heavy/upgrade2
+	smoke_strength = 0.95
 	reagent_transfer_amount = 20
 
 /datum/ammo/xeno/toxin/heavy/upgrade3
-	reagent_transfer_amount = 21
+	smoke_strength = 1
+	reagent_transfer_amount = 10
 
 
 /datum/ammo/xeno/sticky
@@ -2422,7 +2430,7 @@ datum/ammo/bullet/revolver/tp44
 		if(is_type_in_typecache(O, GLOB.no_sticky_resin))
 			return
 
-	new /obj/effect/alien/resin/sticky(T)
+	new /obj/alien/resin/sticky(T)
 
 /datum/ammo/xeno/sticky/turret
 	max_range = 9
