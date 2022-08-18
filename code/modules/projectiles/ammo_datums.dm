@@ -2373,19 +2373,6 @@ datum/ammo/bullet/revolver/tp44
 /datum/ammo/xeno/toxin/heavy/upgrade3
 	smoke_strength = 1
 	reagent_transfer_amount = 21
-	reagent_transfer_amount = 8.5
-
-/datum/ammo/xeno/toxin/heavy/upgrade1
-	smoke_strength = 0.9
-	reagent_transfer_amount = 9
-
-/datum/ammo/xeno/toxin/heavy/upgrade2
-	smoke_strength = 0.95
-	reagent_transfer_amount = 9.5
-
-/datum/ammo/xeno/toxin/heavy/upgrade3
-	smoke_strength = 1
-	reagent_transfer_amount = 10
 
 
 /datum/ammo/xeno/sticky
