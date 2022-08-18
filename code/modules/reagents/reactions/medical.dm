@@ -213,11 +213,6 @@
 	required_reagents = list(/datum/reagent/toxin/sleeptoxin = 1, /datum/reagent/medicine/tricordrazine = 1, /datum/reagent/consumable/drink/doctor_delight = 1, /datum/reagent/medicine/paracetamol = 1)
 	required_catalysts = list(/datum/reagent/medicine/lemoline = 5)
 
-/datum/chemical_reaction/medicalnanites
-	name = "Medical Nanites"
-	results = list(/datum/reagent/medicine/research/medicalnanites = 1)
-	required_reagents = list(/datum/reagent/toxin/nanites = 10, /datum/reagent/radium = 5, /datum/reagent/iron = 100, /datum/reagent/medicine/lemoline = 5)
-
 /datum/chemical_reaction/stimulum
 	name = "Stimulum"
 	results = list(/datum/reagent/medicine/research/stimulon = 1)

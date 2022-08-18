@@ -1257,17 +1257,30 @@
 /datum/reagent/medicine/research/somolent/overdose_process(mob/living/L, metabolism)
 	holder.remove_reagent(/datum/reagent/medicine/research/somolent, 1)
 
+/datum/reagent/medicine/research/medicalnanites_seed
+	name = "Medical nanites seedling"
+	description = "These are a batch of construction nanites altered for in-vivo replication. They can heal wounds using the iron present in the bloodstream, but need to adapt to subject's protein structure before giving positive effects. Medical care is recommended during injection."
+	color = "#19C832"
+	custom_metabolism = 990
+	scannable = FALSE
+	taste_description = "metal, followed by mild burning"
+
+/datum/reagent/medicine/research/medicalnanites_seed/on_mob_add(mob/living/L, metabolism)
+	holder.remove_reagent(/datum/reagent/medicine/research/medicalnanites_seed, 999)
+	if(holder.has_reagent(/datum/reagent/medicine/research/medicalnanites))
+		return
+
+	to_chat(L, span_userdanger("You feel like you should stay near medical help until this shot settles in."))
+	holder.add_reagent(/datum/reagent/medicine/research/medicalnanites, 1)
+
 /datum/reagent/medicine/research/medicalnanites
 	name = "Medical nanites"
-	description = "These are a batch of construction nanites altered for in-vivo replication. They can heal wounds using the iron present in the bloodstream. Medical care is recommended during injection."
+	description = "These are a batch of construction nanites altered for in-vivo replication. They can heal wounds using the iron present in the bloodstream."
 	color = "#19C832"
 	custom_metabolism = 0
 	scannable = TRUE
 	taste_description = "metal, followed by mild burning"
 	overdose_threshold = REAGENTS_OVERDOSE * 1.2 //slight buffer to keep you safe
-
-/datum/reagent/medicine/research/medicalnanites/on_mob_add(mob/living/L, metabolism)
-	to_chat(L, span_userdanger("You feel like you should stay near medical help until this shot settles in."))
 
 /datum/reagent/medicine/research/medicalnanites/on_mob_life(mob/living/L, metabolism)
 	switch(current_cycle)
