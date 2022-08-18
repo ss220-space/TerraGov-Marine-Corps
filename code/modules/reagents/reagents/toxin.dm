@@ -475,7 +475,7 @@
 /datum/reagent/toxin/xeno_neurotoxin/on_mob_life(mob/living/L, metabolism)
 	L.stuttering = max(L.stuttering, 1)
 	L.reagent_pain_modifier -= PAIN_REDUCTION_VERY_HEAVY //50, compensated by trama or oxy
-	L.adjustStaminaLoss(2*effect_str)
+	L.adjustStaminaLoss(2*effect_str) //marine has 100 stamina and 100-150 more that he cant use
 
 	if(current_cycle < 21) //Additional effects at higher cycles
 		return ..()
