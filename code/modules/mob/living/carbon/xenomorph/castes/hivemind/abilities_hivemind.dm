@@ -12,10 +12,10 @@
 	max_range = 4
 	buildable_structures = list(
 		/turf/closed/wall/resin/regenerating,
-		/obj/effect/alien/resin/sticky,
+		/obj/alien/resin/sticky,
 		/obj/structure/mineral_door/resin,
-		/obj/effect/alien/resin/resin_growth,
-		/obj/effect/alien/resin/resin_growth/door,
+		/obj/alien/resin/resin_growth,
+		/obj/alien/resin/resin_growth/door,
 		)
 
 /datum/action/xeno_action/activable/secrete_resin/ranged/slow/action_activate()
