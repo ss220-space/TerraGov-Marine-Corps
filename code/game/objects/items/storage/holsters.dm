@@ -151,10 +151,12 @@
 	holsterable_allowed = list(
 		/obj/item/weapon/claymore/mercsword/machete,
 		/obj/item/weapon/claymore/harvester,
+		/obj/item/weapon/claymore/red_baron,
 	)
 	can_hold = list(
 		/obj/item/weapon/claymore/mercsword/machete,
 		/obj/item/weapon/claymore/harvester,
+		/obj/item/weapon/claymore/red_baron,
 	)
 
 /obj/item/storage/holster/blade/machete/full/Initialize()
@@ -168,6 +170,14 @@
 /obj/item/storage/holster/blade/machete/full_harvester/Initialize()
 	. = ..()
 	var/obj/item/new_item = new /obj/item/weapon/claymore/harvester(src)
+	INVOKE_ASYNC(src, .proc/handle_item_insertion, new_item)
+
+	/obj/item/storage/holster/blade/machete/full_red_baron
+	name = "H3 Pattern M77 red baron scabbard"
+
+/obj/item/storage/holster/blade/machete/full_red_baron/Initialize()
+	. = ..()
+	var/obj/item/new_item = new /obj/item/weapon/claymore/red_baron(src)
 	INVOKE_ASYNC(src, .proc/handle_item_insertion, new_item)
 
 /obj/item/storage/holster/blade/katana

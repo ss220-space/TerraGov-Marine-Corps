@@ -40,6 +40,44 @@
 	user.visible_message(span_danger("[user] is falling on the [src.name]! It looks like [user.p_theyre()] trying to commit suicide."))
 	return(BRUTELOSS)
 
+/obj/item/weapon/claymore/red_baron
+	name = "\improper HP-S 'Saroh' red baron"
+	desc = "Decorated officer's blade. This one looks quite defiant, the inscription 'Saroh'."
+	icon_state = "saroh"
+	item_state = "red_baron"
+	force = 60
+	attack_speed = 12
+	w_class = WEIGHT_CLASS_BULKY
+	flags_item = DRAINS_XENO
+
+	var/force_wielded = 40
+
+	var/codex_info = {"<b>Reagent info:</b><BR>
+	Bicaridine - heal your target for 10 brute. Usable on both dead and living targets.<BR>
+	Kelotane - produce a cone of flames<BR>
+	Tramadol - slow your target for 2 seconds<BR>
+	<BR>
+	<b>Tips:</b><BR>
+	> Needs to be connected to the Vali system to collect green blood. You can connect it though the Vali system's configurations menu.<BR>
+	> Filled by liquid reagent containers. Emptied by using an empty liquid reagent container.<BR>
+	> Toggle unique action (SPACE by default) to load a single-use of the reagent effect after the blade has been filled up."}
+
+/obj/item/weapon/claymore/red_baron/Initialize()
+	. = ..()
+	AddComponent(/datum/component/harvester)
+
+/obj/item/weapon/claymore/red_baron/equipped(mob/user, slot)
+	. = ..()
+	toggle_item_bump_attack(user, TRUE)
+
+/obj/item/weapon/claymore/red_baron/dropped(mob/user)
+	. = ..()
+	toggle_item_bump_attack(user, FALSE)
+
+/obj/item/weapon/claymore/red_baron/get_mechanics_info()
+	. = ..()
+	. += jointext(codex_info, "<br>")
+
 /obj/item/weapon/claymore/harvester
 	name = "\improper HP-S Harvester blade"
 	desc = "TerraGov Marine Corps' experimental High Point-Singularity 'Harvester' blade. An advanced weapon that trades sheer force for the ability to apply a variety of debilitating effects when loaded with certain reagents. Activate after loading to prime a single use of an effect. It also harvests substances from alien lifeforms it strikes when connected to the Vali system."
