@@ -739,6 +739,7 @@
 		/obj/item/reagent_containers/hypospray/advanced/oxycodone,
 		/obj/item/tweezers,
 		/obj/item/tool/surgery/solderingtool,
+		/obj/item/storage/holster/blade/machete/full_red_baron,
 	)
 
 /obj/effect/essentials_set/white_dress
