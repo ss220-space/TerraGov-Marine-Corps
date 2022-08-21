@@ -103,7 +103,6 @@
 
 /datum/reagent/medicine/paracetamol/overdose_process(mob/living/L, metabolism)
 	L.hallucination = max(L.hallucination, 2)
-	L.hallucination += 1
 	L.reagent_pain_modifier += PAIN_REDUCTION_VERY_LIGHT
 	L.apply_damage(0.5*effect_str, TOX)
 
@@ -127,8 +126,7 @@
 	return ..()
 
 /datum/reagent/medicine/tramadol/overdose_process(mob/living/L, metabolism)
-	L.hallucination = max(L.hallucination, 2)
-	L.hallucination += 1
+	L.hallucination = max(L.hallucination, 2) //Hallucinations and oxy damage
 	L.apply_damage(effect_str, OXY)
 
 /datum/reagent/medicine/tramadol/overdose_crit_process(mob/living/L, metabolism)
@@ -159,7 +157,6 @@
 
 /datum/reagent/medicine/oxycodone/overdose_process(mob/living/L, metabolism)
 	L.hallucination = max(L.hallucination, 3)
-	L.hallucination += 1
 	L.set_drugginess(10)
 	L.jitter(3)
 
@@ -441,6 +438,7 @@
 	L.AdjustStun(-20)
 	L.AdjustParalyzed(-20)
 	L.adjustToxLoss(effect_str)
+	L.hallucination = max(0, L.hallucination - 10)
 	switch(current_cycle)
 		if(1 to 10)
 			L.adjustStaminaLoss(-7.5*effect_str)
