@@ -82,7 +82,7 @@
 
 /obj/alien/resin/resin_growth/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, .proc/on_growth), growth_time)
+	addtimer(CALLBACK(src, .proc/on_growth), growth_time, TIMER_DELETE_ME)
 	var/static/list/connections = list(
 		COMSIG_ATOM_ENTERED = .proc/trample_plant
 	)
