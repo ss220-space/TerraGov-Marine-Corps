@@ -467,47 +467,29 @@
 	description = "A debilitating nerve toxin. Impedes motor control in high doses. Causes progressive loss of mobility over time."
 	reagent_state = LIQUID
 	color = "#CF3600" // rgb: 207, 54, 0
-	custom_metabolism = REAGENTS_METABOLISM * 2
-	overdose_threshold = 10000 //Overdosing for neuro is what happens when you run out of stamina to avoid its oxy and toxin damage
+	custom_metabolism = REAGENTS_METABOLISM * 3.5 //0.7u per tick, note liver filters 0.3 per tick by default
+	overdose_threshold = 20
 	scannable = TRUE
-	toxpwr = 0
+	toxpwr = 2 //1 tox dmg per tick, liver heals 0.1 per tick
 
 /datum/reagent/toxin/xeno_neurotoxin/on_mob_life(mob/living/L, metabolism)
-	var/power
-	switch(current_cycle)
-		if(1 to 20)
-			power = (2*effect_str) //While stamina loss is going, stamina regen apparently doesn't happen, so I can keep this smaller.
-			L.reagent_pain_modifier -= PAIN_REDUCTION_LIGHT
-		if(21 to 45)
-			power = (6*effect_str)
-			L.reagent_pain_modifier -= PAIN_REDUCTION_HEAVY
-			L.jitter(4) //Shows that things are bad
-		if(46 to INFINITY)
-			power = (15*effect_str)
-			L.reagent_pain_modifier -= PAIN_REDUCTION_VERY_HEAVY
-			L.jitter(8) //Shows that things are *really* bad
-
-	//Apply stamina damage, then apply any 'excess' stamina damage beyond our maximum as tox and oxy damage
-	var/stamina_loss_limit = L.maxHealth * 2
-	L.adjustStaminaLoss(min(power, max(0, stamina_loss_limit - L.staminaloss))) //If we're under our stamina_loss limit, apply the difference between our limit and current stamina damage or power, whichever's less
-
-	var/stamina_excess_damage = (L.staminaloss + power) - stamina_loss_limit
-	if(stamina_excess_damage > 0) //If we exceed maxHealth * 2 stamina damage, apply any excess as toxloss and oxyloss
-		L.adjustToxLoss(stamina_excess_damage * 0.5)
-		L.adjustOxyLoss(stamina_excess_damage * 0.5)
-		L.Losebreath(2) //So the oxy loss actually means something.
-
 	L.stuttering = max(L.stuttering, 1)
+	L.reagent_pain_modifier -= PAIN_REDUCTION_VERY_HEAVY //50, compensated by trama or oxy
+	L.adjustStaminaLoss(2*effect_str) //marine has 100 stamina and 100-150 more that he cant use
 
 	if(current_cycle < 21) //Additional effects at higher cycles
 		return ..()
 
 	L.adjust_drugginess(1.1) //Move this to stage 2 and 3 so it's not so obnoxious
-
 	if(L.eye_blurry < 30) //So we don't have the visual acuity of Mister Magoo forever
 		L.adjust_blurriness(1.3)
-
 	return ..()
+
+/datum/reagent/toxin/xeno_neurotoxin/overdose_process(mob/living/L, metabolism)
+	//Marine fucked up, and is now really slow
+	L.reagent_pain_modifier -= PAIN_REDUCTION_HEAVY //35, paracetamol
+	L.adjustStaminaLoss(3*effect_str)
+	L.adjustToxLoss(1*effect_str) //2 per tick
 
 /datum/reagent/toxin/xeno_hemodile //Slows its victim. The slow becomes twice as strong with each other xeno toxin in the victim's system.
 	name = "Hemodile"
