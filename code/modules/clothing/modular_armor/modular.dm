@@ -249,6 +249,7 @@
 		/obj/item/armor_module/storage/injector,
 		/obj/item/armor_module/storage/integrated,
 		/obj/item/armor_module/armor/badge,
+		/obj/item/armor_module/module/parka,
 	)
 
 	icon_state_variants = list(
