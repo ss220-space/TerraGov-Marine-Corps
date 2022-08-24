@@ -2241,11 +2241,11 @@ datum/ammo/bullet/revolver/tp44
 	icon_state = "neurotoxin"
 	ping = "ping_x"
 	damage_type = TOX
-	flags_ammo_behavior = AMMO_XENO
+	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE|AMMO_SKIPS_ALIENS
 	var/added_spit_delay = 0 //used to make cooldown of the different spits vary.
 	var/spit_cost = 5
 	armor_type = "bio"
-	shell_speed = 1
+	shell_speed = 1.2
 	accuracy = 40
 	accurate_range = 15
 	max_range = 15
@@ -2267,11 +2267,9 @@ datum/ammo/bullet/revolver/tp44
 
 /datum/ammo/xeno/toxin
 	name = "neurotoxic spit"
-	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE|AMMO_SKIPS_ALIENS
 	spit_cost = 55
 	added_spit_delay = 0
 	damage_type = STAMINA
-	accurate_range = 5
 	max_range = 10
 	accuracy_var_low = 3
 	accuracy_var_high = 3
@@ -2381,7 +2379,6 @@ datum/ammo/bullet/revolver/tp44
 	name = "sticky resin spit"
 	icon_state = "sticky"
 	ping = null
-	flags_ammo_behavior = AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE|AMMO_XENO
 	damage_type = STAMINA
 	armor_type = "bio"
 	spit_cost = 50
@@ -2447,10 +2444,9 @@ datum/ammo/bullet/revolver/tp44
 	damage_type = BURN
 	added_spit_delay = 5
 	spit_cost = 50
-	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE
 	armor_type = "acid"
 	damage = 18
-	max_range = 8
+	max_range = 9
 	bullet_color = COLOR_PALE_GREEN_GRAY
 	///Duration of the acid puddles
 	var/puddle_duration = 1 SECONDS //Lasts 1-3 seconds
@@ -2463,19 +2459,16 @@ datum/ammo/bullet/revolver/tp44
 /datum/ammo/xeno/acid/medium
 	name = "acid spatter"
 	damage = 30
-	flags_ammo_behavior = AMMO_XENO
 
 /datum/ammo/xeno/acid/auto
 	name = "light acid spatter"
 	damage = 10
-	flags_ammo_behavior = AMMO_XENO
 	spit_cost = 25
 	added_spit_delay = 0
 
 /datum/ammo/xeno/acid/passthrough
 	name = "acid spittle"
 	damage = 20
-	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS
 
 /datum/ammo/xeno/acid/heavy
 	name = "acid splash"
@@ -2529,7 +2522,6 @@ datum/ammo/bullet/revolver/tp44
 ///For the Spitter's Scatterspit ability
 /datum/ammo/xeno/acid/heavy/scatter
 	damage = 20
-	flags_ammo_behavior = AMMO_XENO|AMMO_EXPLOSIVE|AMMO_SKIPS_ALIENS
 	bonus_projectiles_type = /datum/ammo/xeno/acid/heavy/scatter
 	bonus_projectiles_amount = 6
 	bonus_projectiles_scatter = 2
@@ -2544,7 +2536,6 @@ datum/ammo/bullet/revolver/tp44
 	var/icon_key = BOILER_GLOB_NEURO
 	///This text will show up when a boiler selects this ammo. Span proc should be applied when this var is used.
 	var/select_text = "We will now fire neurotoxic gas. This is nonlethal."
-	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE
 	var/danger_message = span_danger("A glob of acid lands with a splat and explodes into noxious fumes!")
 	armor_type = "bio"
 	accuracy_var_high = 10
@@ -2661,7 +2652,6 @@ datum/ammo/bullet/revolver/tp44
 	sound_bounce	= "acid_bounce"
 	icon_key = BOILER_GLOB_ACID
 	select_text = "We will now fire corrosive acid. This is lethal!"
-	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS|AMMO_EXPLOSIVE
 	armor_type = "acid"
 	danger_message = span_danger("A glob of acid lands with a splat and explodes into corrosive bile!")
 	damage = 50
@@ -2729,7 +2719,7 @@ datum/ammo/bullet/revolver/tp44
 /datum/ammo/xeno/hugger
 	name = "hugger ammo"
 	ping = ""
-	flags_ammo_behavior = AMMO_XENO
+	flags_ammo_behavior = AMMO_XENO|AMMO_SKIPS_ALIENS
 	damage = 0
 	max_range = 6
 	shell_speed = 1
