@@ -224,3 +224,21 @@ GLOBAL_LIST_EMPTY(gear_datums)
 	path = /obj/item/clothing/glasses/mgoggles/prescription
 	cost = 2
 	slot = SLOT_GLASSES
+
+/datum/gear/hachimaki
+	display_name = "Ancient pilot headband and scarf kit"
+	path = /obj/item/clothing/head/hachimaki
+	cost = 2
+	slot = SLOT_HEAD
+
+/datum/gear/Koran
+	display_name = "Koran"
+	path = /obj/item/storage/bible/koran/basic
+	cost = 1
+	slot = SLOT_HEAD
+
+/datum/gear/namaz
+	display_name = "Prayer rug"
+	path = /obj/item/namaz
+	cost = 1
+	slot = SLOT_HEAD

@@ -504,3 +504,93 @@ SUBSYSTEM_DEF(ru_items)
 	)
 	cost = 60
 	available_against_xeno_only = TRUE
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////// Namaz rug ///////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+/obj/structure/bed/namaz
+	name = "Prayer rug"
+	desc = "Very halal prayer rug."
+	icon = 'icons/priest/priest_icon.dmi'
+	icon_state = "namaz"
+	anchored = TRUE
+	buckle_flags = CAN_BUCKLE|BUCKLE_PREVENTS_PULL
+	buckle_lying = 0
+	buckling_y = 6
+	max_integrity = 200
+	hit_sound = 'sound/effects/footstep/carpetbarefoot3.ogg'
+	destroy_sound = 'sound/items/poster_ripped.ogg'
+	dir = NORTH
+	foldabletype = /obj/item/namaz
+	accepts_bodybag = FALSE
+	base_bed_icon = "namaz"
+
+/obj/item/namaz
+	name = "Prayer rug"
+	desc = "Very halal prayer rug."
+	icon = 'icons/priest/priest_icon.dmi'
+	icon_state = "rolled_namaz"
+	w_class = WEIGHT_CLASS_SMALL
+	var/rollertype = /obj/structure/bed/namaz
+
+/obj/item/namaz/attack_self(mob/user)
+	deploy_roller(user, user.loc)
+
+/obj/item/namaz/afterattack(obj/target, mob/user , proximity)
+	if(!proximity)
+		return
+	if(isturf(target))
+		var/turf/T = target
+		if(!T.density)
+			deploy_roller(user, target)
+
+/obj/item/namaz/attackby(obj/item/I, mob/user, params)
+	. = ..()
+
+/obj/item/namaz/proc/deploy_roller(mob/user, atom/location)
+	var/obj/structure/bed/namaz/R = new rollertype(location)
+	user.temporarilyRemoveItemFromInventory(src)
+	qdel(src)
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////// Hachimaki ///////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+/obj/item/clothing/head/hachimaki
+	name = "\improper Ancient pilot headband and scarf kit"
+	desc = "Ancient pilot kit of scarf that protects neck from cold wind and headband that protects face from sweat"
+	icon = 'icons/priest/Banzai.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/priest/Banzai1.dmi')
+	icon_state = "Banzai"
+	soft_armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	w_class = WEIGHT_CLASS_SMALL
+
+	var/list/armor_overlays
+	actions_types = list(/datum/action/item_action/toggle)
+	flags_armor_features = ARMOR_LAMP_OVERLAY|ARMOR_NO_DECAP
+	flags_item = SYNTH_RESTRICTED
+
+/obj/item/clothing/head/hachimaki/attack_self(mob/user)
+	var/mob/living/carbon/human/activator = user
+	if(TIMER_COOLDOWN_CHECK(user, "Banzai"))
+		user.balloon_alert(user, "You used that emote too recently")
+		return
+	TIMER_COOLDOWN_START(user, "Banzai", 7200 SECONDS)
+	activator.say("Tenno Heika Banzai!!")
+	playsound(get_turf(user), 'sound/voice/banzai1.ogg', 30)
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////// Combat parka ///////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+/obj/item/armor_module/module/parka
+	name = "\improper Combat parka"
+	desc = "Old fashioned parka, made from durable materials as combat wear for some merc group many centuries ago. How it ended up here? Its pretty rare, don't ya think? You can attach it to your Xenonauten armored vest."
+	icon = 'icons/priest/suit_1.dmi'
+	icon_state = "Parka"
+	item_state = "Parka_a"
+	slowdown = 0
+	w_class = WEIGHT_CLASS_BULKY
+	slot = ATTACHMENT_SLOT_BADGE

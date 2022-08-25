@@ -15,6 +15,7 @@
 #define CAT_MOD "JAEGER STORAGE MODULES"
 #define CAT_ARMMOD "JAEGER ARMOR MODULES"
 
+#define CAT_REL "RELIGION"
 #define CAT_MEDSUP "MEDICAL SUPPLIES"
 #define CAT_ENGSUP "ENGINEERING SUPPLIES"
 #define CAT_LEDSUP "LEADER SUPPLIES"
@@ -37,6 +38,7 @@ GLOBAL_LIST_INIT(marine_selector_cats, list(
 		CAT_GLA = 1,
 		CAT_MAS = 1,
 		CAT_ESS = 1,
+		CAT_REL = 1,
 		CAT_POU = 2,
 	))
 
@@ -100,6 +102,8 @@ GLOBAL_LIST_INIT(medic_gear_listed_products, list(
 
 GLOBAL_LIST_INIT(leader_gear_listed_products, list(
 		/obj/effect/essentials_set/leader = list(CAT_ESS, "Essential SL Set", 0, "white"),
+		/obj/item/storage/bible/koran = list(CAT_REL, "Luxury Koran", 0, "black"),
+		/obj/item/storage/bible = list(CAT_REL, "Bible", 0, "black"),
 		/obj/item/whistle = list(CAT_LEDSUP, "Whistle", 5, "black"),
 		/obj/item/beacon/supply_beacon = list(CAT_LEDSUP, "Supply beacon", 10, "black"),
 		/obj/item/fulton_extraction_pack = list(CAT_LEDSUP, "Fulton Extraction Pack", 20, "orange"),
