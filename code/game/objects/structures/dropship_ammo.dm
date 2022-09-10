@@ -404,7 +404,7 @@
 	name = "\improper AIM-224 'Widowmaker'"
 	desc = "The AIM-224 is the latest in air to air missile technology. Earning the nickname of 'Widowmaker' from various dropship pilots after improvements to its guidence warhead prevents it from being jammed leading to its high kill rate. Not well suited for ground bombardment, but its high velocity makes it reach its target quickly."
 	icon_state = "single"
-	travelling_time = 1 SECONDS //not powerful, but reaches target fast
+	travelling_time = 1.25 SECONDS //not powerful, but reaches target fast
 	ammo_id = ""
 	point_cost = 75
 	devastating_explosion_range = 2
@@ -423,7 +423,7 @@
 	desc = "The AGM-227 missile is a mainstay of the overhauled dropship fleet against any mobile or armored ground targets. It's earned the nickname of 'Banshee' from the sudden wail that it emitts right before hitting a target. Useful to clear out large areas."
 	icon_state = "banshee"
 	ammo_id = "b"
-	travelling_time = 2 SECONDS
+	travelling_time = 2.5 SECONDS
 	point_cost = 150
 	devastating_explosion_range = 2
 	heavy_explosion_range = 4
@@ -442,7 +442,7 @@
 	desc = "The GBU-67 'Keeper II' is the latest in a generation of laser guided weaponry that spans all the way back to the 20th century. Earning its nickname from a shortening of 'Peacekeeper' which comes from the program that developed its guidance system and the various uses of it during peacekeeping conflicts. Its payload is designed to devastate armored targets."
 	icon_state = "keeper"
 	ammo_id = "k"
-	travelling_time = 2 SECONDS
+	travelling_time = 2.5 SECONDS
 	point_cost = 300
 	devastating_explosion_range = 4
 	heavy_explosion_range = 4
@@ -459,7 +459,7 @@
 	desc = "The SM-17 'Fatty', an experimental missile utilising a supercooled tanglefoot payload. Harmless to marines, but destroys resin walls around the impact site."
 	icon_state = "fatty"
 	ammo_id = "f"
-	travelling_time = 2 SECONDS
+	travelling_time = 2.5 SECONDS
 	point_cost = 150
 	cas_effect = /obj/effect/overlay/blinking_laser/fatty
 
@@ -475,7 +475,7 @@
 	desc = "The XN-99 'Napalm' is an incendiary rocket used to turn specific targeted areas into giant balls of fire for a long time."
 	icon_state = "napalm"
 	ammo_id = "n"
-	travelling_time = 2 SECONDS
+	travelling_time = 2.5 SECONDS
 	point_cost = 200
 	devastating_explosion_range = 2
 	heavy_explosion_range = 3
