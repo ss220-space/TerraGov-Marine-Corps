@@ -2,7 +2,7 @@ name: Generate documentation
 on:
   push:
     branches:
-    - master
+    - master220
 jobs:
   generate_documentation:
     runs-on: ubuntu-20.04
