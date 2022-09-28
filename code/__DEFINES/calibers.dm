@@ -83,3 +83,4 @@
 
 ///Unmanned vehicles
 #define CALIBER_11X35 "11x35mm"
+#define DROID_CELL "droid cell"

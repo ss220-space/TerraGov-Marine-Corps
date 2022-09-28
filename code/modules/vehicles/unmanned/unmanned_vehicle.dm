@@ -6,14 +6,14 @@
 	icon_state = "light_uv"
 	anchored = FALSE
 	buckle_flags = null
-	light_range = 6
+	light_range = 5
 	light_power = 3
 	light_system = MOVABLE_LIGHT
-	move_delay = 2.5	//set this to limit the speed of the vehicle
-	max_integrity = 150
+	move_delay = 3.3	//set this to limit the speed of the vehicle
+	max_integrity = 165
 	hud_possible = list(MACHINE_HEALTH_HUD, MACHINE_AMMO_HUD)
 	flags_atom = BUMP_ATTACKABLE
-	soft_armor = list("melee" = 25, "bullet" = 85, "laser" = 50, "energy" = 100, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 25, "acid" = 25)
+	soft_armor = list("melee" = 30, "bullet" = 85, "laser" = 50, "energy" = 100, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 25, "acid" = 30)
 	/// Path of "turret" attached
 	var/obj/item/uav_turret/turret_path
 	/// Type of the turret attached
@@ -109,7 +109,7 @@
 		if(TURRET_TYPE_EXPLOSIVE)
 			. += "It is equipped with an explosive weapon system. "
 		if(TURRET_TYPE_DROIDLASER)
-			. += "It is equipped with a droid weapon system. It uses 11x35mm ammo."
+			. += "It is equipped with a droid weapon system. It uses overcharge energy ammo."
 
 /obj/vehicle/unmanned/attackby(obj/item/I, mob/user, params)
 	. = ..()
@@ -280,7 +280,7 @@
 /obj/vehicle/unmanned/punch_act(mob/living/carbon/xenomorph/X, damage, target_zone)
 	X.do_attack_animation(src, ATTACK_EFFECT_YELLOWPUNCH)
 	X.do_attack_animation(src, ATTACK_EFFECT_DISARM2)
-	attack_generic(X, damage * 4, BRUTE, "", FALSE) //Deals 4 times regular damage to uavs
+	attack_generic(X, damage * 3, BRUTE, "", FALSE) //Deals 4 times regular damage to uavs
 	X.visible_message(span_xenodanger("\The [X] smashes [src] with a devastating punch!"), \
 		span_xenodanger("We smash [src] with a devastating punch!"), visible_message_flags = COMBAT_MESSAGE)
 	playsound(src, pick('sound/effects/bang.ogg','sound/effects/metal_crash.ogg','sound/effects/meteorimpact.ogg'), 50, 1)
@@ -317,7 +317,7 @@
 		return
 	if(!I.use_tool(src, user, 0, volume=50, amount=1))
 		return TRUE
-	repair_damage(35)
+	repair_damage(40)
 	if(obj_integrity == max_integrity)
 		balloon_alert_to_viewers("Fully repaired!")
 	else
@@ -328,15 +328,15 @@
 /obj/vehicle/unmanned/medium
 	name = "UV-M Gecko"
 	icon_state = "medium_uv"
-	move_delay = 3
-	max_rounds = 200
+	move_delay = 3.7
+	max_rounds = 300
 	max_integrity = 200
 
 /obj/vehicle/unmanned/heavy
 	name = "UV-H Komodo"
 	icon_state = "heavy_uv"
 	move_delay = 4
-	max_rounds = 200
+	max_rounds = 300
 	max_integrity = 250
 
 /obj/structure/closet/crate/uav_crate
@@ -350,7 +350,6 @@
 /obj/structure/closet/crate/uav_crate/PopulateContents()
 	new /obj/vehicle/unmanned(src)
 	new /obj/item/uav_turret(src)
-	new /obj/item/ammo_magazine/box11x35mm(src)
 	new /obj/item/ammo_magazine/box11x35mm(src)
 	new /obj/item/ammo_magazine/box11x35mm(src)
 	new /obj/item/unmanned_vehicle_remote(src)

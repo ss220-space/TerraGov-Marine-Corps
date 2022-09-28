@@ -6,11 +6,11 @@
 	///Turret type, used for assigning what we do on clicks
 	var/turret_type = TURRET_TYPE_LIGHT
 	///Ammo typepath we use when attached
-	var/ammo_type = /datum/ammo/bullet/smg
+	var/ammo_type = /datum/ammo/bullet/uvlight
 	/// Amount of projectiles in this turret
-	var/current_rounds = 150
+	var/current_rounds = 200
 	/// The max amount of projectiles in this turret
-	var/max_rounds = 150
+	var/max_rounds = 200
 	///This var must match the unmanned vehicles turret_pattern then be added
 	var/turret_pattern = PATTERN_TRACKED
 	/// The fire rate of this turret in byond tick
@@ -23,10 +23,10 @@
 	name = "heavy unmanned vehicle turret"
 	icon_state = "heavy_cannon_obj"
 	turret_type = TURRET_TYPE_HEAVY
-	ammo_type = /datum/ammo/bullet/machinegun
+	ammo_type = /datum/ammo/bullet/uvheavy
 	fire_delay = 2
-	current_rounds = 50
-	max_rounds = 50
+	current_rounds = 80
+	max_rounds = 80
 	magazine_type = /obj/item/ammo_magazine/box12x40mm //I think this is the correct one?
 
 /obj/item/uav_turret/droid
@@ -34,7 +34,8 @@
 	icon_state = "droidlaser_obj"
 	turret_pattern = PATTERN_DROID
 	turret_type = TURRET_TYPE_DROIDLASER
-	ammo_type = /datum/ammo/energy/lasgun/marine/overcharge
+	ammo_type = /datum/ammo/energy/lasgun/marine/droidgun
 	fire_delay = 1.5
-	current_rounds = 300
-	max_rounds = 300
+	current_rounds = 250
+	max_rounds = 250
+	magazine_type = /obj/item/ammo_magazine/droidlasercells
