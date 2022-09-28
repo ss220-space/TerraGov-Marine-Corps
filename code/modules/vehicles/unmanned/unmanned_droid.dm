@@ -2,16 +2,16 @@
 	name = "XN-43-H combat droid"
 	desc = "A prototype combat droid, first deployed as a prototype to fight the xeno menace in the frontier sytems."
 	icon_state = "droidcombat"
-	move_delay = 3
+	move_delay = 3.5
 	max_integrity = 150
 	turret_pattern = PATTERN_DROID
 	can_interact = TRUE
 	gunnoise = 'sound/weapons/guns/fire/laser.ogg'
 	spawn_equipped_type = /obj/item/uav_turret/droid
-	unmanned_flags = HAS_LIGHTS|OVERLAY_TURRET
+	unmanned_flags = HAS_LIGHTS|OVERLAY_TURRET|GIVE_NIGHT_VISION
 	/// Existing signal for Supply console.
 	var/datum/supply_beacon/beacon_datum
-	/// Action to activate suppply antenna. 
+	/// Action to activate suppply antenna.
 	var/datum/action/antenna/antenna
 
 /obj/vehicle/unmanned/droid/Initialize()
@@ -43,6 +43,9 @@
 		UnregisterSignal(user, COMSIG_UNMANNED_COORDINATES)
 
 /obj/vehicle/unmanned/droid/Destroy(datum/source, mob/user)
+	. = ..()
+	GLOB.unmanned_vehicles -= src
+	QDEL_NULL(flash)
 	user.clear_fullscreen("machine", 5)
 	antenna.remove_action(user)
 	UnregisterSignal(user, COMSIG_UNMANNED_COORDINATES)
@@ -130,3 +133,12 @@
 
 /datum/action/antenna/action_activate()
 	SEND_SIGNAL(owner, COMSIG_UNMANNED_COORDINATES)
+
+/obj/vehicle/unmanned/droid/Destroy(datum/source, mob/user)
+	. = ..()
+	GLOB.unmanned_vehicles -= src
+	QDEL_NULL(flash)
+	user.clear_fullscreen("machine", 5)
+	antenna.remove_action(user)
+	UnregisterSignal(user, COMSIG_UNMANNED_COORDINATES)
+	return ..()

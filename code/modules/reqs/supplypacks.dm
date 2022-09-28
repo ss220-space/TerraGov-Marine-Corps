@@ -1452,7 +1452,7 @@ VEHICLES
 /datum/supply_packs/vehicles/droid_combat
 	name = "Combat droid with weapon equipped"
 	contains = list(/obj/vehicle/unmanned/droid)
-	cost = 40
+	cost = 75
 
 /datum/supply_packs/vehicles/droid_scout
 	name = "Scout droid"
@@ -1465,43 +1465,49 @@ VEHICLES
 	cost = 20
 	containertype = /obj/structure/closet/crate/weapon
 
+/datum/supply_packs/vehicles/droid_energy_cells
+	name = "Droid energy cells"
+	contains = list(/obj/item/ammo_magazine/droidlasercells)
+	cost = 20
+	containertype = /obj/structure/closet/crate/weapon
+
 /datum/supply_packs/vehicles/light_uv
 	name = "Light unmanned vehicle - Iguana"
 	contains = list(/obj/vehicle/unmanned)
-	cost = 30
+	cost = 25
 
 /datum/supply_packs/vehicles/medium_uv
 	name = "Medium unmanned vehicle - Gecko"
 	contains = list(/obj/vehicle/unmanned/medium)
-	cost = 50
+	cost = 45
 
 /datum/supply_packs/vehicles/heavy_uv
 	name = "Heavy unmanned vehicle - Komodo"
 	contains = list(/obj/vehicle/unmanned/heavy)
-	cost = 70
+	cost = 65
 
 /datum/supply_packs/vehicles/uv_light_weapon
 	name = "Light UV weapon"
 	contains = list(/obj/item/uav_turret)
-	cost = 20
+	cost = 10
 	containertype = /obj/structure/closet/crate/weapon
 
 /datum/supply_packs/vehicles/uv_heavy_weapon
 	name = "Heavy UV weapon"
 	contains = list(/obj/item/uav_turret/heavy)
-	cost = 20
+	cost = 30
 	containertype = /obj/structure/closet/crate/weapon
 
 /datum/supply_packs/vehicles/uv_light_ammo
 	name = "Light UV ammo - 11x35mm"
 	contains = list(/obj/item/ammo_magazine/box11x35mm)
-	cost = 3
+	cost = 5
 	containertype = /obj/structure/closet/crate/ammo
 
 /datum/supply_packs/vehicles/uv_heavy_ammo
 	name = "Heavy UV ammo - 12x40mm"
 	contains = list(/obj/item/ammo_magazine/box12x40mm)
-	cost = 3
+	cost = 10
 	containertype = /obj/structure/closet/crate/ammo
 
 /datum/supply_packs/vehicles/vehicle_remote

@@ -19,3 +19,13 @@
 	current_rounds = 150
 	max_rounds = 150
 	icon_state_mini = "ammo_packet"
+
+/obj/item/ammo_magazine/droidlasercells
+	name = "box of droid laser cells"
+	desc = "A box containing 250 cells for combat droid laser gun."
+	icon_state = "ltbcannon_4"
+	w_class = WEIGHT_CLASS_NORMAL
+	default_ammo = /datum/ammo/energy/lasgun/marine/droidgun
+	current_rounds = 250
+	max_rounds = 250
+	icon_state_mini = "ammo_packet"
