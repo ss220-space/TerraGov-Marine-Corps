@@ -109,7 +109,7 @@
 		if(TURRET_TYPE_EXPLOSIVE)
 			. += "It is equipped with an explosive weapon system. "
 		if(TURRET_TYPE_DROIDLASER)
-			. += "It is equipped with a droid weapon system. It uses overcharge energy ammo."
+			. += "It is equipped with a droid weapon system. It uses droid laser cells."
 
 /obj/vehicle/unmanned/attackby(obj/item/I, mob/user, params)
 	. = ..()
