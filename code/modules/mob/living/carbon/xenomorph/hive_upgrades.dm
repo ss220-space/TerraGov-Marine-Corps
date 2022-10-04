@@ -327,7 +327,7 @@ GLOBAL_LIST_INIT(tier_to_primo_upgrade, list(
 	icon = "smartminions"
 	flags_gamemode = ABILITY_DISTRESS
 	flags_upgrade = UPGRADE_FLAG_ONETIME|UPGRADE_FLAG_MESSAGE_HIVE
-	psypoint_cost = 500
+	psypoint_cost = 200
 
 /datum/hive_upgrade/primordial
 	category = "Xenos"
@@ -343,7 +343,7 @@ GLOBAL_LIST_INIT(tier_to_primo_upgrade, list(
 /datum/hive_upgrade/primordial/tier_four
 	name = PRIMORDIAL_TIER_FOUR
 	desc = "Unlocks the primordial for the last tier"
-	psypoint_cost = 600
+	psypoint_cost = 50
 	icon = "primoqueen"
 
 /datum/hive_upgrade/primordial/tier_three
