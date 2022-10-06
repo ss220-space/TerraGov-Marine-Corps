@@ -181,17 +181,17 @@
 	primordial_message = "Destiny bows to our will as the universe trembles before us."
 	upgrade = XENO_UPGRADE_FOUR
 	// *** Melee Attacks *** //
-	melee_damage = 23
+	melee_damage = 25
 
 	// *** Speed *** //
 	speed = -0.3
 
 	// *** Plasma *** //
-	plasma_max = 1200
+	plasma_max = 1300
 	plasma_gain = 70
 
 	// *** Health *** //
-	max_health = 500
+	max_health = 550
 
 	// *** Defense *** //
 	soft_armor = list(MELEE = 65, BULLET = 65, LASER = 65, ENERGY = 65, BOMB = 30, BIO = 60, "rad" = 60, FIRE = 60, ACID = 60)
