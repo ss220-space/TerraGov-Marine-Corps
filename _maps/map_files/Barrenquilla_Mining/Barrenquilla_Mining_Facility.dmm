@@ -4,11 +4,11 @@
 /turf/open/lavaland/basalt,
 /area/bigredv2/outside/ne)
 "ad" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/space)
 "ae" = (
 /obj/structure/girder/reinforced,
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/space)
 "af" = (
 /obj/structure/girder/reinforced,
@@ -21,7 +21,7 @@
 /turf/open/lavaland/basalt,
 /area/bigredv2/outside/ne)
 "ah" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/outside/n)
 "aj" = (
 /turf/closed/wall/r_wall,
@@ -942,7 +942,7 @@
 	},
 /area/barren/medical)
 "fe" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/barren/cave/lz2)
 "ff" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1783,6 +1783,13 @@
 /obj/effect/landmark/corpsespawner/pmc,
 /turf/open/lavaland/basalt,
 /area/bigredv2/outside/c)
+"jJ" = (
+/obj/effect/landmark/patrol_point{
+	id = "SOM_13";
+	name = "SOM exit point 13"
+	},
+/turf/open/floor/marking/delivery,
+/area/barren/cave/lz1)
 "jK" = (
 /obj/structure/cable,
 /turf/open/floor/prison/sterilewhite,
@@ -2005,6 +2012,13 @@
 /obj/structure/barricade/guardrail,
 /turf/open/floor,
 /area/barren/civilian)
+"lf" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_13";
+	name = "TGMC exit point 13"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/outside/nw)
 "lh" = (
 /obj/effect/decal/woodsiding{
 	dir = 8
@@ -3303,6 +3317,13 @@
 	},
 /turf/open/floor/tile/dark2,
 /area/barren/engie/engine)
+"sO" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_11";
+	name = "TGMC exit point 11"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/outside/nw)
 "sP" = (
 /obj/effect/landmark/corpsespawner/doctor,
 /turf/open/floor/tile/blue/whitebluecorner{
@@ -3321,10 +3342,6 @@
 "sS" = (
 /turf/closed/wall,
 /area/bigredv2/caves/south)
-"sT" = (
-/obj/effect/decal/mecha_wreckage/ripley,
-/turf/open/floor/marking,
-/area/bigredv2/outside/c)
 "sU" = (
 /obj/machinery/door/airlock/mainship/secure/free_access{
 	name = "Brig Airlock"
@@ -3720,7 +3737,7 @@
 /turf/open/floor/wood,
 /area/barren/civilian/cook)
 "vg" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/barren/cave/lz1)
 "vh" = (
 /obj/structure/curtain/medical,
@@ -3992,6 +4009,14 @@
 /obj/effect/ai_node,
 /turf/open/floor/prison/sterilewhite,
 /area/barren/medical/research)
+"wL" = (
+/obj/machinery/light,
+/obj/effect/landmark/patrol_point{
+	id = "SOM_12";
+	name = "SOM exit point 12"
+	},
+/turf/open/floor,
+/area/barren/cave/lz1)
 "wM" = (
 /obj/structure/barricade/guardrail{
 	dir = 8
@@ -4629,6 +4654,13 @@
 /obj/structure/cable,
 /turf/open/floor/tile/dark2,
 /area/barren/misc/refinery)
+"AT" = (
+/obj/effect/landmark/patrol_point{
+	id = "SOM_23";
+	name = "SOM exit point 23"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southwest)
 "AV" = (
 /obj/machinery/washing_machine,
 /obj/effect/decal/cleanable/cobweb2,
@@ -4647,6 +4679,13 @@
 	},
 /turf/open/lavaland/basalt,
 /area/bigredv2/outside/c)
+"AZ" = (
+/obj/effect/landmark/patrol_point{
+	id = "SOM_21";
+	name = "SOM exit point 21"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southwest)
 "Ba" = (
 /obj/effect/decal/siding{
 	dir = 5
@@ -4659,6 +4698,13 @@
 	dir = 1
 	},
 /area/barren)
+"Bd" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_21";
+	name = "TGMC exit point 21"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southeast)
 "Bf" = (
 /turf/open/floor/plating,
 /area/bigredv2/outside/n)
@@ -4927,6 +4973,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/barren/civilian/cook)
+"CE" = (
+/obj/effect/landmark/patrol_point{
+	id = "SOM_24";
+	name = "SOM exit point 24"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southwest)
 "CF" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/mainship/generic,
@@ -5088,6 +5141,15 @@
 /obj/structure/table/flipped,
 /turf/open/floor/plating,
 /area/bigredv2/caves/south)
+"DM" = (
+/obj/effect/landmark/patrol_point{
+	id = "SOM_14";
+	name = "SOM exit point 14"
+	},
+/turf/open/floor/plating/warning{
+	dir = 8
+	},
+/area/shuttle/drop1/lz1)
 "DN" = (
 /obj/structure/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -5164,6 +5226,13 @@
 /obj/effect/decal/cleanable/blood/writing,
 /turf/open/floor/wood,
 /area/barren/civilian/cook)
+"Em" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_24";
+	name = "TGMC exit point 24"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southeast)
 "En" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 4
@@ -5200,6 +5269,13 @@
 /obj/effect/decal/remains/xeno,
 /turf/open/lavaland/basalt,
 /area/bigredv2/outside/n)
+"Ev" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_23";
+	name = "TGMC exit point 23"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southeast)
 "Ew" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/tile/blue/whiteblue{
@@ -5251,6 +5327,13 @@
 	dir = 1
 	},
 /area/barren/medical)
+"EI" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_14";
+	name = "TGMC exit point 14"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/outside/nw)
 "EM" = (
 /obj/structure/window/framed/colony/reinforced,
 /obj/structure/cable,
@@ -5647,7 +5730,7 @@
 /turf/open/floor/tile/dark2,
 /area/bigredv2/outside/general_offices)
 "GS" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/outside/se)
 "GU" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5760,7 +5843,7 @@
 /turf/open/lavaland/basalt,
 /area/bigredv2/outside/c)
 "HB" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/outside/ne)
 "HC" = (
 /obj/effect/decal/cleanable/blood/writing{
@@ -6145,6 +6228,13 @@
 /obj/structure/sign/poster,
 /turf/open/floor,
 /area/barren/cave/lz1)
+"JH" = (
+/obj/effect/landmark/patrol_point{
+	id = "SOM_22";
+	name = "SOM exit point 22"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southwest)
 "JI" = (
 /obj/structure/bookcase/manuals/research_and_development,
 /turf/open/floor/prison/sterilewhite,
@@ -6333,7 +6423,7 @@
 /turf/open/floor,
 /area/space)
 "KP" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/caves/southwest)
 "KR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7210,7 +7300,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/barren/civilian)
 "QA" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/caves/south)
 "QB" = (
 /obj/effect/landmark/weed_node,
@@ -7273,7 +7363,7 @@
 /turf/open/lavaland/basalt,
 /area/bigredv2/caves/southeast)
 "QV" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/caves/southeast)
 "QW" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -7310,7 +7400,7 @@
 /area/barren/engie/two)
 "Rf" = (
 /obj/structure/girder/reinforced,
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/barren/cave/lz1)
 "Rg" = (
 /obj/effect/spawner/random/toolbox,
@@ -7446,10 +7536,6 @@
 /area/bigredv2/caves/south)
 "RW" = (
 /obj/structure/table/mainship,
-/obj/item/clothing/suit/storage/labcoat/armored_coat,
-/obj/item/clothing/suit/storage/labcoat/armored_coat,
-/obj/item/clothing/suit/storage/labcoat/armored_coat,
-/obj/item/clothing/suit/storage/labcoat/armored_coat,
 /turf/open/floor/prison,
 /area/ai_monitored/storage/secure)
 "RY" = (
@@ -7828,7 +7914,7 @@
 	},
 /area/barren)
 "Uv" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/outside/e)
 "Ux" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -7839,7 +7925,7 @@
 /turf/open/floor/prison/kitchen,
 /area/barren/civilian/cook)
 "Uy" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/outside/nw)
 "UC" = (
 /obj/effect/decal/woodsiding{
@@ -7910,10 +7996,6 @@
 	dir = 1
 	},
 /area/barren)
-"UT" = (
-/obj/effect/decal/mecha_wreckage/ripley,
-/turf/open/lavaland/basalt,
-/area/bigredv2/caves/southwest)
 "UV" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -7989,9 +8071,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterilewhite,
 /area/barren/civilian)
-"Vt" = (
-/turf/closed/mineral,
-/area/bigredv2/outside/e)
 "Vv" = (
 /obj/structure/bed/chair/pew{
 	dir = 9
@@ -8002,6 +8081,13 @@
 /obj/item/trash/cigbutt/cigarbutt,
 /turf/open/floor/wood,
 /area/barren/civilian/workdorm)
+"Vx" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_12";
+	name = "TGMC exit point 12"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/outside/nw)
 "Vy" = (
 /obj/structure/fence,
 /obj/structure/cable,
@@ -8337,7 +8423,7 @@
 /turf/open/lavaland/basalt/glowing,
 /area/bigredv2/caves/south)
 "XF" = (
-/turf/closed/mineral/indestructible,
+/turf/closed/mineral/smooth/indestructible,
 /area/bigredv2/outside/w)
 "XJ" = (
 /obj/structure/table/reinforced,
@@ -8446,6 +8532,13 @@
 	dir = 6
 	},
 /area/barren/medical)
+"Yz" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_22";
+	name = "TGMC exit point 22"
+	},
+/turf/open/lavaland/basalt,
+/area/bigredv2/caves/southeast)
 "YA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -8626,6 +8719,13 @@
 /obj/effect/landmark/weed_node,
 /turf/open/lavaland/basalt,
 /area/bigredv2/caves/south)
+"ZE" = (
+/obj/effect/landmark/patrol_point{
+	id = "SOM_11";
+	name = "SOM exit point 11"
+	},
+/turf/open/floor,
+/area/barren/cave/lz1)
 "ZF" = (
 /obj/machinery/light{
 	dir = 4
@@ -14439,7 +14539,7 @@ rK
 rK
 rK
 rK
-QR
+lf
 QR
 rK
 rK
@@ -14699,7 +14799,7 @@ QR
 QR
 QR
 QR
-QR
+Vx
 rK
 rK
 rK
@@ -15721,7 +15821,7 @@ rK
 rK
 rK
 rK
-QR
+sO
 QR
 QR
 QR
@@ -16239,7 +16339,7 @@ QR
 QR
 QR
 QR
-QR
+EI
 rK
 rK
 rK
@@ -16358,7 +16458,7 @@ HQ
 YI
 YI
 YI
-YI
+AT
 YI
 YI
 YI
@@ -16876,7 +16976,7 @@ YI
 YI
 YI
 YI
-YI
+CE
 HQ
 KP
 aI
@@ -17383,7 +17483,7 @@ HQ
 HQ
 HQ
 HQ
-YI
+AZ
 YI
 YI
 YI
@@ -18157,7 +18257,7 @@ QB
 YI
 YI
 YI
-YI
+JH
 YI
 YI
 YI
@@ -18646,7 +18746,7 @@ YI
 YI
 YI
 YI
-UT
+YI
 YI
 YI
 YI
@@ -24827,7 +24927,7 @@ HQ
 HQ
 YI
 YI
-UT
+YI
 HQ
 YI
 YI
@@ -30443,7 +30543,7 @@ ZK
 ZK
 GO
 Ei
-sT
+SQ
 SQ
 SQ
 AG
@@ -54116,7 +54216,7 @@ QS
 Xo
 QT
 Xo
-Xo
+Bd
 Xo
 Zz
 Xo
@@ -54626,7 +54726,7 @@ ZS
 QS
 QS
 QS
-Xo
+Yz
 Xo
 QT
 Xo
@@ -54889,7 +54989,7 @@ Xo
 Xo
 Zz
 Bz
-Xo
+Em
 Xo
 Xo
 SA
@@ -55657,7 +55757,7 @@ Xo
 jN
 Sr
 Xo
-Xo
+Ev
 Xo
 Xo
 Xo
@@ -56078,7 +56178,7 @@ tm
 tm
 tm
 tm
-tm
+DM
 tm
 tm
 tm
@@ -56586,7 +56686,7 @@ Pw
 Pw
 Pw
 Pw
-Pw
+ZE
 Pw
 Pw
 Pw
@@ -56849,7 +56949,7 @@ Pw
 Pw
 Pw
 Pw
-gf
+wL
 AK
 AK
 AK
@@ -57103,7 +57203,7 @@ AK
 Pw
 Pt
 Pw
-Ag
+jJ
 Pw
 eI
 Pw
@@ -57140,7 +57240,7 @@ Uv
 Uv
 Uv
 Uv
-Vt
+Uv
 Uv
 Uv
 Uv
