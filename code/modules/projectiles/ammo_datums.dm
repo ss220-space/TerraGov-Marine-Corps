@@ -550,6 +550,19 @@ datum/ammo/bullet/revolver/tp44
 	sundering = 0.5
 	penetration = 5
 
+/datum/ammo/bullet/uvlight
+	name = "uvlight bullet"
+	hud_state = "smg"
+	hud_state_empty = "smg_empty"
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
+	accuracy_var_low = 7
+	accuracy_var_high = 7
+	damage = 20
+	accurate_range = 4
+	damage_falloff = 1
+	sundering = 1
+	penetration = 5
+
 /datum/ammo/bullet/smg/ap
 	name = "armor-piercing submachinegun bullet"
 	hud_state = "smg_ap"
@@ -1166,6 +1179,19 @@ datum/ammo/bullet/revolver/tp44
 	accurate_range = 12
 	damage = 40 //Reduced damage due to vastly increased mobility
 	penetration = 40 //Reduced penetration due to vastly increased mobility
+	accuracy = 5
+	barricade_clear_distance = 2
+	sundering = 5
+
+/datum/ammo/bullet/uvheavy
+	name = "uv heavy bullet"
+	icon_state 	= "bullet" //
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_SUNDERING
+	hud_state   = "smartgun"
+	hud_state_empty = "smartgun_empty"
+	accurate_range = 8
+	damage = 33 //
+	penetration = 25 //
 	accuracy = 5
 	barricade_clear_distance = 2
 	sundering = 5
@@ -2015,6 +2041,15 @@ datum/ammo/bullet/revolver/tp44
 	damage = 40
 	penetration = 20
 	sundering = 2
+	hitscan_effect_icon = "beam_heavy"
+
+/datum/ammo/energy/lasgun/marine/droidgun
+	name = "overcharged droid laser bolt"
+	icon_state = "overchargedlaser"
+	hud_state = "laser_sniper"
+	damage = 30
+	penetration = 25
+	sundering = 2.5
 	hitscan_effect_icon = "beam_heavy"
 
 /datum/ammo/energy/lasgun/marine/blast
