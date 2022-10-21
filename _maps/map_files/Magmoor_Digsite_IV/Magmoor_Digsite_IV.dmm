@@ -988,6 +988,13 @@
 "aTZ" = (
 /turf/open/lavaland/basalt/dirt,
 /area/magmoor/compound/south)
+"aUe" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_21";
+	name = "TGMC exit point 21"
+	},
+/turf/open/lavaland/basalt,
+/area/magmoor/cave/northwest)
 "aUi" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 1
@@ -5089,6 +5096,13 @@
 	},
 /turf/open/floor/tile/yellow/full,
 /area/magmoor/mining)
+"dDh" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_13";
+	name = "TGMC exit point 13"
+	},
+/turf/open/floor/tile/yellow/full,
+/area/magmoor/cargo/storage)
 "dDP" = (
 /obj/machinery/alarm{
 	dir = 4
@@ -6828,6 +6842,15 @@
 	dir = 1
 	},
 /area/magmoor/cave/central)
+"eIk" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_14";
+	name = "TGMC exit point 14"
+	},
+/turf/open/floor/tile/yellow{
+	dir = 4
+	},
+/area/magmoor/mining/refinery)
 "eIs" = (
 /obj/machinery/computer/security/wooden_tv,
 /obj/structure/table/mainship,
@@ -10490,6 +10513,10 @@
 /obj/effect/decal/warning_stripes/thin{
 	dir = 10
 	},
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_23";
+	name = "TGMC exit point 23"
+	},
 /turf/open/floor/plating/mainship,
 /area/magmoor/mining/garage)
 "hmX" = (
@@ -12617,6 +12644,10 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/grass,
 /area/magmoor/hydroponics)
+"iOu" = (
+/obj/effect/landmark/start/job/xenomorph,
+/turf/open/floor/cult,
+/area/magmoor/cave/north)
 "iOR" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -14052,9 +14083,12 @@
 	},
 /area/magmoor/compound/northeast)
 "jQn" = (
-/obj/effect/landmark/excavation_site_spawner,
-/turf/open/lavaland/lava/lpiece,
-/area/magmoor/cave/north)
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_12";
+	name = "TGMC exit point 12"
+	},
+/turf/open/floor/plating,
+/area/magmoor/compound/north)
 "jQr" = (
 /turf/open/lavaland/basalt/cave{
 	dir = 10
@@ -15648,6 +15682,11 @@
 	dir = 6
 	},
 /area/magmoor/cave/south)
+"kSx" = (
+/obj/effect/landmark/weed_node,
+/obj/effect/landmark/start/job/xenomorph,
+/turf/open/floor/cult,
+/area/magmoor/cave/north)
 "kSI" = (
 /turf/open/floor/mainship/silver/corner{
 	dir = 4
@@ -22799,13 +22838,11 @@
 /area/magmoor/cave/south)
 "pFE" = (
 /obj/effect/landmark/patrol_point{
-	id = "TGMC_21";
-	name = "TGMC exit point 21"
+	id = "TGMC_11";
+	name = "TGMC exit point 11"
 	},
-/turf/open/lavaland/lava/side{
-	dir = 1
-	},
-/area/magmoor/cave/northwest)
+/turf/open/floor/tile/yellow/full,
+/area/magmoor/cargo/storage)
 "pFO" = (
 /obj/machinery/vending/snack,
 /turf/open/floor/prison/kitchen,
@@ -34063,6 +34100,10 @@
 	},
 /area/magmoor/civilian/dorms)
 "wau" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_24";
+	name = "TGMC exit point 24"
+	},
 /turf/open/floor/plating/dmg3,
 /area/magmoor/mining/garage)
 "wav" = (
@@ -36769,6 +36810,10 @@
 	},
 /turf/open/floor/mainship,
 /area/magmoor/civilian/arrival/east)
+"xvU" = (
+/obj/effect/landmark/excavation_site_spawner,
+/turf/open/lavaland/basalt,
+/area/magmoor/cave/north)
 "xwa" = (
 /obj/machinery/conveyor{
 	dir = 5
@@ -38116,6 +38161,10 @@
 	dir = 1
 	},
 /area/magmoor/landing)
+"ydc" = (
+/obj/effect/landmark/start/job/xenomorph,
+/turf/open/floor/cult,
+/area/magmoor/cave/northeast)
 "ydd" = (
 /turf/open/floor/mainship/blue{
 	dir = 10
@@ -38240,6 +38289,15 @@
 	dir = 5
 	},
 /area/magmoor/compound/northwest)
+"yfO" = (
+/obj/effect/landmark/patrol_point{
+	id = "TGMC_22";
+	name = "TGMC exit point 22"
+	},
+/turf/open/floor/tile/yellow{
+	dir = 8
+	},
+/area/magmoor/mining/refinery)
 "yfP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -44105,9 +44163,9 @@ cnh
 xLg
 xLg
 xLg
-pFE
+aFS
 dBV
-dBV
+aUe
 dBV
 dBV
 dBV
@@ -47135,7 +47193,7 @@ dBV
 dBV
 lqA
 hWv
-dCb
+pFE
 lmA
 mxY
 lCT
@@ -47153,7 +47211,7 @@ inp
 xOs
 kWR
 exD
-dSI
+yfO
 fNl
 phJ
 grp
@@ -48774,7 +48832,7 @@ pey
 pey
 aOG
 vRx
-dCb
+dDh
 iOl
 kjC
 nUg
@@ -49017,7 +49075,7 @@ vLH
 xOs
 kWR
 ujd
-gyd
+eIk
 tja
 jic
 grp
@@ -49231,7 +49289,7 @@ lCT
 bDE
 dNt
 aVA
-dky
+jQn
 dky
 iJC
 iJC
@@ -54835,7 +54893,7 @@ gnc
 gqb
 cYq
 cYq
-gqb
+xvU
 gqb
 cna
 ctU
@@ -55069,7 +55127,7 @@ gqb
 gqb
 gqb
 gqb
-jQn
+cna
 ctU
 utd
 utd
@@ -58088,7 +58146,7 @@ qhT
 urr
 iXp
 urr
-urr
+iOu
 urr
 urr
 urr
@@ -58320,13 +58378,13 @@ ngm
 qhT
 urr
 urr
+iOu
 urr
 urr
 urr
-urr
+kSx
 iXp
-iXp
-urr
+iOu
 qhT
 kmb
 nhd
@@ -58556,7 +58614,7 @@ urr
 urr
 urr
 urr
-urr
+iOu
 urr
 urr
 urr
@@ -58790,7 +58848,7 @@ iXp
 qrZ
 urr
 urr
-iXp
+kSx
 urr
 urr
 qhT
@@ -59256,7 +59314,7 @@ urr
 iXp
 urr
 urr
-iXp
+kSx
 urr
 urr
 qhT
@@ -59486,11 +59544,11 @@ qhT
 urr
 urr
 urr
+iOu
 urr
 urr
 urr
-urr
-urr
+iOu
 iXp
 qhT
 kmb
@@ -59720,7 +59778,7 @@ urr
 urr
 iXp
 urr
-urr
+iOu
 iXp
 urr
 urr
@@ -64149,10 +64207,10 @@ idd
 jHY
 dSj
 bOr
-bOr
+ydc
 qll
 bOr
-bOr
+ydc
 qll
 bOr
 dSj
@@ -64387,7 +64445,7 @@ bOr
 bOr
 bOr
 bOr
-bOr
+ydc
 bOr
 joT
 bCW
@@ -64615,7 +64673,7 @@ rqT
 jHY
 dSj
 bOr
-bOr
+ydc
 bOr
 uru
 bOr
@@ -64852,7 +64910,7 @@ bOr
 bOr
 bOr
 kGr
-bOr
+ydc
 bOr
 bOr
 jft
