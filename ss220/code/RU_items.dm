@@ -462,7 +462,7 @@ SUBSYSTEM_DEF(ru_items)
 	name = "\improper Urodela armor plating"
 	desc = "Heavy armor plating designed for self mounting on TerraGov combat robotics. It has self-sealing bolts for mounting on robotic owners inside. The armor is inspired by the mining exosuits used on lava planets. Upgraded by TeraGova engineers for robots that use a flamethrower and work in an environment of elevated temperatures. Armor protects important modules and wiring from fire and lava, which gives robots high survivability in fire."
 	soft_armor = list(MELEE = 50, BULLET = 60, LASER = 80, ENERGY = 70, BOMB = 50, BIO = 50, FIRE = 100, ACID = 60)
-	hard_armor = list("fire" = 200)
+	hard_armor = list(FIRE = 200)
 	slowdown = 0.5
 
 	icon_state = "robo_armor_fire"
