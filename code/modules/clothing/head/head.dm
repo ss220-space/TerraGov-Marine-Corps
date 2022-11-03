@@ -411,3 +411,44 @@
 /obj/item/clothing/head/squadhb/d
 	name = "\improper Delta squad headband"
 	icon_state = "dsquadhb"
+
+/obj/item/clothing/head/tgmcberet/squad
+	name = "\improper Charlie squad beret"
+	icon_state = "csberet"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Charlie Squad."
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
+
+/obj/item/clothing/head/tgmcberet/squad/delta
+	name = "\improper Delta Squad beret"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Delta Squad."
+	icon_state = "dsberet"
+
+/obj/item/clothing/head/tgmcberet/squad/alpha
+	name = "\improper Alpha Squad beret"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Alpha Squad."
+	icon_state = "asberet"
+
+/obj/item/clothing/head/tgmcberet/squad/bravo
+	name = "\improper Bravo Squad beret"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Bravo Squad."
+	icon_state = "bsberet"
+
+/obj/item/clothing/head/tgmcberet/commando
+	name = "\improper Marines Commando beret"
+	desc = "Dark Green beret with an old TGMC insignia on it."
+	icon_state = "marcommandoberet"
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
+
+
+/obj/item/clothing/head/tgmcberet/medical
+	name = "\improper Medical beret"
+	desc = "A white beret with a green cross finely threaded into it. It has that sterile smell about it."
+	icon_state = "medberet"
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
+
