@@ -807,6 +807,7 @@
 			/obj/item/radio/headset/mainship/marine/bravo = -1,
 			/obj/item/radio/headset/mainship/marine/charlie = -1,
 			/obj/item/radio/headset/mainship/marine/delta = -1,
+			/obj/item/toy/plush/pig = 1,
 		),
 		"Mining Equipment" = list(
 			/obj/item/minerupgrade/automatic = 1,
