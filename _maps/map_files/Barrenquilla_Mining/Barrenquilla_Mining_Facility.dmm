@@ -3527,7 +3527,9 @@
 	id = "TGMC_11";
 	name = "TGMC exit point 11"
 	},
-/turf/open/lavaland/basalt,
+/turf/open/lavaland/basalt{
+	baseturfs = /turf/open/lavaland/basalt
+	},
 /area/bigredv2/outside/nw)
 "sP" = (
 /obj/effect/landmark/corpsespawner/doctor,
@@ -7807,9 +7809,6 @@
 /obj/structure/table/reinforced/prison,
 /turf/open/floor/mainship/black/full,
 /area/barren/security)
-"QR" = (
-/turf/open/lavaland/basalt,
-/area/bigredv2/outside/nw)
 "QS" = (
 /turf/closed/brock,
 /area/bigredv2/caves/southeast)
@@ -16144,8 +16143,8 @@ rK
 rK
 rK
 rK
-QR
-QR
+fM
+fM
 fM
 fM
 fM
@@ -16401,8 +16400,8 @@ rK
 rK
 rK
 sO
-QR
-QR
+fM
+fM
 fM
 fM
 rK
@@ -16657,9 +16656,9 @@ rK
 rK
 rK
 rK
-QR
 fM
-QR
+fM
+fM
 fM
 fM
 rK
@@ -16914,9 +16913,9 @@ rK
 rK
 rK
 rK
-QR
-QR
-QR
+fM
+fM
+fM
 fM
 EI
 rK
@@ -17171,9 +17170,9 @@ rK
 rK
 rK
 rK
-QR
-QR
-QR
+fM
+fM
+fM
 fM
 fM
 fM
@@ -17429,8 +17428,8 @@ rK
 rK
 rK
 rK
-QR
-QR
+fM
+fM
 fM
 fM
 fM
