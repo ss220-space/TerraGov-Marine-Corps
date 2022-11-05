@@ -781,7 +781,7 @@
 /area/bigredv2/outside/n)
 "ea" = (
 /obj/structure/rack,
-/obj/effect/spawner/random/gun/sidearms,
+/obj/effect/landmark/weapon_spawn/tier1_weapon_spawn,
 /turf/open/floor/tile/red/full,
 /area/barren/security)
 "eb" = (
@@ -1699,6 +1699,10 @@
 /area/barren/civilian)
 "io" = (
 /obj/item/frame/camera,
+/obj/machinery/door_control/unmeltable{
+	id = "secure_blast5";
+	name = "Vault Access"
+	},
 /turf/open/lavaland/basalt{
 	baseturfs = /turf/open/lavaland/basalt
 	},
@@ -2073,12 +2077,8 @@
 /obj/machinery/door/poddoor/mainship/indestructible{
 	dir = 2;
 	id = "secure_blast5";
-	name = "\improper Ash Shelter"
-	},
-/obj/machinery/door_control/unmeltable{
-	id = "secure_blast5";
-	name = "Vault Access";
-	pixel_x = -32
+	name = "\improper Ash Shelter";
+	desc = "That loosks like it doesn't open easily."
 	},
 /turf/open/floor/plating/asteroidfloor,
 /area/bigredv2/outside/w)
@@ -4247,7 +4247,7 @@
 /obj/item/storage/box/flashbangs,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
-/obj/effect/spawner/random/gun,
+/obj/effect/landmark/weapon_spawn/tier2_weapon_spawn,
 /turf/open/floor/tile/red/full,
 /area/barren/security)
 "vK" = (
@@ -6563,7 +6563,7 @@
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/suit/armor/vest,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/random/ammo,
+/obj/effect/spawner/random/gun,
 /turf/open/floor/tile/red/full,
 /area/barren/security)
 "Id" = (
