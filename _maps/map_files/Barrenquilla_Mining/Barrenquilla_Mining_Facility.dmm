@@ -668,6 +668,7 @@
 "dB" = (
 /obj/structure/table/reinforced/prison,
 /obj/item/paper,
+/obj/effect/landmark/weapon_spawn/tier2_weapon_spawn,
 /turf/open/floor/wood,
 /area/barren/security)
 "dC" = (
@@ -780,12 +781,7 @@
 /area/bigredv2/outside/n)
 "ea" = (
 /obj/structure/rack,
-/obj/item/ammo_magazine/pistol/g22,
-/obj/item/ammo_magazine/pistol/g22,
-/obj/item/ammo_magazine/pistol/g22,
-/obj/item/ammo_magazine/pistol/g22,
-/obj/item/ammo_magazine/pistol/g22,
-/obj/item/ammo_magazine/pistol/g22,
+/obj/effect/spawner/random/gun/sidearms,
 /turf/open/floor/tile/red/full,
 /area/barren/security)
 "eb" = (
@@ -926,6 +922,12 @@
 /obj/structure/sign/poster,
 /turf/open/floor,
 /area/barren/civilian)
+"eE" = (
+/obj/effect/spawner/random/trash,
+/turf/open/lavaland/basalt{
+	baseturfs = /turf/open/lavaland/basalt
+	},
+/area/bigredv2/outside/e)
 "eF" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -1434,7 +1436,8 @@
 "gU" = (
 /obj/machinery/door/airlock/mainship/generic{
 	dir = 1;
-	name = "\improper Dormitories Bedroom"
+	name = "\improper Dormitories Bedroom";
+	locked = 1
 	},
 /turf/open/floor/plating/mainship,
 /area/bigredv2/outside/w)
@@ -1478,6 +1481,7 @@
 /area/bigredv2/caves/southwest)
 "hg" = (
 /obj/structure/bed/chair/sofa/right,
+/obj/effect/spawner/random/plushie/nospawnninetynine,
 /turf/open/floor/carpet{
 	icon_state = "carpet6-0"
 	},
@@ -1916,6 +1920,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/barren/security)
+"jv" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/random/pillbottle,
+/turf/open/floor/tile/blue/whiteblue{
+	dir = 4
+	},
+/area/barren/medical/chemistry)
 "jw" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -2929,9 +2940,7 @@
 /turf/open/floor/wood,
 /area/barren/cave/lz1)
 "oQ" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/beakers,
-/obj/item/storage/box/pillbottles,
+/obj/machinery/vending/medical,
 /turf/open/floor/tile/blue/whiteblue{
 	dir = 10
 	},
@@ -3146,6 +3155,10 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/tile/dark,
 /area/barren/cave/lz2)
+"pZ" = (
+/obj/effect/landmark/corpsespawner/colonist/regular,
+/turf/open/floor/tile,
+/area/bigredv2/outside/w)
 "qa" = (
 /obj/machinery/chem_dispenser,
 /turf/open/floor/prison/sterilewhite,
@@ -4163,6 +4176,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean/two,
 /area/barren/security)
+"vm" = (
+/obj/structure/rack,
+/obj/effect/spawner/random/plushie/nospawnninetynine,
+/turf/open/floor/marking/delivery,
+/area/barren/misc/genstorage)
 "vn" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -4229,6 +4247,7 @@
 /obj/item/storage/box/flashbangs,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
+/obj/effect/spawner/random/gun,
 /turf/open/floor/tile/red/full,
 /area/barren/security)
 "vK" = (
@@ -5229,7 +5248,13 @@
 /obj/structure/rack,
 /obj/item/weapon/gun/pistol/g22,
 /obj/item/weapon/gun/pistol/g22,
+/obj/item/ammo_magazine/pistol/g22,
 /obj/item/weapon/gun/pistol/g22,
+/obj/item/ammo_magazine/pistol/g22,
+/obj/item/ammo_magazine/pistol/g22,
+/obj/item/ammo_magazine/pistol/g22,
+/obj/item/ammo_magazine/pistol/g22,
+/obj/item/ammo_magazine/pistol/g22,
 /turf/open/floor/tile/red/full,
 /area/barren/security)
 "Bn" = (
@@ -6201,6 +6226,7 @@
 "Gi" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower,
+/obj/effect/landmark/weapon_spawn/tier3_weapon_spawn,
 /turf/open/floor/plating/plating_catwalk,
 /area/bigredv2/outside/w)
 "Gj" = (
@@ -6537,6 +6563,7 @@
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/suit/armor/vest,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/ammo,
 /turf/open/floor/tile/red/full,
 /area/barren/security)
 "Id" = (
@@ -7048,6 +7075,7 @@
 /obj/structure/bed/chair/pew{
 	dir = 5
 	},
+/obj/effect/spawner/random/trash,
 /turf/open/lavaland/basalt{
 	baseturfs = /turf/open/lavaland/basalt
 	},
@@ -7200,6 +7228,7 @@
 /area/barren/cave/lz2)
 "Lu" = (
 /obj/structure/table/reinforced,
+/obj/item/storage/belt/lifesaver/full,
 /turf/open/floor/prison/sterilewhite,
 /area/barren/medical/research)
 "Lv" = (
@@ -7239,6 +7268,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
+/obj/effect/spawner/random/pillbottle,
 /turf/open/floor/tile/blue/whiteblue{
 	dir = 8
 	},
@@ -7480,10 +7510,10 @@
 /turf/open/floor/prison/sterilewhite,
 /area/barren/civilian)
 "Na" = (
-/obj/machinery/power/apc/drained{
+/obj/structure/cable,
+/obj/machinery/power/apc/high{
 	dir = 4
 	},
-/obj/structure/cable,
 /turf/open/floor/carpet{
 	icon_state = "carpet7-0"
 	},
@@ -7608,6 +7638,10 @@
 /obj/effect/ai_node,
 /turf/open/floor/plating,
 /area/bigredv2/caves/south)
+"NO" = (
+/obj/effect/landmark/weapon_spawn/tier1_weapon_spawn,
+/turf/open/floor/plating,
+/area/bigredv2/outside/c)
 "NP" = (
 /obj/structure/cable,
 /obj/structure/cable,
@@ -9009,6 +9043,8 @@
 /obj/effect/decal/cleanable/cobweb{
 	dir = 4
 	},
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/beakers,
 /turf/open/floor/tile/blue/whiteblue{
 	dir = 1
 	},
@@ -22280,7 +22316,7 @@ ZW
 ZW
 ZW
 em
-FW
+pZ
 FW
 gN
 RZ
@@ -36685,7 +36721,7 @@ GO
 iH
 NT
 AG
-RA
+NO
 jj
 Ta
 Ta
@@ -39234,7 +39270,7 @@ Jl
 VC
 WJ
 Zw
-aD
+jv
 ss
 Jl
 ZK
@@ -45647,7 +45683,7 @@ rf
 rR
 Pv
 LC
-Pv
+eE
 Pv
 LC
 Pv
@@ -47978,7 +48014,7 @@ WG
 Mt
 YC
 Vj
-UY
+vm
 Vc
 Pv
 Pv
