@@ -5383,6 +5383,14 @@
 	baseturfs = /turf/open/lavaland/basalt
 	},
 /area/bigredv2/outside/c)
+"BV" = (
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/weed_node,
+/turf/open/lavaland/basalt{
+	baseturfs = /turf/open/lavaland/basalt
+	},
+/area/bigredv2/caves/south)
 "BW" = (
 /obj/structure/bed/chair/wood/wings,
 /turf/open/floor/wood,
@@ -9034,6 +9042,9 @@
 	baseturfs = /turf/open/lavaland/basalt
 	},
 /area/bigredv2/caves/south)
+"VK" = (
+/turf/open/space/basic,
+/area/bigredv2/outside/e)
 "VL" = (
 /turf/open/floor/plating/warning{
 	dir = 4
@@ -18447,7 +18458,7 @@ HQ
 HQ
 HQ
 Su
-YI
+QB
 HQ
 HQ
 HQ
@@ -19475,7 +19486,7 @@ Jv
 YI
 YI
 YI
-YI
+QB
 YI
 Jv
 YI
@@ -19743,7 +19754,7 @@ HQ
 HQ
 YI
 YI
-YI
+QB
 Dq
 Jv
 Sw
@@ -19997,7 +20008,7 @@ YI
 YI
 YI
 YI
-YI
+QB
 YI
 VF
 YI
@@ -20506,7 +20517,7 @@ HQ
 HQ
 HQ
 YI
-YI
+QB
 HQ
 HQ
 YI
@@ -20774,7 +20785,7 @@ YI
 YI
 Dq
 YI
-YI
+QB
 AH
 HQ
 HQ
@@ -21276,11 +21287,11 @@ HQ
 HQ
 HQ
 YI
-YI
+QB
 HQ
 HQ
 YI
-YI
+QB
 Su
 YI
 YI
@@ -25916,7 +25927,7 @@ YI
 HQ
 YI
 YI
-YI
+QB
 YI
 YI
 YI
@@ -32736,7 +32747,7 @@ aI
 aI
 ah
 al
-gs
+bj
 gs
 gs
 gs
@@ -32994,8 +33005,8 @@ aI
 ah
 al
 gs
-gg
 gs
+gg
 bj
 gs
 bL
@@ -34922,7 +34933,7 @@ Zg
 Zg
 Zg
 Zd
-Zg
+Zb
 Zg
 Zg
 WF
@@ -35699,7 +35710,7 @@ Zg
 Zg
 Zd
 Zd
-Zg
+Zb
 Zg
 Zd
 Zd
@@ -38004,7 +38015,7 @@ Zg
 Zq
 Zg
 Zg
-Zg
+Zb
 Zg
 Zg
 Zg
@@ -38020,7 +38031,7 @@ Zd
 Zd
 Zd
 Zg
-Zg
+Zb
 Zd
 QA
 aI
@@ -38777,7 +38788,7 @@ Zg
 Zg
 Zg
 XB
-Zg
+Zb
 Zg
 Zg
 Zg
@@ -39031,7 +39042,7 @@ Zg
 Zg
 Zg
 Zg
-Zg
+Zb
 Zg
 XB
 Zg
@@ -40833,7 +40844,7 @@ Zd
 Zd
 lz
 dG
-dG
+BV
 Lb
 XB
 XB
@@ -44161,7 +44172,7 @@ Zg
 Zd
 Zd
 Zd
-Zg
+Zb
 Zg
 Zg
 Zg
@@ -44864,7 +44875,7 @@ Mw
 Mw
 Ie
 Pv
-Pv
+LC
 Pv
 Pv
 Pv
@@ -45123,11 +45134,11 @@ Ie
 Pv
 Pv
 Pv
+LC
 Pv
 Pv
 Pv
-Pv
-ZL
+RH
 ZL
 Ry
 Mw
@@ -45635,10 +45646,10 @@ rf
 rf
 rR
 Pv
+LC
 Pv
 Pv
-Pv
-Pv
+LC
 Pv
 Pv
 Pv
@@ -45703,7 +45714,7 @@ Zg
 Zd
 Zd
 Zg
-Zg
+Zb
 sS
 HN
 HN
@@ -45899,7 +45910,7 @@ Pv
 Pv
 Pv
 Pv
-Pv
+LC
 Pv
 lt
 QO
@@ -46184,7 +46195,7 @@ ZK
 Pv
 hC
 Pv
-Pv
+VK
 Pv
 Pv
 LC
@@ -46406,7 +46417,7 @@ rf
 rf
 rR
 Pv
-Pv
+LC
 Pv
 Pv
 Pv
@@ -46671,7 +46682,7 @@ pX
 Pv
 Pv
 Pv
-Pv
+LC
 Pv
 Pv
 wq
@@ -46922,9 +46933,9 @@ Hp
 pF
 Pv
 Pv
+LC
 Pv
-Pv
-Pv
+LC
 Pv
 Pv
 Pv
@@ -47503,7 +47514,7 @@ Zg
 WF
 Zg
 Zg
-Zg
+Zb
 Zd
 WS
 WS
@@ -47702,7 +47713,7 @@ EB
 Pv
 Pv
 Pv
-Xd
+IH
 Pv
 Pv
 Pv
@@ -49801,7 +49812,7 @@ Op
 QS
 QS
 QS
-Xo
+Bz
 Xo
 Xo
 Xo
@@ -53408,7 +53419,7 @@ Xo
 Xo
 Sz
 Xo
-Xo
+Bz
 QS
 QS
 QS
@@ -53926,7 +53937,7 @@ Xo
 QS
 QS
 Xo
-Xo
+Bz
 Xo
 uf
 Xo
@@ -56746,7 +56757,7 @@ Ev
 Xo
 Xo
 Xo
-Xo
+Bz
 Xo
 Xo
 Xo
@@ -58027,7 +58038,7 @@ Xo
 Xo
 Xo
 QT
-Xo
+Bz
 Xo
 Xo
 QT
@@ -58805,7 +58816,7 @@ Xo
 Xo
 Xo
 Xo
-Xo
+Bz
 Xo
 Xo
 Xo
