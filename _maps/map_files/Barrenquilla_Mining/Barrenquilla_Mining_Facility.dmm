@@ -771,6 +771,10 @@
 	dir = 1
 	},
 /area/barren)
+"eh" = (
+/obj/effect/landmark/sensor_tower_patrol,
+/turf/open/floor/tile/dark2,
+/area/barren/engie/engine)
 "ei" = (
 /obj/structure/disposalpipe/segment/corner{
 	dir = 8
@@ -3168,6 +3172,12 @@
 	dir = 4
 	},
 /area/barren/security)
+"qT" = (
+/obj/effect/landmark/sensor_tower_patrol,
+/turf/open/lavaland/basalt{
+	baseturfs = /turf/open/lavaland/basalt
+	},
+/area/bigredv2/caves/south)
 "qU" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/tile/blue/whiteblue{
@@ -3435,6 +3445,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/tile/dark2,
 /area/bigredv2/outside/general_offices)
+"sm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/sensor_tower_patrol,
+/turf/open/floor/grimy,
+/area/barren/civilian/workdorm)
 "sn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
@@ -8054,6 +8069,7 @@
 /turf/open/floor/prison/sterilewhite,
 /area/barren/medical/research)
 "Sh" = (
+/obj/effect/landmark/sensor_tower_patrol,
 /turf/open/floor/prison/sterilewhite,
 /area/barren/civilian)
 "Si" = (
@@ -8095,6 +8111,10 @@
 	baseturfs = /turf/open/lavaland/basalt
 	},
 /area/bigredv2/caves/southwest)
+"Sv" = (
+/obj/effect/landmark/sensor_tower_patrol,
+/turf/open/lavaland/catwalk,
+/area/bigredv2/outside/w)
 "Sw" = (
 /obj/machinery/miner/damaged/platinum,
 /turf/open/lavaland/basalt{
@@ -18256,7 +18276,7 @@ Dt
 TO
 QJ
 Ke
-Ke
+Sv
 Ke
 xi
 Tq
@@ -32653,7 +32673,7 @@ aY
 aY
 bu
 fw
-aY
+eh
 aY
 eP
 aY
@@ -37604,7 +37624,7 @@ Zg
 Zg
 WF
 Zb
-Zg
+qT
 Zg
 ia
 Zd
@@ -54258,7 +54278,7 @@ Pv
 dH
 An
 yD
-CU
+sm
 CU
 Ci
 nw
