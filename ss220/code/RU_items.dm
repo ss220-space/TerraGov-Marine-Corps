@@ -539,7 +539,7 @@ SUBSYSTEM_DEF(ru_items)
 	item_icons = list(
 		slot_head_str = 'icons/mob/squadhb.dmi')
 	icon_state = "asquadhb"
-	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, "rad" = 0, FIRE = 0, ACID = 0)
+	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
 	slowdown = -0.1
 	w_class = WEIGHT_CLASS_TINY
 
