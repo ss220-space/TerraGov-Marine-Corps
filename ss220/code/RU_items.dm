@@ -109,6 +109,7 @@ SUBSYSTEM_DEF(ru_items)
 	default_ammo = /datum/ammo/bullet/revolver/rifle
 	caliber = CALIBER_44LS
 	current_rounds = 40
+	icon_state_mini = "44LSbox"
 	max_rounds = 40
 
 /datum/ammo/bullet/revolver/rifle
