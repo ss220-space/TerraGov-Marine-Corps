@@ -154,14 +154,14 @@
 	desc = "The pinnacle of tacticool technology."
 	icon_state = "booniehatdg"
 	item_state = "booniehatdg"
-	soft_armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 10, "bio" = 5, "rad" = 0, "fire" = 5, "acid" = 5)
+	soft_armor = list(MELEE = 15, BULLET = 15, LASER = 15, ENERGY = 15, BOMB = 10, BIO = 5, FIRE = 5, ACID = 5)
 
 /obj/item/clothing/head/boonie/booniehattan
 	name = "Tan Boonie Hat"
 	desc = "The pinnacle of tacticool technology."
 	icon_state = "booniehattan"
 	item_state = "booniehattan"
-	soft_armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 10, "bio" = 5, "rad" = 0, "fire" = 5, "acid" = 5)
+	soft_armor = list(MELEE = 15, BULLET = 15, LASER = 15, ENERGY = 15, BOMB = 10, BIO = 5, FIRE = 5, ACID = 5)
 
 /obj/item/clothing/head/slouch
 	name = "\improper TGMC slouch hat"
@@ -387,7 +387,7 @@
 		slot_r_hand_str = 'icons/mob/items_righthand_1.dmi',)
 	icon = 'icons/obj/clothing/cm_hats.dmi'
 	icon_state = "straw_hat"
-	soft_armor = list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 15, BIO = 10, "rad" = 0, FIRE = 20, ACID = 20)
+	soft_armor = list(MELEE = 30, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 15, BIO = 10, FIRE = 20, ACID = 20)
 
 /obj/item/clothing/head/squadhb
 	name = "\improper Alpha squad headband"
@@ -396,7 +396,7 @@
 	item_icons = list(
 		slot_head_str = 'icons/mob/squadhb.dmi')
 	icon_state = "asquadhb"
-	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, "rad" = 0, FIRE = 0, ACID = 0)
+	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
 	slowdown = -0.1
 	w_class = WEIGHT_CLASS_TINY
 
