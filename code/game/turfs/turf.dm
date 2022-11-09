@@ -650,10 +650,6 @@
 /turf/open/lavaland/basalt/can_dig_xeno_tunnel()
 	return TRUE
 
-
-
-
-
 //what dirt type you can dig from this turf if any.
 /turf/proc/get_dirt_type()
 	return NO_DIRT
