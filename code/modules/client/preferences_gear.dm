@@ -93,6 +93,35 @@ GLOBAL_LIST_EMPTY(gear_datums)
 	cost = 3
 	slot = SLOT_HEAD
 
+/datum/gear/beret_charlie
+	display_name = "Charlie Squad beret"
+	path = /obj/item/clothing/head/tgmcberet/squad
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/beret_alpha
+	display_name = "Alpha Squad beret"
+	path = /obj/item/clothing/head/tgmcberet/squad/alpha
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/beret_delta
+	display_name = "Delta Squad beret"
+	path = /obj/item/clothing/head/tgmcberet/squad/delta
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/beret_bravo
+	display_name = "Bravo Squad beret"
+	path = /obj/item/clothing/head/tgmcberet/squad/bravo
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/beret_commando
+	display_name = "Marine Commando beret"
+	path = /obj/item/clothing/head/tgmcberet/commando
+	cost = 3
+	slot = SLOT_HEAD
 
 /datum/gear/headband_green
 	display_name = "TGMC headband (green)"
@@ -192,6 +221,30 @@ GLOBAL_LIST_EMPTY(gear_datums)
 	display_name = "Cigarette"
 	path = /obj/item/clothing/mask/cigarette
 	cost = 2
+	slot = SLOT_WEAR_MASK
+
+/datum/gear/cigarette/pipe
+	display_name = "Smoking pipe"
+	path = /obj/item/clothing/mask/cigarette/pipe
+	cost = 3
+	slot = SLOT_WEAR_MASK
+
+/datum/gear/cigarette/pipe/corn
+	display_name = "Corn cob pipe"
+	path = /obj/item/clothing/mask/cigarette/pipe/cobpipe
+	cost = 3
+	slot = SLOT_WEAR_MASK
+
+/datum/gear/cigarette/pipe/corn/curved
+	display_name = "Curved corn cob pipe"
+	path = /obj/item/clothing/mask/cigarette/pipe/cobpipe/curved
+	cost = 3
+	slot = SLOT_WEAR_MASK
+
+/datum/gear/cigarette/pipe/bone
+	display_name = "Europan bone pipe"
+	path = /obj/item/clothing/mask/cigarette/pipe/bonepipe
+	cost = 3
 	slot = SLOT_WEAR_MASK
 
 /datum/gear/ancient

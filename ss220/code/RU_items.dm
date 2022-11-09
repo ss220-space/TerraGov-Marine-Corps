@@ -109,6 +109,7 @@ SUBSYSTEM_DEF(ru_items)
 	default_ammo = /datum/ammo/bullet/revolver/rifle
 	caliber = CALIBER_44LS
 	current_rounds = 40
+	icon_state_mini = "44LSbox"
 	max_rounds = 40
 
 /datum/ammo/bullet/revolver/rifle
@@ -503,3 +504,94 @@ SUBSYSTEM_DEF(ru_items)
 	)
 	cost = 60
 	available_against_xeno_only = TRUE
+
+/obj/item/toy/plush/pig
+	name = "pig toy"
+	desc = "Captain Dementy! Bring the pigs! Marines demand pigs!."
+	icon = 'icons/obj/items/pig.dmi'
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/pig_lefthand.dmi',
+		slot_r_hand_str = 'icons/mob/pig_righthand.dmi',)
+	icon_state = "pig"
+	item_state = "pig"
+	attack_verb = list("oinks", "grunts")
+
+/obj/item/toy/plush/pig/attack_self(mob/user)
+	if(world.time > last_hug_time)
+		user.visible_message(span_notice("[user] presses [src]! Oink! "), \
+							span_notice("You press [src]. Oink! "))
+		last_hug_time = world.time + 50 //5 second cooldown
+
+/obj/item/toy/plush/pig/Initialize()
+	. = ..()
+	AddComponent(/datum/component/squeak, 'sound/items/khryu.ogg', 50)
+
+/datum/supply_packs/supplies/pigs
+	name = "Pig toys crate"
+	contains = list(/obj/item/toy/plush/pig, /obj/item/toy/plush/pig, /obj/item/toy/plush/pig, /obj/item/toy/plush/pig, /obj/item/toy/plush/pig)
+	cost = 50
+	available_against_xeno_only = TRUE
+	containertype = /obj/structure/closet/crate/supply
+
+/obj/item/clothing/head/squadhb
+	name = "\improper Alpha squad headband"
+	desc = "Headband made from ultra-thin special cloth. Cloth thickness provides more than just a stylish fluttering of headband. You can tie around headband onto a helmet. This squad version of a headband has secret unique features created by the cloth coloring component. "
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
+	icon_state = "asquadhb"
+	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
+	slowdown = -0.1
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/clothing/head/squadhb/b
+	name = "\improper Bravo squad headband"
+	icon_state = "bsquadhb"
+
+/obj/item/clothing/head/squadhb/c
+	name = "\improper Charlie squad headband"
+	icon_state = "csquadhb"
+
+/obj/item/clothing/head/squadhb/d
+	name = "\improper Delta squad headband"
+	icon_state = "dsquadhb"
+
+/obj/item/clothing/head/tgmcberet/squad
+	name = "\improper Charlie squad beret"
+	icon_state = "csberet"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Charlie Squad."
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
+
+/obj/item/clothing/head/tgmcberet/squad/delta
+	name = "\improper Delta Squad beret"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Delta Squad."
+	icon_state = "dsberet"
+
+/obj/item/clothing/head/tgmcberet/squad/alpha
+	name = "\improper Alpha Squad beret"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Alpha Squad."
+	icon_state = "asberet"
+
+/obj/item/clothing/head/tgmcberet/squad/bravo
+	name = "\improper Bravo Squad beret"
+	desc = "Military beret with TGMC marine squad insignia. This one belongs to the Bravo Squad."
+	icon_state = "bsberet"
+
+/obj/item/clothing/head/tgmcberet/commando
+	name = "\improper Marines Commando beret"
+	desc = "Dark Green beret with an old TGMC insignia on it."
+	icon_state = "marcommandoberet"
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
+
+
+/obj/item/clothing/head/tgmcberet/medical
+	name = "\improper Medical beret"
+	desc = "A white beret with a green cross finely threaded into it. It has that sterile smell about it."
+	icon_state = "medberet"
+	icon = 'icons/obj/clothing/squad_hb.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/mob/squadhb.dmi')
