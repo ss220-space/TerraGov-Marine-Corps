@@ -97,7 +97,7 @@
 	icon_state = "shield-blue"
 	item_icons = "helmetNA"
 	flags_item = NODROP|DELONDROP
-	soft_armor = list("melee" = 65, "bullet" = 60, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 40, "rad" = 0, "fire" = 20, "acid" = 20)
+	soft_armor = list(MELEE = 65, BULLET = 60, LASER = 30, ENERGY = 20, BOMB = 25, BIO = 40, FIRE = 20, ACID = 20)
 	anti_hug = 5
 
 //emergency call NecoArc
