@@ -264,7 +264,7 @@
 	mechanics_text = "Use while at 50% health or lower to gain extra slash damage, resistances and speed in proportion to your missing hit points. This bonus is increased and you regain plasma while your HP is negative."
 	ability_name = "Rage"
 	plasma_cost = 0 //We're limited by cooldowns, not plasma
-	cooldown_timer = 60 SECONDS
+	cooldown_timer = 120 SECONDS
 	keybind_flags = XACT_KEYBIND_USE_ABILITY | XACT_IGNORE_SELECTED_ABILITY
 	keybinding_signals = list(
 		KEYBINDING_NORMAL = COMSIG_XENOABILITY_RAGE,
@@ -300,7 +300,7 @@
 	rage_power = (1-(X.health/X.maxHealth)) * RAVAGER_RAGE_POWER_MULTIPLIER //Calculate the power of our rage; scales with difference between current and max HP
 
 	if(X.health < 0) //If we're at less than 0 HP, it's time to max rage.
-		rage_power = 0.5
+		rage_power = 0.75
 
 	var/rage_power_radius = CEILING(rage_power * 7, 1) //Define radius of the SFX
 
@@ -319,7 +319,7 @@
 		var/datum/action/xeno_action/endure/endure_ability = X.actions_by_path[/datum/action/xeno_action/endure]
 
 		if(endure_ability.endure_duration) //Check if Endure is active
-			endure_ability.endure_threshold = RAVAGER_ENDURE_HP_LIMIT * (1 + rage_power) //Endure crit threshold scales with Rage Power; min -100, max -150
+			endure_ability.endure_threshold = RAVAGER_ENDURE_HP_LIMIT * (1 + rage_power) //Endure crit threshold scales with Rage Power; min -100, max -200
 
 		if(charge)
 			charge.clear_cooldown() //Reset charge cooldown
