@@ -22,8 +22,9 @@
 	desc = "Exosuit"
 	icon = 'icons/mecha/mecha.dmi'
 	move_force = MOVE_FORCE_VERY_STRONG
-	move_resist = MOVE_FORCE_EXTREMELY_STRONG
+	move_resist = MOVE_FORCE_OVERPOWERING
 	resistance_flags = UNACIDABLE|XENO_DAMAGEABLE
+	flags_atom = BUMP_ATTACKABLE|PREVENT_CONTENTS_EXPLOSION
 	max_integrity = 300
 	soft_armor = list(MELEE = 20, BULLET = 10, LASER = 0, ENERGY = 0, BOMB = 10, BIO = 0, FIRE = 100, ACID = 100)
 	force = 5
@@ -44,7 +45,7 @@
 	///How much energy we drain each time we mechpunch someone
 	var/melee_energy_drain = 15
 	///The minimum amount of energy charge consumed by leg overload
-	var/overload_step_energy_drain_min = 100
+	var/overload_step_energy_drain_min = 50
 	///Modifiers for directional damage reduction
 	var/list/facing_modifiers = list(MECHA_FRONT_ARMOUR = 0.5, MECHA_SIDE_ARMOUR = 1, MECHA_BACK_ARMOUR = 1.5)
 	///if we cant use our equipment(such as due to EMP)
@@ -166,7 +167,7 @@
 	///Bool for leg overload on/off
 	var/leg_overload_mode = FALSE
 	///Energy use modifier for leg overload
-	var/leg_overload_coeff = 100
+	var/leg_overload_coeff = 5
 
 	//Bool for zoom on/off
 	var/zoom_mode = FALSE
@@ -469,9 +470,15 @@
 	hud_set_mecha_battery()
 
 ///Called when a driver clicks somewhere. Handles everything like equipment, punches, etc.
-/obj/vehicle/sealed/mecha/proc/on_mouseclick(mob/user, atom/target, list/modifiers)
+/obj/vehicle/sealed/mecha/proc/on_mouseclick(mob/user, atom/target, turf/location, control, list/modifiers)
 	SIGNAL_HANDLER
-	modifiers = params2list(modifiers) //tgmc added
+	//tgmc add start
+	modifiers = params2list(modifiers)
+	if(isnull(location) && target.plane == CLICKCATCHER_PLANE) //Checks if the intended target is in deep darkness and adjusts target based on params.
+		target = params2turf(modifiers["screen-loc"], get_turf(user), user.client)
+		modifiers["icon-x"] = num2text(ABS_PIXEL_TO_REL(text2num(modifiers["icon-x"])))
+		modifiers["icon-y"] = num2text(ABS_PIXEL_TO_REL(text2num(modifiers["icon-y"])))
+	//tgmc add end
 	if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 		set_safety(user)
 		return COMSIG_MOB_CLICK_CANCELED
@@ -507,7 +514,7 @@
 		balloon_alert(user, "wrong seat for equipment!")
 		return
 	var/obj/item/mecha_parts/mecha_equipment/selected
-	if(LAZYACCESS(modifiers, RIGHT_CLICK))
+	if(modifiers[BUTTON] == RIGHT_CLICK)
 		selected = equip_by_category[MECHA_R_ARM]
 	else
 		selected = equip_by_category[MECHA_L_ARM]

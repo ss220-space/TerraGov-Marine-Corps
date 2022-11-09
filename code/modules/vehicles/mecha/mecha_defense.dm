@@ -252,13 +252,21 @@
 		return
 	if(!W.tool_start_check(user, amount=1))
 		return
-	user.balloon_alert_to_viewers("started welding [src]", "started repairing [src]")
-	audible_message(span_hear("You hear welding."))
 	var/did_the_thing
+	var/started = FALSE
+	var/skill = user.skills.getRating("engineer")
 	while(obj_integrity < max_integrity)
+		if(skill < SKILL_ENGINEER_ENGI)
+			user.balloon_alert_to_viewers("fumbles around trying to repair")
+			if(!do_after(user, 30 * (SKILL_ENGINEER_ENGI - skill), TRUE, user, BUSY_ICON_UNSKILLED))
+				return
+		if(!started)
+			user.balloon_alert_to_viewers("started welding", "started repairing")
+			audible_message(span_hear("You hear welding."))
+			started = TRUE
 		if(W.use_tool(src, user, 2.5 SECONDS, volume=50, amount=1))
 			did_the_thing = TRUE
-			obj_integrity += min(10, (max_integrity - obj_integrity))
+			obj_integrity += min(100, (max_integrity - obj_integrity))
 			audible_message(span_hear("You hear welding."))
 		else
 			break
@@ -327,7 +335,11 @@
 			gun.projectiles_cache = gun.projectiles_cache + reload_box.rounds
 		playsound(get_turf(user),reload_box.load_audio,50,TRUE)
 		to_chat(user, span_notice("You add [reload_box.rounds] [reload_box.ammo_type][reload_box.rounds > 1?"s":""] to the [gun.name]"))
+		if(reload_box.qdel_on_empty)
+			qdel(reload_box)
+			return TRUE
 		reload_box.rounds = 0
+		reload_box.update_icon()
 		return TRUE
 	if(!fail_chat_override)
 		if(found_gun)

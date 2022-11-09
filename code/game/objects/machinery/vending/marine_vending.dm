@@ -80,6 +80,7 @@
 			/obj/item/weapon/twohanded/spear/tactical/harvester = -1,
 			/obj/item/weapon/powerfist = -1,
 			/obj/item/weapon/shield/riot/marine = 6,
+			/obj/item/weapon/shield/riot/marine/deployable = 6,
 		),
 		"Sidearm" = list(
 			/obj/item/weapon/gun/pistol/standard_pistol = -1,
@@ -116,9 +117,9 @@
 		),
 		"Specialized" = list(
 			/obj/item/weapon/gun/rifle/pepperball = 4,
-			/obj/item/ammo_magazine/rifle/pepperball = 40,
+			/obj/item/ammo_magazine/rifle/pepperball = -1,
 			/obj/item/weapon/gun/flamer/big_flamer/marinestandard = 4,
-			/obj/item/ammo_magazine/flamer_tank/large = 30,
+			/obj/item/ammo_magazine/flamer_tank/large = 16,
 			/obj/item/ammo_magazine/flamer_tank/backtank = 4,
 			/obj/item/jetpack_marine = 3,
 			/obj/item/bodybag/tarp = 10,
@@ -130,7 +131,8 @@
 			/obj/item/storage/box/sentry = 4,
 			/obj/item/storage/box/tl102 = 1,
 			/obj/item/weapon/gun/heavymachinegun = 1,
-			/obj/item/ammo_magazine/heavymachinegun = 10,
+			/obj/item/ammo_magazine/heavymachinegun = 5,
+			/obj/item/ammo_magazine/heavymachinegun/small = 10,
 			/obj/item/storage/holster/backholster/rpg/full = 2,
 			/obj/item/ammo_magazine/rocket/recoilless = 4,
 			/obj/item/ammo_magazine/rocket/recoilless/light = 4,
@@ -171,6 +173,7 @@
 		),
 		"Boxes" = list(
 			/obj/item/ammo_magazine/packet/p9mm = -1,
+			/obj/item/ammo_magazine/packet/p9mmap = -1,
 			/obj/item/ammo_magazine/packet/acp = -1,
 			/obj/item/ammo_magazine/packet/magnum = -1,
 			/obj/item/ammo_magazine/packet/p10x20mm = -1,
@@ -274,6 +277,7 @@
 			/obj/item/weapon/twohanded/spear/tactical/harvester = -1,
 			/obj/item/weapon/powerfist = -1,
 			/obj/item/weapon/shield/riot/marine = 6,
+			/obj/item/weapon/shield/riot/marine/deployable = 6,
 		),
 		"Sidearm" = list(
 			/obj/item/weapon/gun/pistol/standard_pistol = -1,
@@ -345,6 +349,7 @@
 		),
 		"Boxes" = list(
 			/obj/item/ammo_magazine/packet/p9mm = -1,
+			/obj/item/ammo_magazine/packet/p9mmap = -1,
 			/obj/item/ammo_magazine/packet/acp = -1,
 			/obj/item/ammo_magazine/packet/magnum = -1,
 			/obj/item/ammo_magazine/packet/p10x20mm = -1,
@@ -449,6 +454,7 @@
 			/obj/item/weapon/twohanded/spear/tactical/harvester = -1,
 			/obj/item/weapon/powerfist = -1,
 			/obj/item/weapon/shield/riot/marine = -1,
+			/obj/item/weapon/shield/riot/marine/deployable = -1,
 		),
 		"Sidearm" = list(
 			/obj/item/weapon/gun/pistol/standard_pistol = -1,
@@ -533,6 +539,7 @@
 		),
 		"Boxes" = list(
 			/obj/item/ammo_magazine/packet/p9mm = -1,
+			/obj/item/ammo_magazine/packet/p9mmap = -1,
 			/obj/item/ammo_magazine/packet/acp = -1,
 			/obj/item/ammo_magazine/packet/magnum = -1,
 			/obj/item/ammo_magazine/packet/p10x20mm = -1,
@@ -631,6 +638,7 @@
 			/obj/item/weapon/twohanded/spear/tactical/harvester = -1,
 			/obj/item/weapon/powerfist = -1,
 			/obj/item/weapon/shield/riot/marine = 6,
+			/obj/item/weapon/shield/riot/marine/deployable = 6,
 		),
 		"Sidearm" = list(
 			/obj/item/weapon/gun/pistol/standard_pistol = -1,
@@ -697,6 +705,7 @@
 		),
 		"Boxes" = list(
 			/obj/item/ammo_magazine/packet/p9mm = -1,
+			/obj/item/ammo_magazine/packet/p9mmap = -1,
 			/obj/item/ammo_magazine/packet/acp = -1,
 			/obj/item/ammo_magazine/packet/magnum = -1,
 			/obj/item/ammo_magazine/packet/p10x20mm = -1,
@@ -798,6 +807,7 @@
 			/obj/item/radio/headset/mainship/marine/bravo = -1,
 			/obj/item/radio/headset/mainship/marine/charlie = -1,
 			/obj/item/radio/headset/mainship/marine/delta = -1,
+			/obj/item/toy/plush/pig = 1,
 		),
 		"Mining Equipment" = list(
 			/obj/item/minerupgrade/automatic = 1,
@@ -821,6 +831,7 @@
 		),
 		"Ammo Boxes" = list(
 			/obj/item/big_ammo_box = 1,
+			/obj/item/big_ammo_box/smg = 1,
 			/obj/item/shotgunbox = 1,
 			/obj/item/shotgunbox/buckshot = 1,
 			/obj/item/shotgunbox/flechette = 1,
@@ -845,6 +856,22 @@
 			/obj/item/storage/box/visual/magazine/compact/chamberedrifle/full = 1,
 			/obj/item/storage/box/visual/magazine/compact/standard_lmg/full = 1,
 			/obj/item/storage/box/visual/magazine/compact/standard_gpmg/full = 1,
+		),
+		"Mecha Ammo" = list(
+			/obj/item/mecha_ammo/vendable/pistol = -1,
+			/obj/item/mecha_ammo/vendable/burstpistol = -1,
+			/obj/item/mecha_ammo/vendable/smg = -1,
+			/obj/item/mecha_ammo/vendable/burstrifle = -1,
+			/obj/item/mecha_ammo/vendable/rifle = -1,
+			/obj/item/mecha_ammo/vendable/shotgun = -1,
+			/obj/item/mecha_ammo/vendable/lmg = -1,
+			/obj/item/mecha_ammo/vendable/lightcannon = -1,
+			/obj/item/mecha_ammo/vendable/heavycannon = -1,
+			/obj/item/mecha_ammo/vendable/minigun = -1,
+			/obj/item/mecha_ammo/vendable/sniper = -1,
+			/obj/item/mecha_ammo/vendable/grenade = -1,
+			/obj/item/mecha_ammo/vendable/flamer = -1,
+			/obj/item/mecha_ammo/vendable/rpg = -1,
 		)
 	)
 
@@ -958,6 +985,14 @@
 	//product_slogans = "Standard Issue Marine food!;It's good for you, and not the worst thing in the world.;Just fucking eat it.;"
 	product_ads = "Try the cornbread.;Try the pizza.;Try the pasta.;Try the tofu, wimp.;Try the pork.; 9 Flavors of Protein!; You'll never guess the mystery flavor!"
 
+/obj/machinery/vending/marineFood/som
+	name = "\improper SOM Food and Drinks Vendor"
+	faction = FACTION_SOM
+	products = list(
+		/obj/item/reagent_containers/food/snacks/protein_pack/som = -1,
+		/obj/item/storage/box/MRE/som = -1,
+		/obj/item/reagent_containers/food/drinks/flask/marine = -1,
+	)
 
 /obj/machinery/vending/MarineMed
 	name = "\improper MarineMed"
@@ -1178,6 +1213,7 @@
 			/obj/item/armor_module/module/mimir_environment_protection/mimir_helmet/mark1 = -1,
 			/obj/item/armor_module/module/tyr_extra_armor/mark1 = -1,
 			/obj/item/armor_module/module/ballistic_armor = -1,
+			/obj/item/armor_module/module/hod_head = -1,
 			/obj/item/armor_module/module/better_shoulder_lamp = -1,
 			/obj/item/armor_module/module/chemsystem = -1,
 			/obj/item/armor_module/module/eshield = -1,
@@ -1208,12 +1244,13 @@
 		"Standard" = list(
 			/obj/item/clothing/under/marine/robotic = -1,
 			/obj/item/clothing/under/marine = -1,
-			/obj/item/clothing/under/marine/standard =-1,
-			/obj/item/clothing/under/marine/camo =-1,
-			/obj/item/clothing/under/marine/camo/desert =-1,
-			/obj/item/clothing/under/marine/camo/snow =-1,
-			/obj/item/clothing/under/marine/jaeger =-1,
-			/obj/item/clothing/gloves/marine =-1,
+			/obj/item/clothing/under/marine/standard = -1,
+			/obj/item/clothing/under/marine/camo = -1,
+			/obj/item/clothing/under/marine/camo/desert = -1,
+			/obj/item/clothing/under/marine/camo/snow = -1,
+			/obj/item/clothing/under/marine/orion_fatigue = -1,
+			/obj/item/clothing/under/marine/jaeger = -1,
+			/obj/item/clothing/gloves/marine = -1,
 			/obj/item/clothing/shoes/marine/full = -1,
 			/obj/item/clothing/shoes/cowboy = -1,
 			/obj/item/armor_module/armor/badge = -1,
@@ -1267,6 +1304,10 @@
 			/obj/item/clothing/head/squadhb/b = -1,
 			/obj/item/clothing/head/squadhb/c = -1,
 			/obj/item/clothing/head/squadhb/d = -1,
+			/obj/item/clothing/head/tgmcberet/squad = -1,
+			/obj/item/clothing/head/tgmcberet/squad/delta = -1,
+			/obj/item/clothing/head/tgmcberet/squad/alpha = -1,
+			/obj/item/clothing/head/tgmcberet/squad/bravo = -1,
 			/obj/item/clothing/head/slouch = -1,
 			/obj/item/clothing/head/headband/red = -1,
 			/obj/item/clothing/head/headband/rambo = -1,
@@ -1284,6 +1325,7 @@
 			/obj/item/clothing/head/tgmcberet/snow = -1,
 			/obj/item/clothing/head/beret/marine = -1,
 			/obj/item/clothing/head/tgmcberet = -1,
+			/obj/item/clothing/head/tgmcberet/commando = -1,
 			/obj/item/clothing/glasses/mgoggles = -1,
 			/obj/item/clothing/glasses/mgoggles/prescription = -1,
 		),

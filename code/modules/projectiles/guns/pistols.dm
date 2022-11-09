@@ -201,6 +201,9 @@
 /obj/item/weapon/gun/pistol/standard_heavypistol/suppressed
 	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/flashlight) //Tacticool
 
+/obj/item/weapon/gun/pistol/standard_heavypistol/tacticool
+	starting_attachment_types = list(/obj/item/attachable/lace, /obj/item/attachable/flashlight) //Tacticool
+
 /obj/item/weapon/gun/pistol/standard_heavypistol/tactical
 	starting_attachment_types = list(/obj/item/attachable/reddot)
 //-------------------------------------------------------
@@ -505,7 +508,7 @@
 		/obj/item/attachable/lace,
 	)
 
-	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)
+	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOBURST)
 	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 22,"rail_x" = 19, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 11, "stock_y" = 10)
 
 	fire_delay = 0.2 SECONDS
@@ -584,13 +587,21 @@
 	accuracy_mult_unwielded = 0.95
 	recoil = -2
 	aim_slowdown = 0.1
-	scatter = 0
+	scatter = -1
 	scatter_unwielded = 4
 
 /obj/item/weapon/gun/pistol/som/standard
 	starting_attachment_types = list(
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/reddot,
+	)
+
+/obj/item/weapon/gun/pistol/som/burst
+	default_ammo_type = /obj/item/ammo_magazine/pistol/som/extended
+	starting_attachment_types = list(
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/lace,
 	)
 
 //-------------------------------------------------------
@@ -611,7 +622,7 @@ It is a modified Beretta 93R, and can fire three round burst or single fire. Whe
 	allowed_ammo_types = list(/obj/item/ammo_magazine/pistol/auto9)
 	force = 15
 	attachable_allowed = list()
-	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_AUTOBURST)
+	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOBURST)
 
 
 	fire_delay = 0.1 SECONDS

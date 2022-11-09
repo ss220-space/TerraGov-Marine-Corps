@@ -343,6 +343,7 @@
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/railgun,
 		/obj/item/explosive/grenade,
 		/obj/item/explosive/mine,
 		/obj/item/reagent_containers/food/snacks,
@@ -620,7 +621,11 @@
 	icon_state= "sparepouch"
 	item_state= "sparepouch"
 
-
+/obj/item/storage/belt/sparepouch/som
+	name= "standard utility pouch"
+	desc= "A small, lightweight pouch that can be clipped onto armor or your belt to provide additional storage for miscellaneous gear or box and drum magazines. Made from genuine SOM leather."
+	icon_state= "sparepouch_som"
+	item_state= "som_belt"
 
 
 ////////////////////////////// GUN BELTS /////////////////////////////////////
@@ -647,7 +652,9 @@
 		/obj/item/weapon/gun/pistol,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol,
+		/obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/serpenta,
 		/obj/item/cell/lasgun/lasrifle,
+		/obj/item/cell/lasgun/volkite/small,
 	)
 
 /obj/item/storage/belt/gun/Destroy()
@@ -794,13 +801,20 @@
 	desc = "A belt with origins dating back to old colony security holster rigs."
 	icon_state = "som_belt_pistol"
 	item_state = "som_belt_pistol"
+	can_hold = list(
+		/obj/item/weapon/gun/pistol,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/weapon/gun/energy/lasgun/lasrifle/standard_marine_pistol,
+		/obj/item/weapon/gun/energy/lasgun/lasrifle/volkite/serpenta,
+		/obj/item/cell/lasgun/lasrifle,
+		/obj/item/cell/lasgun/volkite/small,
+	)
 
-//No overlays, sprite not positioned to allow for it
-/obj/item/storage/belt/gun/pistol/m4a3/som/update_gun_icon()
-	if(current_gun)
-		playsound(src,drawSound, 15, 1)
-	else
-		playsound(src,sheatheSound, 15, 1)
+/obj/item/storage/belt/gun/pistol/m4a3/som/fancy
+	name = "\improper S19-B holster rig"
+	desc = "A quality pistol belt of a style typically seen worn by SOM officers. It looks old, but well looked after."
+	icon_state = "som_belt_pistol_fancy"
+	item_state = "som_belt_pistol_fancy"
 
 /obj/item/storage/belt/gun/pistol/stand
 	name = "\improper M276 pattern M4A3 holster rig"

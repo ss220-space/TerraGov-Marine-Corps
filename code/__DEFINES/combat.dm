@@ -13,6 +13,7 @@
 #define ATTACK_EFFECT_REDSLASH pick("redslash","redslash2")
 #define ATTACK_EFFECT_REDSTAB "redstab"
 #define ATTACK_EFFECT_YELLOWPUNCH "yellowpunch"
+#define ATTACK_EFFECT_LASERSWORD pick("laser_slash","laser_slash2")
 
 //Damage flag defines //
 /// Involves a melee attack or a thrown object.
@@ -25,7 +26,7 @@
 #define ENERGY "energy"
 /// Involves a shockwave, usually from an explosion.
 #define BOMB "bomb"
-/// Involved in checking wheter a disease can infect or spread. Also involved in xeno neurotoxin.
+/// Involved in checking whether a disease can infect or spread. Also involved in xeno neurotoxin.
 #define BIO "bio"
 /// Involves fire or temperature extremes.
 #define FIRE "fire"

@@ -1,106 +1,16 @@
-import { useBackend, useLocalState } from '../backend';
+import { useBackend, useLocalState } from '../../backend';
 import { capitalize } from 'common/string';
 import {
   Button,
   Section,
   Box,
-  Modal,
-  Divider,
-  Tabs,
   Stack,
   ByondUi,
   ColorBox,
   Collapsible,
   Input,
-} from '../components';
-import { Window } from '../layouts';
-
-const tabs = ['Mecha Assembly', 'Weapons'];
-const partdefinetofluff = {
-  'CHEST': 'Torso',
-  'HEAD': 'Head',
-  'L_ARM': 'Left Arm',
-  'R_ARM': 'Right arm',
-  'LEG': 'Legs',
-};
-
-type MechVendData = {
-  mech_view: string;
-  colors: ColorData;
-  visor_colors: ColorData;
-  selected_primary: SimpleStringList;
-  selected_secondary: SimpleStringList;
-  selected_visor: string;
-  selected_variants: SimpleStringList;
-  selected_name: string;
-  current_stats: MechStatData,
-};
-
-type MechStatData = {
-  accuracy: number;
-  light_mod: number;
-  left_scatter: number;
-  right_scatter: number;
-  health: number;
-  slowdown: number;
-  armor: string[],
-  power_max: number,
-};
-
-type BodypartPickerData = {
-  displayingpart: string;
-};
-
-type ColorDisplayData = {
-  shown_colors: string;
-};
-
-type ColorData = {
-  [key: string]: SimpleStringList;
-};
-
-type SimpleStringList = {
-  [key: string]: string;
-};
-
-export const MechVendor = (props, context) => {
-  const [showDesc, setShowDesc] = useLocalState(context, 'showDesc', null); // tivi todo for weapons tab
-  const [selectedTab, setSelectedTab] = useLocalState(
-    context,
-    'selectedTab',
-    tabs[0]
-  );
-
-  return (
-    <Window title={'Mecha Assembler'}>
-      {showDesc ? ( // tivi todo for weapons
-        <Modal width="400px">
-          <Box>{showDesc}</Box>
-          <Button content="Dismiss" onClick={() => setShowDesc(null)} />
-        </Modal>
-      ) : null}
-      <Window.Content>
-        <Section lineHeight={1.75} textAlign="center">
-          <Tabs fluid >
-            {tabs.map((tabname) => {
-              return (
-                <Tabs.Tab
-                  key={tabname}
-                  selected={tabname === selectedTab}
-                  fontSize="130%"
-                  onClick={() => setSelectedTab(tabname)}>
-                  {tabname}
-                </Tabs.Tab>
-              );
-            })}
-          </Tabs>
-          <Divider />
-        </Section>
-        <PanelContent />
-      </Window.Content>
-    </Window>
-  );
-};
+} from '../../components';
+import { ColorDisplayData, BodypartPickerData, MechVendData, partdefinetofluff } from './data';
 
 const ColorDisplayRow = (props: ColorDisplayData, context) => {
   const { shown_colors } = props;
@@ -157,21 +67,30 @@ const BodypartPicker = (props: BodypartPickerData, context) => {
     </Section>
   );
 };
-// tivi todo make mech name choosable?
 
-const MechAssembly = (props, context) => {
+export const MechAssembly = (props, context) => {
   const { act, data } = useBackend<MechVendData>(context);
   const {
     mech_view,
     selected_variants,
     selected_name,
     current_stats,
+    all_equipment,
+    selected_equipment,
   } = data;
   const [selectedBodypart, setSelectedBodypart] = useLocalState(
     context,
     'selectedBodypart',
     'none'
   );
+
+  const left_weapon = all_equipment.weapons
+    .find(o => o.type === selected_equipment.mecha_l_arm);
+  const right_weapon = all_equipment.weapons
+    .find(o => o.type === selected_equipment.mecha_r_arm);
+
+  const left_weapon_scatter = right_weapon ? right_weapon.scatter : 0;
+  const right_weapon_scatter = right_weapon ? right_weapon.scatter : 0;
 
   return (
     <Stack>
@@ -196,10 +115,10 @@ const MechAssembly = (props, context) => {
               <Collapsible color={"transparent"} title={"Integrity: " + current_stats.health}>
                 <Box maxWidth={"160px"}>Determines maximum integrity of mecha.</Box>
               </Collapsible>
-              <Collapsible color={"transparent"} title={"L scatter angle: " + current_stats.left_scatter+ "°"}>
+              <Collapsible color={"transparent"} title={"L scatter angle: " + (current_stats.left_scatter + left_weapon_scatter) + "°"}>
                 <Box maxWidth={"160px"}>Scatter angle for left arm.</Box>
               </Collapsible>
-              <Collapsible color={"transparent"} title={"R scatter angle: " + current_stats.right_scatter + "°"}>
+              <Collapsible color={"transparent"} title={"R scatter angle: " + (current_stats.right_scatter + right_weapon_scatter) + "°"}>
                 <Box maxWidth={"160px"}>Scatter angle for right arm.</Box>
               </Collapsible>
               <Collapsible color={"transparent"} title={"Slowdown: " + current_stats.slowdown}>
@@ -343,7 +262,6 @@ const MechAssembly = (props, context) => {
 
 const ColorSelector = (props, context) => {
   const { act, data } = useBackend<MechVendData>(context);
-  // tivi todo prop type
   const {
     selected_primary,
     selected_secondary,
@@ -391,35 +309,4 @@ const ColorSelector = (props, context) => {
       ))}
     </Section>
   );
-};
-// tivi todo make mech name choosable?
-
-
-const MechWeapons = (props, context) => {
-  const { act, data } = useBackend<MechVendData>(context);
-  const [showDesc, setShowDesc] = useLocalState<String | null>(
-    context,
-    'showDesc',
-    null
-  );
-
-  return <Section title={'You are currently assembling your mech'} />;
-};
-
-const PanelContent = (props, context) => {
-  const [selectedTab, setSelectedTab] = useLocalState(
-    context,
-    'selectedTab',
-    tabs[0]
-  );
-  {
-    switch (selectedTab) {
-      case 'Mecha Assembly':
-        return <MechAssembly />;
-      case 'Weapons':
-        return <MechWeapons />;
-      default:
-        return null;
-    }
-  }
 };

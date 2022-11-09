@@ -118,12 +118,6 @@
 		set waitfor = FALSE
 		var/datum/language/L = new path ()
 		L.get_icon()
-
-/datum/asset/simple/orbit
-	assets = list(
-		"ghost.png" = 'html/images/ghost.png'
-	)
-
 /datum/asset/spritesheet/blessingmenu
 	name = "blessingmenu"
 
@@ -136,6 +130,21 @@
 
 /datum/asset/spritesheet/mechaarmor/register()
 	InsertAll("", 'icons/UI_Icons/mecha/armor.dmi')
+	..()
+
+/datum/asset/spritesheet/mech_builder
+	name = "mech_builder"
+
+/datum/asset/spritesheet/mech_builder/register()
+	InsertAll("", 'icons/mecha/mecha_equipment_64x32.dmi')
+	..()
+
+/datum/asset/spritesheet/mech_ammo
+	name = "mech_ammo"
+
+/datum/asset/spritesheet/mech_ammo/register()
+	InsertAll("", 'icons/mecha/mecha_ammo.dmi')
+	..()
 
 /datum/asset/spritesheet/hivestatus
 	name = "hivestatus"
