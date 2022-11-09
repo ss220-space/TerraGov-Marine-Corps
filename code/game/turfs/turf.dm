@@ -648,6 +648,10 @@
 /turf/open/floor/prison/can_dig_xeno_tunnel()
 	return TRUE
 
+/turf/open/lavaland/basalt/can_dig_xeno_tunnel()
+	return TRUE
+
+
 
 
 
