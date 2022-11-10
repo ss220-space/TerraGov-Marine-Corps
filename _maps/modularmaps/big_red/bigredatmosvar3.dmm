@@ -257,6 +257,9 @@
 /obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/bigredv2/outside/filtration_plant)
+"nS" = (
+/turf/closed/mineral/smooth/bigred,
+/area/bigredv2/outside/filtration_plant)
 "ok" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor,
@@ -918,8 +921,8 @@ jX
 HM
 pY
 Ff
-Jl
-Jl
+nS
+nS
 Ff
 eH
 eH

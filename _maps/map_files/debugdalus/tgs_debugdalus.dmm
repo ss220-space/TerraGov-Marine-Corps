@@ -200,6 +200,7 @@
 /area/mainship/squads/general)
 "aaS" = (
 /obj/machinery/marine_selector/clothes,
+/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -210,6 +211,7 @@
 /area/mainship/squads/general)
 "aaT" = (
 /obj/machinery/marine_selector/clothes,
+/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -964,14 +966,10 @@
 /area/mainship/squads/req)
 "aey" = (
 /obj/effect/landmark/start/job/ai,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /turf/open/floor/mainship/tcomms,
 /area/mainship/command/telecomms)
 "aez" = (
-/obj/machinery/door/window/secure/bridge/aidoor{
+/obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/open/floor/mainship,
@@ -1028,6 +1026,9 @@
 /area/mainship/squads/req)
 "aeM" = (
 /obj/machinery/telecomms/processor/preset_one,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/open/floor/mainship,
 /area/mainship/command/telecomms)
 "aeN" = (
@@ -1637,6 +1638,7 @@
 /area/mainship/medical/medical_science)
 "ahI" = (
 /obj/machinery/telecomms/bus/preset_one,
+/obj/structure/window/reinforced,
 /turf/open/floor/mainship,
 /area/mainship/command/telecomms)
 "ahJ" = (
@@ -2348,19 +2350,6 @@
 	},
 /turf/open/floor/mainship,
 /area/mainship/medical/medical_science)
-"eDr" = (
-/obj/machinery/marine_selector/clothes,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/open/floor/mainship,
-/area/mainship/squads/general)
 "eDC" = (
 /obj/structure/cable,
 /obj/machinery/landinglight/ds1/delaytwo{
@@ -2576,19 +2565,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4
-	},
-/turf/open/floor/mainship,
-/area/mainship/squads/general)
-"qzT" = (
-/obj/machinery/marine_selector/clothes,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
 	},
 /turf/open/floor/mainship,
 /area/mainship/squads/general)
@@ -4954,7 +4930,7 @@ aaA
 aaS
 qxC
 aaA
-eDr
+aaS
 cCb
 aaC
 hni
@@ -5074,7 +5050,7 @@ aaA
 aaT
 apF
 aaA
-qzT
+aaT
 abi
 qEm
 acI

@@ -1321,10 +1321,6 @@
 	dir = 8
 	},
 /area/bigredv2/outside/space_port)
-"IG" = (
-/obj/effect/mapping_helpers/area_flag_injector/marine_base,
-/turf/open/floor/tile/dark,
-/area/bigredv2/outside/telecomm)
 "Jf" = (
 /obj/structure/table,
 /turf/open/floor/tile/dark,
@@ -2526,7 +2522,7 @@ Ko
 Yc
 ON
 ro
-IG
+og
 og
 CH
 ga

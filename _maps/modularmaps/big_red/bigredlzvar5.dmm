@@ -318,10 +318,6 @@
 	},
 /turf/open/floor/tile/dark,
 /area/bigredv2/outside/space_port)
-"ia" = (
-/obj/effect/mapping_helpers/area_flag_injector/marine_base,
-/turf/open/floor/tile/dark,
-/area/bigredv2/outside/telecomm)
 "ib" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/corpsespawner/security,
@@ -2513,7 +2509,7 @@ tu
 wT
 Xq
 eL
-ia
+Jp
 Jp
 if
 lP

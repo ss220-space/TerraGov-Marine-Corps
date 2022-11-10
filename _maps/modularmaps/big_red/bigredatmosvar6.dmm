@@ -383,7 +383,7 @@
 /area/bigredv2/outside/se)
 "zz" = (
 /turf/open/ground/river,
-/area/bigredv2/caves/rock)
+/area/bigredv2/outside/s)
 "zI" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,

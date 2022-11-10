@@ -59,6 +59,12 @@
 	dir = 8
 	},
 /area/bigredv2/outside/admin_building)
+"dN" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/open/floor/tile/dark,
+/area/bigredv2/outside/admin_building)
 "dQ" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -387,6 +393,12 @@
 	dir = 8
 	},
 /area/bigredv2/outside/admin_building)
+"pA" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/tile/dark,
+/area/bigredv2/outside/admin_building)
 "pR" = (
 /obj/structure/table,
 /obj/structure/paper_bin,
@@ -510,6 +522,12 @@
 	dir = 6
 	},
 /obj/effect/ai_node,
+/turf/open/floor/tile/dark,
+/area/bigredv2/outside/admin_building)
+"uX" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/open/floor/tile/dark,
 /area/bigredv2/outside/admin_building)
 "vo" = (
@@ -637,6 +655,10 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"yp" = (
+/obj/structure/window/reinforced,
+/turf/open/floor/tile/dark,
 /area/bigredv2/outside/admin_building)
 "yG" = (
 /obj/machinery/computer/atmos_alert,
@@ -847,16 +869,6 @@
 	},
 /area/bigredv2/outside/admin_building)
 "EV" = (
-/obj/structure/window/reinforced/windowstake{
-	dir = 4
-	},
-/obj/structure/window/reinforced/windowstake{
-	dir = 8
-	},
-/obj/structure/window/reinforced/windowstake,
-/obj/structure/window/reinforced/windowstake{
-	dir = 1
-	},
 /turf/open/ground/jungle/clear,
 /area/bigredv2/outside/admin_building)
 "Ft" = (
@@ -1710,7 +1722,7 @@ sT
 Gq
 fO
 Ds
-fO
+dN
 xH
 ng
 fO
@@ -1735,9 +1747,9 @@ sT
 sT
 UY
 fO
-fO
+yp
 EV
-fO
+pA
 ZU
 Nv
 kg
@@ -1762,7 +1774,7 @@ jM
 Gr
 wh
 PN
-fO
+uX
 fO
 UW
 sT

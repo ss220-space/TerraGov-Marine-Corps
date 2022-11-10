@@ -167,6 +167,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/window/reinforced,
 /obj/machinery/marine_selector/clothes,
 /turf/open/floor/mainship/mono,
 /area/shuttle/canterbury)
@@ -225,6 +226,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/window/reinforced,
 /obj/machinery/marine_selector/clothes,
 /turf/open/floor/mainship/mono,
 /area/shuttle/canterbury)
@@ -675,6 +677,9 @@
 /area/shuttle/canterbury)
 "ql" = (
 /obj/structure/rack,
+/obj/item/storage/box/sentry,
+/obj/item/storage/box/sentry,
+/obj/item/storage/box/sentry,
 /obj/item/tool/screwdriver,
 /obj/item/tool/wrench,
 /obj/item/storage/toolbox/mechanical,
@@ -797,6 +802,14 @@
 /obj/effect/landmark/start/latejoin/crash,
 /turf/open/floor/mainship,
 /area/shuttle/canterbury)
+"ye" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/marine_selector/clothes,
+/obj/structure/window/reinforced,
+/turf/open/floor/mainship/mono,
+/area/shuttle/canterbury)
 "yp" = (
 /obj/machinery/light{
 	dir = 8
@@ -874,6 +887,7 @@
 	dir = 8
 	},
 /obj/machinery/marine_selector/clothes,
+/obj/structure/window/reinforced,
 /turf/open/floor/mainship/mono,
 /area/shuttle/canterbury)
 "JM" = (
@@ -921,6 +935,7 @@
 /area/shuttle/canterbury)
 "Mj" = (
 /obj/structure/rack,
+/obj/item/storage/box/tl102,
 /obj/item/storage/toolbox/electrical,
 /obj/item/tool/hand_labeler,
 /obj/item/stack/barbed_wire/full,
@@ -1702,7 +1717,7 @@ ow
 ab
 aM
 DI
-aQ
+ye
 bA
 cF
 DI

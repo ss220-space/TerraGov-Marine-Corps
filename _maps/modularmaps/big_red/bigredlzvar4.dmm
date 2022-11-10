@@ -875,10 +875,6 @@
 /obj/structure/cable,
 /turf/open/floor/tile/dark,
 /area/bigredv2/outside/telecomm)
-"wc" = (
-/obj/effect/mapping_helpers/area_flag_injector/marine_base,
-/turf/open/floor/tile/dark,
-/area/bigredv2/outside/telecomm)
 "we" = (
 /obj/machinery/landinglight/ds1/delaythree{
 	dir = 8
@@ -2521,7 +2517,7 @@ wz
 WM
 er
 kH
-wc
+CE
 CE
 zj
 eS

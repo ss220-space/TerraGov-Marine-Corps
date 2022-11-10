@@ -1357,10 +1357,6 @@
 	dir = 10
 	},
 /area/bigredv2/outside/space_port)
-"Id" = (
-/obj/effect/mapping_helpers/area_flag_injector/marine_base,
-/turf/open/floor/tile/dark,
-/area/bigredv2/outside/telecomm)
 "Ie" = (
 /obj/item/shard,
 /obj/effect/decal/cleanable/blood/gibs,
@@ -2604,7 +2600,7 @@ xX
 dz
 eY
 Vj
-Id
+QK
 QK
 mh
 TG
