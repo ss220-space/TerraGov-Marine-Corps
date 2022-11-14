@@ -529,7 +529,7 @@ SUBSYSTEM_DEF(ru_items)
 /datum/supply_packs/supplies/pigs
 	name = "Pig toys crate"
 	contains = list(/obj/item/toy/plush/pig, /obj/item/toy/plush/pig, /obj/item/toy/plush/pig, /obj/item/toy/plush/pig, /obj/item/toy/plush/pig)
-	cost = 50
+	cost = 10
 	available_against_xeno_only = TRUE
 	containertype = /obj/structure/closet/crate/supply
 
