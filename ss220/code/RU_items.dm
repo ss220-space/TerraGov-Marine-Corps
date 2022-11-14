@@ -595,3 +595,63 @@ SUBSYSTEM_DEF(ru_items)
 	icon = 'icons/obj/clothing/squad_hb.dmi'
 	item_icons = list(
 		slot_head_str = 'icons/mob/squadhb.dmi')
+
+/datum/gear/hijab_black
+	display_name = "Black hijab"
+	path = /obj/item/clothing/head/tgmcberet/hijab
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/hijab_grey
+	display_name = "Grey hijab"
+	path = /obj/item/clothing/head/tgmcberet/hijab/grey
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/hijab_red
+	display_name = "Red hijab"
+	path = /obj/item/clothing/head/tgmcberet/hijab/red
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/hijab_blue
+	display_name = "Blue hijab"
+	path = /obj/item/clothing/head/tgmcberet/hijab/blue
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/hijab_brown
+	display_name = "Brown hijab"
+	path = /obj/item/clothing/head/tgmcberet/hijab/brown
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/hijab_white
+	display_name = "White hijab"
+	path = /obj/item/clothing/head/tgmcberet/hijab/white
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/turban_black
+	display_name = "Black turban"
+	path = /obj/item/clothing/head/tgmcberet/hijab/turban
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/turban_white
+	display_name = "White turban"
+	path = /obj/item/clothing/head/tgmcberet/hijab/turban/white
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/turban_red
+	display_name = "Red turban"
+	path = /obj/item/clothing/head/tgmcberet/hijab/turban/red
+	cost = 3
+	slot = SLOT_HEAD
+
+/datum/gear/turban_blue
+	display_name = "Blue turban"
+	path = /obj/item/clothing/head/tgmcberet/hijab/turban/blue
+	cost = 3
+	slot = SLOT_HEAD
