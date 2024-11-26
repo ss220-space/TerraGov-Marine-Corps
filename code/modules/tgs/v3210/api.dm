@@ -28,7 +28,7 @@
 
 #define SERVICE_RETURN_SUCCESS "SUCCESS"
 
-#define TGS_FILE2LIST(filename) (splittext_char(trim_left(trim_right(file2text(filename))), "\n"))
+#define TGS_FILE2LIST(filename) (splittext(trim_left(trim_right(file2text(filename))), "\n"))
 
 /datum/tgs_api/v3210
 	var/reboot_mode = REBOOT_MODE_NORMAL
@@ -44,15 +44,15 @@
 	return new /datum/tgs_version("3.2.1.3")
 
 /datum/tgs_api/v3210/proc/trim_left(text)
-	for (var/i = 1 to length_char(text))
-		if (text2ascii_char(text, i) > 32)
-			return copytext_char(text, i)
+	for (var/i = 1 to length(text))
+		if (text2ascii(text, i) > 32)
+			return copytext(text, i)
 	return ""
 
 /datum/tgs_api/v3210/proc/trim_right(text)
-	for (var/i = length_char(text), i > 0, i--)
-		if (text2ascii_char(text, i) > 32)
-			return copytext_char(text, 1, i + 1)
+	for (var/i = length(text), i > 0, i--)
+		if (text2ascii(text, i) > 32)
+			return copytext(text, 1, i + 1)
 	return ""
 
 /datum/tgs_api/v3210/OnWorldNew(minimum_required_security_level)
@@ -65,15 +65,15 @@
 
 	var/list/logs = TGS_FILE2LIST(".git/logs/HEAD")
 	if(logs.len)
-		logs = splittext_char(logs[logs.len], " ")
+		logs = splittext(logs[logs.len], " ")
 		if (logs.len >= 2)
 			commit = logs[2]
 		else
 			TGS_ERROR_LOG("Error parsing commit logs")
 
-	logs = TGS_FILE2LIST(".git/logs/refs/remotes/origin/master220")
+	logs = TGS_FILE2LIST(".git/logs/refs/remotes/origin/master")
 	if(logs.len)
-		logs = splittext_char(logs[logs.len], " ")
+		logs = splittext(logs[logs.len], " ")
 		if (logs.len >= 2)
 			originmastercommit = logs[2]
 		else
@@ -179,7 +179,7 @@
 /datum/tgs_api/v3210/Revision()
 	if(!warned_revison)
 		var/datum/tgs_version/api_version = ApiVersion()
-		TGS_ERROR_LOG("Use of TgsRevision on [api_version.deprefixed_parameter] origin_commit only points to master!")
+		TGS_WARNING_LOG("Use of TgsRevision on [api_version.deprefixed_parameter] origin_commit only points to master!")
 		warned_revison = TRUE
 	var/datum/tgs_revision_information/ri = new
 	ri.commit = commit
@@ -193,16 +193,19 @@
 /datum/tgs_api/v3210/ChatChannelInfo()
 	return list() // :omegalul:
 
-/datum/tgs_api/v3210/ChatBroadcast(message, list/channels)
+/datum/tgs_api/v3210/ChatBroadcast(datum/tgs_message_content/message, list/channels)
 	if(channels)
 		return TGS_UNIMPLEMENTED
+	message = UpgradeDeprecatedChatMessage(message)
 	ChatTargetedBroadcast(message, TRUE)
 	ChatTargetedBroadcast(message, FALSE)
 
-/datum/tgs_api/v3210/ChatTargetedBroadcast(message, admin_only)
-	ExportService("[admin_only ? SERVICE_REQUEST_IRC_ADMIN_CHANNEL_MESSAGE : SERVICE_REQUEST_IRC_BROADCAST] [message]")
+/datum/tgs_api/v3210/ChatTargetedBroadcast(datum/tgs_message_content/message, admin_only)
+	message = UpgradeDeprecatedChatMessage(message)
+	ExportService("[admin_only ? SERVICE_REQUEST_IRC_ADMIN_CHANNEL_MESSAGE : SERVICE_REQUEST_IRC_BROADCAST] [message.text]")
 
 /datum/tgs_api/v3210/ChatPrivateMessage(message, datum/tgs_chat_user/user)
+	UpgradeDeprecatedChatMessage(message)
 	return TGS_UNIMPLEMENTED
 
 /datum/tgs_api/v3210/SecurityLevel()
